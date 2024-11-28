@@ -1,0 +1,109 @@
+.dashboard-page {
+  .card {
+    a {
+      text-decoration: none;
+      ;
+    }
+  }
+
+  .list-group-flush>.list-group-item {
+    // font-size: 1.1875rem;
+    // line-height: 1.25rem;
+    color: #000000;
+  }
+
+}
+
+.table {
+  td {
+    vertical-align: middle;
+  }
+}
+.user-account-sidebar {
+  .menu-link{
+    .nav-link{
+      a{
+        padding-top: 1.3rem !important;
+        padding-bottom: 1.6rem !important;
+      }
+    }
+  }
+}
+.menu-link{
+  .nav-link {
+    @extend .position-relative;
+    .normal-icon {
+      display: inline-block;
+    }
+  
+    .active-icon {
+      display: none;
+    }
+    a{
+      padding-top: 1.3rem !important;
+      padding-bottom: 1.3rem !important;
+    }
+  
+    &:hover {
+      .normal-icon {
+        display: none;
+      }
+  
+      .active-icon {
+        display: inline-block;
+      }
+  
+      a {
+        color: #6E72EE;
+      }
+    }
+  
+    &.active {
+      .normal-icon {
+        display: none;
+      }
+  
+      .active-icon {
+        display: inline-block;
+      }
+  
+      a {
+        background: var(--bs-gray-light);
+        border-top-left-radius: 35px;
+        border-bottom-left-radius: 35px;
+        box-shadow: inset 10px 3px 36px rgba(0, 0, 0, 0.1);
+        color: #6E72EE;
+      }
+      a::after{
+        content: "";
+        @extend .position-absolute;
+        background: var(--bs-gray-light);
+        width: 2rem;
+        height: 2rem;
+        right: 0;
+        top: -2rem;
+        transform: rotate(270deg);
+        background-image: radial-gradient(circle at 100% 0, white 0%, white 2rem, #e6e6e6 2rem);
+      }
+      a::before{
+        content: "";
+        @extend .position-absolute;
+        background: var(--bs-gray-light);
+        width: 2rem;
+        height: 2rem;
+        right: 0;
+        bottom: -2rem;
+        transform: rotate(180deg);
+        background-image: radial-gradient(circle at 100% 0, white 0%, white 2rem, #e6e6e6 2rem);
+      }
+    }
+  }
+}
+.nav-item.nav-item-one:first-child {
+  .nav-link.active {
+    min-width: 64px;
+  }
+}
+.btn-check:checked + .btn-tertiary{
+    @extend .btn-info;
+}

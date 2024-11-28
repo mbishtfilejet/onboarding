@@ -1,0 +1,11 @@
+.subscription-body {
+    .table-parent::after{
+        content: "PREVIEW";
+        @extend .font-weight-700,.position-absolute,.top-50,.start-50,.translate-middle;
+        font-size: 4em;
+        opacity: .15;
+        letter-spacing:4px;
+        rotate: -45deg;
+        transform-origin: 0 0;
+    }
+}

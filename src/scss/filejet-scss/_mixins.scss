@@ -1,0 +1,18 @@
+@use "sass:math";
+@use "sass:color";
+
+@function strip-unit($number) {
+  @if type-of($number) == "number" and not unitless($number) {
+    @return math.div($number, $number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+// USAGE
+/*
+  font-size: rem(20px);
+*/
+@function rem($sizeInPx: 16px) {
+  @return #{math.div(strip-unit($sizeInPx), 16)}rem;
+}

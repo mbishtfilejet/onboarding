@@ -1,0 +1,2592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>File Jet: Group</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="../dist/css/filejet-style.css" />
+    <script src="../dist/js/jquery.min.js"></script>
+    <!-- Scripts -->
+</head>
+
+<body>
+    <div class="grey-bg dashboard-page min-vh-100">
+        <div class="container-fluid p-0">
+            <div class="sidebar-wrapper">
+                <div class="sidebar min-vh-100 py-3 ps-3">
+                    <div>
+                        <div class="ps-3 pb-4">
+                            <a href="/" class="logo">
+                                <img src="dist/images/logo.png" class="d-none d-lg-block" alt="FileJet">
+                                <img src="dist/images/filejet-pinLogo.png" class="d-block d-lg-none" alt="FileJet">
+                            </a>
+                        </div>
+                        <div>
+                            <ul class="menu-link menu-onboardin p-0 m-0">
+                                <!-- Dashboard -->
+                                <li class="nav-link">
+                                    <a href="./" class="text-decoration-none ps-3 py-3 d-flex align-items-center">
+                                        
+                                        <span class="icon icon-entities-dark normal-icon"></span>
+                                        <span class="icon icon-entities-purple active-icon"></span>
+                                        <span class="text nav-text">Entities</span>
+                                    </a>
+                                </li>
+                                <!-- Entities -->
+                                <li class="nav-link">
+                                    <a href="./groups.html" class="text-decoration-none ps-3 py-3 d-flex align-items-center">
+                                        <span class="icon icon-groups-dark normal-icon"></span>
+                                        <span class="icon icon-groups-purple active-icon"></span>
+                                        <span class="text nav-text position-relative">
+                                            Groups
+                                        </span>
+                                    </a>
+                                </li>
+                                <!-- Groups -->
+                                <li class="nav-link">
+                                    <a href="./users.html" class="text-decoration-none ps-3 py-3 d-flex align-items-center">
+                                        <span class="icon icon-users-dark normal-icon"></span>
+                                        <span class="icon icon-users-purple active-icon"></span>
+                                        <span class="text nav-text">Users</span>
+                                    </a>
+                                </li>
+                                <li class="nav-link active">
+                                    <a href="./payment-method.html" class="text-decoration-none ps-3 py-3 d-flex align-items-center">
+                                        <span class="icon icon-payment-method-dark normal-icon"></span>
+                                        <span class="icon icon-payment-method-purple active-icon"></span>
+                                        <span class="text nav-text">Payment Method</span>
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <!-- <div class="pe-4 me-2 ps-3 flex-fill">
+                        <button type="button" class="btn btn-light border-dark px-3 text-capitalize w-100 ">Contact Rep</button>
+                    </div> -->
+                </div>
+            </div>
+
+            <div class="main-content-wrapper">
+                <div class="container-lg container-fluid">
+                    <div class="header py-1">
+                        <div class="row align-items-center">
+                            <div class="col-6 col-xl-6 col-lg-6">
+                                <h3 class="m-0 font-weight-700">
+
+                                    Billing - Settings
+
+                                </h3>
+                            </div>
+                            <div
+                                class="col col-md-6 col-xl-6 col-lg-6 d-flex align-items-center justify-content-end justify-content-md-end">
+
+                                <div class="profile-nav">
+                                    <div class="dropdown white-bg p-0 rounded-5">
+
+                                        <a class="nav-link dropdown-toggle show px-3" href="#" data-bs-toggle="dropdown"
+                                            aria-expanded="true">
+                                            <span class="avatar avatar-lg ms-n3">
+                                                <img src="../dist/images/avatar.png" alt="" />
+                                            </span>
+                                            <span class="user-name fw-bold">Roman</span>
+                                        </a>
+                                        <ul class="dropdown-menu" data-bs-popper="static">
+                                            <li>
+                                                <span
+                                                    class="dropdown-item py-3 d-flex align-items-center border-bottom">
+                                                    Account
+                                                </span>
+                                            </li>
+                                            
+                                            <li>
+                                                <a class="dropdown-item py-3 d-flex align-items-center"
+                                                    href="../../login.html">
+                                                    <span class="icon icon-logout me-4"></span>
+                                                    Logout
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="container-lg container-fluid">
+                    <div class="main-content pt-3">
+                        <div class="text-center py-5 my-5 d-none">
+                            <p>Your account will be invoiced on Net <b>X</b> Payment Terms</p>
+                            <p>where X is loaded from their configured payment terms.  This will count as having a payment method setup.</p>
+                        </div>
+                        <div class="border-bottom py-4">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h4 class="m-0 font-weight-700">Payment Methods</h4>
+                                <p class="text-end text-dark mt-4 font-weight-600">
+                                    <span data-bs-toggle="modal" data-bs-target="#addPaymentModal"
+                                        class="cursor-pointer">+
+                                        ADD NEW</span>
+                                </p>
+                            </div>
+                            <div class="">
+                                <table id="payment-method-table" class="table table-striped table-gap-rows w-100">
+                                    <thead class="d-none">
+                                    </thead>
+                                    <tbody>
+                                        <tr class="odd">
+                                            <td class="sorting_1">American Express</td>
+                                            <td>Amex....0005</td>
+                                            <td><span class="d-flex align-items-center"><span
+                                                        class="btn-tertiary-grey p-2 rounded-1"><input type="radio"
+                                                            id="card-default-677" name="card"
+                                                            class="form-check-input default-card"
+                                                            data-ajax-url="http://13.64.144.136/qa/billing/card/default"
+                                                            value="677" checked=""><label
+                                                            class="form-check-label fs-6 text-capitalize text-dark my-0 ms-2"
+                                                            for="card-default-677">Default</label></span></span></td>
+                                            <td><a href="javascript:void(0)"
+                                                    style="text-decoration:none;"
+                                                    class="cursor-pointers text-dark  billing-payment-group"
+                                                    data-ajax-url="/qa/billing/payment/view/entities?payment_profile_id=677"
+                                                    data-ajax-delete-url="/qa/remove/group/cart" data-bs-toggle="modal"
+                                                    data-bs-target="#linkEntityModal">VIEW ENTITIES/GROUPS</a></td>
+                                            <td class="text-center"><span class="cursor-pointer d-flex">
+                                                    <span class="icon icon-edit edit-document-name mx-3 cursor-pointer"
+                                                        data-toggle="tooltip" aria-label="EDIT"
+                                                        data-bs-original-title="EDIT"></span>
+                                                    <span class="icon icon-save save-document-name mx-3 cursor-pointer"
+                                                        data-toggle="tooltip" title="SAVE"
+                                                        style="display: none;"></span>
+                                                    <span class="icon icon-stop-danger m-0 me-4 d-inline-block"
+                                                        data-toggle="tooltip" title="DELETE" data-bs-toggle="modal"
+                                                        data-bs-target="#deletePayment"></span>
+                                                </span></td>
+                                        </tr>
+                                        <tr class="even">
+                                            <td class="sorting_1">Emmanuel Sims</td>
+                                            <td>Visa....4242</td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <input type="radio" disabled="" name="card"
+                                                    class="form-check-input default-card"><label
+                                                    class="form-check-label fs-6 text-capitalize text-disabled my-0 ms-2"
+                                                    for="default-card">Set As Default</label>
+                                                </div>
+                                            </td>
+                                            <td><a href="javascript:void(0)"
+                                                    style="text-decoration:none;"
+                                                    class="cursor-pointers text-dark  billing-payment-group"
+                                                    data-ajax-url="/qa/billing/payment/view/entities?payment_profile_id=683"
+                                                    data-ajax-delete-url="/qa/remove/group/cart" data-bs-toggle="modal"
+                                                    data-bs-target="#linkEntityModal">VIEW ENTITIES/GROUPS</a></td>
+                                            <td class="text-center"><span class="cursor-pointer d-flex">
+                                                    <span class="icon icon-edit edit-document-name mx-3 cursor-pointer"
+                                                        data-toggle="tooltip" aria-label="EDIT"
+                                                        data-bs-original-title="EDIT"></span>
+                                                    <span class="icon icon-save save-document-name mx-3 cursor-pointer"
+                                                        data-toggle="tooltip" title="SAVE"
+                                                        style="display: none;"></span>
+                                                    <span class="icon icon-stop-danger m-0 me-4 d-inline-block"
+                                                        data-toggle="tooltip" title="DELETE" data-bs-toggle="modal"
+                                                        data-bs-target="#deletePayment"></span>
+                                                </span></td>
+                                        </tr>
+                                        <tr class="odd">
+                                            <td class="sorting_1">John Doe</td>
+                                            <td>Visa....4242</td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <input type="radio" disabled="" name="card"
+                                                    class="form-check-input default-card"><label
+                                                    class="form-check-label fs-6 text-capitalize text-disabled my-0 ms-2"
+                                                    for="default-card">Set As Default</label>
+                                                </div>
+                                            </td>
+                                            <td><a href="javascript:void(0)"
+                                                    style="text-decoration:none;"
+                                                    class="cursor-pointers text-dark  billing-payment-group"
+                                                    data-ajax-url="/qa/billing/payment/view/entities?payment_profile_id=687"
+                                                    data-ajax-delete-url="/qa/remove/group/cart" data-bs-toggle="modal"
+                                                    data-bs-target="#linkEntityModal">VIEW ENTITIES/GROUPS</a></td>
+                                            <td class="text-center"><span class="cursor-pointer d-flex">
+                                                    <span class="icon icon-edit edit-document-name mx-3 cursor-pointer"
+                                                        data-toggle="tooltip" aria-label="EDIT"
+                                                        data-bs-original-title="EDIT"></span>
+                                                    <span class="icon icon-save save-document-name mx-3 cursor-pointer"
+                                                        data-toggle="tooltip" title="SAVE"
+                                                        style="display: none;"></span>
+                                                    <span class="icon icon-stop-danger m-0 me-4 d-inline-block"
+                                                        data-toggle="tooltip" title="DELETE" data-bs-toggle="modal"
+                                                        data-bs-target="#deletePayment"></span>
+                                                </span></td>
+                                        </tr>
+                                        <tr class="even">
+                                            <td class="sorting_1">Discover</td>
+                                            <td>Discover....1117</td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <input type="radio" id="card-default-678" name="card"
+                                                    class="form-check-input default-card"
+                                                    data-ajax-url="http://13.64.144.136/qa/billing/card/default"
+                                                    value="678"><label
+                                                    class="form-check-label fs-6 text-capitalize text-dark my-0 ms-2"
+                                                    for="card-default-678">Set As Default</label>
+                                                </div>
+                                            </td>
+                                            <td><a href="javascript:void(0)"
+                                                    style="text-decoration:none;"
+                                                    class="cursor-pointers text-dark  billing-payment-group"
+                                                    data-ajax-url="/qa/billing/payment/view/entities?payment_profile_id=678"
+                                                    data-ajax-delete-url="/qa/remove/group/cart" data-bs-toggle="modal"
+                                                    data-bs-target="#linkEntityModal">VIEW ENTITIES/GROUPS</a></td>
+                                            <td class="text-center"><span class="cursor-pointer d-flex">
+                                                    <span class="icon icon-edit edit-document-name mx-3 cursor-pointer"
+                                                        data-toggle="tooltip" aria-label="EDIT"
+                                                        data-bs-original-title="EDIT"></span>
+                                                    <span class="icon icon-save save-document-name mx-3 cursor-pointer"
+                                                        data-toggle="tooltip" title="SAVE"
+                                                        style="display: none;"></span>
+                                                    <span class="icon icon-stop-danger m-0 me-4 d-inline-block"
+                                                        data-toggle="tooltip" title="DELETE" data-bs-toggle="modal"
+                                                        data-bs-target="#deletePayment"></span>
+                                                </span></td>
+                                        </tr>
+                                        <tr class="odd">
+                                            <td class="sorting_1">ACH</td>
+                                            <td>STRIPE TEST BANK....6789</td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <input type="radio" id="card-default-679" name="card"
+                                                    class="form-check-input default-card"
+                                                    data-ajax-url="http://13.64.144.136/qa/billing/card/default"
+                                                    value="679"><label
+                                                    class="form-check-label fs-6 text-capitalize text-dark my-0 ms-2"
+                                                    for="card-default-679">Set As Default</label>
+                                                </div>
+                                            </td>
+                                            <td><a href="javascript:void(0)"
+                                                    style="text-decoration:none;"
+                                                    class="cursor-pointers text-dark  billing-payment-group"
+                                                    data-ajax-url="/qa/billing/payment/view/entities?payment_profile_id=679"
+                                                    data-ajax-delete-url="/qa/remove/group/cart" data-bs-toggle="modal"
+                                                    data-bs-target="#linkEntityModal">VIEW ENTITIES/GROUPS</a></td>
+                                            <td class="text-center"><span class="cursor-pointer d-flex">
+                                                    <span class="icon icon-edit edit-document-name mx-3 cursor-pointer"
+                                                        data-toggle="tooltip" aria-label="EDIT"
+                                                        data-bs-original-title="EDIT"></span>
+                                                    <span class="icon icon-save save-document-name mx-3 cursor-pointer"
+                                                        data-toggle="tooltip" title="SAVE"
+                                                        style="display: none;"></span>
+                                                    <span class="icon icon-stop-danger m-0 me-4 d-inline-block"
+                                                        data-toggle="tooltip" title="DELETE" data-bs-toggle="modal"
+                                                        data-bs-target="#deletePayment"></span>
+                                                </span></td>
+                                        </tr>
+                                        <tr class="even">
+                                            <td class="sorting_1">Bank of America</td>
+                                            <td>STRIPE TEST BANK....6789</td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <input type="radio" disabled="" name="card"
+                                                    class="form-check-input default-card"><label
+                                                    class="form-check-label fs-6 text-capitalize text-disabled my-0 ms-2"
+                                                    for="default-card">Set As Default</label>
+                                                </div>
+                                            </td>
+                                            <td><a href="javascript:void(0)"
+                                                    style="text-decoration:none;"
+                                                    class="cursor-pointers text-dark  billing-payment-group"
+                                                    data-ajax-url="/qa/billing/payment/view/entities?payment_profile_id=680"
+                                                    data-ajax-delete-url="/qa/remove/group/cart" data-bs-toggle="modal"
+                                                    data-bs-target="#linkEntityModal">VIEW ENTITIES/GROUPS</a></td>
+                                            <td class="text-center"><span class="cursor-pointer d-flex">
+                                                    <span class="icon icon-edit edit-document-name mx-3 cursor-pointer"
+                                                        data-toggle="tooltip" aria-label="EDIT"
+                                                        data-bs-original-title="EDIT"></span>
+                                                    <span class="icon icon-save save-document-name mx-3 cursor-pointer"
+                                                        data-toggle="tooltip" title="SAVE"
+                                                        style="display: none;"></span>
+                                                    <span class="icon icon-stop-danger m-0 me-4 d-inline-block"
+                                                        data-toggle="tooltip" title="DELETE" data-bs-toggle="modal"
+                                                        data-bs-target="#deletePayment"></span>
+                                                </span></td>
+                                        </tr>
+                                        <tr class="odd">
+                                            <td class="sorting_1">Jere Stevenson</td>
+                                            <td>Visa....4242</td>
+                                            <td>
+                                                <div class="d-flex  align-items-center">
+                                                    <input type="radio" disabled="" name="card"
+                                                    class="form-check-input default-card"><label
+                                                    class="form-check-label fs-6 text-capitalize text-disabled my-0 ms-2"
+                                                    for="default-card">Set As Default</label>
+                                                </div>
+                                            </td>
+                                            <td><a href="javascript:void(0)"
+                                                    style="text-decoration:none;"
+                                                    class="cursor-pointers text-dark  billing-payment-group"
+                                                    data-ajax-url="/qa/billing/payment/view/entities?payment_profile_id=681"
+                                                    data-ajax-delete-url="/qa/remove/group/cart" data-bs-toggle="modal"
+                                                    data-bs-target="#linkEntityModal">VIEW ENTITIES/GROUPS</a></td>
+                                            <td class="text-center"><span class="cursor-pointer d-flex">
+                                                    <span class="icon icon-edit edit-document-name mx-3 cursor-pointer"
+                                                        data-toggle="tooltip" aria-label="EDIT"
+                                                        data-bs-original-title="EDIT"></span>
+                                                    <span class="icon icon-save save-document-name mx-3 cursor-pointer"
+                                                        data-toggle="tooltip" title="SAVE"
+                                                        style="display: none;"></span>
+                                                    <span class="icon icon-stop-danger m-0 me-4 d-inline-block"
+                                                        data-toggle="tooltip" title="DELETE" data-bs-toggle="modal"
+                                                        data-bs-target="#deletePayment"></span>
+                                                </span></td>
+                                        </tr>
+                                        <tr class="even">
+                                            <td class="sorting_1">Juliette Nichols</td>
+                                            <td>Visa....1111</td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <input type="radio" disabled="" name="card"
+                                                    class="form-check-input default-card"><label
+                                                    class="form-check-label fs-6 text-capitalize text-disabled my-0 ms-2"
+                                                    for="default-card">Set As Default</label>
+                                                </div>
+                                            </td>
+                                            <td><a href="javascript:void(0)"
+                                                    style="text-decoration:none;"
+                                                    class="cursor-pointers text-dark  billing-payment-group"
+                                                    data-ajax-url="/qa/billing/payment/view/entities?payment_profile_id=682"
+                                                    data-ajax-delete-url="/qa/remove/group/cart" data-bs-toggle="modal"
+                                                    data-bs-target="#linkEntityModal">VIEW ENTITIES/GROUPS</a></td>
+                                            <td class="text-center"><span class="cursor-pointer d-flex">
+                                                    <span class="icon icon-edit edit-document-name mx-3 cursor-pointer"
+                                                        data-toggle="tooltip" aria-label="EDIT"
+                                                        data-bs-original-title="EDIT"></span>
+                                                    <span class="icon icon-save save-document-name mx-3 cursor-pointer"
+                                                        data-toggle="tooltip" title="SAVE"
+                                                        style="display: none;"></span>
+                                                    <span class="icon icon-stop-danger m-0 me-4 d-inline-block"
+                                                        data-toggle="tooltip" title="DELETE" data-bs-toggle="modal"
+                                                        data-bs-target="#deletePayment"></span>
+                                                </span></td>
+                                        </tr>
+                                        <tr class="odd">
+                                            <td class="sorting_1">Traci David</td>
+                                            <td>Visa....1111</td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <input type="radio" disabled="" name="card"
+                                                    class="form-check-input default-card"><label
+                                                    class="form-check-label fs-6 text-capitalize text-disabled my-0 ms-2"
+                                                    for="default-card">Set As Default</label>
+                                                </div>
+                                            </td>
+                                            <td><a href="javascript:void(0)"
+                                                    style="text-decoration:none;"
+                                                    class="cursor-pointers text-dark  billing-payment-group"
+                                                    data-ajax-url="/qa/billing/payment/view/entities?payment_profile_id=684"
+                                                    data-ajax-delete-url="/qa/remove/group/cart" data-bs-toggle="modal"
+                                                    data-bs-target="#linkEntityModal">VIEW ENTITIES/GROUPS</a></td>
+                                            <td class="text-center"><span class="cursor-pointer d-flex">
+                                                    <span class="icon icon-edit edit-document-name mx-3 cursor-pointer"
+                                                        data-toggle="tooltip" aria-label="EDIT"
+                                                        data-bs-original-title="EDIT"></span>
+                                                    <span class="icon icon-save save-document-name mx-3 cursor-pointer"
+                                                        data-toggle="tooltip" title="SAVE"
+                                                        style="display: none;"></span>
+                                                    <span class="icon icon-stop-danger m-0 me-4 d-inline-block"
+                                                        data-toggle="tooltip" title="DELETE" data-bs-toggle="modal"
+                                                        data-bs-target="#deletePayment"></span>
+                                                </span></td>
+                                        </tr>
+                                        <tr class="even">
+                                            <td class="sorting_1">Bank Of America</td>
+                                            <td>STRIPE TEST BANK....6789</td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <input type="radio" disabled="" name="card"
+                                                    class="form-check-input default-card"><label
+                                                    class="form-check-label fs-6 text-capitalize text-disabled my-0 ms-2"
+                                                    for="default-card">Set As Default</label>
+                                                </div>
+                                            </td>
+                                            <td><a href="javascript:void(0)"
+                                                    style="text-decoration:none;"
+                                                    class="cursor-pointers text-dark  billing-payment-group"
+                                                    data-ajax-url="/qa/billing/payment/view/entities?payment_profile_id=685"
+                                                    data-ajax-delete-url="/qa/remove/group/cart" data-bs-toggle="modal"
+                                                    data-bs-target="#linkEntityModal">VIEW ENTITIES/GROUPS</a></td>
+                                            <td class="text-center"><span class="cursor-pointer d-flex">
+                                                    <span class="icon icon-edit edit-document-name mx-3 cursor-pointer"
+                                                        data-toggle="tooltip" aria-label="EDIT"
+                                                        data-bs-original-title="EDIT"></span>
+                                                    <span class="icon icon-save save-document-name mx-3 cursor-pointer"
+                                                        data-toggle="tooltip" title="SAVE"
+                                                        style="display: none;"></span>
+                                                    <span class="icon icon-stop-danger m-0 me-4 d-inline-block"
+                                                        data-toggle="tooltip" title="DELETE" data-bs-toggle="modal"
+                                                        data-bs-target="#deletePayment"></span>
+                                                </span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Search Modal Starts-->
+        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content bg-black opacity-75 border-0">
+                    <button type="button" class="btn-close btn-close-white ms-auto pe-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="modal-body d-flex flex-column align-items-center">
+                        <div class="w-50 text-white">
+                            <form autocomplete="off">
+                                <div class="d-flex align-items-center white-bg px-4 py-3 rounded-pill">
+                                    <span class="icon icon-search-grey icon-lg"></span>
+                                    <input class="w-100 p-0 rounded-5 border-0 fs-3" id="search" type="text"
+                                        name="seach" placeholder="Search">
+                                </div>
+                            </form>
+                            <div class="fw-bold fs-4 mt-5 d-flex align-items-center"> <span
+                                    class="icon icon-circular icon-lg icon-clock-dark mr-4"></span>
+                                Search results</div>
+                            <div class="my-4">
+                                <div class="font-weight-600 fs-6">Domain Inc (England) - 20% in progress</div>
+                                <div class="fs-8 mt-1">Entity</div>
+                            </div>
+                            <div class="my-4">
+                                <div class="font-weight-600 fs-6">Mainsail Industries (AL) </div>
+                                <div class="fs-8 mt-1">Entity</div>
+                            </div>
+                            <div class="my-4">
+                                <div class="font-weight-600 fs-6">The Main Group </div>
+                                <div class="fs-8 mt-1">Group</div>
+                            </div>
+                            <div class="my-4">
+                                <div class="font-weight-600 fs-6">The Main Sail (Irvine/Orange, CA) </div>
+                                <div class="font-weight-600 fs-6">Mainsail Industries Inc (CA) </div>
+                                <div class="fs-8 mt-1">Business License</div>
+                            </div>
+                            <div class="my-4">
+                                <div class="font-weight-600 fs-6">Shoes R Us (Los Angeles, CA)</div>
+                                <div class="font-weight-600 fs-6">Mainshoe Industries Inc (CA)</div>
+                                <div class="fs-8 mt-1">Fictitious / Trade Name</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Search Modal Ends -->
+
+        <!-- Notification Modal Starts -->
+         <!-- Notification Modal Starts -->
+        <div class="modal modal-right fade" id="notificationModal" tabindex="-1" aria-labelledby="searchModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-end modal-dialog-scrollable modal-xl my-0 min-vh-100">
+                <div class="modal-content border-0 rounded-0 min-vh-100">
+                    <!-- Modal Header -->
+                    <div class="modal-header flex-wrap">
+                        <div class="d-flex align-items-center w-100 mb-4 pb-2">
+                            <span class="bg-dark p-3 rounded-2 me-4 d-inline-block">
+                                <span class="icon icon-sm icon-bell-white m-0"></span>
+                            </span>
+                            <div>
+                                <span class="d-block text-dark text-opacity-50 fs-9 text-uppercase">Notifications</span>
+                                <h3 class="fs-3 m-0 mt-2">Your Notifications</h3>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center white-bg px-4 py-3 rounded-2 w-100 shadow">
+                            <span class="icon icon-search-grey opacity-25"></span>
+                            <input class="w-100 bg-transparent p-0 rounded-2 border-0" id="search" type="text" name="seach"
+                                placeholder="Find a Notification">
+                        </div>
+                    </div>
+
+                    <!-- Modal Header Ends -->
+
+                    <!-- Modal Body -->
+                    <div class="modal-body">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <ul class="nav nav-tabs pt-2" id="notificationTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active border-0 text-uppercase" id="unread-notification-tab"
+                                        data-bs-toggle="tab" data-bs-target="#unread-notification" type="button" role="tab"
+                                        aria-controls="unreadNotification" aria-selected="true">UNREAD</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link border-0 text-uppercase" id="read-notification-tab"
+                                        data-bs-toggle="tab" data-bs-target="#read-notification" type="button" role="tab"
+                                        aria-controls="readNotification" aria-selected="false">READ</button>
+                                </li>
+                            </ul>
+                            <div class="d-flex gap-3">
+                                <a href="#" class="text-purple text-decoration-none d-inline-block text-uppercase"> ALL</a>
+                                <a href="#" class="text-purple text-decoration-none d-inline-block text-uppercase"> None</a>
+        
+                            </div>
+                        </div>
+                        <div class="tab-content bg-white" id="notificationTabContent">
+
+                            <!-- Unread Notification -->
+                            <div class="tab-pane fade show active" id="unread-notification" role="tabpanel"
+                                aria-labelledby="unread-notification-tab">
+                                <ul class="list-group m-0 p-0 border-0 list-table">
+                                    <li
+                                        class="list-group-item border-0 border-bottom rounded-0 d-flex justify-content-between align-items-center px-4">
+                                        <div class="flex-fill">
+                                            <div class="dropdown white-bg p-0 rounded-5">
+
+                                                <a class="nav-link px-0">
+                                                    <span class="fw-bold">Notification</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="dropdown white-bg p-0 rounded-5">
+
+                                                <a class="nav-link dropdown-toggle show px-0" href="#"
+                                                    data-bs-toggle="dropdown" aria-expanded="true">
+                                                    <span class="user-name">Date</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item border-0 border-bottom rounded-0 p-4">
+                                        <a class="d-flex flex-wrap flex-sm-nowrap gap-3 gap-lg-0 align-items-center text-decoration-none w-100"
+                                            href="">
+                                            <div>
+                                                <input type="checkbox" class="form-check-input" name="" id="">
+                                            </div>
+                                            <div>
+                                                <p class="mb-2">**Item Name** has been shipped/emailed</p>
+                                                <span class="d-block text-dark text-opacity-50 fs-8">**Entity Name**</span>
+                                            </div>
+                                            <div>
+                                                <p class="mb-2">10 / 29 / 2021</p>
+                                                <span class="d-block text-dark text-opacity-50 fs-8">08:15 AM</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item border-0 border-bottom rounded-0 p-4">
+                                        <a class="d-flex flex-wrap flex-sm-nowrap gap-3 gap-lg-0 align-items-center text-decoration-none w-100"
+                                            href="">
+                                            <div>
+                                                <input type="checkbox" class="form-check-input" name="" id="">
+                                            </div>
+                                            <div>
+                                                <p class="mb-2">**Item Name** has been shipped/emailed</p>
+                                                <span class="d-block text-dark text-opacity-50 fs-8">**Entity Name**</span>
+                                            </div>
+                                            <div>
+                                                <p class="mb-2">10 / 29 / 2021</p>
+                                                <span class="d-block text-dark text-opacity-50 fs-8">08:15 AM</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item border-0 border-bottom rounded-0 p-4">
+                                        <a class="d-flex flex-wrap flex-sm-nowrap gap-3 gap-lg-0 align-items-center text-decoration-none w-100"
+                                            href="">
+                                            <div>
+                                                <input type="checkbox" class="form-check-input" name="" id="">
+                                            </div>
+                                            <div>
+                                                <p class="mb-2">**Item Name** has been shipped/emailed</p>
+                                                <span class="d-block text-dark text-opacity-50 fs-8">**Entity Name**</span>
+                                            </div>
+                                            <div>
+                                                <p class="mb-2">10 / 29 / 2021</p>
+                                                <span class="d-block text-dark text-opacity-50 fs-8">08:15 AM</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item border-0 border-bottom rounded-0 p-4">
+                                        <a class="d-flex flex-wrap flex-sm-nowrap gap-3 gap-lg-0 align-items-center text-decoration-none w-100"
+                                            href="">
+                                            <div>
+                                                <input type="checkbox" class="form-check-input" name="" id="">
+                                            </div>
+                                            <div>
+                                                <p class="mb-2">**Item Name** has been shipped/emailed</p>
+                                                <span class="d-block text-dark text-opacity-50 fs-8">**Entity Name**</span>
+                                            </div>
+                                            <div>
+                                                <p class="mb-2">10 / 29 / 2021</p>
+                                                <span class="d-block text-dark text-opacity-50 fs-8">08:15 AM</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item border-0 border-bottom rounded-0 p-4">
+                                        <a class="d-flex flex-wrap flex-sm-nowrap gap-3 gap-lg-0 align-items-center text-decoration-none w-100"
+                                            href="">
+                                            <div>
+                                                <input type="checkbox" class="form-check-input" name="" id="">
+                                            </div>
+                                            <div>
+                                                <p class="mb-2">**Item Name** has been shipped/emailed</p>
+                                                <span class="d-block text-dark text-opacity-50 fs-8">**Entity Name**</span>
+                                            </div>
+                                            <div>
+                                                <p class="mb-2">10 / 29 / 2021</p>
+                                                <span class="d-block text-dark text-opacity-50 fs-8">08:15 AM</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item border-0 border-bottom rounded-0 p-4">
+                                        <a class="d-flex flex-wrap flex-sm-nowrap gap-3 gap-lg-0 align-items-center text-decoration-none w-100"
+                                            href="">
+                                            <div>
+                                                <input type="checkbox" class="form-check-input" name="" id="">
+                                            </div>
+                                            <div>
+                                                <p class="mb-2">**Item Name** has been shipped/emailed</p>
+                                                <span class="d-block text-dark text-opacity-50 fs-8">**Entity Name**</span>
+                                            </div>
+                                            <div>
+                                                <p class="mb-2">10 / 29 / 2021</p>
+                                                <span class="d-block text-dark text-opacity-50 fs-8">08:15 AM</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item border-0 border-bottom rounded-0 p-4">
+                                        <a class="d-flex flex-wrap flex-sm-nowrap gap-3 gap-lg-0 align-items-center text-decoration-none w-100"
+                                            href="">
+                                            <div>
+                                                <input type="checkbox" class="form-check-input" name="" id="">
+                                            </div>
+                                            <div>
+                                                <p class="mb-2">**Item Name** has been shipped/emailed</p>
+                                                <span class="d-block text-dark text-opacity-50 fs-8">**Entity Name**</span>
+                                            </div>
+                                            <div>
+                                                <p class="mb-2">10 / 29 / 2021</p>
+                                                <span class="d-block text-dark text-opacity-50 fs-8">08:15 AM</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item border-0 border-bottom rounded-0 p-4">
+                                        <a class="d-flex flex-wrap flex-sm-nowrap gap-3 gap-lg-0 align-items-center text-decoration-none w-100"
+                                            href="">
+                                            <div>
+                                                <input type="checkbox" class="form-check-input" name="" id="">
+                                            </div>
+                                            <div>
+                                                <p class="mb-2">**Item Name** has been shipped/emailed</p>
+                                                <span class="d-block text-dark text-opacity-50 fs-8">**Entity Name**</span>
+                                            </div>
+                                            <div>
+                                                <p class="mb-2">10 / 29 / 2021</p>
+                                                <span class="d-block text-dark text-opacity-50 fs-8">08:15 AM</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="px-4 mb-3 pt-5 mt-2">
+                                    <p class="text-uppercase mb-0">Notifications based on Partner inviting a Client </p>
+                                </div>
+                                <ul class="list-group m-0 p-0 border-0 list-table">
+                                    <li class="list-group-item border-0 border-bottom rounded-0 p-4">
+                                        <a class="d-flex flex-wrap flex-sm-nowrap gap-3 gap-lg-0 align-items-center text-decoration-none w-100"
+                                            href="">
+                                            <div>
+                                                <input type="checkbox" class="form-check-input" name="" id="">
+                                            </div>
+                                            <div>
+                                                <p class="mb-2">**Item Name** has been shipped/emailed</p>
+                                                <span class="d-block text-dark text-opacity-50 fs-8">**Entity Name**</span>
+                                            </div>
+                                            <div>
+                                                <p class="mb-2">10 / 29 / 2021</p>
+                                                <span class="d-block text-dark text-opacity-50 fs-8">08:15 AM</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item border-0 border-bottom rounded-0 p-4">
+                                        <a class="d-flex flex-wrap flex-sm-nowrap gap-3 gap-lg-0 align-items-center text-decoration-none w-100"
+                                            href="">
+                                            <div>
+                                                <input type="checkbox" class="form-check-input" name="" id="">
+                                            </div>
+                                            <div>
+                                                <p class="mb-2">**Item Name** has been shipped/emailed</p>
+                                                <span class="d-block text-dark text-opacity-50 fs-8">**Entity Name**</span>
+                                            </div>
+                                            <div>
+                                                <p class="mb-2">10 / 29 / 2021</p>
+                                                <span class="d-block text-dark text-opacity-50 fs-8">08:15 AM</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item border-0 border-bottom rounded-0 p-4">
+                                        <a class="d-flex flex-wrap flex-sm-nowrap gap-3 gap-lg-0 flex-wrap flex-sm-nowrap gap-3 align-items-center text-decoration-none w-100"
+                                            href="">
+                                            <div>
+                                                <input type="checkbox" class="form-check-input" name="" id="">
+                                            </div>
+                                            <div>
+                                                <p class="mb-2">**Item Name** has been shipped/emailed</p>
+                                                <span class="d-block text-dark text-opacity-50 fs-8">**Entity Name**</span>
+                                            </div>
+                                            <div>
+                                                <p class="mb-2">10 / 29 / 2021</p>
+                                                <span class="d-block text-dark text-opacity-50 fs-8">08:15 AM</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item border-0 border-bottom rounded-0 p-4">
+                                        <a class="d-flex flex-wrap flex-sm-nowrap gap-3 gap-lg-0 align-items-center text-decoration-none w-100"
+                                            href="">
+                                            <div>
+                                                <input type="checkbox" class="form-check-input" name="" id="">
+                                            </div>
+                                            <div>
+                                                <p class="mb-2">**Item Name** has been shipped/emailed</p>
+                                                <span class="d-block text-dark text-opacity-50 fs-8">**Entity Name**</span>
+                                            </div>
+                                            <div>
+                                                <p class="mb-2">10 / 29 / 2021</p>
+                                                <span class="d-block text-dark text-opacity-50 fs-8">08:15 AM</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item border-0 border-bottom rounded-0 p-4">
+                                        <a class="d-flex flex-wrap flex-sm-nowrap gap-3 gap-lg-0 align-items-center text-decoration-none w-100"
+                                            href="">
+                                            <div>
+                                                <input type="checkbox" class="form-check-input" name="" id="">
+                                            </div>
+                                            <div>
+                                                <p class="mb-2">**Item Name** has been shipped/emailed</p>
+                                                <span class="d-block text-dark text-opacity-50 fs-8">**Entity Name**</span>
+                                            </div>
+                                            <div>
+                                                <p class="mb-2">10 / 29 / 2021</p>
+                                                <span class="d-block text-dark text-opacity-50 fs-8">08:15 AM</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item border-0 border-bottom rounded-0 p-4">
+                                        <a class="d-flex flex-wrap flex-sm-nowrap gap-3 gap-lg-0 align-items-center text-decoration-none w-100"
+                                            href="">
+                                            <div>
+                                                <input type="checkbox" class="form-check-input" name="" id="">
+                                            </div>
+                                            <div>
+                                                <p class="mb-2">**Item Name** has been shipped/emailed</p>
+                                                <span class="d-block text-dark text-opacity-50 fs-8">**Entity Name**</span>
+                                            </div>
+                                            <div>
+                                                <p class="mb-2">10 / 29 / 2021</p>
+                                                <span class="d-block text-dark text-opacity-50 fs-8">08:15 AM</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item border-0 border-bottom rounded-0 p-4">
+                                        <a class="d-flex flex-wrap flex-sm-nowrap gap-3 gap-lg-0 align-items-center text-decoration-none w-100"
+                                            href="">
+                                            <div>
+                                                <input type="checkbox" class="form-check-input" name="" id="">
+                                            </div>
+                                            <div>
+                                                <p class="mb-2">**Item Name** has been shipped/emailed</p>
+                                                <span class="d-block text-dark text-opacity-50 fs-8">**Entity Name**</span>
+                                            </div>
+                                            <div>
+                                                <p class="mb-2">10 / 29 / 2021</p>
+                                                <span class="d-block text-dark text-opacity-50 fs-8">08:15 AM</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item border-0 border-bottom rounded-0 p-4">
+                                        <a class="d-flex flex-wrap flex-sm-nowrap gap-3 gap-lg-0 align-items-center text-decoration-none w-100"
+                                            href="">
+                                            <div>
+                                                <input type="checkbox" class="form-check-input" name="" id="">
+                                            </div>
+                                            <div>
+                                                <p class="mb-2">**Item Name** has been shipped/emailed</p>
+                                                <span class="d-block text-dark text-opacity-50 fs-8">**Entity Name**</span>
+                                            </div>
+                                            <div>
+                                                <p class="mb-2">10 / 29 / 2021</p>
+                                                <span class="d-block text-dark text-opacity-50 fs-8">08:15 AM</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Unread Notification -->
+
+                            <!-- Read Notification -->
+                            <div class="tab-pane fade" id="read-notification" role="tabpanel"
+                                aria-labelledby="read-notification-tab">
+                                <ul class="list-group m-0 p-0 border-0 list-table">
+                                    <li
+                                        class="list-group-item border-0 border-bottom rounded-0 d-flex justify-content-between align-items-center px-4">
+                                        <div class="flex-fill">
+                                            <div class="dropdown white-bg p-0 rounded-5">
+
+                                                <a class="nav-link px-0">
+                                                    <span class="fw-bold">Notification</span>
+                                                </a>
+                                                <!-- <ul class="dropdown-menu p-0" data-bs-popper="static">
+                                                    <li>
+                                                        <a class="dropdown-item py-2 d-flex align-items-center border-bottom" href="#">
+                                                            Latest
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item py-2 d-flex align-items-center border-bottom" href="#">
+                                                            Older
+                                                        </a>
+                                                    </li>
+                                                </ul> -->
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="dropdown white-bg p-0 rounded-5">
+
+                                                <a class="nav-link dropdown-toggle show px-0" href="#"
+                                                    data-bs-toggle="dropdown" aria-expanded="true">
+                                                    <span class="user-name">Date</span>
+                                                </a>
+                                                <!-- <ul class="dropdown-menu p-0" data-bs-popper="static">
+                                                    <li>
+                                                        <a class="dropdown-item py-2 d-flex align-items-center border-bottom" href="#">
+                                                            Past date
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item py-2 d-flex align-items-center border-bottom" href="#">
+                                                            Latest Date
+                                                        </a>
+                                                    </li>
+                                                </ul> -->
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item border-0 border-bottom rounded-0 p-4">
+                                        <a class="d-flex flex-wrap flex-sm-nowrap gap-3 align-items-center text-decoration-none w-100"
+                                            href="">
+                                            <div>
+                                                <input type="checkbox" class="form-check-input" name="" id="" checked>
+                                            </div>
+                                            <div>
+                                                <p class="mb-2">**Item Name** has been shipped/emailed</p>
+                                                <span class="d-block text-dark text-opacity-50 fs-8">**Entity Name**</span>
+                                            </div>
+                                            <div>
+                                                <p class="mb-2">10 / 29 / 2021</p>
+                                                <span class="d-block text-dark text-opacity-50 fs-8">08:15 AM</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item border-0 border-bottom rounded-0 p-4">
+                                        <a class="d-flex flex-wrap flex-sm-nowrap gap-3 align-items-center text-decoration-none w-100"
+                                            href="">
+                                            <div>
+                                                <input type="checkbox" class="form-check-input" name="" id="" checked>
+                                            </div>
+                                            <div>
+                                                <p class="mb-2">**Item Name** has been shipped/emailed</p>
+                                                <span class="d-block text-dark text-opacity-50 fs-8">**Entity Name**</span>
+                                            </div>
+                                            <div>
+                                                <p class="mb-2">10 / 29 / 2021</p>
+                                                <span class="d-block text-dark text-opacity-50 fs-8">08:15 AM</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item border-0 border-bottom rounded-0 p-4">
+                                        <a class="d-flex flex-wrap flex-sm-nowrap gap-3 align-items-center text-decoration-none w-100"
+                                            href="">
+                                            <div>
+                                                <input type="checkbox" class="form-check-input" name="" id="" checked>
+                                            </div>
+                                            <div>
+                                                <p class="mb-2">**Item Name** has been shipped/emailed</p>
+                                                <span class="d-block text-dark text-opacity-50 fs-8">**Entity Name**</span>
+                                            </div>
+                                            <div>
+                                                <p class="mb-2">10 / 29 / 2021</p>
+                                                <span class="d-block text-dark text-opacity-50 fs-8">08:15 AM</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item border-0 border-bottom rounded-0 p-4">
+                                        <a class="d-flex flex-wrap flex-sm-nowrap gap-3 align-items-center text-decoration-none w-100"
+                                            href="">
+                                            <div>
+                                                <input type="checkbox" class="form-check-input" name="" id="" checked>
+                                            </div>
+                                            <div>
+                                                <p class="mb-2">**Item Name** has been shipped/emailed</p>
+                                                <span class="d-block text-dark text-opacity-50 fs-8">**Entity Name**</span>
+                                            </div>
+                                            <div>
+                                                <p class="mb-2">10 / 29 / 2021</p>
+                                                <span class="d-block text-dark text-opacity-50 fs-8">08:15 AM</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item border-0 border-bottom rounded-0 p-4">
+                                        <a class="d-flex flex-wrap flex-sm-nowrap gap-3 align-items-center text-decoration-none w-100"
+                                            href="">
+                                            <div>
+                                                <input type="checkbox" class="form-check-input" name="" id="" checked>
+                                            </div>
+                                            <div>
+                                                <p class="mb-2">**Item Name** has been shipped/emailed</p>
+                                                <span class="d-block text-dark text-opacity-50 fs-8">**Entity Name**</span>
+                                            </div>
+                                            <div>
+                                                <p class="mb-2">10 / 29 / 2021</p>
+                                                <span class="d-block text-dark text-opacity-50 fs-8">08:15 AM</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Read Notification -->
+                        </div>
+                    </div>
+
+                    <!-- Modal Body Ends-->
+
+                    <div class="modal-footer mt-3 pb-0">
+                        <div class="d-flex justify-content-end">
+                            <button type="button" class="btn btn-secondary px-5 py-3 me-3" id="markAsReadBtn">Mark as Read</button>
+                            <button type="button" class="btn btn-secondary px-5 py-3 me-3 d-none" id="markAsUnreadBtn">Mark as UnRead</button>
+                            <button type="button" class="btn btn-secondary px-5 py-3" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+<!-- Notification Modal Ends -->
+        <!-- Notification Modal Ends -->
+
+
+
+
+        <!-- Add Payment  Starts -->
+        <div class="modal modal-right fade" id="addPaymentModal" tabindex="-1" aria-labelledby="addPaymentModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-end modal-dialog-scrollable my-0 min-vh-100">
+                <div class="modal-content border-0 rounded-0 min-vh-100">
+                    <!-- Modal Header -->
+                    <div class="modal-header flex-wrap">
+                        <div class="d-flex align-items-center w-100 pb-2">
+                            <span class="bg-dark p-3 rounded-2 me-4 d-inline-block">
+                                <span class="icon icon-payment-white  icon-lg m-0"></span>
+                            </span>
+                            <div>
+                                <span class="d-block text-dark text-opacity-50 fs-9 text-uppercase">Add Payment
+                                    method</span>
+                                <h3 class="fs-3 m-0 mt-2" id="defaultPaymentDetails">Select Payment Method</h3>
+                                <h3 class="fs-3 m-0 mt-2 hide" id="creditCardDetails">Credit Card Information</h3>
+                                <h3 class="fs-3 m-0 mt-2 hide" id="achInfo">ACH Information</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal Header Ends -->
+
+                    <!-- Modal Body -->
+                    <div class="modal-body">
+                        <div>
+                            <label for="" class="form-label">Select Method </label>
+                            <div class="row d-flex align-items-center bg-white px-3 rounded py-3 mb-4"
+                                data-bs-target="#addCrediCardModal">
+                                <div class="col-6 d-flex flex-wrap align-items-center">
+                                    <div class="form-check d-flex align-items-center">
+                                        <input class="form-check-input" type="radio" name="view"
+                                            onclick="showAchInfo()" id="ach1">
+                                            
+                                    </div>
+                                    <span class="ps-1">
+                                    
+                                        <label for="ach1" class="fs-6 mb-0">ach</label>
+                                    </span>
+                                </div>
+                                <div class=" col-6 d-flex flex-wrap align-items-center">
+                                    <div class="form-check d-flex align-items-center">
+                                        <input class="form-check-input" type="radio" name="view"
+                                            onclick=" showCreditCardDetails()" id="creditCard">
+                                    </div>
+                                    <span class="ps-1">
+                                        
+                                        <label for="creditCard" class="fs-6 mb-0">Credit Card</label>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row hide" id="creditCardDetails">
+                            <div class="col-12">
+                                <div class="form-group mb-3">
+                                    <label for="" class="text-uppercase">Name on card</label>
+                                    <input type="text" class="form-control" placeholder="Name on card">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group mb-3">
+
+                                    <label for="" class="text-uppercase">Card DETAILS</label>
+                                    <div class="d-flex align-items-center form-control">
+                                        <input type="text" placeholder="1242-2341-1242-1642" class="border-0">
+                                        <img src="../dist/images/icon-mastercard.png" alt="card">
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="form-group mb-3">
+                                    <label for="" class="text-uppercase">&nbsp;</label>
+                                    <input type="text" class="form-control" placeholder="MM/YY">
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="form-group mb-3">
+                                    <label for="" class="text-uppercase">&nbsp;</label>
+                                    <input type="text" class="form-control" placeholder="CVV">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row hide" id="achInfo">
+                            <div class="col-12">
+                                <div class="form-group mb-3">
+                                    <label for="" class="text-uppercase">Nickname</label>
+                                    <input type="text" class="form-control" placeholder="Name">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group mb-3">
+                                    <label for="" class="text-uppercase">ACCOUNT TYPE</label>
+
+                                    <div class="d-flex">
+                                        <div
+                                            class="form-check radio-child-element mb-4 form-control w-auto d-flex align-items-center">
+                                            <input class="form-check-input ms-0 mt-0" type="radio" name="account-type" id="account-type-indivisual">
+                                            <label for="account-type-indivisual" class="form-check-label top-0 ms-3">
+                                                Individual
+                                            </label>
+                                        </div>
+                                        <div
+                                            class="form-check radio-child-element mb-4 ms-4 form-control w-auto d-flex align-items-center">
+                                            <input class="form-check-input ms-0 mt-0" type="radio" name="account-type" id="account-type-company">
+                                            <label class="form-check-label top-0 ms-3" for="account-type-company">
+                                                Company
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group mb-3">
+                                    <label for="" class="text-uppercase">ROUTING NUMBER</label>
+                                    <p class="mb-2 text-muted">Also known as ABA number.</p>
+                                    <input type="text" class="form-control" placeholder="ex. 110000000">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group mb-3">
+                                    <label for="" class="text-uppercase ">Account Number</label>
+                                    <input type="text" class="form-control" placeholder="ex. 000123456789">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal Body Ends-->
+
+                    <div class="modal-footer">
+                        <div class="d-flex justify-content-end w-100">
+                            <button type="button" class="btn btn-link text-decoration-none font-weight-600"
+                                data-bs-toggle="modal">
+                                CANCEL
+                            </button>
+                            <button type="button" class="btn btn-secondary py-3 px-3 rounded-3 ms-3"
+                                data-bs-target="#newPaymentLinkEntityModal" data-bs-toggle="modal"
+                                data-bs-dismiss="modal">
+                                NEXT
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Add Payment Ends -->
+
+        <!-- add new payment link entity  Starts -->
+        <div class="modal modal-right fade" id="newPaymentLinkEntityModal" tabindex="-1"
+            aria-labelledby="linkEntityModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-end modal-dialog-scrollable my-0 min-vh-100">
+                <div class="modal-content border-0 rounded-0 min-vh-100">
+                    <!-- Modal Header -->
+                    <div class="modal-header flex-wrap">
+                        <div class="d-flex align-items-center w-100 mb-4 pb-2">
+                            <span class="bg-dark p-3 rounded-2 me-4 d-inline-block">
+                                <span class="icon icon-payment-white  icon-lg m-0"></span>
+                            </span>
+                            <div>
+                                <span class="d-block text-dark text-opacity-50 fs-9 text-uppercase">Jenny's card ••••
+                                    1224d</span>
+                                <h3 class="fs-3 m-0 mt-2">Link Entity/Group</h3>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center white-bg px-4 py-3 mt-4 rounded-2 w-100">
+                            <span class="icon icon-search-grey opacity-25"></span>
+                            <input class="w-100 bg-transparent p-0 rounded-2 border-0" id="search" type="text"
+                                name="seach" placeholder="Search by Entity or Department">
+                        </div>
+                        <div class="d-flex justify-content-end mt-3 ml-1">
+                            <a class="text-decoration-none text-dark" href="/">SELECT ALL</a>
+                            <a class="text-decoration-none text-dark ms-4" href="/">DESELECT ALL</a>
+                        </div>
+                    </div>
+
+                    <!-- Modal Header Ends -->
+
+                    <!-- Modal Body -->
+                    <div class="modal-body">
+                        <div class="accordion" id="accordionGroup1">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="GroupInfo">
+                                    <button class="accordion-button collapsed text-black font-weight-500" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                                        aria-controls="collapseOne">
+                                        <input class="form-check-input me-3" type="checkbox" value="" id="" checked="">
+                                        GROUP NAME
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    aria-labelledby="GroupInfo" data-bs-parent="#accordionGroup">
+                                    <div class="accordion-body p-0">
+                                        <div class="d-flex align-items-center bg-white px-3 py-3 border-bottom">
+                                            <span class="ps-5">
+                                                <input class="form-check-input me-4" type="checkbox" value="" id=""
+                                                    checked="">
+                                                Mainsail Partners
+                                            </span>
+
+                                        </div>
+                                        <div class="d-flex align-items-center bg-white px-3 py-3 border-bottom">
+                                            <span class="ps-5">
+                                                <input class="form-check-input me-4" type="checkbox" value="" id=""
+                                                    checked="">
+                                                Mainsail Partners
+                                            </span>
+                                        </div>
+                                        <div class="d-flex align-items-center bg-white px-3 py-3 border-bottom">
+                                            <span class="ps-5">
+                                                <input class="form-check-input me-4" type="checkbox" value="" id=""
+                                                    checked="">
+                                                Mainsail Partners
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="accordion" id="accordionGroup2">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="GroupInfo">
+
+                                    <button class="accordion-button collapsed text-black font-weight-500" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                                        aria-controls="collapseOne">
+                                        <input class="form-check-input me-3" type="checkbox" value="" id="" checked="">
+                                        GROUP NAME
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="GroupInfo"
+                                    data-bs-parent="#accordionGroup">
+                                    <div class="accordion-body p-0">
+                                        <div class="d-flex align-items-center bg-white px-3 py-3 border-bottom">
+                                            <span class="ps-5">
+                                                <input class="form-check-input me-4" type="checkbox" value="" id=""
+                                                    checked="">
+                                                Mainsail Partners
+                                            </span>
+
+
+                                        </div>
+                                        <div class="d-flex align-items-center bg-white px-3 py-3 border-bottom">
+                                            <span class="ps-5">
+                                                <input class="form-check-input me-4" type="checkbox" value="" id=""
+                                                    checked="">
+                                                Mainsail Partners
+                                            </span>
+
+
+                                        </div>
+                                        <div class="d-flex align-items-center bg-white px-3 py-3 border-bottom">
+                                            <span class="ps-5">
+                                                <input class="form-check-input me-4" type="checkbox" value="" id=""
+                                                    checked="">
+                                                Mainsail Partners
+                                            </span>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="accordion" id="accordionGroup3">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="GroupInfo">
+
+                                    <button class="accordion-button collapsed text-black font-weight-500" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                                        aria-controls="collapseOne">
+                                        <input class="form-check-input me-3" type="checkbox" value="" id="" checked="">
+                                        GROUP NAME
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="GroupInfo"
+                                    data-bs-parent="#accordionGroup">
+                                    <div class="accordion-body p-0">
+                                        <div class="d-flex align-items-center bg-white px-3 py-3 border-bottom">
+                                            <span class="ps-5">
+                                                <input class="form-check-input me-4" type="checkbox" value="" id=""
+                                                    checked="">
+                                                Mainsail Partners
+                                            </span>
+
+
+                                        </div>
+                                        <div class="d-flex align-items-center bg-white px-3 py-3 border-bottom">
+                                            <span class="ps-5">
+                                                <input class="form-check-input me-4" type="checkbox" value="" id=""
+                                                    checked="">
+                                                Mainsail Partners
+                                            </span>
+
+
+                                        </div>
+                                        <div class="d-flex align-items-center bg-white px-3 py-3 border-bottom">
+                                            <span class="ps-5">
+                                                <input class="form-check-input me-4" type="checkbox" value="" id=""
+                                                    checked="">
+                                                Mainsail Partners
+                                            </span>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Modal Body Ends-->
+
+                    <div class="modal-footer">
+                        <div class="d-flex justify-content-end w-100">
+                            <button type="button" class="btn btn-link text-decoration-none font-weight-600"
+                                data-bs-dismiss="modal">
+                                CANCEL
+                            </button>
+                            <button type="button" class="btn btn-tertiary-grey text-decoration-none font-weight-600"
+                                data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#addPaymentModal">
+                                Back
+                            </button>
+                            <button type="button" class="btn btn-secondary py-3 px-3 rounded-3 ms-3" data-bs-target=""
+                                data-bs-toggle="modal" data-bs-dismiss="modal">
+                                SAVE
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- and newpayment link entity Ends -->
+
+        <!-- link entity  Starts -->
+        <div class="modal modal-right fade" id="linkEntityModal" tabindex="-1" aria-labelledby="linkEntityModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-end modal-dialog-scrollable my-0 min-vh-100">
+                <div class="modal-content border-0 rounded-0 min-vh-100">
+                    <!-- Modal Header -->
+                    <div class="modal-header flex-wrap">
+                        <div class="d-flex align-items-center w-100 mb-4 pb-2">
+                            <span class="bg-dark p-3 rounded-2 me-4 d-inline-block">
+                                <span class="icon icon-payment-white  icon-lg m-0"></span>
+                            </span>
+                            <div>
+                                <span class="d-block text-dark text-opacity-50 fs-9 text-uppercase">Jenny's card ••••
+                                    1224d</span>
+                                <h3 class="fs-3 m-0 mt-2">Link Entity/Group</h3>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center white-bg px-4 py-3 mt-4 rounded-2 w-100">
+                            <span class="icon icon-search-grey opacity-25"></span>
+                            <input class="w-100 bg-transparent p-0 rounded-2 border-0" id="search" type="text"
+                                name="seach" placeholder="Search by Entity or Department">
+                        </div>
+                        <div class="d-flex justify-content-end mt-3 ml-1">
+                            <a class="text-decoration-none text-dark" href="/">SELECT ALL</a>
+                            <a class="text-decoration-none text-dark ms-4" href="/">DESELECT ALL</a>
+                        </div>
+                    </div>
+
+                    <!-- Modal Header Ends -->
+
+                    <!-- Modal Body -->
+                    <div class="modal-body">
+                        <div class="accordion" id="accordionGroup1">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="GroupInfo">
+                                    <button class="accordion-button collapsed text-black font-weight-500" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                                        aria-controls="collapseOne">
+                                        <input class="form-check-input me-3" type="checkbox" value="" id="" checked="">
+                                        GROUP NAME
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    aria-labelledby="GroupInfo" data-bs-parent="#accordionGroup">
+                                    <div class="accordion-body p-0">
+                                        <div class="d-flex align-items-center bg-white px-3 py-3 border-bottom">
+                                            <span class="ps-5">
+                                                <input class="form-check-input me-4" type="checkbox" value="" id="partner1"
+                                                    checked="">
+                                                <label for="partner1" class="text-capitalize fs-7">Mainsail Partners</label>
+                                            </span>
+
+                                        </div>
+                                        <div class="d-flex align-items-center bg-white px-3 py-3 border-bottom">
+                                            <span class="ps-5">
+                                                <input class="form-check-input me-4" type="checkbox" value="" id="partner2"
+                                                    checked="">
+                                                    <label for="partner2" class="text-capitalize fs-7">Mainsail Partners</label>
+                                            </span>
+                                        </div>
+                                        <div class="d-flex align-items-center bg-white px-3 py-3 border-bottom">
+                                            <span class="ps-5">
+                                                <input class="form-check-input me-4" type="checkbox" value="" id="partner3"
+                                                    checked="">
+                                                    <label for="partner3" class="text-capitalize fs-7">Mainsail Partners</label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="accordion" id="accordionGroup2">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="GroupInfo">
+
+                                    <button class="accordion-button collapsed text-black font-weight-500" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                                        aria-controls="collapseOne">
+                                        <input class="form-check-input me-3" type="checkbox" value="" id="" checked="">
+                                        GROUP NAME
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="GroupInfo"
+                                    data-bs-parent="#accordionGroup">
+                                    <div class="accordion-body p-0">
+                                        <div class="d-flex align-items-center bg-white px-3 py-3 border-bottom">
+                                            <span class="ps-5">
+                                                <input class="form-check-input me-4" type="checkbox" value="" id="partner4"
+                                                    checked="">
+                                                <label for="partner4" class="text-capitalize fs-7">Mainsail Partners</label>
+                                            </span>
+
+
+                                        </div>
+                                        <div class="d-flex align-items-center bg-white px-3 py-3 border-bottom">
+                                            <span class="ps-5">
+                                                <input class="form-check-input me-4" type="checkbox" value="" id="partner5"
+                                                    checked="">
+                                                <label for="partner5" class="text-capitalize fs-7">Mainsail Partners</label>
+                                            </span>
+
+
+                                        </div>
+                                        <div class="d-flex align-items-center bg-white px-3 py-3 border-bottom">
+                                            <span class="ps-5">
+                                                <input class="form-check-input me-4" type="checkbox" value="" id="partner6"
+                                                    checked="">
+                                                <label for="partner6" class="text-capitalize fs-7">Mainsail Partners</label>
+                                            </span>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="accordion" id="accordionGroup3">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="GroupInfo">
+
+                                    <button class="accordion-button collapsed text-black font-weight-500" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                                        aria-controls="collapseOne">
+                                        <input class="form-check-input me-3" type="checkbox" value="" id="" checked="">
+                                        GROUP NAME
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="GroupInfo"
+                                    data-bs-parent="#accordionGroup">
+                                    <div class="accordion-body p-0">
+                                        <div class="d-flex align-items-center bg-white px-3 py-3 border-bottom">
+                                            <span class="ps-5">
+                                                <input class="form-check-input me-4" type="checkbox" value="" id="partner7"
+                                                    checked="">
+                                                    <label for="partner7" class="text-capitalize fs-7">Mainsail Partners</label>
+                                            </span>
+
+
+                                        </div>
+                                        <div class="d-flex align-items-center bg-white px-3 py-3 border-bottom">
+                                            <span class="ps-5">
+                                                <input class="form-check-input me-4" type="checkbox" value="" id="partner8"
+                                                    checked="">
+                                                    <label for="partner8" class="text-capitalize fs-7">Mainsail Partners</label>
+                                            </span>
+
+
+                                        </div>
+                                        <div class="d-flex align-items-center bg-white px-3 py-3 border-bottom">
+                                            <span class="ps-5">
+                                                <input class="form-check-input me-4" type="checkbox" value="" id="partner9"
+                                                    checked="">
+                                                    <label for="partner9" class="text-capitalize fs-7">Mainsail Partners</label>
+                                            </span>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Modal Body Ends-->
+
+                    <div class="modal-footer">
+                        <div class="d-flex justify-content-end w-100">
+                            <button type="button" class="btn btn-link text-decoration-none font-weight-600"
+                                data-bs-dismiss="modal">
+                                CANCEL
+                            </button>
+                            <button type="button" class="btn btn-secondary py-3 px-3 rounded-3 ms-3" data-bs-target=""
+                                data-bs-toggle="modal" data-bs-dismiss="modal">
+                                SAVE
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- link entity Ends -->
+
+        <!-- billing subscription  Starts -->
+        <div class="modal modal-right fade" id="billingSubscriptionModal" tabindex="-1"
+            aria-labelledby="billingCycleyModalLabel" aria-hidden="true">
+
+            <div class="modal-dialog modal-lg-plus modal-dialog-end modal-dialog-scrollable my-0 min-vh-100">
+                <div class="modal-content p-2 border-0 rounded-0 min-vh-100">
+
+                    <!-- Modal Body -->
+                    <div class="modal-body bg-dark pt-1 pb-1 py-0 px-1">
+                        <div class="bg-light px-4 position-relative">
+                            <!-- Modal Header -->
+                            <div class="modal-header flex-wrap px-0">
+                                <div
+                                    class="d-flex align-items-center justify-content-between w-100 border-bottom border-danger border-3 pb-4">
+                                    <div>
+                                        <a href="/" class="logo">
+                                            <img src="../dist/images/logo.png" class="d-lg-block" alt="FileJet">
+                                        </a>
+                                    </div>
+                                    <div class="me-5">
+                                        <h6 class="text-uppercase fw-bold text-light-blue">Invoice Details</h6>
+                                        <div class="mt-3">
+                                            <p class="mb-0 text-light-blue">Invoice ID: 2435</p>
+                                            <p class="mb-0 text-light-blue">Invoice Date: Dec 02, 2023</p>
+                                            <p class="mb-0 text-light-blue">Due By Date: Dec 02, 2023</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- Modal Header Ends -->
+
+                            <div class="subscription-body px-4">
+                                <p class="border-bottom-light-blue border-2 pb-2 text-light-blue fs-4 font-weight-600">
+                                    Partner Information</p>
+
+                                <div class="d-flex justify-content-between">
+                                    <div class="shippingAddress">
+                                        <h6 class="font-weight-700 fs-4">Billing Address</h6>
+                                        <address>
+                                            <ul class="list-unstyled font-weight-500 fs-5">
+                                                <li class="lh-sm">Allen Corp Supply <br>
+                                                    10440 pioneer Bivd <br>
+                                                    Suite B
+                                                </li>
+                                                <li class="lh-sm">
+                                                    Sanita Fe Springs, CA 90456 <br>
+                                                    United States <br>
+                                                    orders@allencorpsupply.co
+                                                </li>
+                                            </ul>
+                                        </address>
+                                    </div>
+                                    <div class="billingAddress">
+                                        <h6 class="font-weight-700 fs-4">Shipping Address</h6>
+                                        <address>
+                                            <ul class="list-unstyled font-weight-500 fs-5">
+                                                <li class="lh-sm">Allen Corp Supply <br>
+                                                    10440 pioneer Bivd <br>
+                                                    Suite B
+                                                </li>
+                                                <li class="lh-sm">
+                                                    Sanita Fe Springs, CA 90456 <br>
+                                                    United States <br>
+
+                                                </li>
+                                            </ul>
+                                        </address>
+
+                                    </div>
+                                    <div></div>
+
+                                </div>
+
+                                <div class="pb-5 position-relative">
+                                    <h6 class="border-bottom-light-blue pb-2 text-light-blue font-weight-600 fs-4">
+                                        Invoice Summary</h6>
+
+                                    <div class="table-parent pb-5">
+
+                                        <table class="table w-100 table-striped table-nowrap mb-0 fs-6">
+                                            <thead>
+                                                <tr>
+                                                    <th>S. No.</th>
+                                                    <th class="fixed-max-width">Entity</th>
+                                                    <th>Store Number</th>
+                                                    <th>Assigned Groups</th>
+                                                    <th>State</th>
+
+                                                    <th class="text-end">Subscription Fee</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+
+                                                <tr class="odd">
+                                                    <td class="sorting_1">1.</td>
+                                                    <td><span class="text-break text-uppercase">BlueSky Innovations
+                                                            BlueSky Innovations abc version 2.0</span> <sup
+                                                            class="text-light-blue">Plateform Fee</sup>
+                                                    </td>
+                                                    <td>10299</td>
+                                                    <td>BLUESKY INNOVATIONS BLUESK Groups</td>
+                                                    <td><span class="cursor-pointer" data-toggle="tooltip"
+                                                            data-bs-original-title="Arizona">AZ</span></td>
+
+                                                    <td>
+                                                        <div class="text-end">$345.00</div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="even">
+                                                    <td class="sorting_1">1.1</td>
+                                                    <td><span class="text-break">Boldly Better Business Boldly Better
+                                                            Business</span> <sup class="text-light-blue">Plateform
+                                                            Fee</sup>
+                                                    </td>
+                                                    <td>10299</td>
+                                                    <td>Donald Duck 2.0</td>
+                                                    <td><span class="cursor-pointer" data-toggle="tooltip"
+                                                            data-bs-original-title="California">CA</span></td>
+
+                                                    <td>
+                                                        <div class="text-end">$45.00</div>
+                                                    </td>
+
+                                                </tr>
+                                                <tr class="odd">
+                                                    <td class="sorting_1">1.2</td>
+                                                    <td><span class="text-break">BrightPath Enterprises</span> <sup
+                                                            class="text-light-blue">Plateform Fee</sup>
+                                                    </td>
+                                                    <td>10299</td>
+                                                    <td>Donald Duck 3.0 groups</td>
+                                                    <td><span class="cursor-pointer" data-toggle="tooltip"
+                                                            data-bs-original-title="Florida">FL</span></td>
+
+                                                    <td>
+                                                        <div class="text-end">$345.00</div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="even">
+                                                    <td class="sorting_1">2</td>
+                                                    <td><span class="text-break text-uppercase">Ignite Ideas LLC</span>
+                                                    </td>
+                                                    <td>10299</td>
+                                                    <td>Donald Duck 4.0 groups</td>
+                                                    <td><span class="cursor-pointer" data-toggle="tooltip"
+                                                            data-bs-original-title="Maine">ME</span></td>
+
+                                                    <td>
+                                                        <div class="text-end">$3.00</div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="odd">
+                                                    <td class="sorting_1">2.1</td>
+                                                    <td><span class="text-break">Inception Innovations</span>
+                                                    </td>
+                                                    <td>10299</td>
+                                                    <td>Donald Duck 5.0 groups</td>
+                                                    <td><span class="cursor-pointer" data-toggle="tooltip"
+                                                            data-bs-original-title="Wyoming">WY</span></td>
+
+                                                    <td>
+                                                        <div class="text-end">$0.00</div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="even">
+                                                    <td class="sorting_1">2.2</td>
+                                                    <td><span class="text-break">NextWave Industries</span>
+                                                    </td>
+                                                    <td>10299</td>
+                                                    <td>Donald Duck 6.0 groups</td>
+                                                    <td><span class="cursor-pointer" data-toggle="tooltip"
+                                                            data-bs-original-title="Idaho">ID</span></td>
+
+                                                    <td>
+                                                        <div class="text-end">$15.00</div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="odd">
+                                                    <td class="sorting_1">2.3</td>
+                                                    <td><span class="text-break">Nimbus Network
+                                                            Solutions</span></td>
+                                                    <td>10299</td>
+                                                    <td>Donald Duck 3.0 groups</td>
+                                                    <td><span class="cursor-pointer" data-toggle="tooltip"
+                                                            data-bs-original-title="Montana">MT</span></td>
+
+                                                    <td>
+                                                        <div class="text-end">$5.00</div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="even">
+                                                    <td class="sorting_1">3</td>
+                                                    <td><span class="text-break text-uppercase">Ollivander's Tier
+                                                            Technologies</span></td>
+                                                    <td>10299</td>
+                                                    <td>Donald Duck 3.0 groups</td>
+                                                    <td><span class="cursor-pointer" data-toggle="tooltip"
+                                                            data-bs-original-title="Alaska">AK</span></td>
+
+                                                    <td>
+                                                        <div class="text-end">$25.00</div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="odd">
+                                                    <td class="sorting_1">3.1</td>
+                                                    <td><span class="text-break">Precision Progression
+                                                            Group</span></td>
+                                                    <td>10299</td>
+                                                    <td>Donald Duck 3.0 groups</td>
+                                                    <td><span class="cursor-pointer" data-toggle="tooltip"
+                                                            data-bs-original-title="Arkansas">AR</span></td>
+
+                                                    <td>
+                                                        <div class="text-end">$5.00</div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="even">
+                                                    <td></td>
+                                                    <td class="fw-bold fs-5">Total</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td class="text-end fw-bold fs-5">$765.00</td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="subscription-footer border-top border-danger border-2">
+                                <div class="d-flex justify-content-end py-4">
+                                    <div class="fs-6">
+
+                                        Website: filejet.com <br>
+                                        Phone: +1 (949) 259-5955
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Modal Body Ends-->
+                    <div class="modal-footer">
+                        <div class="d-flex justify-content-end w-100 gap-3">
+                            <button type="button" class="btn btn-link text-decoration-none font-weight-600"
+                                data-bs-dismiss="modal">
+                                CLOSE
+                            </button>
+
+                            <button type="button" data-bs-toggle="modal"
+                                data-bs-target="#subscriptionBillingInvoiceModal"
+                                class="btn btn-secondary text-decoration-none font-weight-600">
+                                Next
+                            </button>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <!-- billing subscription modal Ends -->
+
+        <!-- subscription billing Invoice modal Starts -->
+        <div class="modal modal-right fade" id="subscriptionBillingInvoiceModal" tabindex="-1"
+            aria-labelledby="billingCycleyModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-end modal-dialog-scrollable my-0 min-vh-100">
+                <div class="modal-content border-0 rounded-0 min-vh-100">
+                    <!-- Modal Header -->
+                    <div class="modal-header flex-wrap">
+                        <div class="d-flex align-items-center w-100">
+                            <span class="bg-dark p-3 rounded-2 me-4 d-inline-block">
+                                <span class="icon icon-payment-white  icon-lg m-0"></span>
+                            </span>
+                            <div>
+                                <span class="d-block text-dark text-opacity-50 fs-9 text-uppercase">billing</span>
+                                <h3 class="fs-3 m-0 mt-2">Complete Subscription Renewal</h3>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Modal Header Ends -->
+
+                    <!-- Modal Body -->
+                    <div class="modal-body">
+                        <!-- <p class="fw-normal">Complete payment for order #3470 (Entity 1 INC)</p> -->
+                        <div class="bg-white rounded-3 p-4 shadow-sm">
+                            <form action="">
+                                <div class="mb-3">
+                                    <label for="" class="form-label text-uppercase">Payment Type</label>
+                                    <div class="mb-3 bg-white p-4 rounded-3 shadow-lg">
+                                        <div class=" d-flex justify-content-start gap-5 w-100">
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="payNowLater" id="payNow" value="option1">
+                                                <label class="form-check-label" for="payNow">PAY NOw</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="payNowLater" id="payLater" value="option2">
+                                                <label class="form-check-label" for="payLater">Pay Later</label>
+                                            </div>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="" class="form-label text-uppercase">Payment by</label>
+                                    <select class="form-select form-control">
+                                        <option selected="">Partner</option>
+                                        <option value="1">Admin</option>
+                                        <option value="2">Type 2</option>
+
+                                    </select>
+                                </div>
+                               
+                                <div class="mb-3">
+                                    <label for="" class="form-label text-uppercase">Choose Payment method</label>
+                                    <select class="form-select form-control">
+                                        <option selected="">Kelly-visa 2345</option>
+                                        <option value="1">Admin</option>
+                                        <option value="2">Type 2</option>
+
+                                    </select>
+                                </div>
+                                <!-- <div class="mb-3">
+                                    <label for="" class="form-label text-uppercase">Use Alternate Credit card (one time use)</label>
+                                    <input type="text" class="form-control" placeholder="Card Number">
+                                </div>
+
+                                <div class="mb-3">
+                                    
+                                    <fieldset disabled="">
+                                        <label for="" class="form-label text-uppercase">CARD EXPIRATION</label>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" id="" value="12/10/2023">
+                                                
+        
+                                            </div>
+                                            <div class="col-md-6">
+                                              
+                                                <input type="text" class="form-control" id="" value="123">
+        
+                                            </div>
+
+                                        </div>
+                                    </fieldset>
+                                </div> -->
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <label for="" class="form-label text-uppercase">Total amount</label>
+                                        <p class="font-weight-600">$10.00</p>
+                                    </div>
+                                    <div>
+                                        <label for="" class="form-label text-uppercase">Total Unpaid</label>
+                                        <p class="font-weight-600">$10.00</p>
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+
+                    <!-- Modal Body Ends-->
+                    <div class="modal-footer">
+                        <div class="d-flex justify-content-end align-items-center w-100">
+                            <button type="button" class="btn btn-link text-decoration-none font-weight-600"
+                                data-bs-toggle="modal" data-bs-target="#billingSubscriptionModal">
+                                Cancel
+                            </button>
+                            <button type="button" class="btn btn-secondary text-decoration-none font-weight-600"
+                                data-bs-dismiss="modal" data-bs-toggle="modal"
+                                data-bs-target="#afterPayNowSubscriptionBillingInvoiceModal">
+                                Pay Now
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!--subscription billing Invoice modal Ends -->
+
+        <!--after Pay Now click subscription billing Invoice modal Starts -->
+        <div class="modal modal-right fade" id="afterPayNowSubscriptionBillingInvoiceModal" tabindex="-1"
+            aria-labelledby="afterPayNowSubscriptionBillingInvoiceModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-end modal-dialog-scrollable my-0 min-vh-100">
+                <div class="modal-content border-0 rounded-0 min-vh-100">
+                    <!-- Modal Header -->
+                    <div class="modal-header flex-wrap">
+                        <div class="d-flex align-items-center w-100">
+                            <span class="bg-dark p-3 rounded-2 me-4 d-inline-block">
+                                <span class="icon icon-payment-white  icon-lg m-0"></span>
+                            </span>
+                            <div>
+                                <span class="d-block text-dark text-opacity-50 fs-9 text-uppercase">billing</span>
+                                <h3 class="fs-3 m-0 mt-2">Complete Subscription Renewal</h3>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Modal Header Ends -->
+
+                    <!-- Modal Body -->
+                    <div class="modal-body">
+                        <div class="bg-white rounded-3 p-4 shadow-sm">
+
+                            <form method="post" accept-charset="utf-8" class="subscription-renewal-form"
+                                id="subscription-renewal-form"
+                                action="/qa/entity-subscriptions/store?end_date=2024-03-05">
+                                <div style="display:none;"><input type="hidden" name="_method" value="POST"><input
+                                        type="hidden" name="_csrfToken" autocomplete="off"
+                                        value="09fbb998912955465fb69a65c3bbfb057f5efa5a6b0f86939d32669a13fcddbfeaafde41963f72fb2205cd9ad0d59efb1391751c24316e4500c56f72a8f48d94">
+                                </div>
+                                <p>By Clicking the Submit button, the entities included in this Billing cycle will be
+                                    renewed for another 12 months.</p>
+                                <p>Please Submit payment to Filejet on or before your due date stated within your
+                                    Invoice</p>
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <label for="" class="form-label text-uppercase">Total Amount</label>
+                                        <p class="font-weight-600">$200.00</p>
+                                    </div>
+                                    <div>
+                                        <label for="" class="form-label text-uppercase">Total Unpaid</label>
+                                        <p class="font-weight-600">$200.00</p>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Modal Body Ends-->
+                    <div class="modal-footer">
+                        <div class="d-flex justify-content-end align-items-center w-100">
+                            <button type="button"
+                                class="btn btn-link text-decoration-none font-weight-600 payment-close-btn">
+                                Cancel
+                            </button>
+                            <button type="button" class="btn btn-secondary px-3 text-decoration-none font-weight-600 pay-now-btn"
+                                data-bs-dismiss="modal">Submit</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!--after Pay Now click subscription billing Invoice modal Ends -->
+        <!-- billing cycle  Starts -->
+        <div class="modal modal-right fade" id="billingSubscriptionModal" tabindex="-1"
+            aria-labelledby="billingCycleyModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-end modal-dialog-scrollable my-0 min-vh-100">
+                <div class="modal-content border-0 rounded-0 min-vh-100">
+                    <!-- Modal Header -->
+                    <div class="modal-header flex-wrap">
+                        <div class="d-flex align-items-center w-100 mb-4 pb-2">
+                            <span class="bg-dark p-3 rounded-2 me-4 d-inline-block">
+                                <span class="icon icon-payment-white  icon-lg m-0"></span>
+                            </span>
+                            <div>
+                                <span class="d-block text-dark text-opacity-50 fs-9 text-uppercase">billing cycle</span>
+                                <h3 class="fs-3 m-0 mt-2">Link Entity/Group</h3>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center white-bg px-4 py-3 mt-4 rounded-2 w-100">
+                            <span class="icon icon-search-grey opacity-25"></span>
+                            <input class="w-100 bg-transparent p-0 rounded-2 border-0" id="search" type="text"
+                                name="seach" placeholder="Search by Entity or Department">
+                        </div>
+                    </div>
+
+                    <!-- Modal Header Ends -->
+
+                    <!-- Modal Body -->
+                    <div class="modal-body">
+                        <div class="accordion" id="accordionGroup1">
+                            <div class="accordion-item" id="GroupInfo">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed text-black font-weight-500" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                                        aria-controls="collapseOne">
+                                        GROUP NAME
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    aria-labelledby="GroupInfo" data-bs-parent="#accordionGroup">
+                                    <div class="accordion-body p-0">
+                                        <div
+                                            class="d-flex align-items-center justify-content-between bg-white px-5 py-3 border-bottom">
+                                            <span>Mainsail Partners</span>
+                                            <span>Annual Report</span>
+                                        </div>
+                                        <div
+                                            class="d-flex align-items-center justify-content-between bg-white px-5 py-3 border-bottom">
+                                            <span>CIG, Inc. (CA)</span>
+                                            <span>Platform</span>
+                                        </div>
+                                        <div
+                                            class="d-flex align-items-center justify-content-between bg-white px-5 py-3 border-bottom">
+                                            <span>Coastal One, Inc. (England)</span>
+                                            <span>Registered Agent</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="accordion" id="accordionGroup2">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="GroupInfo">
+
+                                    <button class="accordion-button collapsed text-black font-weight-500" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true"
+                                        aria-controls="collapseTwo">
+                                        GROUP NAME
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="GroupInfo"
+                                    data-bs-parent="#accordionGroup">
+                                    <div class="accordion-body p-0">
+                                        <div
+                                            class="d-flex align-items-center justify-content-between bg-white px-5 py-3 border-bottom">
+                                            <span>Mainsail Partners</span>
+                                            <span>Annual Report</span>
+                                        </div>
+                                        <div
+                                            class="d-flex align-items-center justify-content-between bg-white px-5 py-3 border-bottom">
+                                            <span>CIG, Inc. (CA)</span>
+                                            <span>Platform</span>
+                                        </div>
+                                        <div
+                                            class="d-flex align-items-center justify-content-between bg-white px-5 py-3 border-bottom">
+                                            <span>Coastal One, Inc. (England)</span>
+                                            <span>Registered Agent</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion" id="accordionGroup3">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="GroupInfo">
+
+                                    <button class="accordion-button collapsed text-black font-weight-500" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true"
+                                        aria-controls="collapseThree">
+                                        GROUP NAME
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="GroupInfo"
+                                    data-bs-parent="#accordionGroup">
+                                    <div class="accordion-body p-0">
+                                        <div
+                                            class="d-flex align-items-center justify-content-between bg-white px-5 py-3 border-bottom">
+                                            <span>Mainsail Partners</span>
+                                            <span>Annual Report</span>
+                                        </div>
+                                        <div
+                                            class="d-flex align-items-center justify-content-between bg-white px-5 py-3 border-bottom">
+                                            <span>CIG, Inc. (CA)</span>
+                                            <span>Platform</span>
+                                        </div>
+                                        <div
+                                            class="d-flex align-items-center justify-content-between bg-white px-5 py-3 border-bottom">
+                                            <span>Coastal One, Inc. (England)</span>
+                                            <span>Registered Agent</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion" id="accordionGroup4">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="GroupInfo">
+
+                                    <button class="accordion-button collapsed text-black font-weight-500" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true"
+                                        aria-controls="collapseFour">
+                                        GROUP NAME
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="GroupInfo"
+                                    data-bs-parent="#accordionGroup">
+                                    <div class="accordion-body p-0">
+                                        <div
+                                            class="d-flex align-items-center justify-content-between bg-white px-5 py-3 border-bottom">
+                                            <span>Mainsail Partners</span>
+                                            <span>Annual Report</span>
+                                        </div>
+                                        <div
+                                            class="d-flex align-items-center justify-content-between bg-white px-5 py-3 border-bottom">
+                                            <span>CIG, Inc. (CA)</span>
+                                            <span>Platform</span>
+                                        </div>
+                                        <div
+                                            class="d-flex align-items-center justify-content-between bg-white px-5 py-3 border-bottom">
+                                            <span>Coastal One, Inc. (England)</span>
+                                            <span>Registered Agent</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal Body Ends-->
+                    <div class="modal-footer">
+                        <div class="d-flex justify-content-end w-100">
+                            <button type="button" class="btn btn-secondary text-decoration-none font-weight-600"
+                                data-bs-dismiss="modal">
+                                CLOSE
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- billing cycle modal Ends -->
+
+        <!-- verify bank account Starts -->
+        <div class="modal modal-right fade" id="verifyBankAccount" tabindex="-1"
+            aria-labelledby="verifyBankAccountLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-end modal-dialog-scrollable my-0 min-vh-100">
+                <div class="modal-content border-0 rounded-0 min-vh-100">
+                    <!-- Modal Header -->
+                    <div class="modal-header flex-wrap">
+                        <div class="d-flex align-items-center w-100 pb-2">
+                            <span class="bg-dark p-3 rounded-2 me-4 d-inline-block">
+                                <span class="icon icon-payment-white  icon-lg m-0"></span> </span>
+                            <div>
+                                <span class="d-block text-dark text-opacity-50 fs-9 text-uppercase">Payment
+                                    Method</span>
+                                <h3 class="fs-3 m-0 mt-2">Verify Bank Account</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal Header Ends -->
+
+                    <!-- Modal Body -->
+                    <div class="modal-body">
+                        <div class="">
+                            <p>Stripe sent two small deposits to this bank account. To verify this account, please
+                                confirm the amounts of the deposits. You have only 3 attempts to verify your account
+                                After 3 failed attempts you will not be able to verify your bank account.</p>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center gap-3">
+                            <div class="w-50">
+                                <div class="form-group">
+                                    <label for="firstDeposit" class="form-label text-uppercase">First deposit</label>
+                                    <input type="text" id="firstDeposit" class="form-control" placeholder="$.00">
+                                </div>
+                            </div>
+                            <div class="w-50">
+                                <div class="form-group">
+                                    <label for="secondDeposit" class=" form-label text-uppercase">Second
+                                        deposit</label>
+                                    <input type="text" id="secondDeposit" class="form-control" placeholder="$.00">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal Body Ends-->
+
+                    <div class="modal-footer">
+                        <div class="d-flex justify-content-end">
+                            <button type="button" class="btn btn-link rounded-3 ms-3" data-bs-dismiss="modal">
+                                Cancel
+                            </button>
+                            <button type="button" class="btn btn-secondary px-5 py-3 rounded-3 ms-3" data-bs-dismiss="modal">
+                                Verify
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Verify bank account Ends -->
+        <!-- payment method Created Confirm Starts -->
+        <div class="modal modal-right fade" id="paymentMethodCreatedConfirmModal" tabindex="-1"
+            aria-labelledby="paymentMethodCreatedConfirmModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-end modal-dialog-scrollable my-0 min-vh-100">
+                <div class="modal-content border-0 rounded-0 min-vh-100">
+                    <!-- Modal Header -->
+                    <div class="modal-header flex-wrap">
+                        <div class="d-flex align-items-center w-100 pb-2">
+                            <span class="green-bg p-3 rounded-2 me-4 d-inline-block">
+                                <span class="icon icon-md icon-white-tick m-0"></span>
+                            </span>
+                            <div>
+                                <span class="d-block text-dark text-opacity-50 fs-9 text-uppercase">SUCCESS</span>
+                                <h3 class="fs-3 m-0 mt-2">Payment Method Added!</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal Header Ends -->
+
+                    <!-- Modal Body -->
+                    <div class="modal-body">
+                        <div class="">
+                            <p>Your Billing has been successfully updated.</p>
+                        </div>
+                    </div>
+
+                    <!-- Modal Body Ends-->
+
+                    <div class="modal-footer">
+                        <div class="d-flex justify-content-end">
+                            <button type="button" class="btn btn-secondary px-5 py-3 rounded-3 ms-3"
+                                data-bs-target="#paymentMethodUpdatedConfirmModal" data-bs-toggle="modal"
+                                data-bs-dismiss="modal">
+                                Close
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- payment method Confirm Ends -->
+        <!-- payment method updated Starts -->
+        <div class="modal modal-right fade" id="paymentMethodUpdatedConfirmModal" tabindex="-1"
+            aria-labelledby="paymentMethodUpdatedConfirmModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-end modal-dialog-scrollable my-0 min-vh-100">
+                <div class="modal-content border-0 rounded-0 min-vh-100">
+                    <!-- Modal Header -->
+                    <div class="modal-header flex-wrap">
+                        <div class="d-flex align-items-center w-100 pb-2">
+                            <span class="green-bg p-3 rounded-2 me-4 d-inline-block">
+                                <span class="icon icon-md icon-white-tick m-0"></span>
+                            </span>
+                            <div>
+                                <span class="d-block text-dark text-opacity-50 fs-9 text-uppercase">SUCCESS</span>
+                                <h3 class="fs-3 m-0 mt-2">Changes Updated!</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal Header Ends -->
+
+                    <!-- Modal Body -->
+                    <div class="modal-body">
+                        <div class="">
+                            <p>Your Billing has been successfully updated.</p>
+                        </div>
+                    </div>
+
+                    <!-- Modal Body Ends-->
+
+                    <div class="modal-footer">
+                        <div class="d-flex justify-content-end">
+                            <button type="button" class="btn btn-secondary px-5 py-3 rounded-3 ms-3" data-bs-dismiss="modal">
+                                Close
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- payment method updated Ends -->
+
+        <!-- add payment close confirm Starts -->
+        <div class="modal modal-right fade" id="closeConfirmModal" tabindex="-1"
+            aria-labelledby="closeConfirmModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-end modal-dialog-scrollable my-0 min-vh-100">
+                <div class="modal-content border-0 rounded-0 min-vh-100">
+                    <!-- Modal Header -->
+                    <div class="modal-header flex-wrap">
+                        <div class="d-flex align-items-center w-100 pb-2">
+                            <span class="red-bg p-3 rounded-2 me-4 d-inline-block">
+                                <span class="icon icon-exclamation-white m-0"></span>
+                            </span>
+                            <div>
+                                <span class="d-block text-dark text-opacity-50 fs-9 text-uppercase">warning</span>
+                                <h3 class="fs-3 m-0 mt-2">Go Back Without Saving?</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal Header Ends -->
+
+                    <!-- Modal Body -->
+                    <div class="modal-body">
+                        <div class="">
+                            <p>The changes that you’ve made to your Billing will be lost.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Modal Body Ends-->
+                    <div class="modal-footer">
+                        <div class="d-flex justify-content-end w-100">
+                            <button type="button" class="btn btn-link text-decoration-none font-weight-600 text-red"
+                                data-bs-target="#linkEntityModal" data-bs-toggle="modal" data-bs-dismiss="modal">
+                                Cancel
+                            </button>
+                            <button type="button" class="btn btn-danger py-3 px-3 rounded-3 ms-3"
+                                data-bs-dismiss="modal">
+                                Confirm
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- add payment close confirm Ends -->
+
+        <!--Payment Information Modal Starts -->
+        <div class="modal modal-right fade" id="paymentInfoModal" tabindex="-1" aria-labelledby="paymentInfoModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-end modal-dialog-scrollable my-0 min-vh-100">
+                <div class="modal-content border-0 rounded-0 min-vh-100">
+                    <!-- Modal Header -->
+                    <div class="modal-header flex-wrap">
+                        <div class="d-flex align-items-center w-100 pb-2">
+                            <span class="bg-dark p-3 rounded-2 me-4 d-inline-block">
+                                <span class="icon icon-payment-white  icon-lg m-0"></span>
+                            </span>
+                            <div>
+                                <span class="d-block text-dark text-opacity-50 fs-9 text-uppercase">MORE INFO</span>
+                                <h3 class="fs-3 m-0 mt-2">Plan Details</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal Header Ends -->
+
+                    <!-- Modal Body -->
+                    <div class="modal-body ">
+                        <ul class="nav nav-tabs plans-tabs" role="tablist">
+                            <li class="nav-item">
+                                <a href="javascript:void(0)" id="standard-plan-tab"
+                                    class="nav-link active fs-6 rounded-3" data-bs-toggle="tab"
+                                    data-bs-target="#standard-plan" role="tab" aria-controls="standard-plan"
+                                    aria-selected="true">
+
+                                    Standard
+
+                                    <span class="icon icon-white-tick "></span>
+                                </a>
+                            </li>
+                            <li class="nav-item ms-2">
+                                <a href="javascript:void(0)" id="pro-plan-tab" class="nav-link fs-6  rounded-3"
+                                    data-bs-toggle="tab" data-bs-target="#pro-plan" role="tab" aria-controls="pro-plan"
+                                    aria-selected="true">
+                                    Pro
+                                    <span class="icon icon-white-tick "></span>
+
+                                </a>
+                            </li>
+                            <li class="nav-item ms-2">
+                                <a href="javascript:void(0)" id="managed-plan-tab" class="nav-link fs-6  rounded-3"
+                                    data-bs-toggle="tab" data-bs-target="#managed-plan" role="tab"
+                                    aria-controls="managed-plan" aria-selected="true">
+                                    Managed
+                                    <span class="icon icon-white-tick "></span>
+
+                                </a>
+                            </li>
+
+                        </ul>
+
+                        <div class="tab-content shadow-none">
+                            <!-- Standard plan Starts -->
+                            <div class="tab-pane fade show active" id="standard-plan" role="tabpanel"
+                                aria-labelledby="standard-plan-tab">
+                                <div class="py-4">
+                                    <h4 class="font-weight-700 mb-3">Standard</h4>
+                                    <p class="font-weight-500">File, Maintain & Organize</p>
+                                    <ul class="list-unstyled mt-4">
+                                        <li class="d-flex align-items-start pb-4">
+                                            <span class="icon icon-check me-2"></span>
+                                            One User Included
+                                        </li>
+                                        <li class="d-flex align-items-start pb-4">
+                                            <span class="icon icon-check me-2"></span>
+                                            Centralized Digital Cloud-Based Platform
+                                        </li>
+                                        <li class="d-flex align-items-start pb-4">
+                                            <span class="icon icon-check me-2"></span>
+                                            Digital Entity Profile & Repository - Upload & Share Between
+                                            Stakeholders
+                                        </li>
+                                        <li class="d-flex align-items-start pb-4">
+                                            <span class="icon icon-check me-2"></span>
+                                            Automated Compliance Calendaring with Actionable Notifications
+                                        </li>
+                                        <li class="d-flex align-items-start pb-4">
+                                            <span class="icon icon-check me-2"></span>
+                                            Multi-Jurisdiction Capabilities all 50 States Filings
+                                        </li>
+                                        <li class="d-flex align-items-start pb-4">
+                                            <span class="icon icon-check me-2"></span>
+                                            Email Support
+                                        </li>
+                                        <li class="d-flex align-items-start pb-4">
+                                            <span class="icon icon-check me-2"></span>
+                                            30 Mins of Live Platform Training via Video Call & $125/hr for
+                                            Additional
+                                            Training
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- standard  plan Tab Ends -->
+
+                            <!-- pro plan Starts -->
+                            <div class="tab-pane fade" id="pro-plan" role="tabpanel" aria-labelledby="pro-plan-tab">
+                                <div class="py-4">
+                                    <h4 class="font-weight-700 mb-3">Professional</h4>
+                                    <p class="font-weight-500">Built for Teams</p>
+                                    <ul class="list-unstyled mt-4">
+                                        <li class="d-flex align-items-start pb-4">
+                                            <span class="icon icon-check me-2"></span>
+                                            Includes Everything in Standard
+                                        </li>
+                                        <li class="d-flex align-items-start pb-4">
+                                            <span class="icon icon-check me-2"></span>
+                                            5 User Seats
+                                        </li>
+                                        <li class="d-flex align-items-start pb-4">
+                                            <span class="icon icon-check me-2"></span>
+                                            Custom Integrable Reminder Calendaring
+                                        </li>
+                                        <li class="d-flex align-items-start pb-4">
+                                            <span class="icon icon-check me-2"></span>
+                                            Live Customer Phone Support
+                                        </li>
+                                        <li class="d-flex align-items-start pb-4">
+                                            <span class="icon icon-check me-2"></span>
+                                            Bulk Entity Uploading
+                                        </li>
+                                        <li class="d-flex align-items-start pb-4">
+                                            <span class="icon icon-check me-2"></span>
+                                            60 Mins of Live Platform Training via Video Call & $125/hr for
+                                            Additional
+                                            Training
+                                        </li>
+
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- pro plan Tab Ends -->
+
+
+                            <!-- Managed plan Starts -->
+                            <div class="tab-pane fade" id="managed-plan" role="tabpanel"
+                                aria-labelledby="managed-plan-tab">
+                                <div class="py-4">
+                                    <h4 class="font-weight-700 mb-3">Managed By Filejet</h4>
+                                    <p class="font-weight-500">Fully Automated – Complete Visibility</p>
+                                    <ul class="list-unstyled mt-4">
+                                        <li class="d-flex align-items-start pb-4">
+                                            <span class="icon icon-check me-2"></span>
+                                            Includes Everything in Professional
+                                        </li>
+                                        <li class="d-flex align-items-start pb-4">
+                                            <span class="icon icon-check me-2"></span>
+                                            Free Initial Entity Compliance Audit
+                                        </li>
+                                        <li class="d-flex align-items-start pb-4">
+                                            <span class="icon icon-check me-2"></span>
+                                            Unlimited User Seats
+                                        </li>
+                                        <li class="d-flex align-items-start pb-4">
+                                            <span class="icon icon-check me-2"></span>
+                                            Includes Annual Entity Compliance Report Filing
+                                        </li>
+                                        <li class="d-flex align-items-start pb-4">
+                                            <span class="icon icon-check me-2"></span>
+                                            Includes Annual Registered Agent Services
+                                        </li>
+                                        <li class="d-flex align-items-start pb-4">
+                                            <span class="icon icon-check me-2"></span>
+                                            Unlimited User Training
+                                        </li>
+                                        <li class="d-flex align-items-start pb-4">
+                                            <span class="icon icon-check me-2"></span>
+                                            Dedicated Account Representative
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- Managed plan Tab Ends -->
+
+
+                        </div>
+                    </div>
+
+                    <!-- Modal Body Ends-->
+
+                    <div class="modal-footer">
+                        <div class="d-flex justify-content-end w-100">
+
+                            <button type="button" class="btn btn-secondary py-3 px-3 rounded-3 ms-3" data-bs-dismiss="modal">
+                                CLOSE
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Payment Information Modal Ends -->
+
+        <!-- Delete Payment Ends -->
+        <div class="modal modal-right fade" id="deletePayment" tabindex="-1" aria-labelledby="deletePaymentLabel">
+            <div class="modal-dialog modal-dialog-end modal-dialog-scrollable my-0 min-vh-100">
+                <div class="modal-content border-0 rounded-0 min-vh-100">
+                    <!-- Modal Header -->
+                    <div class="modal-header flex-wrap">
+                        <div class="d-flex align-items-center w-100 pb-2">
+                            <span class="red-bg p-3 rounded-2 me-4 d-inline-block">
+                                <span class="icon icon-md icon-delete-white m-0"></span>
+                            </span>
+                            <div>
+                                <span class="d-block text-dark text-opacity-50 fs-9 text-uppercase">Remove</span>
+                                <h3 class="fs-3 m-0 mt-2 text-capitalize">Are you sure you want to remove permanently?
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal Header Ends -->
+
+                    <!-- Modal Body -->
+                    <div class="modal-body">
+                        <div class="">
+                        </div>
+                    </div>
+
+                    <!-- Modal Body Ends-->
+
+                    <div class="modal-footer">
+                        <div class="d-flex justify-content-end">
+                            <button type="button" class="btn btn-link px-5 py-3"
+                                data-bs-dismiss="modal">DISCARD</button>
+                            <button type="button" class="btn btn-danger px-5 py-3"
+                                data-bs-target="#groupDeleteConfirmModal" data-bs-toggle="modal"
+                                data-bs-dismiss="modal">CONFIRM</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Delete Payment Ends -->
+
+        <!-- Notification tabs button when click show and hide footer button -->
+        <script>
+            const markAsReadBtn = document.getElementById('markAsReadBtn');
+            const markAsUnreadBtn = document.getElementById('markAsUnreadBtn');
+        
+            document.querySelectorAll('.nav-link').forEach(button => {
+            button.addEventListener('click', () => {
+                markAsReadBtn.classList.add('d-none');
+                markAsUnreadBtn.classList.add('d-none');
+                
+                if (button.id === 'unread-notification-tab') {
+                    markAsReadBtn.classList.remove('d-none');
+                } else if (button.id === 'read-notification-tab') {
+                    markAsUnreadBtn.classList.remove('d-none');
+                }
+            });
+            });
+        </script>
+        <!-- end -->
+        <script src="../dist/js/plugins.min.js"></script>
+        <script src="../dist/js/custom.min.js"></script>
+        <!-- Scripts End-->
+</body>
+
+</html>

@@ -1,0 +1,1991 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Jet: Dashboard</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="dist/css/filejet-style.css">
+    <script src="dist/js/jquery.min.js"></script>
+    <!-- Scripts -->
+</head>
+
+<body>
+    <div class="grey-bg min-vh-100">
+        <div class="container-fluid p-0">
+            <div class="sidebar-wrapper">
+                <div class="sidebar min-vh-100 py-3 ps-3">
+                    <div>
+                        <div class="ps-3 pb-4">
+                            <a href="/" class="logo">
+                                <img src="dist/images/logo.png" class="d-none d-lg-block" alt="FileJet">
+                                <img src="dist/images/filejet-pinLogo.png" class="d-block d-lg-none" alt="FileJet">
+                            </a>
+                        </div>
+                        <div>
+                            <ul class="menu-link menu-onboardin p-0 m-0">
+                                <!-- Dashboard -->
+                                <li class="nav-link">
+                                    <a href="./" class="text-decoration-none ps-3 py-3 d-flex align-items-center">
+                                        
+                                        <span class="icon icon-entities-dark normal-icon"></span>
+                                        <span class="icon icon-entities-purple active-icon"></span>
+                                        <span class="text nav-text">Entities</span>
+                                    </a>
+                                </li>
+                                <!-- Entities -->
+                                <li class="nav-link active">
+                                    <a href="./groups.html" class="text-decoration-none ps-3 py-3 d-flex align-items-center">
+                                        <span class="icon icon-groups-dark normal-icon"></span>
+                                        <span class="icon icon-groups-purple active-icon"></span>
+                                        <span class="text nav-text position-relative">
+                                            Groups
+                                        </span>
+                                    </a>
+                                </li>
+                                <!-- Groups -->
+                                <li class="nav-link">
+                                    <a href="./users.html" class="text-decoration-none ps-3 py-3 d-flex align-items-center">
+                                        <span class="icon icon-users-dark normal-icon"></span>
+                                        <span class="icon icon-users-purple active-icon"></span>
+                                        <span class="text nav-text">Users</span>
+                                    </a>
+                                </li>
+                                <li class="nav-link">
+                                    <a href="./payment-method.html" class="text-decoration-none ps-3 py-3 d-flex align-items-center">
+                                        <span class="icon icon-payment-method-dark normal-icon"></span>
+                                        <span class="icon icon-payment-method-purple active-icon"></span>
+                                        <span class="text nav-text">Payment Method</span>
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <!-- <div class="pe-4 me-2 ps-3 flex-fill">
+                        <button type="button" class="btn btn-light border-dark px-3 text-capitalize w-100 ">Contact Rep</button>
+                    </div> -->
+                </div>
+            </div>
+            <div class="main-content-wrapper">
+                <div class="container-fluid container-lg">
+                    <div class="header py-1">
+                        <div class="row align-items-center">
+                            <div class="col-6 col-xl-6 col-lg-6">
+                                <h3 class="m-0 font-weight-700">
+
+                                    Onboarding - Groups
+
+                                </h3>
+                            </div>
+                            <div
+                                class="col col-md-6 col-xl-6 col-lg-6 d-flex align-items-center justify-content-end justify-content-md-end">
+
+                                <div class="profile-nav">
+                                    <div class="dropdown white-bg p-0 rounded-5">
+
+                                        <a class="nav-link dropdown-toggle show px-3" href="#" data-bs-toggle="dropdown"
+                                            aria-expanded="true">
+                                            <span class="avatar avatar-lg ms-n3">
+                                                <img src="../dist/images/avatar.png" alt="" />
+                                            </span>
+                                            <span class="user-name fw-bold">Roman</span>
+                                        </a>
+                                        <ul class="dropdown-menu" data-bs-popper="static">
+                                            <li>
+                                                <span
+                                                    class="dropdown-item py-3 d-flex align-items-center border-bottom">
+                                                    Account
+                                                </span>
+                                            </li>
+                                           
+                                            <li>
+                                                <a class="dropdown-item py-3 d-flex align-items-center"
+                                                    href="../../login.html">
+                                                    <span class="icon icon-logout me-4"></span>
+                                                    Logout
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="container-fluid container-lg">
+                    <div class="main-content pt-3">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb text-uppercase fs-10">
+                                <li class="breadcrumb-item"><a class="text-dark" href="groups.html">Groups</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Convey Health Solutions
+                                </li>
+                            </ol>
+                        </nav>
+                        <div class="mb-4 pt-2">
+                            <div class="row justify-content-between mb-4 align-items-center">
+                                <h3 class="fw-bold">Convey Health Solutions
+                                </h3>
+                                <div class="d-flex pt-4">
+                                    <ul class="nav nav-tabs nav-circluar align-items-center nav nav-tabs"
+                                        id="compliance" role="tablist">
+                                        <li class="nav-item nav-item-one">
+                                            <a class="nav-link active" id="groupDetails" data-toggle="tab"
+                                                href="#groupInfo" role="tab" aria-controls="groupInfo"
+                                                aria-selected="true">Group Details</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="members" data-toggle="tab" href="#membersList"
+                                                role="tab" aria-controls="membersList" aria-selected="false">
+                                                Members
+                                                <span class="count count-grey">1</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="address" data-toggle="tab" href="#addresses"
+                                                role="tab" aria-controls="addresses" aria-selected="false">
+                                                Addresses
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="payment" data-toggle="tab" href="#paymentDetails"
+                                                role="tab" aria-controls="paymentDetails" aria-selected="false">
+                                                Payment Details
+                                                <span class="count count-grey">3</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="entities" data-toggle="tab" href="#entitiesList"
+                                                role="tab" aria-controls="entitiesList" aria-selected="false">
+                                                Entities
+                                                <span class="count count-grey">5</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="tab-content rounded-3 overflow-hidden">
+                                <div class="tab-pane fade show active" id="groupInfo" role="tabpanel"
+                                    aria-labelledby="groupDetails">
+                                    <div class="row">
+                                        <div class="col-8 white-bg shadow-lg rounded-3 px-5 py-4">
+                                            <div class="d-flex justify-content-between mb-2">
+                                                <h4>Basic Details</h4>
+                                                <a href="javascript: void(0)" class="text-dark text-decoration-none"
+                                                    data-bs-toggle="modal" data-bs-target="#editGroupDetails">
+                                                    EDIT <span class="icon icon-sm icon-edit mx-1"
+                                                        data-toggle="tooltip" title="EDIT"></span></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-4">
+                                                    <div class="fw-bold text-uppercase fs-8">Primary Contact</div>
+                                                    <div class="opacity-75 mt-3">John Doe</div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="fw-bold text-uppercase fs-8">Email</div>
+                                                    <div class="opacity-75 mt-3 text-break">John@conveyhealth.com
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="fw-bold text-uppercase fs-8">Phone</div>
+                                                    <div class="opacity-75 mt-3">(234) 234-2342</div>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex justify-content-between mb-2 mt-5">
+                                                <h4>Sub Folders</h4>
+                                                <a href="javascript: void(0)" class="text-dark text-decoration-none"
+                                                    data-bs-toggle="modal" data-bs-target="#createFolder">
+                                                    + Add Folder </span></a>
+                                            </div>
+                                            <div class="">
+                                                <table
+                                                    class="table table-striped w-100 table-nowrap groups-details-table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="sorting-none col-1"></th>
+                                                            <th class="col-8">Name</th>
+                                                            <th class="col-2">Date Added</th>
+                                                            <th class="sorting-none col-1"></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="dt-control w-10">
+                                                                <a href="javascript:void(0);">
+                                                                    <span
+                                                                        class="icon icon-folder-upload-dark me-0"></span>
+                                                                </a>
+                                                            </td>
+                                                            <td class="doc-name w-75 text-break">Annual Reports</td>
+                                                            <td class="w-20">10/14/2023</td>
+                                                            <td class="w-10">
+                                                                <div
+                                                                    class="d-flex align-items-center justify-content-end">
+                                                                    <span
+                                                                        class="icon icon-edit edit-document-name mx-3 cursor-pointer"
+                                                                        data-toggle="tooltip" title="EDIT"></span>
+                                                                    <span
+                                                                        class="icon icon-save save-document-name mx-3 cursor-pointer"
+                                                                        data-toggle="tooltip" title="SAVE"></span>
+                                                                    <span class="icon icon-delete m-0 cursor-pointer"
+                                                                        data-bs-toggle="modal"
+                                                                        data-bs-target="#deleteFolder"
+                                                                        data-toggle="tooltip" title="DELETE"></span>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="dt-control">
+                                                                <a href="javascript:void(0);">
+                                                                    <span
+                                                                        class="icon icon-folder-upload-dark me-0"></span>
+                                                                </a>
+                                                            </td>
+                                                            <td class="doc-name">SOP's</td>
+                                                            <td>10/14/2023</td>
+                                                            <td>
+                                                                <div
+                                                                    class="d-flex align-items-center justify-content-end">
+                                                                    <span
+                                                                        class="icon icon-edit edit-document-name mx-3 cursor-pointer"
+                                                                        data-toggle="tooltip" title="EDIT"></span>
+                                                                    <span
+                                                                        class="icon icon-save save-document-name mx-3 cursor-pointer"
+                                                                        data-toggle="tooltip" title="SAVE"></span>
+                                                                    <span class="icon icon-delete m-0 cursor-pointer"
+                                                                        data-bs-toggle="modal"
+                                                                        data-bs-target="#deleteFolder"
+                                                                        data-toggle="tooltip" title="DELETE"></span>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="dt-control">
+                                                                <a href="javascript:void(0);">
+                                                                    <span
+                                                                        class="icon icon-folder-upload-dark me-0"></span>
+                                                                </a>
+                                                            </td>
+                                                            <td class="doc-name">Licenses</td>
+                                                            <td>10/14/2023</td>
+                                                            <td>
+                                                                <div
+                                                                    class="d-flex align-items-center justify-content-end">
+                                                                    <span
+                                                                        class="icon icon-edit edit-document-name mx-3 cursor-pointer"
+                                                                        data-toggle="tooltip" title="EDIT"></span>
+                                                                    <span
+                                                                        class="icon icon-save save-document-name mx-3 cursor-pointer"
+                                                                        data-toggle="tooltip" title="SAVE"></span>
+                                                                    <span class="icon icon-delete m-0 cursor-pointer"
+                                                                        data-bs-toggle="modal"
+                                                                        data-bs-target="#deleteFolder"
+                                                                        data-toggle="tooltip" title="DELETE"></span>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="ms-3 py-3 px-2 white-bg shadow-lg rounded-3">
+                                                <div class="fw-bold text-uppercase px-3">Note</div>
+                                                <form class="inline-form p-3">
+                                                    <div class="mb-3 d-flex justify-content-between gap-3">
+                                                        <input type="text" class="form-control mb-0 w-100"
+                                                            placeholder="Add Note">
+                                                        <button class="btn btn-secondary text-dark bg-light">Save</button>
+                                                    </div>
+                                                </form>
+                                                <table
+                                                    class="table table-striped w-100 table-nowrap data-table-listing">
+                                                    <thead class="d-none">
+                                                        <tr>
+                                                            <th></th>
+                                                            <th></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="fw-bold">Client Credit: 1. Order #4333
+                                                                    ($21.99)</div>
+                                                            </td>
+                                                            <td>October 14 2023</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="fw-bold">Sent Annual Report reminder</div>
+                                                            </td>
+                                                            <td>October 14 2023</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="membersList" role="tabpanel" aria-labelledby="members">
+                                    <div class="white-bg shadow-lg rounded-3 px-5 py-4">
+                                        <div class="d-flex justify-content-between mb-2">
+                                            <h4>Members</h4>
+                                            <a href="#" class="text-dark text-decoration-none d-inline-block"
+                                                data-bs-toggle="modal" data-bs-target="#addGroupMembers">
+                                                <span data-toggle="tooltip" title="ADD MEMBER">+ ADD
+                                                    MEMBER</span></a>
+
+                                        </div>
+                                        <div class="d-flex position-relative w-100 me-0 me-sm-4 shadow mb-4">
+                                            <span
+                                                class="icon icon-search-grey icon-sm opacity-50 position-absolute ms-4 h-100"></span>
+                                            <input type="text" placeholder="Find a Group User"
+                                                class="form-control py-0 ps-5 pe-4 m-0" />
+                                        </div>
+                                        <table class="table table-striped w-100 table-nowrap data-table-listing">
+                                            <thead>
+                                                <tr>
+                                                    <th class="sorting-none">Name</th>
+                                                    <th class="sorting-none"></th>
+                                                    <th class="sorting-none"></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-uppercase">Nichols Coffey</td>
+                                                    <td>
+                                                        <div class="d-flex align-items-center justify-content-center">
+                                                            <span class="opacity-25 mx-3">View</span>
+                                                            <span class="icon icon-bell opacity-25 mx-3"
+                                                                data-toggle="tooltip" title="Notification"></span>
+                                                            <span class="icon mx-3"></span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="d-flex align-items-center justify-content-end">
+                                                            <span class="icon icon-edit mx-3 cursor-pointer"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#editGroupMembers" data-toggle="tooltip"
+                                                                title="EDIT"></span>
+                                                            <span class=" icon icon-delete ms-3 me-0"
+                                                                data-toggle="tooltip" title="DELETE"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#deleteMember"></span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="addresses" role="tabpanel" aria-labelledby="address">
+                                    <div class="white-bg shadow-lg rounded-3 px-5 py-4">
+                                        <div>
+                                            <div class="d-flex justify-content-between mb-2">
+                                                <h4>Group Address</h4>
+                                                <a href="javascript: void(0)" class="text-dark text-decoration-none"
+                                                    data-bs-toggle="modal" data-bs-target="#editAddress">
+                                                    EDIT <span class="icon icon-sm icon-edit mx-1"
+                                                        data-toggle="tooltip" title="EDIT"></span></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-4">
+                                                    <div class="fw-bold text-uppercase fs-8">Address
+                                                    </div>
+                                                    <div class="opacity-75 mt-3 group-address-text">Suite 652</div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="fw-bold text-uppercase fs-8">Address Line 2
+                                                    </div>
+                                                    <div class="opacity-75 mt-3 group-address2-text">3952 Murazik Hills
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="fw-bold text-uppercase fs-8">City</div>
+                                                    <div class="opacity-75 mt-3 group-city-text">Madeleneport</div>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-4">
+                                                <div class="col-4">
+                                                    <div class="fw-bold text-uppercase fs-8">Zip Code
+                                                    </div>
+                                                    <div class="opacity-75 mt-3 group-zip-text">36709</div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="fw-bold text-uppercase fs-8">State</div>
+                                                    <div class="opacity-75 mt-3 group-state-text">WA</div>
+                                                </div>
+                                            </div>
+                                            <hr class="my-5">
+                                        </div>
+                                        <div>
+                                            <div class="d-flex justify-content-between mb-2">
+                                                <h4>Shipping Address</h4>
+                                                <a href="javascript: void(0)" class="text-dark text-decoration-none"
+                                                    data-bs-toggle="modal" data-bs-target="#editShippingAddress">
+                                                    EDIT <span class="icon icon-sm icon-edit mx-1"
+                                                        data-toggle="tooltip" title="EDIT"></span></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-4">
+                                                    <div class="fw-bold text-uppercase fs-8">Address
+                                                    </div>
+                                                    <div class="opacity-75 mt-3 group-address-text">Suite 652</div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="fw-bold text-uppercase fs-8">Address Line 2
+                                                    </div>
+                                                    <div class="opacity-75 mt-3 group-address2-text">3952 Murazik Hills
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="fw-bold text-uppercase fs-8">City</div>
+                                                    <div class="opacity-75 mt-3 group-city-text">Madeleneport</div>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-4">
+                                                <div class="col-4">
+                                                    <div class="fw-bold text-uppercase fs-8">Zip Code
+                                                    </div>
+                                                    <div class="opacity-75 mt-3 group-zip-text">36709</div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="fw-bold text-uppercase fs-8">State</div>
+                                                    <div class="opacity-75 mt-3 group-state-text">WA</div>
+                                                </div>
+                                            </div>
+                                            <hr class="my-5">
+                                        </div>
+                                        <div>
+                                            <div class="d-flex justify-content-between mb-2">
+                                                <h4>Billing Address</h4>
+                                                <a href="javascript: void(0)" class="text-dark text-decoration-none"
+                                                    data-bs-toggle="modal" data-bs-target="#editBillingAddress">
+                                                    EDIT <span class="icon icon-sm icon-edit mx-1"
+                                                        data-toggle="tooltip" title="EDIT"></span></a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-4">
+                                                    <div class="fw-bold text-uppercase fs-8">Address
+                                                    </div>
+                                                    <div class="opacity-75 mt-3 group-address-text">Suite 652</div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="fw-bold text-uppercase fs-8">Address Line 2
+                                                    </div>
+                                                    <div class="opacity-75 mt-3 group-address2-text">3952 Murazik Hills
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="fw-bold text-uppercase fs-8">City</div>
+                                                    <div class="opacity-75 mt-3 group-city-text">Madeleneport</div>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-4">
+                                                <div class="col-4">
+                                                    <div class="fw-bold text-uppercase fs-8">Zip Code
+                                                    </div>
+                                                    <div class="opacity-75 mt-3 group-zip-text">36709</div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="fw-bold text-uppercase fs-8">State</div>
+                                                    <div class="opacity-75 mt-3 group-state-text">WA</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="paymentDetails" role="tabpanel"
+                                    aria-labelledby="payment">
+                                    <div class="white-bg shadow-lg rounded-3 px-5 py-4">
+                                        <div class="d-flex justify-content-between mb-2">
+                                            <h4>Payment Information</h4>
+                                            <a href="javascript: void(0)" class="text-dark text-decoration-none"
+                                                data-bs-toggle="modal" data-bs-target="#addPaymentModal">
+                                                + ADD NEW</a>
+
+                                        </div>
+                                        <div class="">
+                                            <table class="table table-striped w-100 table-nowrap data-table-listing">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Nick/Account Holder Name</th>
+                                                        <th>Last 4 digits</th>
+                                                        <th>Verification Status</th>
+                                                        <th class="sorting-none"></th>
+                                                        <th class="sorting-none"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="doc-name">AMEX</td>
+                                                        <td>**** **** **** 4242</td>
+                                                        <td class="text-uppercase">
+                                                            <button
+                                                                class="btn btn-danger text-danger bg-light rounded-3 text-uppercase px-4 py-2">Verify
+                                                                Bank Account</button>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex align-items-center">
+                                                                <input type="radio" id="card-default-676" name="card"
+                                                                    class="form-check-input default-card"
+                                                                    data-ajax-url="http://13.64.144.136/qa/billing/card/default"
+                                                                    value="676"><label
+                                                                    class="form-check-label fs-6 text-capitalize text-dark my-0 ms-2"
+                                                                    for="card-default-676">Set As Default</label>
+                                                            </div>
+                                                        </td>
+
+                                                        <td>
+                                                            <div class="d-flex align-items-center justify-content-end">
+                                                                <span
+                                                                    class="icon icon-edit edit-document-name mx-3 cursor-pointer"
+                                                                    data-toggle="tooltip" title="EDIT"></span>
+                                                                <span
+                                                                    class="icon icon-save save-document-name mx-3 cursor-pointer"
+                                                                    data-toggle="tooltip" title="SAVE"></span>
+                                                                <span
+                                                                    class="icon icon-stop-danger m-0 me-4 d-inline-block"
+                                                                    data-toggle="tooltip" title="DELETE"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#deletePayment"></span>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="doc-name">Ryan's ACH</td>
+                                                        <td>**** **** **** 1121</td>
+                                                        <td class="text-green text-uppercase">Verified</td>
+                                                        <td>
+                                                            <div class="d-flex align-items-center">
+                                                                <input type="radio" id="card-default-678" name="card"
+                                                                    class="form-check-input default-card"
+                                                                    data-ajax-url="http://13.64.144.136/qa/billing/card/default"
+                                                                    value="678"><label
+                                                                    class="form-check-label fs-6 text-capitalize text-dark my-0 ms-2"
+                                                                    for="card-default-678">Set As Default</label>
+                                                            </div>
+                                                        </td>
+
+                                                        <td>
+                                                            <div class="d-flex align-items-center justify-content-end">
+                                                                <span
+                                                                    class="icon icon-edit edit-document-name mx-3 cursor-pointer"
+                                                                    data-toggle="tooltip" title="EDIT"></span>
+                                                                <span
+                                                                    class="icon icon-save save-document-name mx-3 cursor-pointer"
+                                                                    data-toggle="tooltip" title="SAVE"></span>
+                                                                <span
+                                                                    class="icon icon-stop-danger m-0 me-4 d-inline-block"
+                                                                    data-toggle="tooltip" title="DELETE"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#deletePayment"></span>
+
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="doc-name">Visa (default)</td>
+                                                        <td>**** **** **** 9212</td>
+                                                        <td class="text-green text-uppercase">Verified</td>
+                                                        <td>
+                                                            <div class="d-flex align-items-center">
+                                                                <input type="radio" id="card-default-677" name="card"
+                                                                    class="form-check-input default-card"
+                                                                    data-ajax-url="http://13.64.144.136/qa/billing/card/default"
+                                                                    value="678"><label
+                                                                    class="form-check-label fs-6 text-capitalize text-dark my-0 ms-2"
+                                                                    for="card-default-677">Set As Default</label>
+                                                            </div>
+                                                        </td>
+
+                                                        <td>
+                                                            <div class="d-flex align-items-center justify-content-end">
+                                                                <span
+                                                                    class="icon icon-edit edit-document-name mx-3 cursor-pointer"
+                                                                    data-toggle="tooltip" title="EDIT"></span>
+                                                                <span
+                                                                    class="icon icon-save save-document-name mx-3 cursor-pointer"
+                                                                    data-toggle="tooltip" title="SAVE"></span>
+                                                                <span
+                                                                    class="icon icon-stop-danger m-0 me-4 d-inline-block"
+                                                                    data-toggle="tooltip" title="DELETE"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#deletePayment"></span>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="entitiesList" role="tabpanel" aria-labelledby="entities">
+                                    <div class="white-bg shadow-lg rounded-3 px-5 py-4">
+                                        <div class="d-flex justify-content-between mb-2">
+                                            <h4>Entities</h4>
+                                            <a href="javascript: void(0)" class="text-dark text-decoration-none"
+                                                data-bs-toggle="modal" data-bs-target="#editEntity">
+                                                EDIT <span class="icon icon-sm icon-edit-dark mx-1"
+                                                    data-toggle="tooltip" title="EDIT"></span></a>
+                                        </div>
+                                        <div class="">
+                                            <table
+                                                class="table data-table-listing table-striped w-100 dataTable no-footer"
+                                                aria-describedby="partners_listing_info">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="sorting sorting_asc" tabindex="0"
+                                                            aria-controls="partners-listing" rowspan="1" colspan="1"
+                                                            aria-sort="ascending" aria-label="Partner Name"
+                                                            style="min-width: 160px;">
+                                                            Entity Name
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="odd">
+                                                        <td class="sorting_1"><span class="me-1 font-weight-600"
+                                                                >Beyond Boundaries Ventures
+                                                                (WY)</span> </td>
+
+                                                    </tr>
+                                                    <tr class="even">
+                                                        <td class="sorting_1"><span class="me-1 font-weight-600"
+                                                                >Bluebird Business
+                                                                Strategies (DE)</span> </td>
+
+                                                    </tr>
+                                                    <tr class="odd">
+                                                        <td class="sorting_1"><span class="me-1 font-weight-600"
+                                                                >BlueSky Innovations
+                                                                (AZ)</span> </td>
+
+                                                    </tr>
+                                                    <tr class="even">
+                                                        <td class="sorting_1"><span class="me-1 font-weight-600"
+                                                                >Boldly Better Business
+                                                                (CA)</span> </td>
+
+                                                    </tr>
+                                                    <tr class="odd">
+                                                        <td class="sorting_1"><span class="me-1 font-weight-600"
+                                                                >BrightPath Enterprises
+                                                                (FL)</span> </td>
+
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- edit Group info Starts -->
+    <div class="modal modal-right fade" id="editGroupDetails" tabindex="-1" aria-labelledby="editGroupDetailsLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-end modal-dialog-scrollable my-0 min-vh-100">
+            <div class="modal-content border-0 rounded-0 min-vh-100">
+                <!-- Modal Header -->
+                <div class="modal-header flex-wrap">
+                    <div class="d-flex align-items-center w-100 pb-2">
+                        <span class="bg-dark p-3 rounded-2 me-4 d-inline-block">
+                            <span class="icon icon-edit-white m-0"></span>
+                        </span>
+                        <div>
+                            <span class="d-block text-dark text-opacity-50 fs-9 text-uppercase">Edit Group</span>
+                            <h3 class="fs-3 m-0 mt-2">Group Details</h3>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal Header Ends -->
+
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="" placeholder="Group Name">
+                        </div>
+                        <div>
+                            <div class="opacity-75 pb-3"> Group Information</div>
+                            <form class="border-top pt-3">
+                                <div class="mb-3">
+                                    <label for="" class="form-label">Primary Contact</label>
+                                    <input type="text" class="form-control" id="" placeholder="Primary Contact Person">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="" class="form-label">Email</label>
+                                    <input type="text" class="form-control" id="" placeholder="Email Address">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="" class="form-label">Phone</label>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <input type="text" class="form-control" placeholder="(___) ___ - ____">
+                                        </div>
+                                        <div class="col-6">
+                                            <input type="text" class="form-control" placeholder="Ext.">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal Body Ends-->
+
+                <div class="modal-footer mt-3 pb-0">
+                    <div class="d-flex justify-content-end w-100">
+                        <button type="button" class="btn btn-link text-decoration-none font-weight-600"
+                            data-bs-toggle="modal">
+                            Cancel
+                        </button>
+                        <button type="button" class="btn btn-secondary py-3 px-4 rounded-3 ms-3" data-bs-dismiss="modal">
+                            Save Changes
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- edit Group info Ends -->
+    <!-- edit address Starts -->
+    <div class="modal modal-right fade" id="editAddress" tabindex="-1" aria-labelledby="editAddressLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-end modal-dialog-scrollable my-0 min-vh-100">
+            <div class="modal-content border-0 rounded-0 min-vh-100">
+                <!-- Modal Header -->
+                <div class="modal-header flex-wrap">
+                    <div class="d-flex align-items-center w-100 pb-2">
+                        <span class="bg-dark p-3 rounded-2 me-4 d-inline-block">
+                            <span class="icon icon-edit-white m-0"></span>
+                        </span>
+                        <div>
+                            <span class="d-block text-dark text-opacity-50 fs-9 text-uppercase">Edit Group</span>
+                            <h3 class="fs-3 m-0 mt-2">Edit Address</h3>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal Header Ends -->
+
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <div>
+                        <label class="pb-3 text-uppercase fw-bold">Address</label>
+                        <form class="d-flex flex-column gap-2">
+                            <input type="text" class="form-control" id="" placeholder="Address Line 1">
+                            <input type="text" class="form-control" id="" placeholder="Address Line 2">
+                            <input type="text" class="form-control" id="" placeholder="City">
+                            <div class="row">
+                                <div class="col-6">
+                                    <input type="text" class="form-control" placeholder="State">
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" class="form-control" placeholder="Zip">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- Modal Body Ends-->
+
+                <div class="modal-footer mt-3 pb-0">
+                    <div class="d-flex justify-content-end w-100">
+                        <button type="button" class="btn btn-link text-decoration-none font-weight-600"
+                            data-bs-toggle="modal">
+                            Cancel
+                        </button>
+                        <button type="button" class="btn btn-secondary py-3 px-4 rounded-3 ms-3" data-bs-dismiss="modal">
+                            Save Changes
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- edit address Ends -->
+    <!-- edit shipping address Starts -->
+    <div class="modal modal-right fade" id="editShippingAddress" tabindex="-1"
+        aria-labelledby="editShippingAddressLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-end modal-dialog-scrollable my-0 min-vh-100">
+            <div class="modal-content border-0 rounded-0 min-vh-100">
+                <!-- Modal Header -->
+                <div class="modal-header flex-wrap">
+                    <div class="d-flex align-items-center w-100 pb-2">
+                        <span class="bg-dark p-3 rounded-2 me-4 d-inline-block">
+                            <span class="icon icon-edit-white m-0"></span>
+                        </span>
+                        <div>
+                            <span class="d-block text-dark text-opacity-50 fs-9 text-uppercase">Edit Group</span>
+                            <h3 class="fs-3 m-0 mt-2">Edit Address</h3>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal Header Ends -->
+
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <div>
+                        <form class="d-flex flex-column gap-2">
+                            <div class="text-uppercase fw-bold opacity-75">Shipping Address</div>
+                            <div class="border-top pt-3">
+                                <label for="shippingEmail" class="form-label">Email</label>
+                                <input type="text" class="form-control" id="shippingEmail" placeholder="Email Address">
+                            </div>
+                            <div class="row">
+                                <label for="shippingPhone" class="form-label">Phone</label>
+                                <div class="col-6">
+                                    <input type="text" class="form-control" id="shippingPhone"
+                                        placeholder="(___) ___ - ____">
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" class="form-control" placeholder="Ext.">
+                                </div>
+                            </div>
+                            <div>
+                                <label for="shippingAddress">Address</label>
+                                <input type="text" class="form-control" id="shippingAddress" placeholder="Address">
+                            </div>
+                            <input type="text" class="form-control" id="" placeholder="City">
+                            <div class="row">
+                                <div class="col-6">
+                                    <input type="text" class="form-control" placeholder="State">
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" class="form-control" placeholder="Zip">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- Modal Body Ends-->
+
+                <div class="modal-footer mt-3 pb-0">
+                    <div class="d-flex justify-content-end w-100">
+                        <button type="button" class="btn btn-link text-decoration-none font-weight-600"
+                            data-bs-toggle="modal">
+                            Cancel
+                        </button>
+                        <button type="button" class="btn btn-secondary py-3 px-4 rounded-3 ms-3" data-bs-dismiss="modal">
+                            Save Changes
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- edit shipping address Ends -->
+
+    <!-- edit billing address Starts -->
+    <div class="modal modal-right fade" id="editBillingAddress" tabindex="-1" aria-labelledby="editBillingAddressLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-end modal-dialog-scrollable my-0 min-vh-100">
+            <div class="modal-content border-0 rounded-0 min-vh-100">
+                <!-- Modal Header -->
+                <div class="modal-header flex-wrap">
+                    <div class="d-flex align-items-center w-100 pb-2">
+                        <span class="bg-dark p-3 rounded-2 me-4 d-inline-block">
+                            <span class="icon icon-edit-white m-0"></span>
+                        </span>
+                        <div>
+                            <span class="d-block text-dark text-opacity-50 fs-9 text-uppercase">Edit Group</span>
+                            <h3 class="fs-3 m-0 mt-2">Edit Address</h3>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal Header Ends -->
+
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <div>
+                        <form class="d-flex flex-column gap-3">
+                            <div class="text-uppercase fw-bold opacity-75">Billing Address</div>
+                            <div class="border-top pt-3">
+                                <label for="billingEmail" class="form-label">Email</label>
+                                <input type="text" class="form-control" id="billingEmail" placeholder="Email Address">
+                            </div>
+                            <div>
+                                <label for="fax" class="form-label">Fax</label>
+                                <input type="text" class="form-control" id="fax" placeholder="Fax">
+                            </div>
+                            <div>
+                                <label for="address" class="form-label">Phone</label>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <input type="text" class="form-control" id="address"
+                                            placeholder="(___) ___ - ____">
+                                    </div>
+                                    <div class="col-6">
+                                        <input type="text" class="form-control" placeholder="Ext.">
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="billingAddress" class="form-label">Address</label>
+                                <input type="text" class="form-control" id="billingAddress" placeholder="Address">
+                            </div>
+                            <input type="text" class="form-control" placeholder="City">
+                            <div class="row">
+                                <div class="col-6">
+                                    <input type="text" class="form-control" placeholder="State">
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" class="form-control" placeholder="Zip">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- Modal Body Ends-->
+
+                <div class="modal-footer mt-3 pb-0">
+                    <div class="d-flex justify-content-end w-100">
+                        <button type="button" class="btn btn-link text-decoration-none font-weight-600"
+                            data-bs-toggle="modal">
+                            Cancel
+                        </button>
+                        <button type="button" class="btn btn-secondary py-3 px-4 rounded-3 ms-3" data-bs-dismiss="modal">
+                            Save Changes
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- edit billing address Ends -->
+
+    <!-- Add Payment  Starts -->
+    <div class="modal modal-right fade" id="addPaymentModal" tabindex="-1" aria-labelledby="addPaymentModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-end modal-dialog-scrollable my-0 min-vh-100">
+            <div class="modal-content border-0 rounded-0 min-vh-100">
+                <!-- Modal Header -->
+                <div class="modal-header flex-wrap">
+                    <div class="d-flex align-items-center w-100 pb-2">
+                        <span class="bg-dark p-3 rounded-2 me-4 d-inline-block">
+                            <span class="icon icon-payment-white  icon-lg m-0"></span>
+                        </span>
+                        <div>
+                            <span class="d-block text-dark text-opacity-50 fs-9 text-uppercase">Add Payment
+                                method</span>
+                            <h3 class="fs-3 m-0 mt-2" id="defaultPaymentDetails">Select Payment Method</h3>
+                            <h3 class="fs-3 m-0 mt-2 hide" id="creditCardDetails">Credit Card Information</h3>
+                            <h3 class="fs-3 m-0 mt-2 hide" id="achInfo">ACH Information</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal Header Ends -->
+
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <div>
+                        <label for="" class="form-label">Select Method </label>
+                        <div class="row d-flex align-items-center bg-white px-3 rounded py-3 mb-4"
+                            data-bs-target="#addCrediCardModal">
+                            <div class="col-6 d-flex flex-wrap align-items-center">
+                                <div class="form-check d-flex align-items-center">
+                                    <input class="form-check-input" type="radio" name="view" id="ach"
+                                        onclick="showAchInfo()">
+                                </div>
+                                <label class="ps-1 mb-0 fs-6" for="ach">
+                                    ACH
+                                </label>
+                            </div>
+                            <div class=" col-6 d-flex flex-wrap align-items-center">
+                                <div class="form-check d-flex align-items-center">
+                                    <input class="form-check-input" type="radio" name="view" id="creditCard"
+                                        onclick=" showCreditCardDetails()">
+                                </div>
+                                <label class="ps-1 mb-0 fs-6" for="creditCard">
+                                    Credit Card
+                                    </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row hide" id="creditCardDetails">
+                        <div class="col-12">
+                            <div class="form-group mb-3">
+                                <label for="" class="text-uppercase">Name on card</label>
+                                <input type="text" class="form-control" placeholder="Name on Card">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group mb-3">
+
+                                <label for="" class="text-uppercase">Card DETAILS</label>
+                                <div class="d-flex align-items-center form-control">
+                                    <input type="text" placeholder="1242-2341-1242-1642" class="border-0">
+                                    <img src="../dist/images/icon-mastercard.png" alt="card">
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="form-group mb-3">
+                                <label for="" class="text-uppercase">&nbsp;</label>
+                                <input type="text" class="form-control" placeholder="MM/YY">
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="form-group mb-3">
+                                <label for="" class="text-uppercase">&nbsp;</label>
+                                <input type="text" class="form-control" placeholder="CVV">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row hide" id="achInfo">
+                        <div class="col-12">
+                            <div class="form-group mb-3">
+                                <label for="" class="text-uppercase">Nickname</label>
+                                <input type="text" class="form-control" placeholder="Name">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group mb-3">
+                                <label for="" class="text-uppercase">ACCOUNT TYPE</label>
+
+                                <div class="d-flex">
+                                    <div
+                                        class="form-check radio-child-element mb-4 form-control w-auto d-flex align-items-center">
+                                        <input class="form-check-input ms-0 mt-0" type="radio" id="individual"
+                                            name="account-type">
+                                        <label class="form-check-label top-0 ms-3" for="individual">
+                                            Individual
+                                        </label>
+                                    </div>
+                                    <div
+                                        class="form-check radio-child-element mb-4 ms-4 form-control w-auto d-flex align-items-center">
+                                        <input class="form-check-input ms-0 mt-0" type="radio" id="company"
+                                            name="account-type">
+                                        <label class="form-check-label top-0 ms-3" for="company">
+                                            Company
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group mb-3">
+                                <label for="" class="text-uppercase">ROUTING NUMBER</label>
+                                <p class="mb-2 text-muted">Also known as ABA number.</p>
+                                <input type="text" class="form-control" placeholder="Ex. 110000000">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group mb-3">
+                                <label for="" class="text-uppercase ">Account Number</label>
+                                <input type="text" class="form-control" placeholder="Ex. 000123456789">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal Body Ends-->
+
+                <div class="modal-footer mt-3 pb-0">
+                    <div class="d-flex justify-content-end w-100">
+                        <button type="button" class="btn btn-link text-decoration-none font-weight-600"
+                            data-bs-toggle="modal">
+                            CANCEL
+                        </button>
+                        <button type="button" class="btn btn-secondary py-3 px-5 rounded-3 ms-3" data-bs-dismiss="modal">
+                            Save
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Add Payment Ends -->
+
+    <!-- add Group members Starts -->
+    <div class="modal modal-right fade" id="addGroupMembers" tabindex="-1" aria-labelledby="addGroupMembersLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-end modal-dialog-scrollable my-0 min-vh-100">
+            <div class="modal-content border-0 rounded-0 min-vh-100">
+                <!-- Modal Header -->
+                <div class="modal-header flex-wrap">
+                    <div class="d-flex align-items-center w-100 pb-2">
+                        <span class="bg-dark p-3 rounded-2 me-4 d-inline-block">
+                            <span class="icon icon-edit-white m-0"></span>
+                        </span>
+                        <div>
+                            <span class="d-block text-dark text-opacity-50 fs-9 text-uppercase">Edit Group</span>
+                            <h3 class="fs-3 m-0 mt-2">Add Members</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal Header Ends -->
+
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <form action="" class="mt-4">
+                        <div class="mb-3">
+                            <label for="" class="form-label">Suffix</label>
+                            <select class="form-select form-control" aria-label="Sr.">
+                                <option selected="">Sr.</option>
+                                <option value="1">Mr.</option>
+                                <option value="2">Mrs.</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">First name</label>
+                            <input type="text" class="form-control" id="" placeholder="First Name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Middle name</label>
+                            <input type="text" class="form-control" id="" placeholder="Middle Name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Last name</label>
+                            <input type="text" class="form-control" id="" placeholder="Last Name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Email</label>
+                            <input type="text" class="form-control" id="" placeholder="email@address.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Phone</label>
+                            <input type="text" class="form-control" id="" placeholder="(999) 999 - 9999">
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Address</label>
+                            <input type="text" class="form-control mb-3" id="" placeholder="Address Line 1">
+                            <input type="text" class="form-control mb-3" id="" placeholder="Address Line 2">
+                            <input type="text" class="form-control" id="" placeholder="City">
+                        </div>
+                        <div class="mb-3">
+                            <div class="row">
+                                <div class="col-md">
+                                    <input type="text" class="form-control" id="" placeholder="Zip">
+                                </div>
+                                <div class="col-md">
+                                    <select class="form-select form-control" aria-label="Default select example">
+                                        <option selected="">State</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="">Role</label>
+                            <select class="form-select form-control" aria-label="Admin">
+                                <option selected="">Admin</option>
+                                <option value="1">Contract</option>
+                            </select>
+                        </div>
+                        <div class="row py-2">
+                            <div class="col-8">
+                                <label for="" class="m-0">Rights</label>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-check form-check-inline me-3">
+                                    <input class="form-check-input" type="radio" name="rightView" id="rightView"
+                                        value="rights" checked>
+                                    <label class="form-check-label" for="rightView">View</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="rightView" id="rightNo"
+                                        value="rights">
+                                    <label class="form-check-label" for="rightNo">Edit</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row py-2">
+                            <div class="col-8">
+                                <label for="">Notification</label>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-check form-check-inline me-4 pe-1">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                        id="notificataionYes" value="notification">
+                                    <label class="form-check-label" for="notificataionYes">yes</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                        id="notificataionNo" value="notification" checked>
+                                    <label class="form-check-label" for="notificataionNo">No</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row py-2">
+                            <div class="col-8">
+                                <label for="">Invoices</label>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-check form-check-inline me-4 pe-1">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                        id="invoicesYes" value="invoice" checked>
+                                    <label class="form-check-label" for="invoicesYes">yes</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                        id="invoicesNo" value="invoice">
+                                    <label class="form-check-label" for="invoicesNo">No</label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- Modal Body Ends-->
+
+                <div class="modal-footer mt-3 pb-0">
+                    <div class="d-flex justify-content-end w-100">
+                        <button type="button" class="btn btn-link text-decoration-none font-weight-600"
+                            data-bs-toggle="modal">
+                            Cancel
+                        </button>
+                        <button type="button" class="btn btn-secondary py-3 px-4 rounded-3 ms-3" data-bs-dismiss="modal">
+                            Save Changes
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- add Group members Ends -->
+
+    <!-- edit Group members Starts -->
+    <div class="modal modal-right fade" id="editGroupMembers" tabindex="-1" aria-labelledby="editGroupMembersLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-end modal-dialog-scrollable my-0 min-vh-100">
+            <div class="modal-content border-0 rounded-0 min-vh-100">
+                <!-- Modal Header -->
+                <div class="modal-header flex-wrap">
+                    <div class="d-flex align-items-center w-100 pb-2">
+                        <span class="bg-dark p-3 rounded-2 me-4 d-inline-block">
+                            <span class="icon icon-edit-white m-0"></span>
+                        </span>
+                        <div>
+                            <span class="d-block text-dark text-opacity-50 fs-9 text-uppercase">Edit Group</span>
+                            <h3 class="fs-3 m-0 mt-2">Edit Members</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal Header Ends -->
+
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <form action="" class="mt-4">
+                        <div class="row py-2">
+                            <div class="col-8">
+                                <label for="" class="m-0">Rights</label>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-check form-check-inline me-3">
+                                    <input class="form-check-input" type="radio" name="view1" id="rightView1"
+                                        value="rights" checked>
+                                    <label class="form-check-label" for="rightView1">View</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="view1" id="rightNo1"
+                                        value="rights">
+                                    <label class="form-check-label" for="rightNo1">Edit</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row py-2">
+                            <div class="col-8">
+                                <label for="">Notification</label>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-check form-check-inline me-3">
+                                    <input class="form-check-input" type="radio" name="notificataion1"
+                                        id="notificataionYes1" value="notification">
+                                    <label class="form-check-label" for="notificataionYes1">yes</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="notificataion1"
+                                        id="notificataionNo1" value="notification" checked>
+                                    <label class="form-check-label" for="notificataionNo1">No</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row py-2">
+                            <div class="col-8">
+                                <label for="">Invoices</label>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-check form-check-inline me-3">
+                                    <input class="form-check-input" type="radio" name="invoice1" id="invoicesYes1"
+                                        value="invoice" checked>
+                                    <label class="form-check-label" for="invoicesYes1">yes</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="invoice1" id="invoicesNo1"
+                                        value="invoice">
+                                    <label class="form-check-label" for="invoicesNo1">No</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Suffix</label>
+                            <select class="form-select form-control" aria-label="Sr.">
+                                <option selected="">Sr.</option>
+                                <option value="1">Mr.</option>
+                                <option value="2">Mrs.</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">First name</label>
+                            <input type="text" class="form-control" id="" placeholder="First Name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Middle name</label>
+                            <input type="text" class="form-control" id="" placeholder="Middle Name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Last name</label>
+                            <input type="text" class="form-control" id="" placeholder="Last Name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Email</label>
+                            <input type="text" class="form-control" id="" placeholder="email@address.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Phone</label>
+                            <input type="text" class="form-control" id="" placeholder="(999) 999 - 9999">
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Address</label>
+                            <input type="text" class="form-control mb-3" id="" placeholder="Address Line 1">
+                            <input type="text" class="form-control mb-3" id="" placeholder="Address Line 2">
+                            <input type="text" class="form-control" id="" placeholder="City">
+                        </div>
+                        <div class="mb-3">
+                            <div class="row">
+                                <div class="col-md">
+                                    <input type="text" class="form-control" id="" placeholder="Zip">
+                                </div>
+                                <div class="col-md">
+                                    <select class="form-select form-control" aria-label="Default select example">
+                                        <option selected="">State</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="">Role</label>
+                            <select class="form-select form-control" aria-label="Admin">
+                                <option selected="">Admin</option>
+                                <option value="1">Contract</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <!-- Modal Body Ends-->
+
+                <div class="modal-footer mt-3 pb-0">
+                    <div class="d-flex justify-content-end w-100">
+                        <button type="button" class="btn btn-link text-decoration-none font-weight-600"
+                            data-bs-toggle="modal">
+                            Cancel
+                        </button>
+                        <button type="button" class="btn btn-secondary py-3 px-4 rounded-3 ms-3" data-bs-dismiss="modal">
+                            Save Changes
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- edit Group members Ends -->
+
+
+    <!-- delete folder Modal start-->
+    <div class="modal modal-right fade" id="deleteFolder" tabindex="-1" aria-labelledby="searchModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-end modal-dialog-scrollable modal-md my-0 min-vh-100">
+            <div class="modal-content border-0 rounded-0 min-vh-100">
+                <!-- Modal Header -->
+                <div class="modal-header flex-wrap">
+                    <div class="d-flex align-items-center w-100 mb-4 pb-2">
+                        <span class="bg-danger p-3 rounded-2 me-4 d-inline-block">
+                            <span class="icon icon-md icon-delete-white m-0"></span>
+                        </span>
+                        <div>
+                            <span class="d-block text-dark text-opacity-50 fs-9 text-uppercase">Folder
+                                Deletion</span>
+                            <h3 class="fs-3 m-0 font-weight-700">Are you sure you want to delete this folder</h3>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal Header Ends -->
+                <!-- Modal Body Start-->
+                <div class="modal-body">
+                    <p>This will permanently remove this Folder and its content.</p>
+                </div>
+                <!-- Modal Body End -->
+
+                <div class="modal-footer mt-3 pb-0">
+                    <div class="d-flex justify-content-end w-100">
+                        <button type="button" class="btn btn-link text-uppercase text-decoration-none font-weight-600"
+                            data-bs-dismiss="modal">
+                            CANCEL
+                        </button>
+                        <button type="button" class="btn btn-danger px-5 py-3" data-bs-dismiss="modal">
+                            Confirm
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- delete folder Modal End-->
+
+    <!-- delete document Modal start-->
+    <div class="modal modal-right fade" id="deleteDocument" tabindex="-1" aria-labelledby="searchModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-end modal-dialog-scrollable modal-md my-0 min-vh-100">
+            <div class="modal-content border-0 rounded-0 min-vh-100">
+                <!-- Modal Header -->
+                <div class="modal-header flex-wrap">
+                    <div class="d-flex align-items-center w-100 mb-4 pb-2">
+                        <span class="bg-danger p-3 rounded-2 me-4 d-inline-block">
+                            <span class="icon icon-md icon-delete-white m-0"></span>
+                        </span>
+                        <div>
+                            <span class="d-block text-dark text-opacity-50 fs-9 text-uppercase">Folder
+                                Deletion</span>
+                            <h3 class="fs-3 m-0 font-weight-700">Are you sure you want to delete this Document</h3>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal Header Ends -->
+                <!-- Modal Body Start-->
+                <div class="modal-body">
+                    <p>This will permanently remove this file.</p>
+                </div>
+                <!-- Modal Body End -->
+
+                <div class="modal-footer mt-3 pb-0">
+                    <div class="d-flex justify-content-end w-100">
+                        <button type="button" class="btn btn-link text-uppercase text-decoration-none font-weight-600"
+                            data-bs-dismiss="modal">
+                            CANCEL
+                        </button>
+                        <button type="button" class="btn btn-danger px-5 py-3" data-bs-dismiss="modal">
+                            Confirm
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- delete document Modal End-->
+
+    <!-- delete member Modal start-->
+    <div class="modal modal-right fade" id="deleteMember" tabindex="-1" aria-labelledby="deleteMemberlabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-end modal-dialog-scrollable modal-md my-0 min-vh-100">
+            <div class="modal-content border-0 rounded-0 min-vh-100">
+                <!-- Modal Header -->
+                <div class="modal-header flex-wrap">
+                    <div class="d-flex align-items-center w-100 mb-4 pb-2">
+                        <span class="bg-danger p-3 rounded-2 me-4 d-inline-block">
+                            <span class="icon icon-md icon-delete-white m-0"></span>
+                        </span>
+                        <div>
+                            <span class="d-block text-dark text-opacity-50 fs-9 text-uppercase">Member
+                                Deletion</span>
+                            <h3 class="fs-3 m-0 font-weight-700">Are you sure you want to delete this Member</h3>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal Header Ends -->
+                <!-- Modal Body Start-->
+                <div class="modal-body">
+                    <p>This will permanently remove this member.</p>
+                </div>
+                <!-- Modal Body End -->
+
+                <div class="modal-footer mt-3 pb-0">
+                    <div class="d-flex justify-content-end w-100">
+                        <button type="button" class="btn btn-link text-uppercase text-decoration-none font-weight-600"
+                            data-bs-dismiss="modal">
+                            CANCEL
+                        </button>
+                        <button type="button" class="btn btn-danger px-5 py-3" data-bs-dismiss="modal">
+                            Confirm
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- delete document Modal End-->
+    <!-- Delete Payment Ends -->
+    <div class="modal modal-right fade" id="deletePayment" tabindex="-1" aria-labelledby="deletePaymentLabel">
+        <div class="modal-dialog modal-dialog-end modal-dialog-scrollable my-0 min-vh-100">
+            <div class="modal-content border-0 rounded-0 min-vh-100">
+                <!-- Modal Header -->
+                <div class="modal-header flex-wrap">
+                    <div class="d-flex align-items-center w-100 pb-2">
+                        <span class="red-bg p-3 rounded-2 me-4 d-inline-block">
+                            <span class="icon icon-md icon-delete-white m-0"></span>
+                        </span>
+                        <div>
+                            <span class="d-block text-dark text-opacity-50 fs-9 text-uppercase">Remove</span>
+                            <h3 class="fs-3 m-0 mt-2 text-capitalize">Are you sure you want to remove permanently?
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal Header Ends -->
+
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <div class="">
+                    </div>
+                </div>
+
+                <!-- Modal Body Ends-->
+
+                <div class="modal-footer">
+                    <div class="d-flex justify-content-end">
+                        <button type="button" class="btn btn-link px-5 py-3" data-bs-dismiss="modal">DISCARD</button>
+                        <button type="button" class="btn btn-danger px-5 py-3" data-bs-target="#groupDeleteConfirmModal"
+                            data-bs-toggle="modal" data-bs-dismiss="modal">CONFIRM</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Delete Payment Ends -->
+    <!-- Edit entities modal starts -->
+    <div class="modal modal-right fade" id="editEntity" tabindex="-1" aria-labelledby="editEntityLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-end modal-dialog-scrollable modal-md my-0 min-vh-100">
+            <div class="modal-content border-0 rounded-0 min-vh-100">
+                <!-- Modal Header -->
+                <div class="modal-header flex-wrap">
+                    <div class="d-flex align-items-center w-100 mb-4 pb-2">
+                        <span class="bg-dark p-3 rounded-2 me-4 d-inline-block">
+                            <span class="icon icon-edit-white m-0"></span>
+                        </span>
+                        <div>
+                            <span class="d-block text-dark text-opacity-50 fs-9 font-weight-700 text-uppercase">GROUP
+                                DETAILS - Convey Health Solutions
+                            </span>
+                            <h3 class="fs-3 m-0 mt-2">Edit Entities</h3>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center white-bg px-4 py-3 rounded-2 w-100 shadow">
+                        <span class="icon icon-search-grey opacity-25"></span>
+                        <input class="w-100 bg-transparent p-0 rounded-2 border-0" id="search" type="text" name="seach"
+                            placeholder="Find a Partner User">
+                    </div>
+                </div>
+
+                <!-- Modal Header Ends -->
+                <!-- Modal Body Start-->
+                <div class="modal-body">
+                    <table class="table data-table-listing table-striped w-100 dataTable no-footer"
+                        aria-describedby="partners_listing_info">
+                        <thead>
+                            <tr>
+                                <th class="sorting sorting_asc" tabindex="0" aria-controls="partners-listing"
+                                    rowspan="1" colspan="1" aria-sort="ascending" aria-label="Partner Name"
+                                    style="min-width: 160px;">
+                                    Entity Name
+                                </th>
+                                <th class="sorting sorting_asc sorting-none">
+                                    <div class="d-flex justify-content-end">
+                                        <a class="text-decoration-none text-dark" href="/">ALL</a>
+                                        <a class="text-decoration-none text-dark ms-4" href="/">NONE</a>
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="odd">
+                                <td class="sorting_1"><span class="me-1 font-weight-600">Beyond Boundaries
+                                        Ventures (WY)</span> </td>
+                                <td>
+                                    <div class="d-flex flex-wrap ms-auto justify-content-end">
+                                        <input
+                                            class="form-check-input mt-0 me-3 group-entities-add-item group-entities-add-all"
+                                            data-mode="single" type="checkbox" id="entity-checkbox-25756"
+                                            data-ajax-url="/qa/groups/entitiesCart/118/25756" checked="">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="even">
+                                <td class="sorting_1"><span class="me-1 font-weight-600">Bluebird Business
+                                        Strategies (DE)</span> </td>
+                                <td>
+                                    <div class="d-flex flex-wrap ms-auto justify-content-end">
+                                        <input
+                                            class="form-check-input mt-0 me-3 group-entities-add-item group-entities-add-all"
+                                            data-mode="single" type="checkbox" id="entity-checkbox-25754"
+                                            data-ajax-url="/qa/groups/entitiesCart/118/25754" checked="">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="odd">
+                                <td class="sorting_1"><span class="me-1 font-weight-600">BlueSky Innovations
+                                        (AZ)</span> </td>
+                                <td>
+                                    <div class="d-flex flex-wrap ms-auto justify-content-end">
+                                        <input
+                                            class="form-check-input mt-0 me-3 group-entities-add-item group-entities-add-all"
+                                            data-mode="single" type="checkbox" id="entity-checkbox-25757"
+                                            data-ajax-url="/qa/groups/entitiesCart/118/25757" checked="">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="even">
+                                <td class="sorting_1"><span class="me-1 font-weight-600">Boldly Better
+                                        Business (CA)</span> </td>
+                                <td>
+                                    <div class="d-flex flex-wrap ms-auto justify-content-end">
+                                        <input
+                                            class="form-check-input mt-0 me-3 group-entities-add-item group-entities-add-all"
+                                            data-mode="single" type="checkbox" id="entity-checkbox-25763"
+                                            data-ajax-url="/qa/groups/entitiesCart/118/25763" checked="">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="odd">
+                                <td class="sorting_1"><span class="me-1 font-weight-600">BrightPath
+                                        Enterprises (FL)</span> </td>
+                                <td>
+                                    <div class="d-flex flex-wrap ms-auto justify-content-end">
+                                        <input
+                                            class="form-check-input mt-0 me-3 group-entities-add-item group-entities-add-all"
+                                            data-mode="single" type="checkbox" id="entity-checkbox-25758"
+                                            data-ajax-url="/qa/groups/entitiesCart/118/25758" checked="">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="even">
+                                <td class="sorting_1"><span class="me-1 font-weight-600">Pinnacle Performance
+                                        Solutions (SC)</span> </td>
+                                <td>
+                                    <div class="d-flex flex-wrap ms-auto justify-content-end">
+                                        <input
+                                            class="form-check-input mt-0 me-3 group-entities-add-item group-entities-add-all"
+                                            data-mode="single" type="checkbox" id="entity-checkbox-25768"
+                                            data-ajax-url="/qa/groups/entitiesCart/118/25768">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="odd">
+                                <td class="sorting_1"><span class="me-1 font-weight-600">Precision
+                                        Progression Group (AR)</span> </td>
+                                <td>
+                                    <div class="d-flex flex-wrap ms-auto justify-content-end">
+                                        <input
+                                            class="form-check-input mt-0 me-3 group-entities-add-item group-entities-add-all"
+                                            data-mode="single" type="checkbox" id="entity-checkbox-25774"
+                                            data-ajax-url="/qa/groups/entitiesCart/118/25774">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="even">
+                                <td class="sorting_1"><span class="me-1 font-weight-600">Progress Progression
+                                        Partners (TX)</span> </td>
+                                <td>
+                                    <div class="d-flex flex-wrap ms-auto justify-content-end">
+                                        <input
+                                            class="form-check-input mt-0 me-3 group-entities-add-item group-entities-add-all"
+                                            data-mode="single" type="checkbox" id="entity-checkbox-25773"
+                                            data-ajax-url="/qa/groups/entitiesCart/118/25773">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="odd">
+                                <td class="sorting_1"><span class="me-1 font-weight-600">Silver Summit
+                                        Strategies (FL)</span> </td>
+                                <td>
+                                    <div class="d-flex flex-wrap ms-auto justify-content-end">
+                                        <input
+                                            class="form-check-input mt-0 me-3 group-entities-add-item group-entities-add-all"
+                                            data-mode="single" type="checkbox" id="entity-checkbox-25766"
+                                            data-ajax-url="/qa/groups/entitiesCart/118/25766">
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Modal Body End -->
+
+                <div class="modal-footer mt-3 pb-0">
+                    <div class="d-flex justify-content-end w-100">
+                        <button type="button" class="btn btn-link text-decoration-none font-weight-600"
+                            data-bs-target="#closeConfirmModal" data-bs-toggle="modal">
+                            Close
+                        </button>
+                        <button type="button" class="btn btn-secondary py-3 px-4 rounded-3 ms-3" data-bs-dismiss="modal">
+                            SAVE CHANGES
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--- edit entities modal ends -->
+
+    <!-- Create folder Modal start-->
+    <div class="modal modal-right fade" id="createFolder" tabindex="-1" aria-labelledby="createFolderLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-end modal-dialog-scrollable modal-md my-0 min-vh-100">
+            <div class="modal-content border-0 rounded-0 min-vh-100">
+                <!-- Modal Header -->
+                <div class="modal-header flex-wrap">
+                    <div class="d-flex align-items-center w-100 mb-4 pb-2">
+                        <span class="bg-dark p-3 rounded-2 me-4 d-inline-block">
+                            <span class="icon icon-md icon-folder-white m-0"></span>
+                        </span>
+                        <div>
+                            <span class="d-block text-dark text-opacity-50 fs-9 text-uppercase">Edit Group</span>
+                            <h3 class="fs-3 m-0 font-weight-700">Create Folder</h3>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal Header Ends -->
+                <!-- Modal Body Start-->
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <form action="">
+                                <div class="mb-3">
+                                    <label for="" class="form-label">Folder Name</label>
+                                    <input type="text" class="form-control" id="" placeholder="Enter Folder Name">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal Body End -->
+
+                <div class="modal-footer mt-3 pb-0">
+                    <div class="d-flex justify-content-end w-100">
+                        <button type="button" class="btn btn-link text-uppercase text-decoration-none font-weight-600"
+                            data-bs-dismiss="modal">
+                            CANCEL
+                        </button>
+                        <button type="button" class="btn btn-secondary text-uppercase py-3 px-4 rounded-3 ms-3">
+                            SAVE
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Create Folder Modal End-->
+
+    <script>
+        // script for folder expand property
+        /* For more info: https://datatables.net/examples/api/row_details.html */
+        function format() {
+            //this func can accept arguments for dynamic data
+            return (
+                `<div class="py-3 pt-0">
+                    <div class="bg-white">
+                        <table class="table data-table-listing table-striped w-100">
+                            <thead>
+                                <tr>
+                                    <th class="sorting-none w-10"></th>
+                                    <th class="w-75">Document Name</th>
+                                    <th class="w-20">Date Added</th>
+                                    <th class="sorting-none w-10"></th>
+                                </tr>
+                                
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <a href="javascript: void(0)" class="text-decoration-none" data-bs-toggle="modal"
+                                            data-bs-target="#previewModal">
+                                            <span class="d-inline-block me-2">
+                                                <span class="icon icon-file-dark m-0"></span>
+                                            </span>
+                                        </a>
+                                    </td>
+                                    <td class="doc-name">Clearance Certificate With Long Name To Test How It Behaves With Large Text</td>
+                                    <td>06/12/2021</td>
+                                    <td>
+                                        <div class="d-flex align-items-center justify-content-end">
+                                            <span class="icon icon-edit edit-document-name mx-3 cursor-pointer" data-toggle="tooltip"
+                                                title="EDIT"></span>
+                                            <span class="icon icon-save save-document-name mx-3 cursor-pointer" data-toggle="tooltip"
+                                                title="SAVE"></span>
+                                            <span class="icon icon-delete m-0 cursor-pointer" data-bs-toggle="modal"
+                                                data-bs-target="#deleteDocument" data-toggle="tooltip" title="DELETE"></span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="javascript: void(0)" class="text-decoration-none" data-bs-toggle="modal"
+                                            data-bs-target="#previewModal">
+                                            <span class="d-inline-block me-2">
+                                                <span class="icon icon-file-dark m-0"></span>
+                                            </span>
+                                        </a>
+                                    </td>
+                                    <td class="doc-name">Misc. Folder</td>
+                                    <td>06/12/2021</td>
+                                    <td>
+                                        <div class="d-flex align-items-center justify-content-end">
+                                            <span class="icon icon-edit edit-document-name mx-3 cursor-pointer" data-toggle="tooltip"
+                                                title="EDIT"></span>
+                                            <span class="icon icon-save save-document-name mx-3 cursor-pointer" data-toggle="tooltip"
+                                                title="SAVE"></span>
+                                            <span class="icon icon-delete m-0 cursor-pointer" data-bs-toggle="modal"
+                                                data-bs-target="#deleteDocument" data-toggle="tooltip" title="DELETE"></span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="javascript: void(0)" class="text-decoration-none" data-bs-toggle="modal"
+                                            data-bs-target="#previewModal">
+                                            <span class="d-inline-block me-2">
+                                                <span class="icon icon-file-dark m-0"></span>
+                                            </span>
+                                        </a>
+                                    </td>
+                                    <td class="doc-name">Extra From State</td>
+                                    <td>06/12/2021</td>
+                                    <td>
+                                        <div class="d-flex align-items-center justify-content-end">
+                                            <span class="icon icon-edit edit-document-name mx-3 cursor-pointer" data-toggle="tooltip"
+                                                title="EDIT"></span>
+                                            <span class="icon icon-save save-document-name mx-3 cursor-pointer" data-toggle="tooltip"
+                                                title="SAVE"></span>
+                                            <span class="icon icon-delete m-0 cursor-pointer" data-bs-toggle="modal"
+                                                data-bs-target="#deleteDocument" data-toggle="tooltip" title="DELETE"></span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="javascript: void(0)" class="text-decoration-none" data-bs-toggle="modal"
+                                            data-bs-target="#previewModal">
+                                            <span class="d-inline-block me-2">
+                                                <span class="icon icon-file-dark m-0"></span>
+                                            </span>
+                                        </a>
+                                    </td>
+                                    <td class="doc-name"> Storage</td>
+                                    <td>06/12/2021</td>
+                                    <td>
+                                        <div class="d-flex align-items-center justify-content-end">
+                                            <span class="icon icon-edit edit-document-name mx-3 cursor-pointer" data-toggle="tooltip"
+                                                title="EDIT"></span>
+                                            <span class="icon icon-save save-document-name mx-3 cursor-pointer" data-toggle="tooltip"
+                                                title="SAVE"></span>
+                                            <span class="icon icon-delete m-0 cursor-pointer" data-bs-toggle="modal"
+                                                data-bs-target="#deleteDocument" data-toggle="tooltip" title="DELETE"></span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="javascript: void(0)" data-bs-toggle="modal" data-bs-target="#previewModal"
+                                            class="text-decoration-none">
+                                            <span class="d-inline-block me-2">
+                                                <span class="icon icon-file-dark m-0"></span>
+                                            </span>
+                                        </a>
+                                    </td>
+                                    <td class="doc-name">Taxes</td>
+                                    <td>06/12/2021</td>
+                                    <td>
+                                        <div class="d-flex align-items-center justify-content-end">
+                                            <span class="icon icon-edit edit-document-name mx-3 cursor-pointer" data-toggle="tooltip"
+                                                title="EDIT"></span>
+                                            <span class="icon icon-save save-document-name mx-3 cursor-pointer" data-toggle="tooltip"
+                                                title="SAVE"></span>
+                                            <span class="icon icon-delete m-0 cursor-pointer" data-bs-toggle="modal"
+                                                data-bs-target="#deleteDocument" data-toggle="tooltip" title="DELETE"></span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="drop-zone mt-4 mb-3 mx-4">
+                            <span class="drop-zone__prompt">DRAG & DROP TO UPLOAD FILE</span>
+                            <input type="file" name="myFile" class="drop-zone__input" />
+                        </div>
+                    </div>
+                </div>`
+            );
+        }
+
+        var handleTable = function (table) {
+            return function () {
+                var tr = $(this).closest('tr');
+                var row = table.row(tr);
+                if (row.child.isShown()) {
+                    // This row is already open - close it
+                    row.child.hide();
+                    tr.removeClass('shown');
+                } else {
+                    // Open this row
+                    row.child(format()).show();
+                    tr.addClass('shown');
+                    row.child().addClass('remove-hover');
+                    editDocumentName(); //call edit document name function defined in custom.js
+                    fileUploadInput(); //call file upload input function defined in custom.js 
+                    reintializeDataTable(); //init datatable after page is loaded
+                }
+                $('td[colspan="4"]').addClass('nested-table');
+            }
+        }
+
+
+        $(document).ready(function () {
+            var AllTable = $('.groups-details-table').DataTable({
+                "lengthChange": false,
+                "pagingType": "simple_numbers",
+                "processing": true,
+                "language": {
+                    "processing": '<div  role="status"> </div>',
+                },
+                "scrollX": true,
+                "scrollY": "50vh",
+
+            });
+            // Add event listener for opening and closing details
+            $('.groups-details-table tbody').on('click', 'td.dt-control', handleTable(AllTable));
+        });
+    </script>
+
+    <script src="dist/js/plugins.min.js"></script>
+    <script src="dist/js/custom.min.js"></script>
+    <!-- Scripts End-->
+</body>
+
+</html>

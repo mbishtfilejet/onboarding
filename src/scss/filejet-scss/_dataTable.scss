@@ -1,0 +1,257 @@
+.dataTables_wrapper {
+
+    // css for table loader
+    .row.dt-row {
+        @extend .position-relative;
+
+        .dataTables_processing.card {
+            @extend .position-absolute, .top-50, .start-50, .bg-transparent, .border-0;
+        }
+
+        .dataTables_processing.card div[role="status"] {
+            @extend .text-purple, .spinner-border;
+        }
+    }
+
+    // loader end
+    &>.row {
+        &:last-child {
+            @extend .justify-content-between, .align-items-center;
+        }
+    }
+
+    tbody {
+        td {
+            @extend .py-3, .px-3, .bg-transparent;
+            font-weight: 500;
+            line-height: rem(20);
+            font-size: rem(16);
+
+            a {
+                font-weight: 600;
+
+                &:hover {
+                    color: var(--bs-purple)
+                }
+            }
+        }
+
+        tr {
+            @extend .bg-white;
+
+            &:hover:not(.remove-hover) {
+                @extend .bg-black-light;
+            }
+        }
+
+        .nested-table {
+            @extend .p-0;
+        }
+    }
+
+    thead {
+        th {
+            @extend .py-4, .px-3, .bg-white, .fs-7;
+            font-weight: 700;
+            line-height: rem(19);
+        }
+    }
+
+    .dataTable {
+        @extend .m-0;
+
+        thead {
+            th.sorting {
+                position: relative;
+                @extend .bg-transparent, .text-capitalize;
+
+                &::after {
+                    content: '';
+                    background-image: url('../../../dist/images/icons/down-filter-arrow.svg');
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    position: absolute;
+                    width: rem(10);
+                    height: 100%;
+                    right: auto;
+                    top: 0;
+                    transition: all 0.3s ease-in;
+                    margin-left: rem(10);
+                }
+
+                &.sorting_asc {
+                    &::after {
+                        transform: rotate(180deg);
+                    }
+                }
+
+                &.sorting_desc {
+                    &::after {
+                        transform: rotate(0deg);
+                    }
+                }
+
+                &.sorting-none {
+                    @extend .border-start-0;
+
+                    &:after {
+                        content: none;
+                    }
+                }
+            }
+
+
+        }
+    }
+}
+
+.dataTables_paginate {
+    ul.pagination {
+        @extend .m-0, .justify-content-end;
+
+        .paginate_button {
+            &.next {
+
+                .page-link {
+                    background: url(../../../dist/images/icons/icon-angle-right.svg) no-repeat center center;
+                    color: transparent;
+                }
+            }
+
+            &.previous {
+                .page-link {
+                    background: url(../../../dist/images/icons/icon-angle-left.svg) no-repeat center center;
+                    color: transparent;
+                }
+            }
+
+            &.disabled {
+                a.page-link {
+                    opacity: 0.5;
+                }
+            }
+
+            a.page-link {
+                @extend .border-0, .text-center, .bg-transparent;
+                color: #a5a4a4;
+                width: 3rem;
+
+                &:focus,
+                &:active {
+                    outline: none;
+                    @extend .shadow-none;
+                }
+            }
+        }
+
+        .paginate_button.active {
+            a.page-link {
+                @extend .text-dark;
+            }
+        }
+    }
+}
+
+.dataTables_info {
+    @extend .py-4, .px-3;
+    font-size: rem(14);
+    font-weight: 400;
+    line-height: rem(20);
+    opacity: 0.5;
+}
+
+.dataTables_paginate {
+    @extend .py-4, .px-3;
+}
+
+table {
+    tr[text-color="red"] {
+        td {
+            @extend .text-red;
+
+            a {
+                @extend .text-red;
+            }
+
+            .btn {
+                @extend .red-bg;
+                border-color: var(--bs-red);
+            }
+        }
+    }
+
+    &.table-nowrap {
+        th {
+            white-space: nowrap;
+        }
+    }
+
+    .btn {
+        font-size: rem(19);
+        line-height: rem(20);
+        font-weight: 500;
+    }
+}
+
+.dataTables_filter {
+    @extend .d-none;
+}
+
+.dataTables_scrollBody>table>thead>tr {
+    visibility: collapse;
+    height: 0px !important;
+}
+
+.dataTables_scroll {
+    .dataTables_scrollBody {
+        padding-top: 1px;
+    }
+}
+
+.dataTables_scroll {
+    .dataTables_scrollBody:has(.long-data-table-listing) {
+        max-height: calc(100vh - 385px) !important;
+        height: calc(100vh - 385px) !important;
+    }
+    .dataTables_scrollBody:has(.data-table-listing-folder) {
+        max-height: calc(100vh - 450px) !important;
+        height: calc(100vh - 450px) !important;
+    }
+}
+
+//:has() selector is not compatable with firefox which causes scroll height issue in .long-data-table-listing table. this firefox-scroll-height class is added from custom.js file.
+.dataTables_scroll {
+    .dataTables_scrollBody.firefox-scroll-height {
+        max-height: calc(100vh - 385px) !important;
+        height: calc(100vh - 385px) !important;
+    }
+    .dataTables_scrollBody.firefox-scroll-height-folder {
+        max-height: calc(100vh - 450px) !important;
+        height: calc(100vh - 450px) !important;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .dataTables_scroll {
+        .dataTables_scrollBody:has(.long-data-table-listing) {
+            max-height: calc(100vh - 325px) !important;
+            height: calc(100vh - 325px) !important;
+        }
+        .dataTables_scrollBody:has(.data-table-listing-folder) {
+            max-height: calc(100vh - 375px) !important;
+            height: calc(100vh - 375px) !important;
+        }
+    }
+
+    //for firefox
+    .dataTables_scroll {
+        .dataTables_scrollBody.firefox-scroll-height {
+            max-height: calc(100vh - 320px) !important;
+            height: calc(100vh - 320px) !important;
+        }
+        .dataTables_scrollBody.firefox-scroll-height-folder {
+            max-height: calc(100vh - 375px) !important;
+            height: calc(100vh - 375px) !important;
+        }
+    }
+}

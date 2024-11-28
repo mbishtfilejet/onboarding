@@ -1,0 +1,45 @@
+.search-form {
+  input {
+    border: none;
+  }
+}
+
+.dropdown-menu {
+  img {
+    max-width: 24px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+}
+
+.search-bar {
+  border-color: rgba(0, 0, 0, 0.12);
+
+  .text-placeholder {
+    color: var(--bs-black-primary);
+    opacity: 0.5;
+    font-size: 1.1875rem;
+    line-height: 1;
+    min-width: 300px;
+    cursor: pointer;
+  }
+}
+
+.profile-nav {
+  min-width: 140px;
+}
+
+@media (max-width: 992px) {
+
+  .search-bar .text-placeholder {
+    min-width: 0;
+  }
+
+}
+
+.header{
+  padding:0.8rem 0 !important;
+  .profile-nav > div{
+      @extend .shadow;
+    }
+}

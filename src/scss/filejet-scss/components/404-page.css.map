@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,eAAe,CAAA;EACX,MAAM,EAAE,IAAI;CAEf",
+    "sources": [
+        "404-page.scss"
+    ],
+    "names": [],
+    "file": "404-page.css"
+}

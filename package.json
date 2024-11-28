@@ -1,0 +1,35 @@
+{
+  "name": "filejet",
+  "version": "0.1.0",
+  "description": "Grunt",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "grunt --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "grunt-cli": "^0.1.13",
+    "grunt-jquery-builder": "*",
+    "imagemin": "^6.0.0",
+    "jquery": "^3.5.1",
+    "sass": "^1.58.1"
+  },
+  "devDependencies": {
+    "grunt": "^1.6.1",
+    "grunt-backup": "*",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-cssmin": "latest",
+    "grunt-contrib-imagemin": "^3.1.0",
+    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-sass": "^2.0.0",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-html": "latest",
+    "grunt-sass": "^3.1.0",
+    "jit-grunt": "latest",
+    "jshint-stylish": "latest",
+    "node-sass": "^8.0.0"
+  }
+}

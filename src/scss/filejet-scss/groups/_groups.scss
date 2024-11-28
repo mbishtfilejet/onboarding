@@ -1,0 +1,17 @@
+.hoverToolTip{
+    label{
+        cursor: pointer;
+    }
+    label + div{
+        bottom: 80%;
+        right: 0%;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.3s ease-out;
+    }
+    label:hover + div{
+        visibility: visible;
+        opacity: 1;
+        transition: all 0.3s ease-in;
+    }
+}

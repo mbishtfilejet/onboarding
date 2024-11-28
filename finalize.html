@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Jet: Entities</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="dist/css/filejet-style.css">
+    <script src="dist/js/jquery.min.js"></script>
+    <!-- Scripts -->
+
+    <!-- select2 library -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <!-- select2 library -->
+</head>
+
+<body>
+
+    <div class="grey-bg dashboard-page min-vh-100">
+        <div class="container-fluid p-0">
+            <div class="sidebar-wrapper">
+                <div class="sidebar min-vh-100 py-3 ps-3">
+                    <div>
+                        <div class="ps-3 pb-4">
+                            <a href="/" class="logo">
+                                <img src="dist/images/logo.png" class="d-none d-lg-block" alt="FileJet">
+                                <img src="dist/images/filejet-pinLogo.png" class="d-block d-lg-none" alt="FileJet">
+                            </a>
+                        </div>
+                        <div>
+                            <ul class="menu-link menu-onboardin p-0 m-0">
+                                <!-- Dashboard -->
+                                <li class="nav-link active">
+                                    <a href="./" class="text-decoration-none ps-3 py-3 d-flex align-items-center">
+                                        
+                                        <span class="icon icon-entities-dark normal-icon"></span>
+                                        <span class="icon icon-entities-purple active-icon"></span>
+                                        <span class="text nav-text">Entities</span>
+                                    </a>
+                                </li>
+                                <!-- Entities -->
+                                <li class="nav-link">
+                                    <a href="./groups.html" class="text-decoration-none ps-3 py-3 d-flex align-items-center">
+                                        <span class="icon icon-groups-dark normal-icon"></span>
+                                        <span class="icon icon-groups-purple active-icon"></span>
+                                        <span class="text nav-text position-relative">
+                                            Groups
+                                        </span>
+                                    </a>
+                                </li>
+                                <!-- Groups -->
+                                <li class="nav-link">
+                                    <a href="./users.html" class="text-decoration-none ps-3 py-3 d-flex align-items-center">
+                                        <span class="icon icon-users-dark normal-icon"></span>
+                                        <span class="icon icon-users-purple active-icon"></span>
+                                        <span class="text nav-text">Users</span>
+                                    </a>
+                                </li>
+                                <li class="nav-link">
+                                    <a href="./payment-method.html" class="text-decoration-none ps-3 py-3 d-flex align-items-center">
+                                        <span class="icon icon-payment-method-dark normal-icon"></span>
+                                        <span class="icon icon-payment-method-purple active-icon"></span>
+                                        <span class="text nav-text">Payment Method</span>
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <!-- <div class="pe-4 me-2 ps-3 flex-fill">
+                        <button type="button" class="btn btn-light border-dark px-3 text-capitalize w-100 ">Contact Rep</button>
+                    </div> -->
+                </div>
+            </div>
+            <div class="main-content-wrapper">
+                <!-- <div class="container-fluid container-lg">
+                    <div class="header py-1">
+
+                        <div class="row align-items-center">
+                            <div class="col-8 py-3">
+                                <h3 class="m-0 font-weight-700">
+                                    Finalize Entities
+                                </h3>
+                            </div>
+                            <div class="col-4 py-3 text-end">
+                                <a href="index.html" class="text-decoration-none d-flex align-items-center justify-content-end"><span class="fs-6">Edit Entities</span> <span class="icon icon-sm me-0 ms-2 icon-out-of-scope-aero-dark opacity-50"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="container-fluid container-lg">
+                    <div class="header py-1">
+                        <div class="row align-items-center">
+                            <div class="col-6 col-xl-6 col-lg-6">
+                                <h3 class="m-0 font-weight-700">
+
+                                    Finalize Entities
+
+                                </h3>
+                            </div>
+                            <div class="col col-md-6 col-xl-6 col-lg-6 d-flex align-items-center justify-content-end justify-content-md-end">
+
+                                <div class="profile-nav">
+                                    <div class="dropdown white-bg p-0 rounded-5">
+
+                                        <a class="nav-link dropdown-toggle show px-3" href="#" data-bs-toggle="dropdown" aria-expanded="true">
+                                            <span class="avatar avatar-lg ms-n3">
+                                                <img src="../dist/images/avatar.png" alt="">
+                                            </span>
+                                            <span class="user-name fw-bold">Roman</span>
+                                        </a>
+                                        <ul class="dropdown-menu" data-bs-popper="static">
+                                            <li>
+                                                <span class="dropdown-item py-3 d-flex align-items-center border-bottom">
+                                                    Account
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item py-3 d-flex align-items-center" href="../../login.html">
+                                                    <span class="icon icon-logout me-4"></span>
+                                                    Logout
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="container-fluid container-lg">
+                    <div class="main-content">
+                        <div class="row align-items-center">
+                            <div class="col-8 py-3">
+                                <h3 class="m-0 font-weight-700">Entities Summary</h3>
+                            </div>
+                            <div class="col-4 py-3 text-end">
+                                <a href="index.html" class="text-decoration-none d-flex align-items-center justify-content-end"><span class="fs-6">Edit Entities</span> <span class="icon icon-sm me-0 ms-2 icon-out-of-scope-aero-dark opacity-50"></span></a>
+                            </div>
+                        </div>
+                       <div>
+                        <div class="bg-white rounded-2 mb-3 shadow">
+                            <table class="table data-table-listing table-nowrap table-striped w-100">
+                                <thead>
+                                    <tr>
+                                        <th class="fixed-max-width min-width-100">Group</th>
+                                        <th class="fixed-max-width">Entity Name</th>
+                                        <th class="fixed-max-width">State</th>
+                                        <th class="fixed-max-width">Registered Agent</th>
+                                        <th class="fixed-max-width">Annual Report</th>
+                                        <th class="fixed-max-width">CTA</th>
+                                        <th class="fixed-max-width">Payment Method</th>
+                                        <th class="fixed-max-width">Cost</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="odd">
+                                        <td class="sorting_1">Beyond
+                                            </td>
+                                        <td>Beyond
+                                            Boundaries Ventures Beyond Beyond
+                                            Boundaries Ventures</td>
+                                        <td><span class="cursor-pointer " data-toggle="tooltip"
+                                            data-bs-original-title="Wyoming">WY</span></td>
+                                        <td>Yes</td>
+                                        <td>Yes</td>
+                                        <td>Yes</td>
+                                        <td>STRIPE TEST BANK-6789</td>
+                                        <td>$ 349</td>
+                                    </tr>
+                                    <tr class="even">
+                                        <td class="sorting_1">Beyond
+                                            </td>
+                                        <td>Beyond
+                                            Boundaries Ventures</td>
+                                        <td><span class="cursor-pointer " data-toggle="tooltip"
+                                            data-bs-original-title="Wyoming">WY</span></td>
+                                        <td>Yes</td>
+                                        <td>Yes</td>
+                                        <td>Yes</td>
+                                        <td>STRIPE TEST BANK-6789</td>
+                                        <td>$ 349</td>
+                                    </tr>
+                                    <tr class="odd">
+                                        <td class="sorting_1">Beyond
+                                            </td>
+                                        <td>Beyond
+                                            Boundaries Ventures</td>
+                                        <td><span class="cursor-pointer " data-toggle="tooltip"
+                                            data-bs-original-title="Wyoming">WY</span></td>
+                                        <td>Yes</td>
+                                        <td>Yes</td>
+                                        <td>Yes</td>
+                                        <td>Visa-0224</td>
+                                        <td>$ 349</td>
+                                    </tr>
+                                    <tr class="even">
+                                        <td class="sorting_1">Beyond
+                                            </td>
+                                        <td>Beyond
+                                            Boundaries Ventures</td>
+                                        <td><span class="cursor-pointer " data-toggle="tooltip"
+                                            data-bs-original-title="Wyoming">WY</span></td>
+                                        <td>Yes</td>
+                                        <td>Yes</td>
+                                        <td>Yes</td>
+                                        <td>STRIPE TEST BANK-6789</td>
+                                        <td>$ 349</td>
+                                    </tr>
+                                    <tr class="odd">
+                                        <td class="sorting_1">Beyond
+                                            Boundaries Ventures Group 1.0</td>
+                                        <td>Beyond
+                                            Boundaries Ventures</td>
+                                        <td><span class="cursor-pointer " data-toggle="tooltip"
+                                            data-bs-original-title="Wyoming">WY</span></td>
+                                        <td>Yes</td>
+                                        <td>Yes</td>
+                                        <td>Yes</td>
+                                        <td>Visa-0224</td>
+                                        <td>$ 349</td>
+                                    </tr>
+                                    <tr class="even">
+                                        <td class="sorting_1">Beyond
+                                            Boundaries Ventures Group 1.0</td>
+                                        <td>Beyond
+                                            Boundaries Ventures</td>
+                                        <td><span class="cursor-pointer " data-toggle="tooltip"
+                                            data-bs-original-title="Wyoming">WY</span></td>
+                                        <td>Yes</td>
+                                        <td>Yes</td>
+                                        <td>Yes</td>
+                                        <td>STRIPE TEST BANK-6789</td>
+                                        <td>$ 349</td>
+                                    </tr>
+                                    <tr class="odd">
+                                        <td class="sorting_1">Beyond
+                                            Boundaries Ventures Group 1.0</td>
+                                        <td>Beyond
+                                            Boundaries Ventures</td>
+                                        <td><span class="cursor-pointer " data-toggle="tooltip"
+                                            data-bs-original-title="Wyoming">WY</span></td>
+                                        <td>Yes</td>
+                                        <td>Yes</td>
+                                        <td>Yes</td>
+                                        <td>Visa-0224</td>
+                                        <td>$ 349</td>
+                                    </tr>
+                                    <tr class="even">
+                                        <td class="sorting_1">Beyond
+                                            Boundaries Ventures Group 1.0</td>
+                                        <td>Beyond
+                                            Boundaries Ventures</td>
+                                        <td><span class="cursor-pointer " data-toggle="tooltip"
+                                            data-bs-original-title="Wyoming">WY</span></td>
+                                        <td>Yes</td>
+                                        <td>Yes</td>
+                                        <td>Yes</td>
+                                        <td>Visa-0224</td>
+                                        <td>$ 349</td>
+                                    </tr>
+                                    <tr class="odd">
+                                        <td class="sorting_1">Beyond
+                                            Boundaries Ventures Group 1.0</td>
+                                        <td>Beyond
+                                            Boundaries Ventures</td>
+                                        <td><span class="cursor-pointer " data-toggle="tooltip"
+                                            data-bs-original-title="Wyoming">WY</span></td>
+                                        <td>Yes</td>
+                                        <td>Yes</td>
+                                        <td>Yes</td>
+                                        <td>Visa-0224</td>
+                                        <td>$ 349</td>
+                                    </tr>
+                                    <tr class="even">
+                                        <td class="sorting_1">Beyond
+                                            Boundaries Ventures Group 1.0</td>
+                                        <td>Beyond
+                                            Boundaries Ventures</td>
+                                        <td><span class="cursor-pointer " data-toggle="tooltip"
+                                            data-bs-original-title="Wyoming">WY</span></td>
+                                        <td>Yes</td>
+                                        <td>Yes</td>
+                                        <td>Yes</td>
+                                        <td>Visa-0224</td>
+                                        <td>$ 349</td>
+                                    </tr>
+                                    <tr class="odd">
+                                        <td class="sorting_1">Beyond
+                                            Boundaries Ventures Group 1.0</td>
+                                        <td>Beyond
+                                            Boundaries Ventures</td>
+                                        <td><span class="cursor-pointer " data-toggle="tooltip"
+                                            data-bs-original-title="Wyoming">WY</span></td>
+                                        <td>Yes</td>
+                                        <td>Yes</td>
+                                        <td>Yes</td>
+                                        <td>Visa-0224</td>
+                                        <td>$ 349</td>
+                                    </tr>
+                                    <tr class="even">
+                                        <td class="sorting_1">Beyond
+                                            Boundaries Ventures Group 1.0</td>
+                                        <td>Beyond
+                                            Boundaries Ventures</td>
+                                        <td><span class="cursor-pointer " data-toggle="tooltip"
+                                            data-bs-original-title="Wyoming">WY</span></td>
+                                        <td>Yes</td>
+                                        <td>Yes</td>
+                                        <td>Yes</td>
+                                        <td>Visa-0224</td>
+                                        <td>$ 349</td>
+                                    </tr>
+                                    <tr class="odd">
+                                        <td class="sorting_1">Beyond
+                                            Boundaries Ventures Group 1.0</td>
+                                        <td>Beyond
+                                            Boundaries Ventures</td>
+                                        <td><span class="cursor-pointer " data-toggle="tooltip"
+                                            data-bs-original-title="Wyoming">WY</span></td>
+                                        <td>Yes</td>
+                                        <td>Yes</td>
+                                        <td>Yes</td>
+                                        <td>Visa-0224</td>
+                                        <td>$ 349</td>
+                                    </tr>
+                                    <tr class="even">
+                                        <td class="sorting_1">Beyond
+                                            Boundaries Ventures Group 1.0</td>
+                                        <td>Beyond
+                                            Boundaries Ventures</td>
+                                        <td><span class="cursor-pointer " data-toggle="tooltip"
+                                            data-bs-original-title="Wyoming">WY</span></td>
+                                        <td>Yes</td>
+                                        <td>Yes</td>
+                                        <td>Yes</td>
+                                        <td>Visa-0224</td>
+                                        <td>$ 349</td>
+                                    </tr>
+                                    <tr class="odd">
+                                        <td class="sorting_1">Beyond
+                                            Boundaries Ventures Group 1.0</td>
+                                        <td>Beyond
+                                            Boundaries Ventures</td>
+                                        <td><span class="cursor-pointer " data-toggle="tooltip"
+                                            data-bs-original-title="Wyoming">WY</span></td>
+                                        <td>Yes</td>
+                                        <td>Yes</td>
+                                        <td>Yes</td>
+                                        <td>STRIPE TEST BANK-6789</td>
+                                        <td>$ 349</td>
+                                    </tr>
+                                    <tr class="even">
+                                        <td class="sorting_1">Beyond
+                                            Boundaries Ventures Group 1.0</td>
+                                        <td>Beyond
+                                            Boundaries Ventures</td>
+                                        <td><span class="cursor-pointer " data-toggle="tooltip"
+                                            data-bs-original-title="Wyoming">WY</span></td>
+                                        <td>Yes</td>
+                                        <td>Yes</td>
+                                        <td>Yes</td>
+                                        <td>Visa-0224</td>
+                                        <td>$ 349</td>
+                                    </tr>
+                                    
+                                </tbody>
+                                <tfoot class="w-100 ">
+                                    <tr class="py-2">
+                                        <td colspan="7" class="ps-3 fw-bold py-4">Total</td>
+                                        
+                                        <td class="ps-4 py-4">
+                                            <span class="text-dark fw-bold text-decoration-none">$1540</span>
+                                        </td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                            
+                        </div>
+                       </div>
+
+                       <div class="payment-summary mt-4">
+                        <div class="row align-items-center">
+                            <div class="col-8 py-3">
+                                <h3 class="m-0 font-weight-700">
+                                    Payment Summary
+                                </h3>
+                            </div>
+                            <div class="col-4 py-3 text-end">
+                                <a href="index.html" class="text-decoration-none d-flex align-items-center justify-content-end"><span class="fs-6">Edit Payment Methods</span> <span class="icon icon-sm me-0 ms-2 icon-out-of-scope-aero-dark opacity-50"></span></a>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-2 mb-3 shadow">
+                            <table id="entity-listing" class="table data-table-payment-summary table-striped  w-100">
+                                <thead>
+                                    <tr>
+                                        <th class="w-75">Card Name</th>
+                                        <th class="sorting-none"></th>
+                                        <th class="sorting-none"></th>
+                                        <th class="sorting-none"></th>
+                                        <th class="sorting-none"></th>
+                                        <th class="sorting-none"></th>
+                                        <th class="">Amount</th>
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="odd">
+                                        <td>Visa-0224</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>$ 349</td>
+                                    </tr>
+                                    <tr class="even">
+                                        <td>Visa-0224</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>$ 349</td>
+                                    </tr>
+                                    <tr class="odd">
+                                        <td>Visa-0224</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>$ 349</td>
+                                    </tr>
+                                    <tr class="even">
+                                        <td>Visa-0224</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>$ 349</td>
+                                    </tr>
+                                    
+                                </tbody>
+                               
+                            </table>
+                            
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between my-5">
+                            <div>
+                                <button type="button" class="px-5 btn btn-light border-dark px-3 text-capitalize w-100 d-flex align-items-center" onclick="window.location.href='./index.html'"><span class="icon icon-angle-left icon-sm"></span> Go Back</button>
+                            </div>
+                            <div>
+                                <button type="button" class="px-5 btn btn-secondary px-4 text-capitalize d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#billingSubscriptionModal">Finish<span class="icon icon-finalize-dark ms-3"></span></button>
+                            </div>
+                        </div>
+                       </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+       <!-- billing subscription  Starts -->
+       <div class="modal modal-right fade" id="billingSubscriptionModal" tabindex="-1"
+       aria-labelledby="billingCycleyModalLabel" aria-hidden="true">
+
+       <div class="modal-dialog modal-lg-plus modal-dialog-end modal-dialog-scrollable my-0 min-vh-100">
+           <div class="modal-content p-2 border-0 rounded-0 min-vh-100">
+
+               <!-- Modal Body -->
+               <div class="modal-body bg-dark pt-1 pb-1 py-0 px-1">
+                   <div class="bg-light px-4 position-relative">
+                       <!-- Modal Header -->
+                       <div class="modal-header flex-wrap px-0">
+                           <div
+                               class="d-flex align-items-center justify-content-between w-100 border-bottom border-danger border-3 pb-4">
+                               <div>
+                                   <a href="/" class="logo">
+                                       <img src="../dist/images/logo.png" class="d-lg-block" alt="FileJet">
+                                   </a>
+                               </div>
+                               <div class="me-5">
+                                   <h6 class="text-uppercase fw-bold text-light-blue">Invoice Details</h6>
+                                   <div class="mt-3">
+                                       <p class="mb-0 text-light-blue">Invoice ID: 2435</p>
+                                       <p class="mb-0 text-light-blue">Invoice Date: Dec 02, 2023</p>
+                                       <p class="mb-0 text-light-blue">Due By Date: Dec 02, 2023</p>
+                                   </div>
+                               </div>
+                           </div>
+
+                       </div>
+                       <!-- Modal Header Ends -->
+
+                       <div class="subscription-body px-4">
+                           <p class="border-bottom-light-blue border-2 pb-2 text-light-blue fs-4 font-weight-600">
+                               Partner Information</p>
+
+                           <div class="d-flex justify-content-between">
+                               <div class="shippingAddress">
+                                   <h6 class="font-weight-700 fs-4">Billing Address</h6>
+                                   <address>
+                                       <ul class="list-unstyled font-weight-500 fs-5">
+                                           <li class="lh-sm">Allen Corp Supply <br>
+                                               10440 pioneer Bivd <br>
+                                               Suite B
+                                           </li>
+                                           <li class="lh-sm">
+                                               Sanita Fe Springs, CA 90456 <br>
+                                               United States <br>
+                                               orders@allencorpsupply.co
+                                           </li>
+                                       </ul>
+                                   </address>
+                               </div>
+                               <div class="billingAddress">
+                                   <h6 class="font-weight-700 fs-4">Shipping Address</h6>
+                                   <address>
+                                       <ul class="list-unstyled font-weight-500 fs-5">
+                                           <li class="lh-sm">Allen Corp Supply <br>
+                                               10440 pioneer Bivd <br>
+                                               Suite B
+                                           </li>
+                                           <li class="lh-sm">
+                                               Sanita Fe Springs, CA 90456 <br>
+                                               United States <br>
+
+                                           </li>
+                                       </ul>
+                                   </address>
+
+                               </div>
+                               <div></div>
+
+                           </div>
+
+                           <div class="pb-5 position-relative">
+                               <h6 class="border-bottom-light-blue pb-2 text-light-blue font-weight-600 fs-4">
+                                   Invoice Summary</h6>
+
+                               <div class="table-parent pb-5">
+
+                                   <table class="table w-100 table-striped table-nowrap mb-0 fs-6">
+                                       <thead>
+                                           <tr>
+                                               <th>S. No.</th>
+                                               <th class="fixed-max-width">Entity</th>
+                                               <th>Store Number</th>
+                                               <th>Assigned Groups</th>
+                                               <th>State</th>
+
+                                               <th class="text-end">Subscription Fee</th>
+                                           </tr>
+                                       </thead>
+                                       <tbody>
+
+                                           <tr class="odd">
+                                               <td class="sorting_1">1.</td>
+                                               <td><span class="text-break text-uppercase">BlueSky Innovations
+                                                       BlueSky Innovations abc version 2.0</span> <sup
+                                                       class="text-light-blue">Plateform Fee</sup>
+                                               </td>
+                                               <td>10299</td>
+                                               <td>BLUESKY INNOVATIONS BLUESK Groups</td>
+                                               <td><span class="cursor-pointer" data-toggle="tooltip"
+                                                       data-bs-original-title="Arizona">AZ</span></td>
+
+                                               <td>
+                                                   <div class="text-end">$345.00</div>
+                                               </td>
+                                           </tr>
+                                           <tr class="even">
+                                               <td class="sorting_1">1.1</td>
+                                               <td><span class="text-break">Boldly Better Business Boldly Better
+                                                       Business</span> <sup class="text-light-blue">Plateform
+                                                       Fee</sup>
+                                               </td>
+                                               <td>10299</td>
+                                               <td>Donald Duck 2.0</td>
+                                               <td><span class="cursor-pointer" data-toggle="tooltip"
+                                                       data-bs-original-title="California">CA</span></td>
+
+                                               <td>
+                                                   <div class="text-end">$45.00</div>
+                                               </td>
+
+                                           </tr>
+                                           <tr class="odd">
+                                               <td class="sorting_1">1.2</td>
+                                               <td><span class="text-break">BrightPath Enterprises</span> <sup
+                                                       class="text-light-blue">Plateform Fee</sup>
+                                               </td>
+                                               <td>10299</td>
+                                               <td>Donald Duck 3.0 groups</td>
+                                               <td><span class="cursor-pointer" data-toggle="tooltip"
+                                                       data-bs-original-title="Florida">FL</span></td>
+
+                                               <td>
+                                                   <div class="text-end">$345.00</div>
+                                               </td>
+                                           </tr>
+                                           <tr class="even">
+                                               <td class="sorting_1">2</td>
+                                               <td><span class="text-break text-uppercase">Ignite Ideas LLC</span>
+                                               </td>
+                                               <td>10299</td>
+                                               <td>Donald Duck 4.0 groups</td>
+                                               <td><span class="cursor-pointer" data-toggle="tooltip"
+                                                       data-bs-original-title="Maine">ME</span></td>
+
+                                               <td>
+                                                   <div class="text-end">$3.00</div>
+                                               </td>
+                                           </tr>
+                                           <tr class="odd">
+                                               <td class="sorting_1">2.1</td>
+                                               <td><span class="text-break">Inception Innovations</span>
+                                               </td>
+                                               <td>10299</td>
+                                               <td>Donald Duck 5.0 groups</td>
+                                               <td><span class="cursor-pointer" data-toggle="tooltip"
+                                                       data-bs-original-title="Wyoming">WY</span></td>
+
+                                               <td>
+                                                   <div class="text-end">$0.00</div>
+                                               </td>
+                                           </tr>
+                                           <tr class="even">
+                                               <td class="sorting_1">2.2</td>
+                                               <td><span class="text-break">NextWave Industries</span>
+                                               </td>
+                                               <td>10299</td>
+                                               <td>Donald Duck 6.0 groups</td>
+                                               <td><span class="cursor-pointer" data-toggle="tooltip"
+                                                       data-bs-original-title="Idaho">ID</span></td>
+
+                                               <td>
+                                                   <div class="text-end">$15.00</div>
+                                               </td>
+                                           </tr>
+                                           <tr class="odd">
+                                               <td class="sorting_1">2.3</td>
+                                               <td><span class="text-break">Nimbus Network
+                                                       Solutions</span></td>
+                                               <td>10299</td>
+                                               <td>Donald Duck 3.0 groups</td>
+                                               <td><span class="cursor-pointer" data-toggle="tooltip"
+                                                       data-bs-original-title="Montana">MT</span></td>
+
+                                               <td>
+                                                   <div class="text-end">$5.00</div>
+                                               </td>
+                                           </tr>
+                                           <tr class="even">
+                                               <td class="sorting_1">3</td>
+                                               <td><span class="text-break text-uppercase">Ollivander's Tier
+                                                       Technologies</span></td>
+                                               <td>10299</td>
+                                               <td>Donald Duck 3.0 groups</td>
+                                               <td><span class="cursor-pointer" data-toggle="tooltip"
+                                                       data-bs-original-title="Alaska">AK</span></td>
+
+                                               <td>
+                                                   <div class="text-end">$25.00</div>
+                                               </td>
+                                           </tr>
+                                           <tr class="odd">
+                                               <td class="sorting_1">3.1</td>
+                                               <td><span class="text-break">Precision Progression
+                                                       Group</span></td>
+                                               <td>10299</td>
+                                               <td>Donald Duck 3.0 groups</td>
+                                               <td><span class="cursor-pointer" data-toggle="tooltip"
+                                                       data-bs-original-title="Arkansas">AR</span></td>
+
+                                               <td>
+                                                   <div class="text-end">$5.00</div>
+                                               </td>
+                                           </tr>
+                                           <tr class="even">
+                                               <td></td>
+                                               <td class="fw-bold fs-5">Total</td>
+                                               <td></td>
+                                               <td></td>
+                                               <td></td>
+                                               <td class="text-end fw-bold fs-5">$765.00</td>
+                                           </tr>
+
+                                       </tbody>
+                                   </table>
+
+
+                               </div>
+
+                           </div>
+
+                       </div>
+                       <div class="subscription-footer border-top border-danger border-2">
+                           <div class="d-flex justify-content-end py-4">
+                               <div class="fs-6">
+
+                                   Website: filejet.com <br>
+                                   Phone: +1 (949) 259-5955
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+
+
+               <!-- Modal Body Ends-->
+               <div class="modal-footer">
+                   <div class="d-flex justify-content-end w-100 gap-3">
+                       <button type="button" class="btn btn-link text-decoration-none font-weight-600"
+                           data-bs-dismiss="modal">
+                           CLOSE
+                       </button>
+
+                       <button type="button" data-bs-toggle="modal"
+                           data-bs-target="#afterPayNowSubscriptionBillingInvoiceModal"
+                           class="btn btn-secondary px-4 text-decoration-none font-weight-600">
+                           Pay Now
+                       </button>
+
+                   </div>
+               </div>
+
+           </div>
+       </div>
+
+   </div>
+   <!-- billing subscription modal Ends -->
+
+   <!-- subscription billing Invoice modal Starts -->
+   <div class="modal modal-right fade" id="subscriptionBillingInvoiceModal" tabindex="-1"
+       aria-labelledby="billingCycleyModalLabel" aria-hidden="true">
+       <div class="modal-dialog modal-dialog-end modal-dialog-scrollable my-0 min-vh-100">
+           <div class="modal-content border-0 rounded-0 min-vh-100">
+               <!-- Modal Header -->
+               <div class="modal-header flex-wrap">
+                   <div class="d-flex align-items-center w-100">
+                       <span class="bg-dark p-3 rounded-2 me-4 d-inline-block">
+                           <span class="icon icon-payment-white  icon-lg m-0"></span>
+                       </span>
+                       <div>
+                           <span class="d-block text-dark text-opacity-50 fs-9 text-uppercase">billing</span>
+                           <h3 class="fs-3 m-0 mt-2">Complete Payment</h3>
+                       </div>
+                   </div>
+
+               </div>
+
+               <!-- Modal Header Ends -->
+
+               <!-- Modal Body -->
+               <div class="modal-body">
+                   <!-- <p class="fw-normal">Complete payment for order #3470 (Entity 1 INC)</p> -->
+                   <div class="bg-white rounded-3 p-4 shadow-sm">
+                       <form action="">
+                           <div class="mb-3">
+                               <label for="" class="form-label text-uppercase">Payment Type</label>
+                               <div class="mb-3 bg-white p-4 rounded-3 shadow-lg">
+                                   <div class=" d-flex justify-content-start gap-5 w-100">
+                                       <div class="form-check form-check-inline">
+                                           <input class="form-check-input" type="radio" name="payNowLater" id="payNow" value="option1">
+                                           <label class="form-check-label" for="payNow">PAY NOw</label>
+                                       </div>
+                                       <div class="form-check form-check-inline">
+                                           <input class="form-check-input" type="radio" name="payNowLater" id="payLater" value="option2">
+                                           <label class="form-check-label" for="payLater">Pay Later</label>
+                                       </div>
+                               </div>
+                               </div>
+                           </div>
+                           <div class="mb-3">
+                               <label for="" class="form-label text-uppercase">Payment by</label>
+                               <select class="form-select form-control">
+                                   <option selected="">Partner</option>
+                                   <option value="1">Admin</option>
+                                   <option value="2">Type 2</option>
+
+                               </select>
+                           </div>
+                          
+                           <div class="mb-3">
+                               <label for="" class="form-label text-uppercase">Choose Payment method</label>
+                               <select class="form-select form-control">
+                                   <option selected="">Kelly-visa 2345</option>
+                                   <option value="1">Admin</option>
+                                   <option value="2">Type 2</option>
+
+                               </select>
+                           </div>
+                           <!-- <div class="mb-3">
+                               <label for="" class="form-label text-uppercase">Use Alternate Credit card (one time use)</label>
+                               <input type="text" class="form-control" placeholder="Card Number">
+                           </div>
+
+                           <div class="mb-3">
+                               
+                               <fieldset disabled="">
+                                   <label for="" class="form-label text-uppercase">CARD EXPIRATION</label>
+                                   <div class="row">
+                                       <div class="col-md-6">
+                                           <input type="text" class="form-control" id="" value="12/10/2023">
+                                           
+   
+                                       </div>
+                                       <div class="col-md-6">
+                                         
+                                           <input type="text" class="form-control" id="" value="123">
+   
+                                       </div>
+
+                                   </div>
+                               </fieldset>
+                           </div> -->
+                           <div class="d-flex justify-content-between">
+                               <div>
+                                   <label for="" class="form-label text-uppercase">Total amount</label>
+                                   <p class="font-weight-600">$10.00</p>
+                               </div>
+                               <div>
+                                   <label for="" class="form-label text-uppercase">Total Unpaid</label>
+                                   <p class="font-weight-600">$10.00</p>
+                               </div>
+                           </div>
+                       </form>
+
+                   </div>
+               </div>
+
+               <!-- Modal Body Ends-->
+               <div class="modal-footer">
+                   <div class="d-flex justify-content-end align-items-center w-100">
+                       <button type="button" class="btn btn-link text-decoration-none font-weight-600"
+                           data-bs-toggle="modal" data-bs-target="#billingSubscriptionModal">
+                           Cancel
+                       </button>
+                       <button type="button" class="btn btn-secondary px-4 text-decoration-none font-weight-600"
+                           data-bs-dismiss="modal" data-bs-toggle="modal"
+                           data-bs-target="#afterPayNowSubscriptionBillingInvoiceModal">
+                           Pay Now
+                       </button>
+                   </div>
+               </div>
+
+           </div>
+       </div>
+   </div>
+   <!--subscription billing Invoice modal Ends -->
+
+   <!--after Pay Now click subscription billing Invoice modal Starts -->
+   <div class="modal modal-right fade" id="afterPayNowSubscriptionBillingInvoiceModal" tabindex="-1"
+       aria-labelledby="afterPayNowSubscriptionBillingInvoiceModalLabel" aria-hidden="true">
+       <div class="modal-dialog modal-dialog-end modal-dialog-scrollable my-0 min-vh-100">
+           <div class="modal-content border-0 rounded-0 min-vh-100">
+               <!-- Modal Header -->
+               <div class="modal-header flex-wrap">
+                   <div class="d-flex align-items-center w-100">
+                       <span class="bg-dark p-3 rounded-2 me-4 d-inline-block">
+                           <span class="icon icon-payment-white  icon-lg m-0"></span>
+                       </span>
+                       <div>
+                           <span class="d-block text-dark text-opacity-50 fs-9 text-uppercase">billing</span>
+                           <h3 class="fs-3 m-0 mt-2">Complete Onboarding Process</h3>
+                       </div>
+                   </div>
+
+               </div>
+
+               <!-- Modal Header Ends -->
+
+               <!-- Modal Body -->
+               <div class="modal-body">
+                   <div class="bg-white rounded-3 p-4 shadow-sm">
+
+                       <form method="post" accept-charset="utf-8" class="subscription-renewal-form"
+                           id="subscription-renewal-form"
+                           action="/qa/entity-subscriptions/store?end_date=2024-03-05">
+                           <div style="display:none;"><input type="hidden" name="_method" value="POST"><input
+                                   type="hidden" name="_csrfToken" autocomplete="off"
+                                   value="09fbb998912955465fb69a65c3bbfb057f5efa5a6b0f86939d32669a13fcddbfeaafde41963f72fb2205cd9ad0d59efb1391751c24316e4500c56f72a8f48d94">
+                           </div>
+                           <p>Your order is processing . You may now access the portal to view the entities. </p>
+                          
+                           
+                       </form>
+                   </div>
+                    <div class="text-center my-4">
+                        <button type="button" class="btn btn-secondary font-weight-600" onclick="window.location.href='https://filejet-redesign.vercel.app/'">Click to Proceed to your dashboard</button>
+                    </div>
+               </div>
+
+               <!-- Modal Body Ends-->
+            
+           </div>
+       </div>
+   </div>
+   <!--after Pay Now click subscription billing Invoice modal Ends -->
+    <!--daterange picker init  -->
+    <script>
+        $(function () {
+            $('input[id="formateDateCompleted"]').daterangepicker({
+                singleDatePicker: true,
+                // showDropdowns: true,
+                autoUpdateInput: false,
+                autoApply: true,
+                //parentEl: $('.calender-parent'),
+                applyButtonClasses: 'btn-info',
+                drops: 'bottom',
+                minYear: 1901,
+                maxYear: parseInt(moment().format('YYYY'), 10)
+
+            });
+            $('input[id="formateDateCompleted"]').on('apply.daterangepicker', function (ev, picker) {
+                $(this).val(picker.startDate.format('MM/DD/YYYY'));
+            });
+        });
+
+        $(function () {
+            $('input[id="formationDate"]').daterangepicker({
+                singleDatePicker: true,
+                // showDropdowns: true,
+                autoUpdateInput: false,
+                autoApply: true,
+                parentEl: $('.calender-input-filed'),
+                applyButtonClasses: 'btn-info',
+                drops: 'bottom',
+                minYear: 1901,
+                maxYear: parseInt(moment().format('YYYY'), 10)
+
+            });
+            $('input[id="formationDate"]').on('apply.daterangepicker', function (ev, picker) {
+                $(this).val(picker.startDate.format('MM/DD/YYYY'));
+            });
+        });
+
+    </script>
+    <!-- select2 init -->
+    <script>
+        // In your Javascript (external .js resource or <script> tag)
+        $(document).ready(function () {
+            $('.js-example-basic-single').select2();
+        });
+    </script>
+    <!-- select2 init end-->
+    
+    <script src="dist/js/plugins.min.js"></script>
+    <script src="dist/js/custom.min.js"></script>
+
+    <!-- Scripts End-->
+</body>
+
+</html>
