@@ -336,6 +336,7 @@
                                                             <th class="min-width-100">State Id No.</th>
                                                             <th class="formation-date-min-width">Formation Date</th>
                                                             <th class="min-width-100">Last Rep. Filed</th>
+                                                            <th class="min-width-100">Good Standing Status</th>
                                                             <th class="min-width-100">Status</th>
                                                             <th class="max-width-130">Services</th>
                                                         </tr>
@@ -388,12 +389,16 @@
                                                                         id="formateDateCompleted" value="10/13/2023">
                                                                 </div>
                                                             </td>
+                                                           
                                                             <td class="max-width-130">
                                                                 <div class="calender-parent position-relative">
                                                                     <input type="text"
                                                                         class="bg-transparent outline-0 border-0 fs-6 font-weight-500"
                                                                         id="formateDateCompleted" value="10/13/2023">
                                                                 </div>
+                                                            </td>
+                                                            <td>
+                                                                GS
                                                             </td>
                                                             <td>
                                                                 <div>
@@ -480,6 +485,9 @@
                                                                         class="bg-transparent outline-0 border-0 fs-6 font-weight-500"
                                                                         id="formateDateCompleted" value="10/13/2023">
                                                                 </div>
+                                                            </td>
+                                                            <td>
+                                                                GS
                                                             </td>
                                                             <td>
                                                                 <div>
@@ -570,183 +578,7 @@
                                                                 </div>
                                                             </td>
                                                             <td>
-                                                                <div>
-                                                                    <select
-                                                                        class="js-example-basic-single entity-select"
-                                                                        name="state">
-                                                                        <option value="active">Active</option>
-                                                                        <option value="inactive">Inactive</option>
-                                                                        <option value="dissolved">Dissolved</option>
-                                                                    </select>
-                                                                </div>
-                                                            </td>
-                                                            <td class="disabled">
-                                                                <button type="button"
-                                                                    class="w-100 btn fs-6 border rounded-2 px-3 py-2">
-                                                                    RA/AR/CTA
-                                                                </button>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class="even">
-                                                            <td class="sorting_1 max-width-25"><span><input
-                                                                        class="form-check-input" type="checkbox"
-                                                                        name="" id="1"></span></td>
-                                                            <td>
-                                                                <div class="d-flex">
-                                                                    <!-- <span contenteditable="true">Entity Name 1</span> -->
-                                                                    <a href="javascript:void()" contenteditable="true"
-                                                                        class="cursor-pointer" role="button"
-                                                                        data-bs-toggle="modal"
-                                                                        data-bs-target="#updateEntityDetails">Entity
-                                                                        Name 1</a>
-                                                                </div>
-                                                            </td>
-                                                            <td>Home</td>
-                                                            <td>
-                                                                <div>
-                                                                    <select
-                                                                        class="js-example-basic-single entity-select"
-                                                                        name="state">
-
-                                                                        <option value="entity-type">Entity Type*</option>
-                                                                        <option value="INC">INC</option>
-                                                                        <option value="PVT">PVT</option>
-                                                                        <option value="LTD">LTD</option>
-                                                                        <option value="LLC">LLC</option>
-                                                                        <option value="LLP">LLP</option>
-                                                                        <option value="CORP">CORP</option>
-                                                                    </select>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <div class="icon-with-state d-flex align-items-center">
-                                                                    <span class="icon icon-pending-review col-1"></span>
-                                                                    <div>
-                                                                        <select
-                                                                            class="js-example-basic-single text-warning entity-select"
-                                                                            name="state">
-                                                                            <option value="IND">IND</option>
-                                                                            <option value="WY">WY</option>
-                                                                            <option value="FL">FL</option>
-                                                                            <option value="CL">CA</option>
-                                                                            <option value="AU">AUS</option>
-                                                                            <option value="DE">DE</option>
-                                                                        </select>
-                                                                    </div>
-                                                                </div>
-
-                                                            </td>
-                                                            <td><span class="text-danger">State ID No.*</span></td>
-                                                            <td class="max-width-130">
-                                                                <div class="text-danger" contenteditable="true">
-                                                                    <div class="calender-parent position-relative">
-                                                                        <input type="text"
-                                                                            class="bg-transparent placeholder-color outline-0 border-0 fs-6 font-weight-500"
-                                                                            id="formateDateCompleted"
-                                                                            placeholder="Formation Date*" value=""
-                                                                            autocomplete="off">
-                                                                    </div>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <div class="d-flex align-items-center">
-                                                                    <span class="icon icon-pending-review col-1"></span>
-                                                                    <div class="calender-parent position-relative">
-                                                                        <input type="text"
-                                                                            class="bg-transparent text-warning outline-0 border-0 fs-6 font-weight-500"
-                                                                            id="formateDateCompleted"
-                                                                            value="10/13/2023">
-                                                                    </div>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <div>
-                                                                    <select
-                                                                        class="js-example-basic-single entity-select"
-                                                                        name="state">
-                                                                        <option value="active">Active</option>
-                                                                        <option value="inactive">Inactive</option>
-                                                                        <option value="dissolved">Dissolved</option>
-                                                                    </select>
-                                                                </div>
-                                                            </td>
-                                                            <td class="disabled">
-                                                                <button type="button"
-                                                                    class="w-100 btn fs-6 border rounded-2 px-3 py-2">
-                                                                    RA/AR/CTA
-                                                                </button>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class="odd">
-                                                            <td class="sorting_1 max-width-25"><span><input class="form-check-input"
-                                                                        type="checkbox" name="" id="1"></span></td>
-                                                            <td>
-                                                                <div class="d-flex">
-                                                                    <!-- <span contenteditable="true">Entity Name 1</span> -->
-                                                                    <a href="javascript:void()" contenteditable="true"
-                                                                        class="cursor-pointer" role="button"
-                                                                        data-bs-toggle="modal"
-                                                                        data-bs-target="#updateEntityDetails">Entity
-                                                                        Name 1</a>
-                                                                </div>
-                                                            </td>
-                                                            <td>Home</td>
-                                                            <td>
-                                                                <div>
-                                                                    <select
-                                                                        class="js-example-basic-single entity-select"
-                                                                        name="state">
-
-                                                                        <option value="entity-type">Entity Type*</option>
-                                                                        <option value="INC">INC</option>
-                                                                        <option value="PVT">PVT</option>
-                                                                        <option value="LTD">LTD</option>
-                                                                        <option value="LLC">LLC</option>
-                                                                        <option value="LLP">LLP</option>
-                                                                        <option value="CORP">CORP</option>
-                                                                    </select>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <div class="icon-with-state d-flex align-items-center">
-                                                                    <span class="icon icon-pending-review col-1"></span>
-                                                                    <div>
-                                                                        <select
-                                                                            class="js-example-basic-single text-warning entity-select"
-                                                                            name="state">
-                                                                            <option value="IND">IND</option>
-                                                                            <option value="WY">WY</option>
-                                                                            <option value="FL">FL</option>
-                                                                            <option value="CL">CA</option>
-                                                                            <option value="AU">AUS</option>
-                                                                            <option value="DE">DE</option>
-                                                                        </select>
-                                                                    </div>
-                                                                </div>
-
-                                                            </td>
-                                                            <td><span class="text-danger">State ID No.*</span></td>
-                                                            <td class="max-width-130">
-                                                                <div class="text-danger" contenteditable="true">
-                                                                    <div class="calender-parent position-relative">
-                                                                        <input type="text"
-                                                                            class="bg-transparent placeholder-color outline-0 border-0 fs-6 font-weight-500"
-                                                                            id="formateDateCompleted"
-                                                                            placeholder="Formation Date*" value=""
-                                                                            autocomplete="off">
-                                                                    </div>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <div class="d-flex align-items-center">
-                                                                    <span class="icon icon-pending-review col-1"></span>
-                                                                    <div class="calender-parent position-relative">
-                                                                        <input type="text"
-                                                                            class="bg-transparent text-warning outline-0 border-0 fs-6 font-weight-500"
-                                                                            id="formateDateCompleted"
-                                                                            value="10/13/2023">
-                                                                    </div>
-                                                                </div>
+                                                                NGS
                                                             </td>
                                                             <td>
                                                                 <div>
@@ -839,6 +671,9 @@
                                                                 </div>
                                                             </td>
                                                             <td>
+                                                                NA
+                                                            </td>
+                                                            <td>
                                                                 <div>
                                                                     <select
                                                                         class="js-example-basic-single entity-select"
@@ -926,6 +761,9 @@
                                                                             value="10/13/2023">
                                                                     </div>
                                                                 </div>
+                                                            </td>
+                                                            <td>
+                                                                GS
                                                             </td>
                                                             <td>
                                                                 <div>
@@ -1018,6 +856,9 @@
                                                                 </div>
                                                             </td>
                                                             <td>
+                                                                NGS
+                                                            </td>
+                                                            <td>
                                                                 <div>
                                                                     <select
                                                                         class="js-example-basic-single entity-select"
@@ -1105,6 +946,9 @@
                                                                             value="10/13/2023">
                                                                     </div>
                                                                 </div>
+                                                            </td>
+                                                            <td>
+                                                                NA
                                                             </td>
                                                             <td>
                                                                 <div>
@@ -1197,6 +1041,9 @@
                                                                 </div>
                                                             </td>
                                                             <td>
+                                                               NGS
+                                                            </td>
+                                                            <td>
                                                                 <div>
                                                                     <select
                                                                         class="js-example-basic-single entity-select"
@@ -1284,6 +1131,9 @@
                                                                             value="10/13/2023">
                                                                     </div>
                                                                 </div>
+                                                            </td>
+                                                            <td>
+                                                                NA
                                                             </td>
                                                             <td>
                                                                 <div>
@@ -1376,6 +1226,9 @@
                                                                 </div>
                                                             </td>
                                                             <td>
+                                                                GS
+                                                            </td>
+                                                            <td>
                                                                 <div>
                                                                     <select
                                                                         class="js-example-basic-single entity-select"
@@ -1463,6 +1316,9 @@
                                                                             value="10/13/2023">
                                                                     </div>
                                                                 </div>
+                                                            </td>
+                                                            <td>
+                                                                NGS
                                                             </td>
                                                             <td>
                                                                 <div>
@@ -1555,6 +1411,9 @@
                                                                 </div>
                                                             </td>
                                                             <td>
+                                                                NA
+                                                            </td>
+                                                            <td>
                                                                 <div>
                                                                     <select
                                                                         class="js-example-basic-single entity-select"
@@ -1642,6 +1501,9 @@
                                                                             value="10/13/2023">
                                                                     </div>
                                                                 </div>
+                                                            </td>
+                                                            <td>
+                                                                GS
                                                             </td>
                                                             <td>
                                                                 <div>
@@ -1734,6 +1596,9 @@
                                                                 </div>
                                                             </td>
                                                             <td>
+                                                                NGS
+                                                            </td>
+                                                            <td>
                                                                 <div>
                                                                     <select
                                                                         class="js-example-basic-single entity-select"
@@ -1821,6 +1686,194 @@
                                                                             value="10/13/2023">
                                                                     </div>
                                                                 </div>
+                                                            </td>
+                                                            <td>
+                                                                NA
+                                                            </td>
+                                                            <td>
+                                                                <div>
+                                                                    <select
+                                                                        class="js-example-basic-single entity-select"
+                                                                        name="state">
+                                                                        <option value="active">Active</option>
+                                                                        <option value="inactive">Inactive</option>
+                                                                        <option value="dissolved">Dissolved</option>
+                                                                    </select>
+                                                                </div>
+                                                            </td>
+                                                            <td class="disabled">
+                                                                <button type="button"
+                                                                    class="w-100 btn fs-6 border rounded-2 px-3 py-2">
+                                                                    RA/AR/CTA
+                                                                </button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="even">
+                                                            <td class="sorting_1 max-width-25"><span><input
+                                                                        class="form-check-input" type="checkbox"
+                                                                        name="" id="1"></span></td>
+                                                            <td>
+                                                                <div class="d-flex">
+                                                                    <!-- <span contenteditable="true">Entity Name 1</span> -->
+                                                                    <a href="javascript:void()" contenteditable="true"
+                                                                        class="cursor-pointer" role="button"
+                                                                        data-bs-toggle="modal"
+                                                                        data-bs-target="#updateEntityDetails">Entity
+                                                                        Name 1</a>
+                                                                </div>
+                                                            </td>
+                                                            <td>Home</td>
+                                                            <td>
+                                                                <div>
+                                                                    <select
+                                                                        class="js-example-basic-single entity-select"
+                                                                        name="state">
+
+                                                                        <option value="entity-type">Entity Type*</option>
+                                                                        <option value="INC">INC</option>
+                                                                        <option value="PVT">PVT</option>
+                                                                        <option value="LTD">LTD</option>
+                                                                        <option value="LLC">LLC</option>
+                                                                        <option value="LLP">LLP</option>
+                                                                        <option value="CORP">CORP</option>
+                                                                    </select>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="icon-with-state d-flex align-items-center">
+                                                                    <span class="icon icon-pending-review col-1"></span>
+                                                                    <div>
+                                                                        <select
+                                                                            class="js-example-basic-single text-warning entity-select"
+                                                                            name="state">
+                                                                            <option value="IND">IND</option>
+                                                                            <option value="WY">WY</option>
+                                                                            <option value="FL">FL</option>
+                                                                            <option value="CL">CA</option>
+                                                                            <option value="AU">AUS</option>
+                                                                            <option value="DE">DE</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+
+                                                            </td>
+                                                            <td><span class="text-danger">State ID No.*</span></td>
+                                                            <td class="max-width-130">
+                                                                <div class="text-danger" contenteditable="true">
+                                                                    <div class="calender-parent position-relative">
+                                                                        <input type="text"
+                                                                            class="bg-transparent placeholder-color outline-0 border-0 fs-6 font-weight-500"
+                                                                            id="formateDateCompleted"
+                                                                            placeholder="Formation Date*" value=""
+                                                                            autocomplete="off">
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="d-flex align-items-center">
+                                                                    <span class="icon icon-pending-review col-1"></span>
+                                                                    <div class="calender-parent position-relative">
+                                                                        <input type="text"
+                                                                            class="bg-transparent text-warning outline-0 border-0 fs-6 font-weight-500"
+                                                                            id="formateDateCompleted"
+                                                                            value="10/13/2023">
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                GS
+                                                            </td>
+                                                            <td>
+                                                                <div>
+                                                                    <select
+                                                                        class="js-example-basic-single entity-select"
+                                                                        name="state">
+                                                                        <option value="active">Active</option>
+                                                                        <option value="inactive">Inactive</option>
+                                                                        <option value="dissolved">Dissolved</option>
+                                                                    </select>
+                                                                </div>
+                                                            </td>
+                                                            <td class="disabled">
+                                                                <button type="button"
+                                                                    class="w-100 btn fs-6 border rounded-2 px-3 py-2">
+                                                                    RA/AR/CTA
+                                                                </button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="odd">
+                                                            <td class="sorting_1 max-width-25"><span><input class="form-check-input"
+                                                                        type="checkbox" name="" id="1"></span></td>
+                                                            <td>
+                                                                <div class="d-flex">
+                                                                    <!-- <span contenteditable="true">Entity Name 1</span> -->
+                                                                    <a href="javascript:void()" contenteditable="true"
+                                                                        class="cursor-pointer" role="button"
+                                                                        data-bs-toggle="modal"
+                                                                        data-bs-target="#updateEntityDetails">Entity
+                                                                        Name 1</a>
+                                                                </div>
+                                                            </td>
+                                                            <td>Home</td>
+                                                            <td>
+                                                                <div>
+                                                                    <select
+                                                                        class="js-example-basic-single entity-select"
+                                                                        name="state">
+
+                                                                        <option value="entity-type">Entity Type*</option>
+                                                                        <option value="INC">INC</option>
+                                                                        <option value="PVT">PVT</option>
+                                                                        <option value="LTD">LTD</option>
+                                                                        <option value="LLC">LLC</option>
+                                                                        <option value="LLP">LLP</option>
+                                                                        <option value="CORP">CORP</option>
+                                                                    </select>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="icon-with-state d-flex align-items-center">
+                                                                    <span class="icon icon-pending-review col-1"></span>
+                                                                    <div>
+                                                                        <select
+                                                                            class="js-example-basic-single text-warning entity-select"
+                                                                            name="state">
+                                                                            <option value="IND">IND</option>
+                                                                            <option value="WY">WY</option>
+                                                                            <option value="FL">FL</option>
+                                                                            <option value="CL">CA</option>
+                                                                            <option value="AU">AUS</option>
+                                                                            <option value="DE">DE</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+
+                                                            </td>
+                                                            <td><span class="text-danger">State ID No.*</span></td>
+                                                            <td class="max-width-130">
+                                                                <div class="text-danger" contenteditable="true">
+                                                                    <div class="calender-parent position-relative">
+                                                                        <input type="text"
+                                                                            class="bg-transparent placeholder-color outline-0 border-0 fs-6 font-weight-500"
+                                                                            id="formateDateCompleted"
+                                                                            placeholder="Formation Date*" value=""
+                                                                            autocomplete="off">
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="d-flex align-items-center">
+                                                                    <span class="icon icon-pending-review col-1"></span>
+                                                                    <div class="calender-parent position-relative">
+                                                                        <input type="text"
+                                                                            class="bg-transparent text-warning outline-0 border-0 fs-6 font-weight-500"
+                                                                            id="formateDateCompleted"
+                                                                            value="10/13/2023">
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                NGS
                                                             </td>
                                                             <td>
                                                                 <div>
