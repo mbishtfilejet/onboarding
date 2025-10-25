@@ -22,6 +22,7 @@
 .user-account-sidebar {
   .menu-link{
     .nav-link{
+      right: -1px;
       a{
         padding-top: 1.3rem !important;
         padding-bottom: 1.6rem !important;
@@ -71,30 +72,11 @@
         background: #FAFAFA;
         border-top-left-radius: 35px;
         border-bottom-left-radius: 35px;
-        color: #0a0c42;
+        color: #6e72ee;
+        border: 1px solid #aaa9a9 !important;
+        border-right: 0px !important;
       }
-      a::after{
-        content: "";
-        @extend .position-absolute;
-        background: var(--bs-gray-light);
-        width: 2rem;
-        height: 2rem;
-        right: 0;
-        top: -2rem;
-        transform: rotate(270deg);
-        background-image: radial-gradient(circle at 100% 0, white 0%, white 2rem, #e6e6e6 2rem);
-      }
-      a::before{
-        content: "";
-        @extend .position-absolute;
-        background: var(--bs-gray-light);
-        width: 2rem;
-        height: 2rem;
-        right: 0;
-        bottom: -2rem;
-        transform: rotate(180deg);
-        background-image: radial-gradient(circle at 100% 0, white 0%, white 2rem, #e6e6e6 2rem);
-      }
+
     }
   }
 }

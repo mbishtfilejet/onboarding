@@ -306,3 +306,54 @@
         }
     }
 }
+
+
+.dataTables_wrapper .dataTable thead th.sorting {
+    position: relative !important;
+    text-transform: capitalize !important;
+    padding: 0.9rem !important;
+}
+.dataTables_wrapper tbody td {
+    padding: 1rem 0.9rem !important;
+    color: #212529;
+}
+.dataTables_wrapper tbody td a {
+    font-weight: 500 !important;
+}
+.dataTables_wrapper .odd {
+    background-color: #FAFAFA !important;
+}
+.dataTables_wrapper tbody tr{
+    border: 0px solid #d9d9d9 !important;
+}
+.dataTables_wrapper .dataTable thead th.sorting::before {
+    right: 0px !important;
+    bottom: 50% !important;
+    content: "▲" !important;
+    position: absolute !important;
+    display: block !important;
+    line-height: 9px !important;
+    font-size: 0.8em !important;
+    opacity: 0.125;
+}
+.dataTables_wrapper .dataTable thead th.sorting::after {
+    height: auto !important;
+    right: 0px !important;
+    top: 45% !important;
+    margin-left: 0rem !important;
+    content: "▼" !important;
+    transform: none !important;
+    background-image: none !important;
+    line-height: normal !important;
+    width: auto !important;
+    margin-top: 4px !important;
+    position: absolute !important;
+    display: block !important;
+    line-height: 9px !important;
+    font-size: 0.8em !important;
+    opacity: 0.125;
+}
+.dataTables_wrapper .dataTable thead th.sorting.sorting_asc::before {
+    opacity: 0.6;
+}
+.dataTables_wrapper .dataTable thead th.sorting.sorting_desc::after {transform: none !important;opacity: 0.6;}

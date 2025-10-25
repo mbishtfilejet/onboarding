@@ -7617,7 +7617,7 @@ input[type=time]:active:before, .modal-header .btn-outline-dark:hover .icon-mail
   position: relative !important;
 }
 
-.position-absolute, .subscription-body .table-parent::after, .dataTables_wrapper .row.dt-row .dataTables_processing.card, .menu-link .nav-link.active a::before, .menu-link .nav-link.active a::after, input[type=time]:invalid:before {
+.position-absolute, .subscription-body .table-parent::after, .dataTables_wrapper .row.dt-row .dataTables_processing.card, input[type=time]:invalid:before {
   position: absolute !important;
 }
 
@@ -11658,7 +11658,7 @@ img {
 }
 
 .grey-bg {
-  background-color: var(--bs-gray-light);
+  background-color: #FAFAFA;
 }
 
 .purple-bg {
@@ -12641,6 +12641,9 @@ input[type=radio] {
   vertical-align: middle;
 }
 
+.user-account-sidebar .menu-link .nav-link {
+  right: -1px;
+}
 .user-account-sidebar .menu-link .nav-link a {
   padding-top: 1.3rem !important;
   padding-bottom: 1.6rem !important;
@@ -12675,27 +12678,9 @@ input[type=radio] {
   background: #FAFAFA;
   border-top-left-radius: 35px;
   border-bottom-left-radius: 35px;
-  color: #0a0c42;
-}
-.menu-link .nav-link.active a::after {
-  content: "";
-  background: var(--bs-gray-light);
-  width: 2rem;
-  height: 2rem;
-  right: 0;
-  top: -2rem;
-  transform: rotate(270deg);
-  background-image: radial-gradient(circle at 100% 0, white 0%, white 2rem, #e6e6e6 2rem);
-}
-.menu-link .nav-link.active a::before {
-  content: "";
-  background: var(--bs-gray-light);
-  width: 2rem;
-  height: 2rem;
-  right: 0;
-  bottom: -2rem;
-  transform: rotate(180deg);
-  background-image: radial-gradient(circle at 100% 0, white 0%, white 2rem, #e6e6e6 2rem);
+  color: #6e72ee;
+  border: 1px solid #aaa9a9 !important;
+  border-right: 0px !important;
 }
 
 .nav-item.nav-item-one:first-child .nav-link.active {
@@ -13113,8 +13098,8 @@ label {
 
 .sidebar {
   background: var(--bs-white);
-  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.1);
   font-size: 1.125rem;
+  border-right: 1px solid #aaa9a9 !important;
 }
 
 .main-content-wrapper {
@@ -13330,6 +13315,67 @@ label {
 .form-select2 .select2.select2-container .select2-selection.select2-selection--single .select2-selection__arrow b {
   border-width: 8px 8px 0 8px;
   border-color: #000 transparent transparent transparent;
+}
+
+.dataTables_wrapper .dataTable thead th.sorting {
+  position: relative !important;
+  text-transform: capitalize !important;
+  padding: 0.9rem !important;
+}
+
+.dataTables_wrapper tbody td {
+  padding: 1rem 0.9rem !important;
+  color: #212529;
+}
+
+.dataTables_wrapper tbody td a {
+  font-weight: 500 !important;
+}
+
+.dataTables_wrapper .odd {
+  background-color: #FAFAFA !important;
+}
+
+.dataTables_wrapper tbody tr {
+  border: 0px solid #d9d9d9 !important;
+}
+
+.dataTables_wrapper .dataTable thead th.sorting::before {
+  right: 0px !important;
+  bottom: 50% !important;
+  content: "▲" !important;
+  position: absolute !important;
+  display: block !important;
+  line-height: 9px !important;
+  font-size: 0.8em !important;
+  opacity: 0.125;
+}
+
+.dataTables_wrapper .dataTable thead th.sorting::after {
+  height: auto !important;
+  right: 0px !important;
+  top: 45% !important;
+  margin-left: 0rem !important;
+  content: "▼" !important;
+  transform: none !important;
+  background-image: none !important;
+  line-height: normal !important;
+  width: auto !important;
+  margin-top: 4px !important;
+  position: absolute !important;
+  display: block !important;
+  line-height: 9px !important;
+  font-size: 0.8em !important;
+  opacity: 0.125;
+}
+
+.dataTables_wrapper .dataTable thead th.sorting.sorting_asc::before {
+  opacity: 0.6;
+}
+
+.dataTables_wrapper .dataTable thead th.sorting.sorting_desc::after {
+  transform: none !important;
+  opacity: 0.6;
 }
 
 .dataTables_wrapper tbody td {
