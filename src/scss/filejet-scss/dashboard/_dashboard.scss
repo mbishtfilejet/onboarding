@@ -22,7 +22,6 @@
 .user-account-sidebar {
   .menu-link{
     .nav-link{
-      right: -1px;
       a{
         padding-top: 1.3rem !important;
         padding-bottom: 1.6rem !important;
@@ -72,9 +71,8 @@
         background: #FAFAFA;
         border-top-left-radius: 35px;
         border-bottom-left-radius: 35px;
-        color: #6e72ee;
-        border: 1px solid #aaa9a9 !important;
-        border-right: 0px !important;
+        box-shadow: inset 10px 3px 36px rgba(0, 0, 0, 0.1);
+        color: #6E72EE;
       }
 
     }
