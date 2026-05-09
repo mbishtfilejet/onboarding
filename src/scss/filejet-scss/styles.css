@@ -9,6 +9,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
 :root {
   /*--bs-blue: #0d6efd;*/
   --bs-blue: #165A8B;
@@ -11570,6 +11571,10 @@ input[type=time]:active:before, .modal-header .btn-outline-dark:hover .icon-mail
   }
 }
 
+:root {
+  --bs-body-font-family: "Sora", sans-serif;
+}
+
 html {
   font-size: 14px;
 }
@@ -11581,6 +11586,19 @@ html {
 
 body {
   letter-spacing: 0.2px;
+}
+
+pre,
+code,
+kbd,
+samp,
+.popover,
+.tooltip {
+  font-family: var(--bs-body-font-family);
+}
+
+.btn {
+  --bs-btn-font-family: var(--bs-body-font-family);
 }
 
 img {
@@ -11803,7 +11821,7 @@ input[type=time]:active {
 }
 
 .font-weight-500 {
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .font-weight-400 {
@@ -12563,6 +12581,11 @@ input[type=time]:invalid:before {
 input[type=checkbox],
 input[type=radio] {
   padding: 0.45rem;
+}
+
+input[type=checkbox]:checked {
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .form-check-input[type=radio] {
@@ -13354,7 +13377,7 @@ label {
 }
 
 .formation-date-min-width {
-  min-width: 130px !important;
+  min-width: 160px !important;
 }
 
 .formation-date-max-width {
@@ -13468,7 +13491,7 @@ label {
 }
 
 .dataTables_wrapper tbody td {
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.25rem;
   font-size: 1rem;
 }
@@ -14606,7 +14629,7 @@ body .ui-tooltip {
 /* Component containers
 ----------------------------------*/
 .ui-widget {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--bs-body-font-family);
   font-size: 1em;
 }
 
@@ -14618,7 +14641,7 @@ body .ui-tooltip {
 .ui-widget select,
 .ui-widget textarea,
 .ui-widget button {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--bs-body-font-family);
   font-size: 1em;
 }
 
@@ -16726,7 +16749,7 @@ body[class*=jconfirm-no-scroll-] {
 }
 .custom-select {
   position: relative;
-  font-family: Arial;
+  font-family: var(--bs-body-font-family);
 }
 
 .custom-select select {
@@ -16928,7 +16951,7 @@ body .caledar-event-upcoming {
   left: 20px;
   z-index: 3001;
   display: none;
-  font-family: arial;
+  font-family: var(--bs-body-font-family);
   font-size: 15px;
   line-height: 1em;
 }

@@ -1,7 +1,8 @@
 .custom-select {
     position: relative;
-    font-family: Arial;
+    font-family: var(--bs-body-font-family); // global font update
 }
+
 
 .custom-select select {
     display: none;

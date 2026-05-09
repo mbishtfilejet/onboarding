@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap"); // global font update
+
+:root {
+  --bs-body-font-family: "Sora", sans-serif; // global font update
+}
+
 html {
   font-size: 14px;
 
@@ -8,6 +14,20 @@ html {
 
 body {
   letter-spacing: 0.2px;
+}
+
+pre,
+code,
+kbd,
+samp,
+.popover,
+.tooltip {
+  font-family: var(--bs-body-font-family); // global font update
+}
+
+
+.btn{
+  --bs-btn-font-family : var(--bs-body-font-family); // global font update
 }
 
 img {
@@ -1246,6 +1266,11 @@ input[type="time"]:active:before {
 input[type="checkbox"],
 input[type="radio"] {
   padding: 0.45rem;
+}
+
+input[type="checkbox"]:checked{
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .form-check-input[type=radio] {
