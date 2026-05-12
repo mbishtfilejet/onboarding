@@ -1268,9 +1268,9 @@ input[type="radio"] {
   padding: 0.45rem;
 }
 
-input[type="checkbox"]:checked{
+.form-check-input[type="checkbox"]:checked{
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; // checkbox fix global font update
 }
 
 .form-check-input[type=radio] {
