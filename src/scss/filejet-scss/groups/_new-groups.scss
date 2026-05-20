@@ -1,0 +1,135 @@
+.groupsTableCard {
+    background-color: white;
+    position: relative;
+
+    .table {
+        margin-bottom: 0rem !important;
+    }
+
+    table,
+    .dataTable {
+
+        thead {
+            & th:first-child {
+                border-top-left-radius: 5px;
+            }
+
+            & th:last-child {
+                border-top-right-radius: 5px;
+            }
+        }
+
+        tbody tr:last-child {
+            td {
+                border: none;
+            }
+
+            & td:first-child {
+                border-bottom-left-radius: 5px;
+            }
+
+            & td:last-child {
+                border-bottom-right-radius: 5px;
+            }
+        }
+
+    }
+
+    .dataTables_wrapper tbody td {
+        font-weight: 400 !important;
+        color: var(--bs-black-primary) !important;
+        font-size: 12px !important;
+        line-height: 1.25rem !important;
+
+        &.text-light-blue {
+            color: var(--bs-light-blue) !important;
+        }
+
+        &.disabled-column {
+            color: rgb(177, 176, 176) !important;
+            pointer-events: none;
+
+            .dt-control,
+            .icon-folder-upload-purple,
+            .icon-folder-upload-danger,
+            .badge,
+            input {
+                opacity: 0.35;
+            }
+
+        }
+    }
+
+    .dataTables_wrapper .dataTables_scroll {
+
+        .dataTables_scrollHeadInner,
+        .dataTable {
+            width: inherit !important;
+            max-width: inherit !important;
+            min-height: 0 !important;
+        }
+
+        .dataTables_scrollBody {
+            overflow-y: hidden !important;
+        }
+    }
+
+    .groupsListingTable {
+        .dataTables_wrapper tbody td a {
+            font-weight: 400 !important;
+        }
+
+        .dataTables_wrapper .dataTable {
+
+            th,
+            td {
+                &:first-child {
+                    min-width: 170px !important;
+                }
+
+                &:nth-child(2) {
+                    min-width: 100px !important;
+                }
+
+                &:nth-child(4),
+                &:nth-child(6),
+                &:nth-child(7) {
+                    max-width: 75px !important;
+                }
+
+                &:nth-child(5) {
+                    max-width: 105px !important;
+                }
+            }
+
+            td,
+            th {
+                padding: 0.9rem !important;
+            }
+
+        }
+    }
+
+    .icon-entity-edit:hover {
+        background-image: url("../../../../dist/images/icons/edit-dark.svg");
+    }
+
+    .icon-entity-delete:hover {
+        background-image: url("../../../../dist/images/icons/delete-red.svg");
+    }
+}
+
+
+@media (min-width: 1450px) {
+    .groupsTableCard {
+        .dataTables_wrapper {
+            .dataTables_scroll {
+                .dataTables_scrollBody {
+                    overflow: hidden !important;
+                }
+            }
+        }
+
+    }
+
+}
