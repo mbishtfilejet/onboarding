@@ -1,0 +1,1511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>File Jet: Groups</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="src/scss/filejet-style.css" />
+    <script src="dist/js/jquery.min.js"></script>
+    <!-- Scripts -->
+</head>
+
+<body class="main-dashboard-v2">
+    <div class="grey-bg dashboard-page min-vh-100">
+        <div class="container-fluid p-0">
+            <div class="sidebar-wrapper">
+                <div class="sidebar min-vh-100 py-3 ps-3">
+                    <div>
+                        <div class="ps-3 pb-4">
+                            <a href="/" class="logo">
+                                <img src="dist/images/logo.png" class="d-none d-lg-block" alt="FileJet">
+                                <img src="dist/images/filejet-pinLogo.png" class="d-block d-lg-none" alt="FileJet">
+                            </a>
+                        </div>
+                        <div>
+                            <ul class="menu-link menu-onboardin p-0 m-0">
+                                <!-- Dashboard -->
+                                <li class="nav-link">
+                                    <a href="./" class="text-decoration-none ps-3 py-3 d-flex align-items-center">
+
+                                        <span class="icon icon-entities-dark normal-icon"></span>
+                                        <span class="icon icon-entities-purple active-icon"></span>
+                                        <span class="text nav-text">Entities</span>
+                                    </a>
+                                </li>
+                                <!-- Entities -->
+                                <li class="nav-link active">
+                                    <a href="./groups.html"
+                                        class="text-decoration-none ps-3 py-3 d-flex align-items-center">
+                                        <span class="icon icon-groups-dark normal-icon"></span>
+                                        <span class="icon icon-groups-purple active-icon"></span>
+                                        <span class="text nav-text position-relative">
+                                            Groups
+                                        </span>
+                                    </a>
+                                </li>
+                                <!-- Groups -->
+                                <li class="nav-link">
+                                    <a href="./users.html"
+                                        class="text-decoration-none ps-3 py-3 d-flex align-items-center">
+                                        <span class="icon icon-users-dark normal-icon"></span>
+                                        <span class="icon icon-users-purple active-icon"></span>
+                                        <span class="text nav-text">Users</span>
+                                    </a>
+                                </li>
+                                <li class="nav-link">
+                                    <a href="./payment-method.html"
+                                        class="text-decoration-none ps-3 py-3 d-flex align-items-center">
+                                        <span class="icon icon-payment-method-dark normal-icon"></span>
+                                        <span class="icon icon-payment-method-purple active-icon"></span>
+                                        <span class="text nav-text">Payment Method</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- <div class="pe-4 me-2 ps-3 flex-fill">
+                        <button type="button" class="btn btn-light border-dark px-3 text-capitalize w-100 ">Contact Rep</button>
+                    </div> -->
+                </div>
+            </div>
+
+            <div class="main-content-wrapper">
+                <div class="container-fluid container-lg">
+                    <div class="header py-1">
+                        <div class="row align-items-center">
+                            <div class="col-6 col-xl-6 col-lg-6">
+                                <h3 class="m-0 font-weight-700">
+
+                                    Onboarding - Groups
+
+                                </h3>
+                            </div>
+                            <div
+                                class="col col-md-6 col-xl-6 col-lg-6 d-flex align-items-center justify-content-end justify-content-md-end">
+
+                                <div class="profile-nav">
+                                    <div class="dropdown white-bg p-0 rounded-5">
+
+                                        <a class="nav-link dropdown-toggle show px-3" href="#" data-bs-toggle="dropdown"
+                                            aria-expanded="true">
+                                            <span class="avatar avatar-lg ms-n3">
+                                                <img src="../dist/images/avatar.png" alt="" />
+                                            </span>
+                                            <span class="user-name fw-bold">Roman</span>
+                                        </a>
+                                        <ul class="dropdown-menu" data-bs-popper="static">
+                                            <li>
+                                                <span
+                                                    class="dropdown-item py-3 d-flex align-items-center border-bottom">
+                                                    Account
+                                                </span>
+                                            </li>
+
+                                            <li>
+                                                <a class="dropdown-item py-3 d-flex align-items-center"
+                                                    href="../../login.html">
+                                                    <span class="icon icon-logout me-4"></span>
+                                                    Logout
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="container-fluid container-lg">
+                    <div class="main-content pt-3">
+                        <!-- Card Start -->
+                        <div class="row mt-4">
+                            <div class="col-12 mt-2">
+                                <div class="row px-2 ">
+                                    <div class="col-12 col-lg-11 flex-grow-1 px-1 mb-2 search-table-col">
+                                        <div
+                                            class="table-search-feild d-flex align-items-center border border-1 rounded-2 shadow-sm  m-0 white-bg px-3 py-2 py-md-2">
+                                            <span class="icon icon-search-grey icon-sm opacity-25"></span>
+                                            <input type="text" placeholder="Search"
+                                                class="text-placeholder-d2 border-0 p-0 w-100">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-auto export-table-col px-1 mb-2">
+                                        <div
+                                            class="border border-1 rounded-2 shadow-sm export-csv-col px-2 h-100 bg-white">
+                                            <a href="#"
+                                                class="h-100 text-purple text-decoration-none d-flex justify-content-center align-items-center">
+                                                <span class="icon m-0  my-1 icon-export-csv icon-lg"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-2 rounded-2">
+                                    <div class="groupsTableCard border rounded-2">
+                                        <div class="groupsListingTable">
+                                            <table id="group-listing-table"
+                                                class="table table-striped w-100 table-nowrap">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Group Name</th>
+                                                        <th>Group ID</th>
+                                                        <th>Primary Contact</th>
+                                                        <th>Entities</th>
+                                                        <th>Registration</th>
+                                                        <th>Users</th>
+                                                        <th data-orderable="false">Action</th>
+                                                    </tr>
+                                                </thead>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-4 my-3">
+                                        <button aria-label="Add New Group" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#NWGroup"
+                                            class="btn btn-secondary p-0 px-2 rounded-3 text-white text-capitalize">Add
+                                            New Group
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card End -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Edit Group Modal Start -->
+    <div class="modal modal-right fade filter-slideout SOP-model" id="editGroup-modal" tabindex="-1"
+        aria-labelledby="editGroup-modalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-end modal-dialog-scrollable modal-md my-0 min-vh-100">
+            <div class="modal-content border-0 rounded-0 min-vh-100">
+                <div class="modal-header">
+                    <div class="d-flex align-items-center">
+                        <span class="icon icon-edit-group icon-lg me-3"></span>
+                        <h4 class="fw-bold m-0">
+                            Edit Group</h4>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-4 p-3 bg-white rounded-2">
+                            <fieldset class="mb-4">
+                                <label for="" class="form-label w-100">Primary Contact Name <span
+                                        class="icon icon-outline-info m-0"></span></label>
+                                <input type="text" class="form-control" id="" placeholder="Email Address"
+                                    value="John Doe">
+                            </fieldset>
+                            <fieldset class="mb-4">
+                                <label for="" class="form-label w-100">Email Address <span
+                                        class="icon icon-outline-info m-0"></span></label>
+                                <input type="email" class="form-control" id="" placeholder="Email Address"
+                                    value="johndoe@mail.com">
+                            </fieldset>
+                            <fieldset>
+                                <label for="" class="form-label w-100">Phone Number <span
+                                        class="icon icon-outline-info m-0"></span></label>
+                                <input type="text" class="form-control phone-format" id="" name="phone"
+                                    placeholder="(___) ___-____" value="" maxlength="14">
+                            </fieldset>
+                        </div>
+                        <div class="mb-3 p-3 bg-white rounded-2">
+                            <fieldset class="">
+                                <label for="" class="form-label w-100">Principal Address
+                                    <span class="icon icon-outline-info  m-0"></span></label>
+                                <input type="text" class="form-control mb-3" id="" placeholder="Address Line 1"
+                                    value="123 Innovation Valley">
+                                <input type="text" class="form-control mb-3" id="" placeholder="Address Line 2"
+                                    value="Suit 567">
+
+                                <div class="d-flex w-100 mb-4">
+                                    <input type="text" class="form-control me-3 " id="" placeholder="City"
+                                        value="Tech City">
+                                    <div class="w-100 custom-dropdown">
+                                        <select class="form-select" id="formation-model" required="">
+                                            <option value="" disabled="" hidden="" data-full-text="State">State
+                                            </option>
+                                            <option value="1" data-full-text="Alabama">Alabama</option>
+                                            <option value="2" data-full-text="Alaska">Alaska</option>
+                                            <option value="3" data-full-text="Arizona">Arizona</option>
+                                            <option value="4" data-full-text="Arkansas">Arkansas</option>
+                                            <option value="5" data-full-text="California">California</option>
+                                            <option value="6" selected data-full-text="Colorado">Colorado</option>
+                                            <option value="7" data-full-text="Connecticut">Connecticut</option>
+                                            <option value="8" data-full-text="Delaware">Delaware</option>
+                                            <option value="9" data-full-text="District of Columbia">District of Columbia
+                                            </option>
+                                            <option value="10" data-full-text="Florida">Florida</option>
+                                            <option value="11" data-full-text="Georgia">Georgia</option>
+                                            <option value="12" data-full-text="Hawaii">Hawaii</option>
+                                            <option value="13" data-full-text="Idaho">Idaho</option>
+                                            <option value="14" data-full-text="Illinois">Illinois</option>
+                                            <option value="15" data-full-text="Indiana">Indiana</option>
+                                            <option value="16" data-full-text="Iowa">Iowa</option>
+                                            <option value="17" data-full-text="Kansas">Kansas</option>
+                                            <option value="18" data-full-text="Kentucky">Kentucky</option>
+                                            <option value="19" data-full-text="Louisiana">Louisiana</option>
+                                            <option value="20" data-full-text="Maine">Maine</option>
+                                            <option value="21" data-full-text="Maryland">Maryland</option>
+                                            <option value="22" data-full-text="Massachusetts">Massachusetts</option>
+                                            <option value="23" data-full-text="Michigan">Michigan</option>
+                                            <option value="24" data-full-text="Minnesota">Minnesota</option>
+                                            <option value="25" data-full-text="Mississippi">Mississippi</option>
+                                            <option value="26" data-full-text="Missouri">Missouri</option>
+                                            <option value="27" data-full-text="Montana">Montana</option>
+                                            <option value="28" data-full-text="Nebraska">Nebraska</option>
+                                            <option value="29" data-full-text="Nevada">Nevada</option>
+                                            <option value="30" data-full-text="New Hampshire">New Hampshire</option>
+                                            <option value="31" data-full-text="New Jersey">New Jersey</option>
+                                            <option value="32" data-full-text="New Mexico">New Mexico</option>
+                                            <option value="33" data-full-text="New York">New York</option>
+                                            <option value="34" data-full-text="North Carolina">North Carolina</option>
+                                            <option value="35" data-full-text="North Dakota">North Dakota</option>
+                                            <option value="36" data-full-text="Ohio">Ohio</option>
+                                            <option value="37" data-full-text="Oklahoma">Oklahoma</option>
+                                            <option value="38" data-full-text="Oregon">Oregon</option>
+                                            <option value="39" data-full-text="Pennsylvania">Pennsylvania</option>
+                                            <option value="40" data-full-text="Rhode Island">Rhode Island</option>
+                                            <option value="41" data-full-text="South Carolina">South Carolina</option>
+                                            <option value="42" data-full-text="South Dakota">South Dakota</option>
+                                            <option value="43" data-full-text="Tennessee">Tennessee</option>
+                                            <option value="44" data-full-text="Texas">Texas</option>
+                                            <option value="45" data-full-text="Utah">Utah</option>
+                                            <option value="46" data-full-text="Vermont">Vermont</option>
+                                            <option value="47" data-full-text="Virginia">Virginia</option>
+                                            <option value="48" data-full-text="Washington">Washington</option>
+                                            <option value="49" data-full-text="West Virginia">West Virginia</option>
+                                            <option value="50" data-full-text="Wisconsin">Wisconsin</option>
+                                            <option value="51" data-full-text="Wyoming">Wyoming</option>
+                                        </select>
+                                    </div>
+                                    <input type="text" class="form-control ms-3" id="" placeholder="Zipcode"
+                                        value="90210">
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <div class="mailing-address-fields">
+                                    <label for="" class="form-label w-100">Shipping Address
+                                        <span class="icon icon-outline-info  m-0"></span></label>
+                                    <input type="text" class="form-control mb-3" id="" placeholder="Address Line 1"
+                                        value="123 Innovation Valley">
+                                    <input type="text" class="form-control mb-3" id="" placeholder="Address Line 2"
+                                        value="Suit 567">
+                                    <div class="d-flex w-100">
+                                        <input type="text" class="form-control me-3 " id="" placeholder="City"
+                                            value="Tech City">
+                                        <div class="w-100 custom-dropdown">
+                                            <select class="form-select" id="formation-model" required="">
+                                                <option value="" disabled="" hidden="" data-full-text="State">State
+                                                </option>
+                                                <option value="1" data-full-text="Alabama">Alabama</option>
+                                                <option value="2" data-full-text="Alaska">Alaska</option>
+                                                <option value="3" data-full-text="Arizona">Arizona</option>
+                                                <option value="4" data-full-text="Arkansas">Arkansas</option>
+                                                <option value="5" data-full-text="California">California</option>
+                                                <option value="6" selected data-full-text="Colorado">Colorado</option>
+                                                <option value="7" data-full-text="Connecticut">Connecticut</option>
+                                                <option value="8" data-full-text="Delaware">Delaware</option>
+                                                <option value="9" data-full-text="District of Columbia">District of
+                                                    Columbia
+                                                </option>
+                                                <option value="10" data-full-text="Florida">Florida</option>
+                                                <option value="11" data-full-text="Georgia">Georgia</option>
+                                                <option value="12" data-full-text="Hawaii">Hawaii</option>
+                                                <option value="13" data-full-text="Idaho">Idaho</option>
+                                                <option value="14" data-full-text="Illinois">Illinois</option>
+                                                <option value="15" data-full-text="Indiana">Indiana</option>
+                                                <option value="16" data-full-text="Iowa">Iowa</option>
+                                                <option value="17" data-full-text="Kansas">Kansas</option>
+                                                <option value="18" data-full-text="Kentucky">Kentucky</option>
+                                                <option value="19" data-full-text="Louisiana">Louisiana</option>
+                                                <option value="20" data-full-text="Maine">Maine</option>
+                                                <option value="21" data-full-text="Maryland">Maryland</option>
+                                                <option value="22" data-full-text="Massachusetts">Massachusetts</option>
+                                                <option value="23" data-full-text="Michigan">Michigan</option>
+                                                <option value="24" data-full-text="Minnesota">Minnesota</option>
+                                                <option value="25" data-full-text="Mississippi">Mississippi</option>
+                                                <option value="26" data-full-text="Missouri">Missouri</option>
+                                                <option value="27" data-full-text="Montana">Montana</option>
+                                                <option value="28" data-full-text="Nebraska">Nebraska</option>
+                                                <option value="29" data-full-text="Nevada">Nevada</option>
+                                                <option value="30" data-full-text="New Hampshire">New Hampshire</option>
+                                                <option value="31" data-full-text="New Jersey">New Jersey</option>
+                                                <option value="32" data-full-text="New Mexico">New Mexico</option>
+                                                <option value="33" data-full-text="New York">New York</option>
+                                                <option value="34" data-full-text="North Carolina">North Carolina
+                                                </option>
+                                                <option value="35" data-full-text="North Dakota">North Dakota</option>
+                                                <option value="36" data-full-text="Ohio">Ohio</option>
+                                                <option value="37" data-full-text="Oklahoma">Oklahoma</option>
+                                                <option value="38" data-full-text="Oregon">Oregon</option>
+                                                <option value="39" data-full-text="Pennsylvania">Pennsylvania</option>
+                                                <option value="40" data-full-text="Rhode Island">Rhode Island</option>
+                                                <option value="41" data-full-text="South Carolina">South Carolina
+                                                </option>
+                                                <option value="42" data-full-text="South Dakota">South Dakota</option>
+                                                <option value="43" data-full-text="Tennessee">Tennessee</option>
+                                                <option value="44" data-full-text="Texas">Texas</option>
+                                                <option value="45" data-full-text="Utah">Utah</option>
+                                                <option value="46" data-full-text="Vermont">Vermont</option>
+                                                <option value="47" data-full-text="Virginia">Virginia</option>
+                                                <option value="48" data-full-text="Washington">Washington</option>
+                                                <option value="49" data-full-text="West Virginia">West Virginia</option>
+                                                <option value="50" data-full-text="Wisconsin">Wisconsin</option>
+                                                <option value="51" data-full-text="Wyoming">Wyoming</option>
+                                            </select>
+                                        </div>
+                                        <input type="text" class="form-control ms-3" id="" placeholder="Zipcode"
+                                            value="90210">
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="payment-section">
+                            <div class="mb-4 p-3 bg-white rounded-2">
+                                <fieldset>
+                                    <label class="form-label">Default Payment Method<span
+                                            class="mandatory">*</span></label>
+                                    <div class="custom-dropdown">
+                                        <select class="form-select pricing-method">
+                                            <option value="account-default" data-full-text="Pay Later">Pay Later
+                                            </option>
+                                            <option value="group-default" selected>Group Default (Visa 1111)</option>
+                                            <option value="on-file">On File</option>
+                                            <option value="add-new">Add New</option>
+                                        </select>
+                                    </div>
+                                </fieldset>
+                                <div class="on-file-content mt-4 border rounded-2" style="display: none;">
+                                    <div>
+                                        <div class="payment-card d-flex odd border-bottom">
+                                            <div class="d-flex align-items-center">
+                                                <input class="form-check-input" type="checkbox">
+                                                <div class="ms-2 d-flex">
+                                                    <div class="methodiv">Mastercard </div>
+                                                    <div class="methodcard">Mastercard ...4444</div>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-start  defaultdiv">
+                                                <span class="btn btn-outline-success btn-sm">Default</span>
+                                            </div>
+                                        </div>
+                                        <!-- Payment Method 2 -->
+                                        <div class="container p-0 d-flex flex-column even border-bottom">
+                                            <div class="payment-card">
+                                                <div class="d-flex align-items-center">
+                                                    <input class="form-check-input" type="checkbox" disabled="">
+                                                    <div class="ms-2 d-flex">
+                                                        <div class="methodiv text-disabled">ACH Payment</div>
+                                                        <div class="methodcard  text-disabled">Stripe Test Bank ...6789
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="d-flex align-items-start defaultdiv" data-toggle="tooltip"
+                                                    title="In order to process this order you may be required to verify the ACH account from the accounts Billing section.">
+                                                    <a class="btn btn-outline-primary btn-sm verifybtn">Unverified</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Payment Method 2 -->
+                                        <div class="container p-0 d-flex flex-column odd border-bottom">
+                                            <div class="payment-card">
+                                                <div class="d-flex align-items-center">
+                                                    <input class="form-check-input" type="checkbox">
+                                                    <div class="ms-2 d-flex">
+                                                        <div class="methodiv">ACH Payment</div>
+                                                        <div class="methodcard">Stripe Test Bank ...4786</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Payment Method 3 -->
+                                        <div class="payment-card d-flex even ">
+                                            <div class="d-flex align-items-center">
+                                                <input class="form-check-input" type="checkbox">
+                                                <div class="ms-2 d-flex">
+                                                    <div class="methodiv">Card 2</div>
+                                                    <div class="methodcard">Mastercard ...1111</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+                                </div>
+                                <div class="add-new-content mt-4" style="display: none;">
+                                    <div class="d-flex justify-content-between">
+                                        <span class="fw-bold">SELECT METHOD</span>
+                                        <div class="d-flex align-items-center">
+                                            <div class="form-check me-4">
+                                                <input class="form-check-input ach-option" id="achCheck" type="checkbox"
+                                                    checked>
+                                                <label class="form-check-label rights-label" for="achCheck">ACH</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input credit-option" id="creditCheck"
+                                                    type="checkbox">
+                                                <label class="form-check-label rights-label" for="creditCheck">Credit
+                                                    Card</label>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- ACH Form -->
+                                    <div class="ach-form mt-4" style="display: none;">
+                                        <fieldset class="mb-4">
+                                            <label class="form-label">Account Holder Name</label>
+                                            <input type="text" class="form-control" placeholder="Name">
+                                        </fieldset>
+                                        <div
+                                            class="d-flex justify-content-between align-items-center upload-group w-100 mb-4">
+                                            <span class="fw-bold text-uppercase">ACCOUNT TYPE</span>
+                                            <div class="d-flex align-items-center flex-column">
+                                                <div class="d-flex">
+                                                    <div class="form-check me-4 typecheckradio">
+                                                        <input class="form-check-input no-checkbox" type="radio"
+                                                            id="ACtype" name="customArticles-2" checked="">
+                                                        <label class="form-check-label rights-label "
+                                                            for="ACtype">Individual</label>
+                                                    </div>
+                                                    <div class="form-check typecheckradio">
+                                                        <input class="form-check-input yes-checkbox" type="radio"
+                                                            id="ACompany" name="customArticles-2">
+                                                        <label class="form-check-label rights-label " for="ACompany">
+                                                            Company</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <fieldset class="mb-4">
+                                            <div class="d-flex justify-content-between">
+                                                <label class="form-label">Routing Number</label>
+                                                <div
+                                                    class="icon icon-outline-info customTooltip p-0 m-0 position-relative">
+                                                    <div class="text-start tooltipText tooltipRight"> Please note that
+                                                        the
+                                                        Routing/Account numbers must have a minimum of 12 digits when
+                                                        adding. Your
+                                                        Routing/Account number is less than 12 digits, you may add zeros
+                                                        at the
+                                                        beginning
+                                                        of the Routing/Account number. (see example)</div>
+                                                </div>
+                                            </div>
+                                            <span>Also known as ABA Number</span>
+                                            <input type="text" class="form-control" placeholder="EX. 11000000">
+                                        </fieldset>
+                                        <fieldset>
+                                            <label class="form-label">Account Number</label>
+                                            <input type="text" class="form-control" placeholder="EX. 000123455678">
+                                        </fieldset>
+                                        <div class="mt-4">
+                                            <button type="button" class="btn btn-small py-0 px-5 rounded-3 ms-3"
+                                                id="officeraddBtn">
+                                                SAVE
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Credit Card Form -->
+                                    <div class="credit-card-form mt-4" style="display: none;">
+                                        <fieldset class="mb-4">
+                                            <label class="form-label">Card Holder Name</label>
+                                            <input type="text" class="form-control" placeholder="Name">
+                                        </fieldset>
+                                        <fieldset class="mb-4">
+                                            <label class="form-label">Card Details</label>
+                                            <input type="text" class="form-control" placeholder="**** **** **** 1111">
+                                        </fieldset>
+                                        <div class="d-flex justify-content-between">
+                                            <fieldset class="w-50 me-2">
+                                                <label class="form-label">Expiry Date</label>
+                                                <input type="text" class="form-control" placeholder="MM/YY">
+                                            </fieldset>
+                                            <fieldset class="w-50 ms-2">
+                                                <label class="form-label">CVV</label>
+                                                <input type="text" class="form-control" placeholder="CVV">
+                                            </fieldset>
+                                        </div>
+                                        <div class="mt-4">
+                                            <button type="button" class="btn btn-small py-0 px-5 rounded-3 ms-3"
+                                                id="officeraddBtn">
+                                                SAVE
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <div class="d-flex justify-content-between align-items-center w-100 m-0">
+                        <button type="button" class="btn btn-link text-decoration-none font-weight-600 p-0"
+                            data-bs-dismiss="modal">
+                            CANCEL
+                        </button>
+                        <div class="d-flex align-items-center">
+                            <button type="button" class="btn btn-info py-0 px-5 rounded-3 ms-3" id="updateGroupBtn"
+                                data-bs-dismiss="modal">
+                                Update
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Edit Group Modal End -->
+
+
+    <!-- Delete Modal Start-->
+    <div class="modal modal-right fade filter-slideout SOP-model" id="deleteGroup-modal" tabindex="-1"
+        aria-labelledby="deleteGroup-modalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-end modal-dialog-scrollable modal-md my-0 min-vh-100">
+            <div class="modal-content border-0 rounded-0 min-vh-100">
+                <div class="modal-header">
+                    <div class="d-flex align-items-center">
+                        <span class="icon icon-edit-group icon-lg me-3"></span>
+                        <h4 class="fw-bold m-0">
+                            Delete Group</h4>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <h6>Are you sure you want to remove <b>Alliance Laundry Systems</b>? Any entities assigned to this
+                        group
+                        will become Unassigned.</h6>
+                </div>
+                <div class="modal-footer">
+                    <div class="d-flex justify-content-between align-items-center w-100 m-0">
+                        <button type="button" class="btn btn-link text-decoration-none font-weight-600 p-0"
+                            data-bs-dismiss="modal">
+                            CANCEL
+                        </button>
+                        <div class="d-flex align-items-center">
+                            <button type="button" class="btn btn-info py-0 px-5 rounded-3 ms-3" id="" data-bs-target="#"
+                                data-bs-toggle="modal" data-bs-dismiss="modal">
+                                Delete Group
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Delete Modal End -->
+
+
+    <!-- create new group -->
+
+    <!--New group step-1 Modal start-->
+    <div class="modal modal-right fade filter-slideout SOP-model" id="NWGroup" tabindex="-1"
+        aria-labelledby="searchModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-end modal-dialog-scrollable modal-md my-0 min-vh-100">
+            <div class="modal-content border-0 rounded-0 min-vh-100">
+                <!-- Modal Header -->
+                <div class="modal-header flex-wrap">
+                    <div class="d-flex flex-column w-100 mb-0">
+                        <div class="d-flex align-items-center mb-4">
+                            <span class="icon icon-new-group icon-md me-3"></span>
+                            <h4 class="fw-bold m-0">
+                                Create New Group</h3>
+                        </div>
+                        <!-- stepper start -->
+                        <div class="service-step-group">
+                            <div class="step" data-bs-toggle="modal" data-bs-target="#NWGroup" data-bs-dismiss="modal">
+                                <div class="circle active"></div>
+                                <span class="step-text">GROUP</span>
+                            </div>
+                            <div class="step" data-bs-toggle="modal" data-bs-target="#NWUser" data-bs-dismiss="modal">
+                                <div class="circle"></div>
+                                <span class="step-text">USERS</span>
+                            </div>
+                            <div class="step" data-bs-toggle="modal" data-bs-target="#NWPayment"
+                                data-bs-dismiss="modal">
+                                <div class="circle"></div>
+                                <span class="step-text">PAYMENT<br>OPTIONS</span>
+                            </div>
+                            <div class="step" data-bs-toggle="modal" data-bs-target="#NWAssign" data-bs-dismiss="modal">
+                                <div class="circle"></div>
+                                <span class="step-text">ASSIGN ENTITIES<br>TO GROUP</span>
+                            </div>
+                        </div>
+
+                        <!-- stepper end -->
+                    </div>
+                </div>
+                <!-- Modal Header Ends -->
+                <!-- Modal Body Start-->
+                <div class="modal-body">
+                    <form class="" action="">
+                        <div class="mb-4 p-3 bg-white rounded-2">
+                            <fieldset class="">
+                                <label for="" class="form-label">Group Name <span class="mandatory">*</span></label>
+                                <input type="text" class="form-control " id="" placeholder="Group Name">
+                            </fieldset>
+                        </div>
+                        <div class="p-3 bg-white rounded-2">
+                            <fieldset class="">
+                                <label for="" class="form-label">External Ref#</label>
+                                <input type="text" class="form-control " id="" placeholder="External Ref #">
+                            </fieldset>
+                        </div>
+                    </form>
+                </div>
+                <!-- Modal Body End -->
+                <div class="modal-footer">
+                    <div class="d-flex justify-content-between align-items-center w-100 m-0">
+                        <button type="button" class="btn btn-link text-decoration-none font-weight-600 p-0"
+                            data-bs-dismiss="modal">
+                            CANCEL
+                        </button>
+                        <button type="button" class="btn btn-info py-0 px-5 rounded-3 ms-3" id="nextBtn"
+                            data-bs-target="#NWUser" data-bs-toggle="modal" data-bs-dismiss="modal">
+                            Next
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- New group step-1 Modal End-->
+
+    <!--New group step-2 Modal start-->
+    <div class="modal modal-right fade filter-slideout SOP-model" id="NWUser" tabindex="-1"
+        aria-labelledby="searchModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-end modal-dialog-scrollable modal-md my-0 min-vh-100">
+            <div class="modal-content border-0 rounded-0 min-vh-100">
+                <!-- Modal Header -->
+                <div class="modal-header flex-wrap">
+                    <div class="d-flex flex-column w-100 mb-0">
+                        <div class="d-flex align-items-center mb-4">
+                            <span class="icon icon-new-group icon-md me-3"></span>
+                            <h4 class="fw-bold m-0">
+                                Create New Group</h3>
+                        </div>
+                        <!-- stepper start -->
+                        <div class="service-step-group">
+                            <div class="step completed" data-bs-toggle="modal" data-bs-target="#NWGroup"
+                                data-bs-dismiss="modal">
+                                <div class="circle completed"></div>
+                                <span class="step-text">GROUP</span>
+                            </div>
+                            <div class="step" data-bs-toggle="modal" data-bs-target="#NWUser" data-bs-dismiss="modal">
+                                <div class="circle active"></div>
+                                <span class="step-text">USERS</span>
+                            </div>
+                            <div class="step" data-bs-toggle="modal" data-bs-target="#NWPayment"
+                                data-bs-dismiss="modal">
+                                <div class="circle"></div>
+                                <span class="step-text">PAYMENT<br>OPTIONS</span>
+                            </div>
+                            <div class="step" data-bs-toggle="modal" data-bs-target="#NWAssign" data-bs-dismiss="modal">
+                                <div class="circle"></div>
+                                <span class="step-text">ASSIGN ENTITIES<br>TO GROUP</span>
+                            </div>
+                        </div>
+
+                        <!-- stepper end -->
+                    </div>
+                </div>
+                <!-- Modal Header Ends -->
+                <!-- Modal Body Start-->
+                <div class="modal-body">
+                    <div id="userSearchForm" class="user-search-bar  col-sm-12 search-field w-100 mb-4">
+                        <div class="bg-white rounded-2 shadow position-relative">
+                            <span
+                                class="icon icon-search-grey opacity-25 position-absolute top-50 translate-middle ms-4"></span>
+                            <input type="text"
+                                class="no-bg reset-field form-control search-input w-100 bg-transparent p-2 ps-5 m-0 rounded-2 border-0"
+                                name="term"
+                                data-redirect="<?php echo \Cake\Routing\Router::url(['_name' => 'getstarted.setup.entity']) ?>"
+                                data-src="<?php echo \Cake\Routing\Router::url(['_name'=> 'cta.user.search']) ?>"
+                                placeholder="Search">
+                        </div>
+                        <input type="hidden" name="euid" value="" class="reset-field" autocomplete="off">
+                        <div class="search-autocomplete-result"></div>
+                        <div class="no-search-result"></div>
+                        <a href="javascript:;" class="reset-search pull-right d-none">Reset Search</a>
+                    </div>
+                    <div class="accordion mb-4" id="accordionPanelsStayOpenExample">
+                        <div class="accordion-item m-0">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                                    aria-controls="panelsStayOpen-collapseOne">
+                                    Assign User Access
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show border-0"
+                                aria-labelledby="panelsStayOpen-headingOne">
+                                <div class="assign-user accordion-body pt-0">
+                                    <div class="border rounded-3">
+                                        <div class="fade show active rounded-3 overflow-hidden" id="all">
+                                            <table
+                                                class=" usertable table table-striped w-100 long-data-table-listing border-1">
+                                                <thead>
+                                                    <tr>
+                                                        <th data-orderable="false"><input
+                                                                class="d-flex form-check-input" type="checkbox"></th>
+                                                        <th>User Name</th>
+                                                        <th>Role</th>
+                                                        <th class="">Email Address</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="odd">
+                                                        <td><input class="d-flex form-check-input opacity-50"
+                                                                type="checkbox" checked disabled></td>
+                                                        <td>Carl Smith</td>
+                                                        <td>Super Admin</td>
+                                                        <td>abc@xyz.com abc@xyz.comabc@xyz.comabc@xyz.com abc@xyz.com
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="even">
+                                                        <td><input class="d-flex form-check-input opacity-50"
+                                                                type="checkbox" checked disabled></td>
+                                                        <td>Anna Williams</td>
+                                                        <td>Admin</td>
+                                                        <td>abc@xyz.com</td>
+                                                    </tr>
+                                                    <tr class="odd">
+                                                        <td><input class="d-flex form-check-input opacity-50"
+                                                                type="checkbox" checked disabled></td>
+                                                        <td>Felix Anderson</td>
+                                                        <td>Admin</td>
+                                                        <td>abc@xyz.com</td>
+                                                    </tr>
+                                                    <tr class="even">
+                                                        <td><input class="d-flex form-check-input opacity-50"
+                                                                type="checkbox" checked disabled></td>
+                                                        <td>Benjamin Brown</td>
+                                                        <td>Admin</td>
+                                                        <td>abc@xyz.com</td>
+                                                    </tr>
+                                                    <tr class="odd">
+                                                        <td><input class="d-flex form-check-input" type="checkbox"></td>
+                                                        <td>Charlotte Taylor</td>
+                                                        <td>User</td>
+                                                        <td>abc@xyz.com</td>
+                                                    </tr>
+                                                    <tr class="even">
+                                                        <td><input class="d-flex form-check-input" type="checkbox"></td>
+                                                        <td>Greta Munsen</td>
+                                                        <td>User</td>
+                                                        <td>abc@xyz.com</td>
+                                                    </tr>
+                                                    <tr class="odd">
+                                                        <td><input class="d-flex form-check-input" type="checkbox"></td>
+                                                        <td>Hector Vane</td>
+                                                        <td>User</td>
+                                                        <td>abc@xyz.com</td>
+                                                    </tr>
+                                                    <tr class="even">
+                                                        <td><input class="d-flex form-check-input" type="checkbox"></td>
+                                                        <td>Harrison James</td>
+                                                        <td>User</td>
+                                                        <td>abc@xyz.com</td>
+                                                    </tr>
+                                                    <tr class="odd">
+                                                        <td><input class="d-flex form-check-input" type="checkbox"></td>
+                                                        <td>Ingrid Wille</td>
+                                                        <td>User</td>
+                                                        <td>abc@xyz.com</td>
+                                                    </tr>
+                                                    <tr class="even">
+                                                        <td><input class="d-flex form-check-input" type="checkbox"></td>
+                                                        <td>Ingrid Wille</td>
+                                                        <td>User</td>
+                                                        <td>abc@xyz.com</td>
+                                                    </tr>
+                                                    <tr class="odd">
+                                                        <td><input class="d-flex form-check-input" type="checkbox"></td>
+                                                        <td>Ingrid Wille</td>
+                                                        <td>User</td>
+                                                        <td>abc@xyz.com</td>
+                                                    </tr>
+                                                    <tr class="even">
+                                                        <td><input class="d-flex form-check-input" type="checkbox"></td>
+                                                        <td>Ingrid Wille</td>
+                                                        <td>User</td>
+                                                        <td>abc@xyz.com</td>
+                                                    </tr>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item m-0">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button collapsed m-0" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    Invite External User
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse border-0"
+                                aria-labelledby="headingOne">
+                                <div class="accordion-body pt-0">
+                                    <div id="inviteContainer">
+                                        <form class="mt-4" action="">
+                                            <div class="invitefillingstate ">
+                                                <fieldset class="mb-4">
+                                                    <input type="text" class="form-control mb-3" id="groupName"
+                                                        placeholder="Name">
+                                                    <input type="text" class="form-control" id="groupEmail"
+                                                        placeholder="Email Address">
+                                                </fieldset>
+                                                <div class="view-options mt-3">
+                                                    <div class="d-flex justify-content-between mb-4">
+                                                        <span class="view-label">RIGHTS</span>
+                                                        <div class="d-flex">
+                                                            <div class="form-check me-4">
+                                                                <input class="form-check-input" type="radio"
+                                                                    name="rightsOptions" id="flexRadioDefault2" checked>
+                                                                <label class="form-check-label rights-label"
+                                                                    for="flexRadioDefault2">
+                                                                    View
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="radio"
+                                                                    name="rightsOptions" id="flexRadioDefault1">
+                                                                <label class="form-check-label rights-label"
+                                                                    for="flexRadioDefault1">
+                                                                    Edit
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex justify-content-between mb-4">
+                                                        <span class="view-label">Notifications</span>
+                                                        <div class="d-flex">
+                                                            <div class="form-check me-4">
+                                                                <input class="form-check-input" type="radio"
+                                                                    name="notificationsOptions" id="flexRadioDefault3"
+                                                                    checked>
+                                                                <label class="form-check-label rights-label"
+                                                                    for="flexRadioDefault3">
+                                                                    Yes
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="radio"
+                                                                    name="notificationsOptions" id="flexRadioDefault6">
+                                                                <label class="form-check-label  rights-label"
+                                                                    for="flexRadioDefault6">
+                                                                    No
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex justify-content-between">
+                                                        <span class="view-label">Invoices</span>
+                                                        <div class="d-flex">
+                                                            <div class="form-check me-4">
+                                                                <input class="form-check-input" type="radio"
+                                                                    name="invoicesOptions" id="flexRadioDefault4"
+                                                                    checked>
+                                                                <label class="form-check-label rights-label"
+                                                                    for="flexRadioDefault4">
+                                                                    Yes
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="radio"
+                                                                    name="invoicesOptions" id="flexRadioDefault5">
+                                                                <label class="form-check-label rights-label"
+                                                                    for="flexRadioDefault5"> No
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="mt-4">
+                                                        <button type="button"
+                                                            class="btn btn-small py-0 px-5 rounded-3 ms-3"
+                                                            id="inviteaddBtn">
+                                                            ADD
+                                                        </button>
+                                                        <button type="button"
+                                                            class=" btn  btn-small py-0 px-4 rounded-3 ms-2 me-3 d-none"
+                                                            id="inviteCancelBtn">
+                                                            CANCEL
+                                                        </button>
+                                                        <button type="button"
+                                                            class="btn btn-small py-0 px-5 rounded-3 ms-3 d-none"
+                                                            id="inviteupdateBtn">
+                                                            UPDATE
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="invitefilledstate" style="display: none;">
+                                                <div class="mb-4 w-100 d-flex justify-content-end">
+                                                    <button type="button"
+                                                        class=" moreaddinvite d-flex align-items-center p-0 m-0 border-0 bg-white fw-normal">
+                                                        <span class="icon icon-add-circle-plus"></span> Add
+                                                    </button>
+                                                </div>
+                                                <div class="inputsfilled d-flex justify-content-between flex-column">
+                                                    <div class="d-flex justify-content-between">
+                                                        <div>
+                                                            <p class="groupName m-0 ">Adam Smith</p>
+                                                            <p class="groupEmail m-0 mb-1 fw-normal text-disabled  ">
+                                                                adamsmith@xyz.com
+                                                            </p>
+
+                                                        </div>
+                                                        <div class="d-flex align-items-center">
+                                                            <span class="icon icon-new-edit me-3" data-toggle="tooltip"
+                                                                aria-label="EDIT" data-bs-original-title="EDIT"></span>
+                                                            <span class="icon icon-new-delete m-0 deleteUser"
+                                                                data-bs-toggle="modal" data-bs-target="#userDelete"
+                                                                data-toggle="tooltip" aria-label="DELETE"
+                                                                title="DELETE"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex flex-column justify-content-between">
+                                                        <hr>
+                                                        <div class="d-flex justify-content-between">
+                                                            <div>
+                                                                <p class="groupName m-0 ">Keith Adams</p>
+                                                                <p class="groupEmail m-0 mb-1 fw-normal text-disabled ">
+                                                                    keithadams@xyz.com</p>
+
+                                                            </div>
+                                                            <div class="d-flex align-items-center">
+                                                                <span class="icon icon-new-edit me-3"
+                                                                    data-toggle="tooltip" aria-label="EDIT"
+                                                                    data-bs-original-title="EDIT"></span>
+                                                                <span class="icon icon-new-delete m-0 deleteUser"
+                                                                    data-bs-toggle="modal" data-bs-target="#userDelete"
+                                                                    data-toggle="tooltip" aria-label="DELETE"
+                                                                    title="DELETE"></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+
+
+                                            </div>
+
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+                <!-- Modal Body End -->
+                <div class="modal-footer">
+                    <div class="d-flex justify-content-between align-items-center w-100 m-0">
+                        <button type="button" class="btn btn-link text-decoration-none font-weight-600 p-0"
+                            data-bs-dismiss="modal">
+                            CANCEL
+                        </button>
+                        <div class="d-flex align-items-center">
+                            <button type="button" class="btn btn-link text-decoration-none font-weight-600" id="backBtn"
+                                data-bs-toggle="modal" data-bs-dismiss="modal">
+                                SAVE AND EXIT
+                            </button>
+                            <button type="button" class="btn btn-info py-0 px-5 rounded-3 ms-3" id="nextBtn"
+                                data-bs-target="#NWPayment" data-bs-toggle="modal" data-bs-dismiss="modal">
+                                Next
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- New group step-2 Modal End-->
+
+    <!--Payment step-3 Modal start-->
+    <div class="modal modal-right fade filter-slideout SOP-model" id="NWPayment" tabindex="-1"
+        aria-labelledby="searchModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-end modal-dialog-scrollable modal-md my-0 min-vh-100">
+            <div class="modal-content border-0 rounded-0 min-vh-100">
+                <!-- Modal Header -->
+                <div class="modal-header flex-wrap">
+                    <div class="d-flex flex-column w-100 mb-0">
+                        <div class="d-flex align-items-center mb-4">
+                            <span class="icon icon-new-group icon-md me-3"></span>
+                            <h4 class="fw-bold m-0">
+                                Create New Group</h3>
+                        </div>
+                        <!-- stepper start -->
+                        <div class="service-step-group">
+                            <div class="step completed" data-bs-toggle="modal" data-bs-target="#NWGroup"
+                                data-bs-dismiss="modal">
+                                <div class="circle completed"></div>
+                                <span class="step-text">GROUP</span>
+                            </div>
+                            <div class="step completed" data-bs-toggle="modal" data-bs-target="#NWUser"
+                                data-bs-dismiss="modal">
+                                <div class="circle completed"></div>
+                                <span class="step-text">USERS</span>
+                            </div>
+                            <div class="step" data-bs-toggle="modal" data-bs-target="#NWPayment"
+                                data-bs-dismiss="modal">
+                                <div class="circle active"></div>
+                                <span class="step-text">PAYMENT<br>OPTIONS</span>
+                            </div>
+                            <div class="step" data-bs-toggle="modal" data-bs-target="#NWAssign" data-bs-dismiss="modal">
+                                <div class="circle"></div>
+                                <span class="step-text">ASSIGN ENTITIES<br>TO GROUP</span>
+                            </div>
+                        </div>
+
+                        <!-- stepper end -->
+                    </div>
+                </div>
+                <!-- Modal Header Ends -->
+                <!-- Modal Body Start-->
+                <div class="modal-body">
+
+                    <div class="mb-4 p-3 bg-white rounded-2">
+                        <fieldset>
+                            <label class="form-label">pricing model<span class="mandatory">*</span></label>
+                            <div class="custom-dropdown">
+                                <select class="form-select pricing-method">
+                                    <option value="account-default">Account Default</option>
+                                    <option value="on-file">Client Subscription</option>
+                                </select>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <form class="payment-section">
+                        <div class="mb-4 p-3 bg-white rounded-2">
+                            <fieldset>
+                                <label class="form-label">Payment Method<span class="mandatory">*</span></label>
+                                <div class="custom-dropdown">
+                                    <select class="form-select pricing-method">
+                                        <option value="account-default">Account Default (Visa 1111)</option>
+                                        <option value="on-file">On File</option>
+                                        <option value="add-new">Add New</option>
+                                        <option value="bill-to-client">Bill To Client</option>
+                                    </select>
+                                </div>
+                            </fieldset>
+                            <div class="on-file-content mt-4 border rounded-2" style="display: none;">
+                                <div>
+                                    <div class="payment-card d-flex odd border-bottom">
+                                        <div class="d-flex align-items-center">
+                                            <div class="ms-2 d-flex">
+                                                <div class="methodiv">Mastercard </div>
+                                                <div class="methodcard">Mastercard ...4444</div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-start defaultdiv">
+                                            <span class="btn btn-outline-success btn-sm">Default</span>
+                                        </div>
+                                    </div>
+                                    <!-- Payment Method 2 -->
+                                    <div class="container p-0 d-flex flex-column even border-bottom">
+                                        <div class="payment-card">
+                                            <div class="d-flex align-items-center">
+                                                <div class="ms-2 d-flex">
+                                                    <div class="methodiv text-disabled">ACH Payment</div>
+                                                    <div class="methodcard  text-disabled">Stripe Test Bank ...6789
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex align-items-start defaultdiv" data-toggle="tooltip"
+                                                title="In order to process this order you may be required to verify the ACH account from the accounts Billing section.">
+                                                <a class="btn btn-outline-primary btn-sm verifybtn">Unverified</a>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+
+                                    <!-- Payment Method 2 -->
+                                    <div class="container p-0 d-flex flex-column odd border-bottom">
+                                        <div class="payment-card">
+                                            <div class="d-flex align-items-center">
+                                                <div class="ms-2 d-flex">
+                                                    <div class="methodiv">ACH Payment</div>
+                                                    <div class="methodcard">Stripe Test Bank ...4786</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Payment Method 3 -->
+                                    <div class="payment-card d-flex even ">
+                                        <div class="d-flex align-items-center">
+                                            <div class="ms-2 d-flex">
+                                                <div class="methodiv">Card 2</div>
+                                                <div class="methodcard">Mastercard ...1111</div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-start defaultdiv">
+                                        </div>
+
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                            <div class="add-new-content mt-4" style="display: none;">
+                                <div class="d-flex justify-content-between">
+                                    <span class="fw-bold">SELECT METHOD</span>
+                                    <div class="d-flex align-items-center">
+                                        <div class="form-check me-4">
+                                            <input class="form-check-input ach-option" id="achCheck" type="checkbox"
+                                                checked>
+                                            <label class="form-check-label rights-label" for="achCheck">ACH</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input credit-option" id="creditCheck"
+                                                type="checkbox">
+                                            <label class="form-check-label rights-label" for="creditCheck">Credit
+                                                Card</label>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <!-- ACH Form -->
+                                <div class="ach-form mt-4" style="display: none;">
+                                    <fieldset class="mb-4">
+                                        <label class="form-label">Account Holder Name</label>
+                                        <input type="text" class="form-control" placeholder="Name">
+                                    </fieldset>
+                                    <div
+                                        class="d-flex justify-content-between align-items-center upload-group w-100 mb-4">
+                                        <span class="fw-bold text-uppercase">ACCOUNT TYPE</span>
+                                        <div class="d-flex align-items-center flex-column">
+                                            <div class="d-flex">
+                                                <div class="form-check me-4 typecheckradio">
+                                                    <input class="form-check-input no-checkbox" type="radio" id="ACtype"
+                                                        name="customArticles-2" checked="">
+                                                    <label class="form-check-label rights-label "
+                                                        for="ACtype">Individual</label>
+                                                </div>
+                                                <div class="form-check typecheckradio">
+                                                    <input class="form-check-input yes-checkbox" type="radio"
+                                                        id="ACompany" name="customArticles-2">
+                                                    <label class="form-check-label rights-label " for="ACompany">
+                                                        Company</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <fieldset class="mb-4">
+                                        <div class="d-flex justify-content-between">
+                                            <label class="form-label">Routing Number</label>
+                                            <div class="icon icon-outline-info customTooltip p-0 m-0 position-relative">
+                                                <div class="text-start tooltipText tooltipRight"> Please note that the
+                                                    Routing/Account numbers must have a minimum of 12 digits when
+                                                    adding. Your
+                                                    Routing/Account number is less than 12 digits, you may add zeros at
+                                                    the beginning
+                                                    of the Routing/Account number. (see example)</div>
+                                            </div>
+                                        </div>
+                                        <span>Also known as ABA Number</span>
+                                        <input type="text" class="form-control" placeholder="EX. 11000000">
+                                    </fieldset>
+                                    <fieldset>
+                                        <label class="form-label">Account Number</label>
+                                        <input type="text" class="form-control" placeholder="EX. 000123455678">
+                                    </fieldset>
+                                    <div class="mt-4">
+                                        <button type="button" class="btn btn-small py-0 px-5 rounded-3 ms-3"
+                                            id="officeraddBtn">
+                                            SAVE
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Credit Card Form -->
+                                <div class="credit-card-form mt-4" style="display: none;">
+                                    <fieldset class="mb-4">
+                                        <label class="form-label">Card Holder Name</label>
+                                        <input type="text" class="form-control" placeholder="Name">
+                                    </fieldset>
+                                    <fieldset class="mb-4">
+                                        <label class="form-label">Card Details</label>
+                                        <input type="text" class="form-control" placeholder="**** **** **** 1111">
+                                    </fieldset>
+                                    <div class="d-flex justify-content-between">
+                                        <fieldset class="w-50 me-2">
+                                            <label class="form-label">Expiry Date</label>
+                                            <input type="text" class="form-control" placeholder="MM/YY">
+                                        </fieldset>
+                                        <fieldset class="w-50 ms-2">
+                                            <label class="form-label">CVV</label>
+                                            <input type="text" class="form-control" placeholder="CVV">
+                                        </fieldset>
+                                    </div>
+                                    <div class="mt-4">
+                                        <button type="button" class="btn btn-small py-0 px-5 rounded-3 ms-3"
+                                            id="officeraddBtn">
+                                            SAVE
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bill-to-client mt-4" style="display: none;">
+                                <div class="d-flex justify-content-between align-items-center upload-group w-100">
+                                    <span class="fw-bold text-uppercase">CLIENT APPROVAL REQUIRED</span>
+                                    <div class="d-flex align-items-center flex-column">
+                                        <div class="d-flex">
+                                            <div class="form-check me-4 typecheckradio">
+                                                <input class="form-check-input no-checkbox" type="radio" id="CL_YES"
+                                                    name="customArticles_CL_2">
+                                                <label class="form-check-label rights-label " for="CL_YES">Yes</label>
+                                            </div>
+                                            <div class="form-check typecheckradio">
+                                                <input class="form-check-input yes-checkbox" type="radio" id="CL_NO"
+                                                    name="customArticles_CL_2">
+                                                <label class="form-check-label rights-label " for="CL_NO">No</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- Modal Body End -->
+                <div class="modal-footer">
+                    <div class="d-flex justify-content-between align-items-center w-100 m-0">
+                        <button type="button" class="btn btn-link text-decoration-none font-weight-600 p-0"
+                            data-bs-dismiss="modal">
+                            CANCEL
+                        </button>
+                        <div class="d-flex align-items-center">
+                            <button type="button" class="btn btn-link text-decoration-none font-weight-600" id="backBtn"
+                                data-bs-toggle="modal" data-bs-dismiss="modal">
+                                SAVE AND EXIT
+                            </button>
+                            <button type="button" class="btn btn-info py-0 px-5 rounded-3 ms-3" id="nextBtn"
+                                data-bs-target="#NWAssign" data-bs-toggle="modal" data-bs-dismiss="modal">
+                                Next
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Payment step-3 Modal End-->
+
+    <!--New assign step-4 Modal start-->
+    <div class="modal modal-right fade filter-slideout SOP-model" id="NWAssign" tabindex="-1"
+        aria-labelledby="searchModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-end modal-dialog-scrollable modal-md my-0 min-vh-100">
+            <div class="modal-content border-0 rounded-0 min-vh-100">
+                <!-- Modal Header -->
+                <div class="modal-header flex-wrap">
+                    <div class="d-flex flex-column w-100 mb-0">
+                        <div class="d-flex align-items-center mb-4">
+                            <span class="icon icon-new-group icon-md me-3"></span>
+                            <h4 class="fw-bold m-0">
+                                Create New Group</h3>
+                        </div>
+                        <!-- stepper start -->
+                        <div class="service-step-group">
+                            <div class="step completed" data-bs-toggle="modal" data-bs-target="#NWGroup"
+                                data-bs-dismiss="modal">
+                                <div class="circle completed"></div>
+                                <span class="step-text">GROUP</span>
+                            </div>
+                            <div class="step completed" data-bs-toggle="modal" data-bs-target="#NWUser"
+                                data-bs-dismiss="modal">
+                                <div class="circle completed"></div>
+                                <span class="step-text">USERS</span>
+                            </div>
+                            <div class="step completed" data-bs-toggle="modal" data-bs-target="#NWPayment"
+                                data-bs-dismiss="modal">
+                                <div class="circle completed"></div>
+                                <span class="step-text">PAYMENT<br>OPTIONS</span>
+                            </div>
+                            <div class="step" data-bs-toggle="modal" data-bs-target="#NWAssign" data-bs-dismiss="modal">
+                                <div class="circle active"></div>
+                                <span class="step-text">ASSIGN ENTITIES<br>TO GROUP</span>
+                            </div>
+                        </div>
+
+                        <!-- stepper end -->
+                    </div>
+                </div>
+                <!-- Modal Header Ends -->
+                <!-- Modal Body Start-->
+                <div class="modal-body">
+                    <div id="userSearchForm" class="user-search-bar  col-sm-12 search-field w-100 mb-4">
+                        <div class="bg-white rounded-2 shadow position-relative">
+                            <span
+                                class="icon icon-search-grey opacity-25 position-absolute top-50 translate-middle ms-4"></span>
+                            <input type="text"
+                                class="no-bg reset-field form-control search-input w-100 bg-transparent p-2 ps-5 m-0 rounded-2 border-0"
+                                name="term"
+                                data-redirect="<?php echo \Cake\Routing\Router::url(['_name' => 'getstarted.setup.entity']) ?>"
+                                data-src="<?php echo \Cake\Routing\Router::url(['_name'=> 'cta.user.search']) ?>"
+                                placeholder="Search">
+                        </div>
+                        <input type="hidden" name="euid" value="" class="reset-field" autocomplete="off">
+                        <div class="search-autocomplete-result"></div>
+                        <div class="no-search-result"></div>
+                        <a href="javascript:;" class="reset-search pull-right d-none">Reset Search</a>
+                    </div>
+                    <div class="accordion mb-4" id="accordionPanelsStayOpenExample">
+                        <div class="accordion-item m-0">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                                    aria-controls="panelsStayOpen-collapseOne">
+                                    Unassigned Entities
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show border-0"
+                                aria-labelledby="panelsStayOpen-headingOne">
+                                <div class="assign-user unassign-entites accordion-body pt-0">
+                                    <div class="border rounded-3">
+                                        <div class="fade show active rounded-3 overflow-hidden" id="all">
+                                            <table id="assignTable"
+                                                class="table table-striped w-100 long-data-table-listing border-1">
+                                                <thead>
+                                                    <tr>
+                                                        <th data-orderable="false"><input
+                                                                class="d-flex form-check-input" type="checkbox"></th>
+                                                        <th>Entity Name</th>
+                                                        <th class="juridction-fixed-width">Jurisdiction</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="odd">
+                                                        <td><input class="d-flex form-check-input" type="checkbox"></td>
+                                                        <td>RESOURCE INCOME PARTNERS LIMITED PARTNERSHIP</td>
+                                                        <td>CA</td>
+                                                    </tr>
+                                                    <tr class="even">
+                                                        <td><input class="d-flex form-check-input" type="checkbox"></td>
+                                                        <td>DEJONG'S QUANTUM TAX STRATEGIES, A PROFESSIONAL ACCOUNTANCY
+                                                            CORPORATION
+                                                        </td>
+                                                        <td>WY</td>
+                                                    </tr>
+                                                    <tr class="odd">
+                                                        <td><input class="d-flex form-check-input" type="checkbox"></td>
+                                                        <td>C EXTERNAL BODY MOVERS LLC</td>
+                                                        <td>AL</td>
+                                                    </tr>
+                                                    <tr class="even">
+                                                        <td><input class="d-flex form-check-input" type="checkbox"></td>
+                                                        <td>RASA Realty LLC</td>
+                                                        <td>FL</td>
+                                                    </tr>
+                                                    <tr class="odd">
+                                                        <td><input class="d-flex form-check-input" type="checkbox"></td>
+                                                        <td>MARKSET FUND I -01-SERIES 1 L.L.C.</td>
+                                                        <td>NV</td>
+                                                    </tr>
+                                                    <tr class="even">
+                                                        <td><input class="d-flex form-check-input" type="checkbox"></td>
+                                                        <td>EXPLORATION CAPITAL PARTNERS 2012 LIMITED PARTNERSHIP</td>
+                                                        <td>DE</td>
+                                                    </tr>
+                                                    <tr class="odd">
+                                                        <td><input class="d-flex form-check-input" type="checkbox"></td>
+                                                        <td>KK RENEWAL HOLDINGS CORP</td>
+                                                        <td>TR</td>
+                                                    </tr>
+                                                    <tr class="even">
+                                                        <td><input class="d-flex form-check-input" type="checkbox"></td>
+                                                        <td>File only Entity</td>
+                                                        <td>LA</td>
+                                                    </tr>
+                                                    <tr class="odd">
+                                                        <td><input class="d-flex form-check-input" type="checkbox"></td>
+                                                        <td>GDS DESIGNS, INC.</td>
+                                                        <td>CA</td>
+                                                    </tr>
+                                                    <tr class="even">
+                                                        <td><input class="d-flex form-check-input" type="checkbox"></td>
+                                                        <td>JKL LLC</td>
+                                                        <td>DE</td>
+                                                    </tr>
+                                                    <tr class="odd">
+                                                        <td><input class="d-flex form-check-input" type="checkbox"></td>
+                                                        <td>Ingrid Wille</td>
+                                                        <td>NV</td>
+                                                    </tr>
+                                                    <tr class="even">
+                                                        <td><input class="d-flex form-check-input" type="checkbox"></td>
+                                                        <td>Pikewood Group, LLC</td>
+                                                        <td>CA</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal Body End -->
+                <div class="modal-footer">
+                    <div class="d-flex justify-content-between align-items-center w-100 m-0">
+                        <button type="button" class="btn btn-link text-decoration-none font-weight-600 p-0"
+                            data-bs-dismiss="modal">
+                            CANCEL
+                        </button>
+                        <div class="d-flex align-items-center">
+                            <button type="button" class="btn btn-info py-0 px-5 rounded-3 ms-3" id="submitBtn"
+                                data-bs-target="#" data-bs-toggle="modal" data-bs-dismiss="modal">
+                                Submit
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- New assign step-4 Modal End-->
+
+    <script src="dist/js/plugins.min.js"></script>
+    <script src="dist/js/custom.min.js"></script>
+    <script src="dist/js/dashboard.js"></script>
+    <script src="dist/js/service-order-process.js"></script>
+
+    <script>
+        // Initialize all tooltips on the page
+        const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        tooltipTriggerList.map(el => new bootstrap.Tooltip(el));
+    </script>
+    <!-- Scripts End-->
+</body>
+
+</html>

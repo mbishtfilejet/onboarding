@@ -1,0 +1,130 @@
+{
+    "groups_listing_data": [
+        {
+            "id": 1,
+            "group_id": "4839201746",
+            "group_name": "Alliance Laundry Systems",
+            "primary_contact": "Bradley Russell",
+            "entities": 6,
+            "registrations": 3,
+            "partner_users": 0
+        },
+        {
+            "id": 2,
+            "group_id": "7150843291",
+            "group_name": "Bob’s Discount Furniture",
+            "primary_contact": "Joaquin Wade",
+            "registrations": 10,
+            "partner_users": 0,
+            "entities": 3
+        },
+        {
+            "id": 3,
+            "group_id": "9024716385",
+            "group_name": "Convey Health Solutions",
+            "primary_contact": "John Doe",
+            "registrations": 5,
+            "partner_users": 0,
+            "entities": 5
+        },
+        {
+            "id": 4,
+            "group_id": "3649182057",
+            "group_name": "Delta-Sonic Carwash",
+            "primary_contact": "Lilian Stafford",
+            "registrations": 15,
+            "partner_users": 0,
+            "entities": 3
+        },
+        {
+            "id": 5,
+            "group_id": "1285704936",
+            "group_name": "Todd, Bremer &amp; Lawson, Inc.",
+            "primary_contact": "Lindsey Parrish",
+            "registrations": 3,
+            "partner_users": 0,
+            "entities": 13
+        },
+        {
+            "id": 6,
+            "group_id": "5619082743",
+            "group_name": "CHARLEY M. STOLL, A PROFESSIONAL CORPORATION",
+            "primary_contact": "John Parrish",
+            "registrations": 13,
+            "partner_users": 0,
+            "entities": 11
+        },
+        {
+            "id": 7,
+            "group_id": "8571930246",
+            "group_name": "Rachel Feder",
+            "primary_contact": "Somia Fredger",
+            "registrations": 5,
+            "partner_users": 0,
+            "entities": 3
+        },
+        {
+            "id": 8,
+            "group_id": "6402819753",
+            "group_name": "SAN JOAQUIN ACCOUNTING",
+            "primary_contact": "Rogder Biny",
+            "registrations": 10,
+            "partner_users": 0,
+            "entities": 5
+        },
+        {
+            "id": 9,
+            "group_id": "2197358640",
+            "group_name": "CNY Accountants & Consultants",
+            "primary_contact": "Mark Bensley",
+            "registrations": 12,
+            "partner_users": 2,
+            "entities": 6
+        },
+        {
+            "id": 10,
+            "group_id": "1826405739",
+            "group_name": "Kurtz, Anderson and Associates",
+            "primary_contact": "Leadey Parish",
+            "registrations": 10,
+            "partner_users": 1,
+            "entities": 4
+        },
+        {
+            "id": 11,
+            "group_id": "5716402983",
+            "group_name": "Natomas Labs, Inc. (Villa Homes)",
+            "primary_contact": "Russek Burdger",
+            "registrations": 12,
+            "partner_users": 0,
+            "entities": 2
+        },
+        {
+            "id": 12,
+            "group_id": "9382057146",
+            "group_name": "Adept HR",
+            "primary_contact": "Antonio Grande",
+            "registrations": 2,
+            "partner_users": 0,
+            "entities": 11
+        },
+        {
+            "id": 13,
+            "group_id": "4062819754",
+            "group_name": "Convey Health Solutions",
+            "primary_contact": "Kariaq Murish",
+            "registrations": 5,
+            "partner_users": 0,
+            "entities": 9
+        },
+        {
+            "id": 14,
+            "group_id": "7931540286",
+            "group_name": "Frontier Local System",
+            "primary_contact": "Michael Johanson",
+            "registrations": 14,
+            "partner_users": 0,
+            "entities": 6
+        }
+    ]
+}
