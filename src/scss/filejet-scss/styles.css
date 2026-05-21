@@ -13145,6 +13145,54 @@ input[type=radio] {
   background-image: url("../../../dist/images/icons/new-edit-group.svg");
 }
 
+.icon-view {
+  background-image: url("../../../dist/images/icons/eye-icon.svg");
+}
+
+.icon-info-card {
+  background-image: url("../../../dist/images/icons/identification-card.svg");
+}
+
+.icon-submit {
+  background-image: url("../../../dist/images/icons/clipboard-icon.svg");
+}
+
+.icon-upload {
+  background-image: url("../../../dist/images/icons/upload-icon.svg");
+}
+
+.icon-download {
+  background-image: url("../../../dist/images/icons/download-icon.svg");
+}
+
+.icon-invoices {
+  background-image: url("../../../dist/images/icons/invoice-icon.svg");
+}
+
+.icon-acknowledge {
+  background-image: url("../../../dist/images/icons/seal-check-icon.svg");
+}
+
+.icon-edit-grey {
+  background-image: url("../../../dist/images/icons/new-edit-grey.svg");
+}
+
+.icon-check-green {
+  background-image: url("../../../dist/images/icons/light-green-check.svg");
+}
+
+.icon-folder-thin {
+  background-image: url("../../../dist/images/icons/icon-folder-thin.svg");
+}
+
+.icon-profile-black {
+  background-image: url("../../../dist/images/icons/profile-black.svg");
+}
+
+.icon-entity-main {
+  background-image: url("../../../dist/images/icons/entity-main.svg");
+}
+
 .login-page {
   background: url("../../../../dist/images/login-banner.jpg") no-repeat center center/cover;
 }
@@ -20067,98 +20115,311 @@ body *::-webkit-scrollbar-thumb {
   background-color: var(--bs-yellow-bg);
 }
 
-.groupsTableCard {
+.groupsTableCard, .usersTableCard {
   background-color: white;
   position: relative;
 }
-.groupsTableCard .table {
+.groupsTableCard .table, .usersTableCard .table {
   margin-bottom: 0rem !important;
 }
-.groupsTableCard table thead th:first-child,
-.groupsTableCard .dataTable thead th:first-child {
+.groupsTableCard table thead th:first-child, .usersTableCard table thead th:first-child,
+.groupsTableCard .dataTable thead th:first-child,
+.usersTableCard .dataTable thead th:first-child {
   border-top-left-radius: 5px;
 }
-.groupsTableCard table thead th:last-child,
-.groupsTableCard .dataTable thead th:last-child {
+.groupsTableCard table thead th:last-child, .usersTableCard table thead th:last-child,
+.groupsTableCard .dataTable thead th:last-child,
+.usersTableCard .dataTable thead th:last-child {
   border-top-right-radius: 5px;
 }
-.groupsTableCard table tbody tr:last-child td,
-.groupsTableCard .dataTable tbody tr:last-child td {
+.groupsTableCard table tbody tr:last-child td, .usersTableCard table tbody tr:last-child td,
+.groupsTableCard .dataTable tbody tr:last-child td,
+.usersTableCard .dataTable tbody tr:last-child td {
   border: none;
 }
-.groupsTableCard table tbody tr:last-child td:first-child,
-.groupsTableCard .dataTable tbody tr:last-child td:first-child {
+.groupsTableCard table tbody tr:last-child td:first-child, .usersTableCard table tbody tr:last-child td:first-child,
+.groupsTableCard .dataTable tbody tr:last-child td:first-child,
+.usersTableCard .dataTable tbody tr:last-child td:first-child {
   border-bottom-left-radius: 5px;
 }
-.groupsTableCard table tbody tr:last-child td:last-child,
-.groupsTableCard .dataTable tbody tr:last-child td:last-child {
+.groupsTableCard table tbody tr:last-child td:last-child, .usersTableCard table tbody tr:last-child td:last-child,
+.groupsTableCard .dataTable tbody tr:last-child td:last-child,
+.usersTableCard .dataTable tbody tr:last-child td:last-child {
   border-bottom-right-radius: 5px;
 }
-.groupsTableCard .dataTables_wrapper tbody td {
+.groupsTableCard .dataTables_wrapper tbody td, .usersTableCard .dataTables_wrapper tbody td {
   font-weight: 400 !important;
   color: var(--bs-black-primary) !important;
   font-size: 12px !important;
+  padding: 0.5rem 0.9rem !important;
   line-height: 1.25rem !important;
 }
-.groupsTableCard .dataTables_wrapper tbody td.text-light-blue {
+.groupsTableCard .dataTables_wrapper tbody td.text-light-blue, .usersTableCard .dataTables_wrapper tbody td.text-light-blue {
   color: var(--bs-light-blue) !important;
 }
-.groupsTableCard .dataTables_wrapper tbody td.disabled-column {
+.groupsTableCard .dataTables_wrapper tbody td.disabled-column, .usersTableCard .dataTables_wrapper tbody td.disabled-column {
   color: rgb(177, 176, 176) !important;
   pointer-events: none;
 }
-.groupsTableCard .dataTables_wrapper tbody td.disabled-column .dt-control,
+.groupsTableCard .dataTables_wrapper tbody td.disabled-column .dt-control, .usersTableCard .dataTables_wrapper tbody td.disabled-column .dt-control,
 .groupsTableCard .dataTables_wrapper tbody td.disabled-column .icon-folder-upload-purple,
+.usersTableCard .dataTables_wrapper tbody td.disabled-column .icon-folder-upload-purple,
 .groupsTableCard .dataTables_wrapper tbody td.disabled-column .icon-folder-upload-danger,
+.usersTableCard .dataTables_wrapper tbody td.disabled-column .icon-folder-upload-danger,
 .groupsTableCard .dataTables_wrapper tbody td.disabled-column .badge,
-.groupsTableCard .dataTables_wrapper tbody td.disabled-column input {
+.usersTableCard .dataTables_wrapper tbody td.disabled-column .badge,
+.groupsTableCard .dataTables_wrapper tbody td.disabled-column input,
+.usersTableCard .dataTables_wrapper tbody td.disabled-column input {
   opacity: 0.35;
 }
-.groupsTableCard .dataTables_wrapper .dataTables_scroll .dataTables_scrollHeadInner,
-.groupsTableCard .dataTables_wrapper .dataTables_scroll .dataTable {
+.groupsTableCard .dataTables_wrapper .dataTables_scroll .dataTables_scrollHeadInner, .usersTableCard .dataTables_wrapper .dataTables_scroll .dataTables_scrollHeadInner,
+.groupsTableCard .dataTables_wrapper .dataTables_scroll .dataTable,
+.usersTableCard .dataTables_wrapper .dataTables_scroll .dataTable {
   width: inherit !important;
   max-width: inherit !important;
   min-height: 0 !important;
 }
-.groupsTableCard .dataTables_wrapper .dataTables_scroll .dataTables_scrollBody {
+.groupsTableCard .dataTables_wrapper .dataTables_scroll .dataTables_scrollBody, .usersTableCard .dataTables_wrapper .dataTables_scroll .dataTables_scrollBody {
   overflow-y: hidden !important;
 }
-.groupsTableCard .groupsListingTable .dataTables_wrapper tbody td a {
+.groupsTableCard .groupsListingTable .dataTables_wrapper tbody td a, .usersTableCard .groupsListingTable .dataTables_wrapper tbody td a {
   font-weight: 400 !important;
 }
-.groupsTableCard .groupsListingTable .dataTables_wrapper .dataTable th:first-child,
-.groupsTableCard .groupsListingTable .dataTables_wrapper .dataTable td:first-child {
+.groupsTableCard .groupsListingTable .dataTables_wrapper .dataTable th:first-child, .usersTableCard .groupsListingTable .dataTables_wrapper .dataTable th:first-child,
+.groupsTableCard .groupsListingTable .dataTables_wrapper .dataTable td:first-child,
+.usersTableCard .groupsListingTable .dataTables_wrapper .dataTable td:first-child {
   min-width: 170px !important;
 }
-.groupsTableCard .groupsListingTable .dataTables_wrapper .dataTable th:nth-child(2),
-.groupsTableCard .groupsListingTable .dataTables_wrapper .dataTable td:nth-child(2) {
+.groupsTableCard .groupsListingTable .dataTables_wrapper .dataTable th:nth-child(2), .usersTableCard .groupsListingTable .dataTables_wrapper .dataTable th:nth-child(2),
+.groupsTableCard .groupsListingTable .dataTables_wrapper .dataTable td:nth-child(2),
+.usersTableCard .groupsListingTable .dataTables_wrapper .dataTable td:nth-child(2) {
   min-width: 100px !important;
 }
-.groupsTableCard .groupsListingTable .dataTables_wrapper .dataTable th:nth-child(4), .groupsTableCard .groupsListingTable .dataTables_wrapper .dataTable th:nth-child(6), .groupsTableCard .groupsListingTable .dataTables_wrapper .dataTable th:nth-child(7),
+.groupsTableCard .groupsListingTable .dataTables_wrapper .dataTable th:nth-child(4), .usersTableCard .groupsListingTable .dataTables_wrapper .dataTable th:nth-child(4), .groupsTableCard .groupsListingTable .dataTables_wrapper .dataTable th:nth-child(6), .usersTableCard .groupsListingTable .dataTables_wrapper .dataTable th:nth-child(6), .groupsTableCard .groupsListingTable .dataTables_wrapper .dataTable th:nth-child(7), .usersTableCard .groupsListingTable .dataTables_wrapper .dataTable th:nth-child(7),
 .groupsTableCard .groupsListingTable .dataTables_wrapper .dataTable td:nth-child(4),
+.usersTableCard .groupsListingTable .dataTables_wrapper .dataTable td:nth-child(4),
 .groupsTableCard .groupsListingTable .dataTables_wrapper .dataTable td:nth-child(6),
-.groupsTableCard .groupsListingTable .dataTables_wrapper .dataTable td:nth-child(7) {
+.usersTableCard .groupsListingTable .dataTables_wrapper .dataTable td:nth-child(6),
+.groupsTableCard .groupsListingTable .dataTables_wrapper .dataTable td:nth-child(7),
+.usersTableCard .groupsListingTable .dataTables_wrapper .dataTable td:nth-child(7) {
   max-width: 75px !important;
 }
-.groupsTableCard .groupsListingTable .dataTables_wrapper .dataTable th:nth-child(5),
-.groupsTableCard .groupsListingTable .dataTables_wrapper .dataTable td:nth-child(5) {
+.groupsTableCard .groupsListingTable .dataTables_wrapper .dataTable th:nth-child(5), .usersTableCard .groupsListingTable .dataTables_wrapper .dataTable th:nth-child(5),
+.groupsTableCard .groupsListingTable .dataTables_wrapper .dataTable td:nth-child(5),
+.usersTableCard .groupsListingTable .dataTables_wrapper .dataTable td:nth-child(5) {
   max-width: 105px !important;
 }
-.groupsTableCard .groupsListingTable .dataTables_wrapper .dataTable td,
-.groupsTableCard .groupsListingTable .dataTables_wrapper .dataTable th {
+.groupsTableCard .groupsListingTable .dataTables_wrapper .dataTable td, .usersTableCard .groupsListingTable .dataTables_wrapper .dataTable td,
+.groupsTableCard .groupsListingTable .dataTables_wrapper .dataTable th,
+.usersTableCard .groupsListingTable .dataTables_wrapper .dataTable th {
   padding: 0.9rem !important;
 }
-.groupsTableCard .icon-entity-edit:hover {
+.groupsTableCard .icon-entity-edit:hover, .usersTableCard .icon-entity-edit:hover {
   background-image: url("../../../../dist/images/icons/edit-dark.svg");
 }
-.groupsTableCard .icon-entity-delete:hover {
+.groupsTableCard .icon-entity-delete:hover, .usersTableCard .icon-entity-delete:hover {
   background-image: url("../../../../dist/images/icons/delete-red.svg");
 }
 
 @media (min-width: 1450px) {
-  .groupsTableCard .dataTables_wrapper .dataTables_scroll .dataTables_scrollBody {
+  .groupsTableCard .dataTables_wrapper .dataTables_scroll .dataTables_scrollBody, .usersTableCard .dataTables_wrapper .dataTables_scroll .dataTables_scrollBody {
     overflow: hidden !important;
   }
+}
+.users_tablist {
+  position: relative;
+  background-color: #F3F5F8;
+  max-width: fit-content;
+  border-radius: 5px;
+}
+.users_tablist::after {
+  position: absolute;
+  content: "";
+  background-color: #D8DDDF;
+  left: var(--tab-left);
+  right: var(--tab-right);
+  width: var(--tab-width);
+  height: var(--tab-height);
+  transition: all 0.5s ease-in-out;
+  z-index: 0;
+  border-radius: 5px;
+}
+.users_tablist .nav-link {
+  position: relative;
+  z-index: 1;
+  color: var(--bs-nw-gray-600);
+  font-size: 14px;
+}
+.users_tablist .nav-link[aria-selected=true], .users_tablist .nav-link.active {
+  color: #272A2E;
+  font-weight: 700;
+}
+
+.usersTableCard .usersListingTable .dataTables_wrapper .dataTable th:first-child, .usersTableCard .usersListingTable .dataTables_wrapper .dataTable th:nth-child(3), .usersTableCard .usersListingTable .dataTables_wrapper .dataTable th:nth-child(4),
+.usersTableCard .usersListingTable .dataTables_wrapper .dataTable td:first-child,
+.usersTableCard .usersListingTable .dataTables_wrapper .dataTable td:nth-child(3),
+.usersTableCard .usersListingTable .dataTables_wrapper .dataTable td:nth-child(4) {
+  min-width: 150px !important;
+}
+.usersTableCard .usersListingTable .dataTables_wrapper .dataTable th:nth-child(2),
+.usersTableCard .usersListingTable .dataTables_wrapper .dataTable td:nth-child(2) {
+  min-width: 200px !important;
+}
+.usersTableCard .usersListingTable .dataTables_wrapper .dataTable th:nth-child(5), .usersTableCard .usersListingTable .dataTables_wrapper .dataTable th:nth-child(6), .usersTableCard .usersListingTable .dataTables_wrapper .dataTable th:nth-child(7),
+.usersTableCard .usersListingTable .dataTables_wrapper .dataTable td:nth-child(5),
+.usersTableCard .usersListingTable .dataTables_wrapper .dataTable td:nth-child(6),
+.usersTableCard .usersListingTable .dataTables_wrapper .dataTable td:nth-child(7) {
+  min-width: 60px !important;
+}
+.usersTableCard .rolesListingTable .dataTables_wrapper .dataTable th:first-child,
+.usersTableCard .rolesListingTable .dataTables_wrapper .dataTable td:first-child {
+  min-width: 150px !important;
+}
+.usersTableCard .rolesListingTable .dataTables_wrapper .dataTable th:last-child,
+.usersTableCard .rolesListingTable .dataTables_wrapper .dataTable td:last-child {
+  max-width: 70px !important;
+  width: 70px !important;
+}
+
+.userAccessTable {
+  padding-top: 1px;
+}
+.userAccessTable .dt-control {
+  margin-top: 6px !important;
+}
+.userAccessTable .dataTables_wrapper {
+  max-height: 400px !important;
+  overflow: hidden;
+  overflow-y: auto;
+}
+.userAccessTable .dataTables_wrapper .dataTables_scrollBody {
+  padding: 0 !important;
+}
+.userAccessTable .dataTable tr .dt-control {
+  color: transparent;
+  width: 1rem;
+  height: 0.85rem;
+  border: none;
+  background-color: transparent;
+  background-image: url("../../../../dist/images/icons/right-angle-table.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+.userAccessTable .dataTable tr .dt-control.no-control {
+  display: none;
+  pointer-events: none;
+  cursor: none;
+}
+.userAccessTable .dataTable tr.expanded-row .dt-control {
+  transform: rotate(90deg);
+}
+.userAccessTable .dataTables_wrapper th:first-child,
+.userAccessTable .dataTables_wrapper td:first-child {
+  max-width: 300px !important;
+  width: 295px !important;
+}
+
+.user-step-group .step {
+  flex: 0 !important;
+}
+.user-step-group .step::after {
+  left: 80% !important;
+  width: calc(var(--bs-modal-width) - 150%) !important;
+}
+.user-step-group .step.last-step {
+  left: 90px;
+  background-color: var(--bs-modal-bg) !important;
+  z-index: 2;
+  align-items: start;
+  padding-left: 20px !important;
+}
+.user-step-group .step.last-step .circle {
+  left: 2%;
+}
+.user-step-group .step.last-step .step-text {
+  justify-content: start;
+  text-align: start;
+}
+
+.notification-option .form-check label {
+  font-size: 14px !important;
+}
+.notification-option .info {
+  font-size: 12px !important;
+}
+
+.group-row.odd th {
+  background-color: #f3f5f8 !important;
+  font-weight: normal !important;
+  border-top-width: 0.8px !important;
+  border-top-style: solid !important;
+  border-top-color: inherit !important;
+}
+
+.SOP-model .green-checkbox[type=checkbox]:checked,
+.green-checkbox[type=checkbox]:checked {
+  background-color: #72E097;
+  background-image: url("../../../../dist/images/icons/light-green-check.svg");
+}
+
+.SOP-model .light-green-checkbox[type=checkbox]:checked,
+.light-green-checkbox[type=checkbox]:checked {
+  background-color: #E7F9ED;
+  background-image: url("../../../../dist/images/icons/light-green-check.svg");
+}
+
+.SOP-model .green-checkbox[type=checkbox]:indeterminate,
+.green-checkbox[type=checkbox]:indeterminate {
+  background-color: #E7F9ED;
+  border-color: #272727 !important;
+  background-image: url("../../../../dist/images/icons/checkmark-optional-dark.svg");
+}
+
+.SOP-model .green-checkbox[type=checkbox]:checked:disabled,
+.SOP-model .green-checkbox[type=checkbox]:indeterminate:disabled,
+.SOP-model .light-green-checkbox[type=checkbox]:checked:disabled {
+  background-color: #D8DDDF;
+}
+
+.badge-user-active {
+  background-color: #D0F4DC;
+}
+
+.badge-user-inactive {
+  background-color: #FDEFB6;
+}
+
+.badge-user-locked {
+  background-color: #F9B1AB;
+}
+
+.badge-user-invited {
+  background-color: #D2E3FE;
+}
+
+.lh-0 {
+  line-height: 0 !important;
+}
+
+.dataTables_wrapper .fs-6, .dataTables_wrapper .form-check label, .form-check .dataTables_wrapper label {
+  font-size: 12px !important;
+}
+.dataTables_wrapper tbody td {
+  color: var(--bs-black-primary) !important;
+  font-size: 12px !important;
+}
+
+.tag-color-picker {
+  position: absolute;
+  top: -5px;
+  right: 0;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
 }
 
 /*# sourceMappingURL=styles.css.map */
