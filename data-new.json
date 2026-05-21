@@ -126,5 +126,271 @@
             "partner_users": 0,
             "entities": 6
         }
+    ],
+    "account_users_data": [
+        {
+            "username": "John Miller",
+            "email": "john.miller@example.com",
+            "phone": "(123) 456 7890",
+            "role": "Admin",
+            "bgColor": "#C7F5FC",
+            "textColor": "#262626",
+            "status": "Active",
+            "groups": 12,
+            "entities": 45
+        },
+        {
+            "username": "Emma Wilson",
+            "email": "emma.wilson@example.com",
+            "phone": "(234) 567 8901",
+            "role": "Invoice Admin",
+            "bgColor": "#72E097",
+            "textColor": "#262626",
+            "status": "Inactive",
+            "groups": 5,
+            "entities": 20
+        },
+        {
+            "username": "Liam Anderson",
+            "email": "liam.anderson@example.com",
+            "phone": "(345) 678 9012",
+            "role": "User Admin",
+            "bgColor": "#FCDF6D",
+            "textColor": "#262626",
+            "status": "Active",
+            "groups": 8,
+            "entities": 33
+        },
+        {
+            "username": "Olivia Brown",
+            "email": "olivia.brown@example.com",
+            "phone": "(456) 789 0123",
+            "role": "Custom User",
+            "bgColor": "#E8F1FE",
+            "textColor": "#262626",
+            "status": "Locked",
+            "groups": 15,
+            "entities": 60
+        },
+        {
+            "username": "Noah Davis",
+            "email": "noah.davis@example.com",
+            "phone": "(567) 890 1234",
+            "role": "Role 1",
+            "bgColor": "#A6C8FD",
+            "textColor": "#262626",
+            "status": "Inactive",
+            "groups": 3,
+            "entities": 10
+        },
+        {
+            "username": "Sophia Taylor",
+            "email": "sophia.taylor@example.com",
+            "phone": "(678) 901 2345",
+            "role": "Role 2",
+            "bgColor": "#7AACFD",
+            "textColor": "#262626",
+            "status": "Invited",
+            "groups": 20,
+            "entities": 75
+        }
+    ],
+    "group_entities_data": [
+        {
+            "id": 1,
+            "group_name": "Unassigned",
+            "entities": [
+                "Orion Dynamics LLC",
+                "ZENITH CORE INC.",
+                "Lumenwave Technologies Ltd",
+                "ATLASPEAK CORP.",
+                "NovaGrid Solutions LLC",
+                "ECLIPSE HOLDINGS INC.",
+                "TerraForge Systems Pvt Ltd"
+            ],
+            "rights": {
+                "view": {
+                    "checked": true,
+                    "someChecked": false
+                },
+                "edit": {
+                    "checked": false,
+                    "someChecked": false
+                },
+                "submit": {
+                    "checked": true,
+                    "someChecked": false
+                },
+                "upload": {
+                    "checked": true,
+                    "someChecked": false
+                },
+                "download": {
+                    "checked": false,
+                    "someChecked": false
+                },
+                "invoices": {
+                    "checked": true,
+                    "someChecked": false
+                },
+                "acknowledge": {
+                    "checked": false,
+                    "someChecked": true
+                }
+            }
+        },
+        {
+            "id": 2,
+            "group_name": "Lone Star",
+            "entities": [
+                "Nexora Systems LLC",
+                "BLUEPIXEL TECHNOLOGIES INC."
+            ],
+            "rights": {
+                "view": {
+                    "checked": true,
+                    "someChecked": false
+                },
+                "edit": {
+                    "checked": true,
+                    "someChecked": false
+                },
+                "submit": {
+                    "checked": false,
+                    "someChecked": true
+                },
+                "upload": {
+                    "checked": true,
+                    "someChecked": false
+                },
+                "download": {
+                    "checked": true,
+                    "someChecked": false
+                },
+                "invoices": {
+                    "checked": true,
+                    "someChecked": false
+                },
+                "acknowledge": {
+                    "checked": false,
+                    "someChecked": false
+                }
+            }
+        },
+        {
+            "id": 3,
+            "group_name": "Golden Ridge",
+            "entities": [
+                "Stratwise Consulting LLC",
+                "APEX ADVISORY GROUP INC."
+            ],
+            "rights": {
+                "view": {
+                    "checked": true,
+                    "someChecked": false
+                },
+                "edit": {
+                    "checked": false,
+                    "someChecked": false
+                },
+                "submit": {
+                    "checked": true,
+                    "someChecked": false
+                },
+                "upload": {
+                    "checked": false,
+                    "someChecked": false
+                },
+                "download": {
+                    "checked": false,
+                    "someChecked": false
+                },
+                "invoices": {
+                    "checked": false,
+                    "someChecked": true
+                },
+                "acknowledge": {
+                    "checked": false,
+                    "someChecked": false
+                }
+            }
+        },
+        {
+            "id": 4,
+            "group_name": "Silver Oak",
+            "entities": [
+                "SilverOak Capital LLC",
+                "PRIMEAXIS FINANCE CORP."
+            ],
+            "rights": {
+                "view": {
+                    "checked": true,
+                    "someChecked": false
+                },
+                "edit": {
+                    "checked": true,
+                    "someChecked": false
+                },
+                "submit": {
+                    "checked": false,
+                    "someChecked": false
+                },
+                "upload": {
+                    "checked": false,
+                    "someChecked": false
+                },
+                "download": {
+                    "checked": false,
+                    "someChecked": true
+                },
+                "invoices": {
+                    "checked": true,
+                    "someChecked": false
+                },
+                "acknowledge": {
+                    "checked": false,
+                    "someChecked": false
+                }
+            }
+        },
+        {
+            "id": 5,
+            "group_name": "CHARLEY M. STOLL, A PROFESSIONAL CORPORATION",
+            "entities": [
+                "Chameleon Consulting Group, LLC",
+                "VitalCore Health LLC",
+                "MEDISPHERE LABS INC."
+            ],
+            "rights": {
+                "view": {
+                    "checked": true,
+                    "someChecked": false
+                },
+                "edit": {
+                    "checked": true,
+                    "someChecked": false
+                },
+                "submit": {
+                    "checked": false,
+                    "someChecked": false
+                },
+                "upload": {
+                    "checked": true,
+                    "someChecked": false
+                },
+                "download": {
+                    "checked": false,
+                    "someChecked": false
+                },
+                "invoices": {
+                    "checked": true,
+                    "someChecked": false
+                },
+                "acknowledge": {
+                    "checked": false,
+                    "someChecked": false
+                }
+            }
+        }
     ]
 }

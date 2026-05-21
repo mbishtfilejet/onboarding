@@ -1,0 +1,1697 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Jet: User Settings</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="/src/scss/filejet-style.css">
+    <script src="dist/js/jquery.min.js"></script>
+    <!-- Scripts -->
+
+    <!-- select2 library -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- select2 library -->
+</head>
+
+<body class="main-dashboard-v2">
+
+    <div class="grey-bg dashboard-page min-vh-100">
+        <div class="container-fluid p-0">
+            <div class="sidebar-wrapper">
+                <div class="sidebar min-vh-100 py-3 ps-3">
+                    <div>
+                        <div class="ps-3 pb-4">
+                            <a href="/" class="logo">
+                                <img src="dist/images/logo.png" class="d-none d-lg-block" alt="FileJet">
+                                <img src="dist/images/filejet-pinLogo.png" class="d-block d-lg-none" alt="FileJet">
+                            </a>
+                        </div>
+                        <div>
+                            <ul class="menu-link menu-onboardin p-0 m-0">
+                                <!-- Dashboard -->
+                                <li class="nav-link">
+                                    <a href="./" class="text-decoration-none ps-3 py-3 d-flex align-items-center">
+
+                                        <span class="icon icon-entities-dark normal-icon"></span>
+                                        <span class="icon icon-entities-purple active-icon"></span>
+                                        <span class="text nav-text">Entities</span>
+                                    </a>
+                                </li>
+                                <!-- Entities -->
+                                <li class="nav-link">
+                                    <a href="./groups-v1.html"
+                                        class="text-decoration-none ps-3 py-3 d-flex align-items-center">
+                                        <span class="icon icon-groups-dark normal-icon"></span>
+                                        <span class="icon icon-groups-purple active-icon"></span>
+                                        <span class="text nav-text position-relative">
+                                            Groups
+                                        </span>
+                                    </a>
+                                </li>
+                                <!-- Groups -->
+                                <li class="nav-link active">
+                                    <a href="./users.html"
+                                        class="text-decoration-none ps-3 py-3 d-flex align-items-center">
+                                        <span class="icon icon-users-dark normal-icon"></span>
+                                        <span class="icon icon-users-purple active-icon"></span>
+                                        <span class="text nav-text">Users</span>
+                                    </a>
+                                </li>
+                                <li class="nav-link">
+                                    <a href="./payment-method.html"
+                                        class="text-decoration-none ps-3 py-3 d-flex align-items-center">
+                                        <span class="icon icon-payment-method-dark normal-icon"></span>
+                                        <span class="icon icon-payment-method-purple active-icon"></span>
+                                        <span class="text nav-text">Payment Method</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- <div class="pe-4 me-2 ps-3 flex-fill">
+                        <button type="button" class="btn btn-light border-dark px-3 text-capitalize w-100 ">Contact Rep</button>
+                    </div> -->
+                </div>
+            </div>
+            <div class="main-content-wrapper">
+                <div class="container-fluid container-lg">
+                    <div class="header py-1">
+                        <div class="row align-items-center">
+                            <div class="col-6 col-xl-6 col-lg-6">
+                                <h3 class="m-0 font-weight-700">
+
+                                    Onboarding - Users
+
+                                </h3>
+                            </div>
+                            <div
+                                class="col col-md-6 col-xl-6 col-lg-6 d-flex align-items-center justify-content-end justify-content-md-end">
+
+                                <div class="profile-nav">
+                                    <div class="dropdown white-bg p-0 rounded-5">
+
+                                        <a class="nav-link dropdown-toggle show px-3" href="#" data-bs-toggle="dropdown"
+                                            aria-expanded="true">
+                                            <span class="avatar avatar-lg ms-n3">
+                                                <img src="../dist/images/avatar.png" alt="" />
+                                            </span>
+                                            <span class="user-name fw-bold">Roman</span>
+                                        </a>
+                                        <ul class="dropdown-menu" data-bs-popper="static">
+                                            <li>
+                                                <span
+                                                    class="dropdown-item py-3 d-flex align-items-center border-bottom">
+                                                    Account
+                                                </span>
+                                            </li>
+
+                                            <li>
+                                                <a class="dropdown-item py-3 d-flex align-items-center"
+                                                    href="../../login.html">
+                                                    <span class="icon icon-logout me-4"></span>
+                                                    Logout
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="container-fluid container-lg">
+                    <div class="main-content pt-3">
+                        <div class="row g-0">
+                            <div class="col-12 bg-white shadow-sm rounded-2 p-4">
+                                <div>
+                                    <ul class="nav users_tablist p-1 shadow-sm" id="myTab" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                            <a href="javascript:void(0)" id="en-users-tab"
+                                                class="nav-link py-2 px-3 text-uppercase active" data-bs-toggle="tab"
+                                                data-bs-target="#en-users-tab-pane" role="tab"
+                                                data-table-key="users-listing-table" aria-controls="en-users-tab-pane"
+                                                aria-selected="true">Users</a>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <a href="javascript:void(0)" class="nav-link py-2 px-3 text-uppercase"
+                                                id="en-roles-tab" data-bs-toggle="tab"
+                                                data-bs-target="#en-roles-tab-pane" role="tab"
+                                                data-table-key="roles-listing-table" aria-controls="en-roles-tab-pane"
+                                                aria-selected="false" tabindex="-1">
+                                                Roles</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="ra-tab-content tab-content w-100 mt-4" id="myTabContent">
+                                    <!-- Users TabContent Start -->
+                                    <div class="tab-pane fade show active" id="en-users-tab-pane" role="tabpanel"
+                                        aria-labelledby="en-users-tab" tabindex="0">
+                                        <div class="row g-2">
+                                            <div class="col-12 col-md-5 mb-2 search-table-col">
+                                                <div
+                                                    class="table-search-feild d-flex align-items-center border border-1 rounded-2 shadow-sm  m-0 white-bg px-3 py-2 py-md-2 h-100">
+                                                    <span class="icon icon-search-grey icon-sm opacity-25"></span>
+                                                    <input type="text" class="custom-search-input border-0 p-0 w-100"
+                                                        placeholder="Username or Email">
+                                                </div>
+                                            </div>
+
+                                            <div
+                                                class="filter2-dropdown col-12 col-md-3 status-table-col mb-2 dropdown">
+                                                <div class="multi-select-container d-flex align-items-center border border-1 rounded-2 shadow-sm m-0 white-bg"
+                                                    id="statusContainer" data-bs-toggle="dropdown" aria-expanded="false"
+                                                    tabindex="0">
+                                                    <input type="text" class="search-input" id="statusSearch"
+                                                        placeholder="Status" autocomplete="off">
+                                                </div>
+                                                <ul class="dropdown-menu" id="statusDropdown">
+                                                    <li><label class="dropdown-item"><input type="checkbox"
+                                                                id="statusSelectAll"
+                                                                class="form-check-input status-checkbox me-2"
+                                                                data-value="All">
+                                                            All</label></li>
+                                                    <li><label class="dropdown-item"><input type="checkbox"
+                                                                class="form-check-input status-checkbox me-2"
+                                                                data-value="Active">
+                                                            Active</label></li>
+                                                    <li><label class="dropdown-item"><input type="checkbox"
+                                                                class="form-check-input status-checkbox me-2"
+                                                                data-value="Inactive">
+                                                            Inactive</label></li>
+                                                    <li><label class="dropdown-item"><input type="checkbox"
+                                                                class="form-check-input status-checkbox me-2"
+                                                                data-value="Invited">
+                                                            Invited</label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            <div
+                                                class="filter2-dropdown col-12 col-md-3 flex-grow-1 status-table-col mb-2 dropdown">
+                                                <div class="multi-select-container d-flex align-items-center shadow-sm border border-1 rounded-2 m-0 white-bg"
+                                                    id="roleContainer1" data-bs-toggle="dropdown" aria-expanded="false"
+                                                    tabindex="0"><input type="button" class="search-input"
+                                                        id="roleSearch1" value="Role" autocomplete="off">
+                                                </div>
+                                                <ul class="dropdown-menu w-100" id="roleDropdown1">
+
+                                                    <li><label class="dropdown-item"><input type="checkbox"
+                                                                class="form-check-input role-checkbox1 me-2"
+                                                                data-value="Admin">Admin</label>
+                                                    </li>
+                                                    <li><label class="dropdown-item"><input type="checkbox"
+                                                                class="form-check-input role-checkbox1 me-2"
+                                                                data-value="User Admin">User Admin</label>
+                                                    </li>
+                                                    <li><label class="dropdown-item"><input type="checkbox"
+                                                                class="form-check-input role-checkbox1 me-2"
+                                                                data-value="Invoice Admin">Invoice Admin</label>
+                                                    </li>
+                                                    <li><label class="dropdown-item"><input type="checkbox"
+                                                                class="form-check-input role-checkbox1 me-2"
+                                                                data-value="Role 1">Role 1</label>
+                                                    </li>
+                                                    <li><label class="dropdown-item"><input type="checkbox"
+                                                                class="form-check-input role-checkbox1 me-2"
+                                                                data-value="Role 2">Role 2</label>
+                                                    </li>
+                                                    <li><label class="dropdown-item"><input type="checkbox"
+                                                                class="form-check-input role-checkbox1 me-2"
+                                                                data-value="Custom User">Custom User</label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="col-12 col-md-auto px-1 mb-2">
+                                                <div
+                                                    class="border border-1 rounded-2 shadow-sm export-csv-col px-2 h-100 bg-white">
+                                                    <a href="#"
+                                                        class="h-100 text-purple text-decoration-none d-flex justify-content-center align-items-center">
+                                                        <span
+                                                            class="icon m-0 my-1 icon-export-csv flex-shrink-0 icon-lg"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="usersTableCard border rounded-2 mt-2">
+                                            <div class="usersListingTable">
+                                                <table id="users-listing-table"
+                                                    class="table table-striped w-100 table-nowrap">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Username</th>
+                                                            <th>Email</th>
+                                                            <th>Phone</th>
+                                                            <th>Role</th>
+                                                            <th>Status</th>
+                                                            <th>Groups</th>
+                                                            <th>Entities</th>
+                                                            <th data-orderable="false">Action</th>
+                                                        </tr>
+                                                    </thead>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-4 mt-3">
+                                            <button data-bs-toggle="modal" data-bs-target="#AddUserDetails"
+                                                aria-label="Add New User" type="button"
+                                                class="btn btn-secondary p-0 px-2 rounded-3 text-white text-capitalize">Add
+                                                New User
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- Users TabContent End -->
+
+                                    <!-- Roles TabContent Start -->
+                                    <div class="tab-pane fade" id="en-roles-tab-pane" role="tabpanel"
+                                        aria-labelledby="en-roles-tab" tabindex="0">
+                                        <div class="row g-2">
+                                            <div class="col-12 mb-2 search-table-col">
+                                                <div
+                                                    class="table-search-feild d-flex align-items-center border border-1 rounded-2 shadow-sm  m-0 white-bg px-3 py-2 py-md-2 h-100">
+                                                    <span class="icon icon-search-grey icon-sm opacity-25"></span>
+                                                    <input type="text" class="custom-search-input border-0 p-0 w-100"
+                                                        placeholder="Search">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="usersTableCard border rounded-2 mt-2">
+                                            <div class="rolesListingTable">
+                                                <table id="roles-listing-table"
+                                                    class="table table-striped w-100 table-nowrap">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Role Name</th>
+                                                            <th>Groups</th>
+                                                            <th>Entities</th>
+                                                            <th data-orderable="false">Action</th>
+                                                        </tr>
+                                                    </thead>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-4 mt-3">
+                                            <button data-bs-toggle="modal" data-bs-target="#AddNewRole"
+                                                aria-label="Add New Role" type="button"
+                                                class="btn btn-secondary p-0 px-2 rounded-3 text-white text-capitalize">Add
+                                                New Role
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- Roles TabContent End -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Deactivate User Modal Start-->
+    <div class="modal modal-right fade filter-slideout SOP-model" id="deactivateUser" tabindex="-1"
+        aria-labelledby="deactivateUser-modalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-end modal-dialog-scrollable modal-md my-0 min-vh-100">
+            <div class="modal-content border-0 rounded-0 min-vh-100">
+                <div class="modal-header">
+                    <div class="d-flex align-items-center">
+                        <span class="icon icon-profile-black icon-lg me-3"></span>
+                        <h4 class="fw-bold m-0">
+                            Deactivate User</h4>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <h6>Are you sure you want to deactivate user <b>Noah Davis</b>?</h6>
+                </div>
+                <div class="modal-footer">
+                    <div class="d-flex justify-content-between align-items-center w-100 m-0">
+                        <button type="button" class="btn btn-link text-decoration-none font-weight-600 p-0"
+                            data-bs-dismiss="modal">
+                            CANCEL
+                        </button>
+                        <div class="d-flex align-items-center">
+                            <button type="button" class="btn btn-info py-0 px-5 rounded-3 ms-3" id="" data-bs-target="#"
+                                data-bs-toggle="modal" data-bs-dismiss="modal">
+                                Deactivate
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Deactivate User Modal End -->
+
+    <!-- Delete Modal Start-->
+    <div class="modal modal-right fade filter-slideout SOP-model" id="deleteRole" tabindex="-1"
+        aria-labelledby="deleteRole-modalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-end modal-dialog-scrollable modal-md my-0 min-vh-100">
+            <div class="modal-content border-0 rounded-0 min-vh-100">
+                <div class="modal-header">
+                    <div class="d-flex align-items-center">
+                        <span class="icon icon-info-card icon-xxl me-3"></span>
+                        <h4 class="fw-bold m-0">
+                            Remove Role</h4>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <h6><b>Role 1</b> may not be deleted because it’s currently assigned to one or more users. Please reassign those users before removing the role.</h6>
+                </div>
+                <div class="modal-footer">
+                    <div class="d-flex justify-content-between align-items-center w-100 m-0">
+                        <button type="button" class="btn btn-link text-decoration-none font-weight-600 p-0"
+                            data-bs-dismiss="modal">
+                            CANCEL
+                        </button>
+                        <div class="d-flex align-items-center">
+                            <button type="button" class="btn btn-info py-0 px-5 rounded-3 ms-3" id="" data-bs-target="#"
+                                data-bs-toggle="modal" data-bs-dismiss="modal">
+                                Remove
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Delete Modal End -->
+
+    <!-- Edit User Modal Start -->
+    <div class="modal modal-right fade filter-slideout SOP-model" id="EditUserDetails" tabindex="-1"
+        aria-labelledby="EditUserDetailsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-end modal-dialog-scrollable modal-md-plus my-0 min-vh-100">
+            <div class="modal-content border-0 rounded-0 min-vh-100">
+                <!-- Modal Header -->
+                <div class="modal-header flex-wrap">
+                    <div class="d-flex flex-column w-100 mb-0">
+                        <div class="d-flex align-items-center mb-4">
+                            <span class="icon icon-profile-black icon-lg me-3"></span>
+                            <h4 class="fw-bold m-0">
+                                Edit User</h3>
+                        </div>
+                        <!-- stepper start -->
+                        <div class="service-step-group user-step-group">
+                            <div class="step" data-bs-toggle="modal" data-bs-target="#AddUserDetails"
+                                data-bs-dismiss="modal">
+                                <div class="circle active"></div>
+                                <span class="step-text">DETAILS</span>
+                            </div>
+                            <div class="step last-step" data-bs-toggle="modal" data-bs-target="#AddUserRole"
+                                data-bs-dismiss="modal">
+                                <div class="circle"></div>
+                                <span class="step-text">ROLE</span>
+                            </div>
+                        </div>
+
+                        <!-- stepper end -->
+                    </div>
+                </div>
+                <!-- Modal Header Ends -->
+                <!-- Modal Body Start-->
+                <div class="modal-body">
+                    <form class="" action="">
+                        <div class="accordion" id="accordionExample_1">
+                            <div class="accordion-item m-0">
+                                <h2 class="accordion-header" id="headingOne_1">
+                                    <button class="accordion-button fs-5" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne_1" aria-expanded="true"
+                                        aria-controls="panelsStayOpen-collapseOne_1">
+                                        Profile Details
+                                    </button>
+                                </h2>
+                                <div id="collapseOne_1" class="accordion-collapse collapse show border-0"
+                                    aria-labelledby="headingOne_1">
+                                    <div class="accordion-body pt-0">
+                                        <div class="row g-4">
+                                            <div class="col-md-6">
+                                                <fieldset>
+                                                    <label for="" class="form-label">First Name</label>
+                                                    <input type="text" class="form-control" id=""
+                                                        placeholder="First Name" value="John">
+                                                </fieldset>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <fieldset>
+                                                    <label for="" class="form-label">Last Name</label>
+                                                    <input type="text" class="form-control" id=""
+                                                        placeholder="Last Name" value="Doe">
+                                                </fieldset>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <fieldset>
+                                                    <label for="" class="form-label">Email Address</label>
+                                                    <input type="email" class="form-control" id=""
+                                                        placeholder="Email Address" value="johndoe@xyz.com">
+                                                </fieldset>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <fieldset>
+                                                    <label for="" class="form-label">Phone Nunber</label>
+                                                    <input type="text" class="form-control" id=""
+                                                        placeholder="Phone Nunber" value="(823) 9834 2321">
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="my-4 p-3 bg-white rounded-2">
+                            <h4 class="text-capitalize fs-5 mb-4 fw-semibold">Notifications</h4>
+
+                            <div class="notification-option d-flex flex-column gap-3">
+                                <div class="form-check align-items-start gap-2 p-0">
+                                    <input class="form-check-input m-0" type="checkbox" id="" checked>
+                                    <label class="fw-normal rights-label" for="">Invoices
+                                        <span class="d-block text-muted fw-light info mt-1">Notifications for created
+                                            and
+                                            submitted
+                                            invoices will be sent to you.</span>
+                                    </label>
+                                </div>
+                                <div class="form-check align-items-start gap-2 p-0">
+                                    <input class="form-check-input m-0" type="checkbox" id="">
+                                    <label class="fw-normal rights-label" for="">Compliance
+                                        Reminders
+                                        <span class="d-block text-muted fw-light info mt-1">Notifications for
+                                            compliances
+                                            will be sent to
+                                            you.</span>
+                                    </label>
+                                </div>
+                                <div class="form-check align-items-start gap-2 p-0">
+                                    <input class="form-check-input m-0" type="checkbox" id="" checked>
+                                    <label class="fw-normal rights-label" for="">Service of Process
+                                        Notifications
+                                        <span class="d-block text-muted fw-light info mt-1">Notifications for Service of
+                                            Process
+                                            will be
+                                            sent to you.</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-4 p-3 bg-white rounded-2">
+                            <h4 class="text-capitalize fs-5 mb-3 fw-semibold">Password Reset</h4>
+
+                            <p class="text-muted fw-normal">Initiate a password reset for this user. They will receive
+                                an email with a reset link, the same as the forgot password flow.</p>
+                            <button type="button" class="btn btn-dark p-1 px-2">
+                                <span class="lh-0">Reset Password</span>
+                            </button>
+                        </div>
+
+                        <div class="mb-4 p-3 rounded-2 alert-danger border">
+                            <h4 class="text-capitalize fs-5 mb-3 fw-semibold">This Account is Currently Locked</h4>
+
+                            <p class="text-muted fw-normal">Unlock this account to restore the user's access. They will
+                                be able to log in again immediately.</p>
+                            
+                            <button type="button" class="btn btn-dark p-1 px-2">
+                                <span class="lh-0">Unlock Account</span>
+                            </button>
+                        </div>
+
+                        <!-- <div class="mb-4 p-3 rounded-2 bg-white">
+                            <h4 class="text-capitalize fs-5 mb-3 fw-semibold">This Account is Inactive</h4>                            
+                            <button type="button" class="btn btn-dark p-1 px-2">
+                                <span class="lh-0">Activate Account</span>
+                            </button>
+                        </div> -->
+                    </form>
+                </div>
+                <!-- Modal Body End -->
+                <div class="modal-footer">
+                    <div class="d-flex justify-content-between align-items-center w-100 m-0">
+                        <button type="button" class="btn btn-link text-decoration-none font-weight-600 p-0"
+                            data-bs-dismiss="modal">
+                            CANCEL
+                        </button>
+                        <button type="button" class="btn btn-info py-0 px-5 rounded-3 ms-3" id=""
+                            data-bs-target="#EditUserRole" data-bs-toggle="modal" data-bs-dismiss="modal">
+                            Next
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Edit User Modal End -->
+
+    <!--Edit User step-2 Modal start-->
+    <div class="modal modal-right fade filter-slideout SOP-model" id="EditUserRole" tabindex="-1"
+        aria-labelledby="EditUserRoleLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-end modal-dialog-scrollable modal-md-plus my-0 min-vh-100">
+            <div class="modal-content border-0 rounded-0 min-vh-100">
+                <!-- Modal Header -->
+                <div class="modal-header flex-wrap">
+                    <div class="d-flex flex-column w-100 mb-0">
+                        <div class="d-flex align-items-center mb-4">
+                            <span class="icon icon-profile-black icon-lg me-3"></span>
+                            <h4 class="fw-bold m-0">
+                                Edit User</h3>
+                        </div>
+                        <!-- stepper start -->
+                        <div class="service-step-group user-step-group">
+                            <div class="step completed" data-bs-toggle="modal" data-bs-target="#AddUserDetails"
+                                data-bs-dismiss="modal">
+                                <div class="circle completed"></div>
+                                <span class="step-text">DETAILS</span>
+                            </div>
+                            <div class="step last-step" data-bs-toggle="modal" data-bs-target="#AddUserRole"
+                                data-bs-dismiss="modal">
+                                <div class="circle active"></div>
+                                <span class="step-text">ROLE</span>
+                            </div>
+                        </div>
+
+                        <!-- stepper end -->
+                    </div>
+                </div>
+                <!-- Modal Header Ends -->
+                <!-- Modal Body Start-->
+                <div class="modal-body">
+                    <form class="" action="">
+                        <div class="mb-4 p-3 bg-white rounded-2">
+                            <fieldset>
+                                <label for="" class="form-label">Role</label>
+                                <div class="custom-dropdown">
+                                    <select class="form-select customSelect2 roles-select" id="">
+                                        <option value="" disabled="" hidden="">Select Role</option>
+                                        <option value="Admin" selected>Admin</option>
+                                        <option value="User Admin">User Admin</option>
+                                        <option value="Invoice Admin">Invoice Admin</option>
+                                        <option value="Role 1">Role 1</option>
+                                        <option value="Role 2">Role 2</option>
+                                        <option value="Custom User">Custom User</option>
+                                    </select>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="access-table-section mb-4 p-3 bg-white rounded-2 d-none">
+                            <h4 class="text-capitalize fs-5 mb-4 fw-semibold">Access</h4>
+                            <div class="bg-white rounded-2 position-relative mb-4">
+                                <span
+                                    class="icon icon-search-grey opacity-25 position-absolute top-50 translate-middle ms-4"></span>
+                                <input type="text"
+                                    class="no-bg form-control search-input w-100 bg-transparent p-2 ps-5 m-0 rounded-2 border border-1"
+                                    placeholder="Search">
+                            </div>
+                            <div class="userAccessTable border rounded-3 overflow-hidden">
+                                <table id="rights-table_2"
+                                    class="table table-striped w-100 table-nowrap user-data-table">
+                                    <thead>
+                                        <tr>
+                                            <th data-orderable="false"></th>
+                                            <th data-orderable="false" column-id="view">
+                                                <div class="d-flex align-items-center" data-toggle="tooltip"
+                                                    aria-label="View" data-bs-original-title="View">
+                                                    <span class="icon icon-md icon-view m-0"></span>
+                                                </div>
+                                            </th>
+                                            <th data-orderable="false" column-id="edit">
+                                                <div class="d-flex align-items-center" data-toggle="tooltip"
+                                                    aria-label="Edit" data-bs-original-title="Edit">
+                                                    <span class="icon icon-edit-grey icon-md m-0"></span>
+                                                </div>
+                                            </th>
+                                            <th data-orderable="false" column-id="submit">
+                                                <div class="d-flex align-items-center" data-toggle="tooltip"
+                                                    aria-label="Submit" data-bs-original-title="Submit">
+                                                    <span class="icon icon-submit icon-md m-0"></span>
+                                                </div>
+                                            </th>
+                                            <th data-orderable="false" column-id="upload">
+                                                <div class="d-flex align-items-center" data-toggle="tooltip"
+                                                    aria-label="Upload" data-bs-original-title="Upload">
+                                                    <span class="icon icon-upload icon-md m-0"></span>
+                                                </div>
+                                            </th>
+                                            <th data-orderable="false" column-id="download">
+                                                <div class="d-flex align-items-center" data-toggle="tooltip"
+                                                    aria-label="Download" data-bs-original-title="Download">
+                                                    <span class="icon icon-download icon-md m-0"></span>
+                                                </div>
+                                            </th>
+                                            <th data-orderable="false" column-id="invoices">
+                                                <div class="d-flex align-items-center" data-toggle="tooltip"
+                                                    aria-label="Invoices" data-bs-original-title="Invoices">
+                                                    <span class="icon icon-invoices icon-md m-0"></span>
+                                                </div>
+                                            </th>
+                                            <th data-orderable="false" column-id="acknowledge">
+                                                <div class="d-flex align-items-center" data-toggle="tooltip"
+                                                    aria-label="Acknowledge" data-bs-original-title="Acknowledge">
+                                                    <span class="icon icon-acknowledge icon-md m-0"></span>
+                                                </div>
+                                            </th>
+                                        </tr>
+                                        <tr class="group-row odd">
+                                            <th class="w-75" data-orderable="false">All Groups & Entities</th>
+                                            <th data-orderable="false" column-id="view">
+                                                <div class="d-flex align-item-center">
+                                                    <input data-column="view"
+                                                        class="form-check-input green-checkbox allgroup-select row-select ms-1"
+                                                        type="checkbox" id="">
+                                                </div>
+                                            </th>
+                                            <th data-orderable="false" column-id="edit">
+                                                <div class="d-flex align-item-center">
+                                                    <input data-column="edit"
+                                                        class="form-check-input green-checkbox allgroup-select row-select ms-1"
+                                                        type="checkbox" id="">
+                                                </div>
+                                            </th>
+                                            <th data-orderable="false" column-id="submit">
+                                                <div class="d-flex align-item-center">
+                                                    <input data-column="submit"
+                                                        class="form-check-input green-checkbox allgroup-select row-select ms-1"
+                                                        type="checkbox" id="">
+                                                </div>
+                                            </th>
+                                            <th data-orderable="false" column-id="upload">
+                                                <div class="d-flex align-item-center">
+                                                    <input data-column="upload"
+                                                        class="form-check-input green-checkbox allgroup-select row-select ms-1"
+                                                        type="checkbox" id="">
+                                                </div>
+                                            </th>
+                                            <th data-orderable="false" column-id="download">
+                                                <div class="d-flex align-item-center">
+                                                    <input data-column="download"
+                                                        class="form-check-input green-checkbox allgroup-select row-select ms-1"
+                                                        type="checkbox" id="">
+                                                </div>
+                                            </th>
+                                            <th data-orderable="false" column-id="invoices">
+                                                <div class="d-flex align-item-center">
+                                                    <input data-column="invoices"
+                                                        class="form-check-input green-checkbox allgroup-select row-select ms-1"
+                                                        type="checkbox" id="">
+                                                </div>
+                                            </th>
+                                            <th data-orderable="false" column-id="acknowledge">
+                                                <div class="d-flex align-item-center">
+                                                    <input data-column="acknowledge"
+                                                        class="form-check-input green-checkbox allgroup-select row-select ms-1"
+                                                        type="checkbox" id="">
+                                                </div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+                <!-- Modal Body End -->
+                <div class="modal-footer">
+                    <div class="d-flex justify-content-between align-items-center w-100 m-0">
+                        <button type="button" class="btn btn-link text-decoration-none font-weight-600 p-0"
+                            data-bs-dismiss="modal">
+                            CANCEL
+                        </button>
+                        <button type="button" class="btn btn-info py-0 px-5 rounded-3 ms-3" id=""
+                            data-bs-dismiss="modal">
+                            Update
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Edit User step-2 Modal End-->
+
+    <!--New User step-1 Modal start-->
+    <div class="modal modal-right fade filter-slideout SOP-model" id="AddUserDetails" tabindex="-1"
+        aria-labelledby="AddUserDetailsLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-end modal-dialog-scrollable modal-md-plus my-0 min-vh-100">
+            <div class="modal-content border-0 rounded-0 min-vh-100">
+                <!-- Modal Header -->
+                <div class="modal-header flex-wrap">
+                    <div class="d-flex flex-column w-100 mb-0">
+                        <div class="d-flex align-items-center mb-4">
+                            <span class="icon icon-profile-black icon-lg me-3"></span>
+                            <h4 class="fw-bold m-0">
+                                Add New User</h3>
+                        </div>
+                        <!-- stepper start -->
+                        <div class="service-step-group user-step-group">
+                            <div class="step" data-bs-toggle="modal" data-bs-target="#AddUserDetails"
+                                data-bs-dismiss="modal">
+                                <div class="circle active"></div>
+                                <span class="step-text">DETAILS</span>
+                            </div>
+                            <div class="step last-step" data-bs-toggle="modal" data-bs-target="#AddUserRole"
+                                data-bs-dismiss="modal">
+                                <div class="circle"></div>
+                                <span class="step-text">ROLE</span>
+                            </div>
+                        </div>
+
+                        <!-- stepper end -->
+                    </div>
+                </div>
+                <!-- Modal Header Ends -->
+                <!-- Modal Body Start-->
+                <div class="modal-body">
+                    <form class="" action="">
+                        <div class="accordion" id="accordionExample7">
+                            <div class="accordion-item m-0">
+                                <h2 class="accordion-header" id="headingOne7">
+                                    <button class="accordion-button fs-5" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne7" aria-expanded="true"
+                                        aria-controls="panelsStayOpen-collapseOne7">
+                                        Profile Details
+                                    </button>
+                                </h2>
+                                <div id="collapseOne7" class="accordion-collapse collapse show border-0"
+                                    aria-labelledby="headingOne7">
+                                    <div class="accordion-body pt-0">
+                                        <div class="row g-4">
+                                            <div class="col-md-6">
+                                                <fieldset>
+                                                    <label for="" class="form-label">First Name</label>
+                                                    <input type="text" class="form-control" id=""
+                                                        placeholder="First Name">
+                                                </fieldset>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <fieldset>
+                                                    <label for="" class="form-label">Last Name</label>
+                                                    <input type="text" class="form-control" id=""
+                                                        placeholder="Last Name">
+                                                </fieldset>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <fieldset>
+                                                    <label for="" class="form-label">Email Address</label>
+                                                    <input type="email" class="form-control" id=""
+                                                        placeholder="Email Address">
+                                                </fieldset>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <fieldset>
+                                                    <label for="" class="form-label">Phone Nunber</label>
+                                                    <input type="text" class="form-control" id=""
+                                                        placeholder="Phone Nunber">
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="my-4 p-3 bg-white rounded-2">
+                            <h4 class="text-capitalize fs-5 mb-4 fw-semibold">Notifications</h4>
+
+                            <div class="notification-option d-flex flex-column gap-3">
+                                <div class="form-check align-items-start gap-2 p-0">
+                                    <input class="form-check-input m-0" type="checkbox" id="">
+                                    <label class="fw-normal rights-label" for="">Invoices
+                                        <span class="d-block text-muted fw-light info mt-1">Notifications for created
+                                            and
+                                            submitted
+                                            invoices will be sent to you.</span>
+                                    </label>
+                                </div>
+                                <div class="form-check align-items-start gap-2 p-0">
+                                    <input class="form-check-input m-0" type="checkbox" id="">
+                                    <label class="fw-normal rights-label" for="">Compliance
+                                        Reminders
+                                        <span class="d-block text-muted fw-light info mt-1">Notifications for
+                                            compliances
+                                            will be sent to
+                                            you.</span>
+                                    </label>
+                                </div>
+                                <div class="form-check align-items-start gap-2 p-0">
+                                    <input class="form-check-input m-0" type="checkbox" id="">
+                                    <label class="fw-normal rights-label" for="">Service of Process
+                                        Notifications
+                                        <span class="d-block text-muted fw-light info mt-1">Notifications for Service of
+                                            Process
+                                            will be
+                                            sent to you.</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- Modal Body End -->
+                <div class="modal-footer">
+                    <div class="d-flex justify-content-between align-items-center w-100 m-0">
+                        <button type="button" class="btn btn-link text-decoration-none font-weight-600 p-0"
+                            data-bs-dismiss="modal">
+                            CANCEL
+                        </button>
+                        <button type="button" class="btn btn-info py-0 px-5 rounded-3 ms-3" id=""
+                            data-bs-target="#AddUserRole" data-bs-toggle="modal" data-bs-dismiss="modal">
+                            Next
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- New User step-1 Modal End-->
+
+    <!--New User step-2 Modal start-->
+    <div class="modal modal-right fade filter-slideout SOP-model" id="AddUserRole" tabindex="-1"
+        aria-labelledby="AddUserRoleLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-end modal-dialog-scrollable modal-md-plus my-0 min-vh-100">
+            <div class="modal-content border-0 rounded-0 min-vh-100">
+                <!-- Modal Header -->
+                <div class="modal-header flex-wrap">
+                    <div class="d-flex flex-column w-100 mb-0">
+                        <div class="d-flex align-items-center mb-4">
+                            <span class="icon icon-profile-black icon-lg me-3"></span>
+                            <h4 class="fw-bold m-0">
+                                Add New User</h3>
+                        </div>
+                        <!-- stepper start -->
+                        <div class="service-step-group user-step-group">
+                            <div class="step completed" data-bs-toggle="modal" data-bs-target="#AddUserDetails"
+                                data-bs-dismiss="modal">
+                                <div class="circle completed"></div>
+                                <span class="step-text">DETAILS</span>
+                            </div>
+                            <div class="step last-step" data-bs-toggle="modal" data-bs-target="#AddUserRole"
+                                data-bs-dismiss="modal">
+                                <div class="circle active"></div>
+                                <span class="step-text">ROLE</span>
+                            </div>
+                        </div>
+
+                        <!-- stepper end -->
+                    </div>
+                </div>
+                <!-- Modal Header Ends -->
+                <!-- Modal Body Start-->
+                <div class="modal-body">
+                    <form class="" action="">
+                        <div class="mb-4 p-3 bg-white rounded-2">
+                            <fieldset>
+                                <label for="" class="form-label">Role</label>
+                                <div class="custom-dropdown">
+                                    <select class="form-select customSelect2 roles-select" id="">
+                                        <option value="" disabled="" selected="" hidden="">Select Role</option>
+                                        <option value="Admin">Admin</option>
+                                        <option value="User Admin">User Admin</option>
+                                        <option value="Invoice Admin">Invoice Admin</option>
+                                        <option value="Role 1">Role 1</option>
+                                        <option value="Role 2">Role 2</option>
+                                        <option value="Custom User">Custom User</option>
+                                    </select>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="access-table-section mb-4 p-3 bg-white rounded-2 d-none">
+                            <h4 class="text-capitalize fs-5 mb-4 fw-semibold">Access</h4>
+                            <div class="bg-white rounded-2 position-relative mb-4">
+                                <span
+                                    class="icon icon-search-grey opacity-25 position-absolute top-50 translate-middle ms-4"></span>
+                                <input type="text"
+                                    class="no-bg form-control search-input w-100 bg-transparent p-2 ps-5 m-0 rounded-2 border border-1"
+                                    placeholder="Search">
+                            </div>
+                            <div class="userAccessTable border rounded-3 overflow-hidden">
+                                <table id="rights-table_1"
+                                    class="table table-striped w-100 table-nowrap user-data-table">
+                                    <thead>
+                                        <tr>
+                                            <th data-orderable="false"></th>
+                                            <th data-orderable="false" column-id="view">
+                                                <div class="d-flex align-items-center" data-toggle="tooltip"
+                                                    aria-label="View" data-bs-original-title="View">
+                                                    <span class="icon icon-md icon-view m-0"></span>
+                                                </div>
+                                            </th>
+                                            <th data-orderable="false" column-id="edit">
+                                                <div class="d-flex align-items-center" data-toggle="tooltip"
+                                                    aria-label="Edit" data-bs-original-title="Edit">
+                                                    <span class="icon icon-edit-grey icon-md m-0"></span>
+                                                </div>
+                                            </th>
+                                            <th data-orderable="false" column-id="submit">
+                                                <div class="d-flex align-items-center" data-toggle="tooltip"
+                                                    aria-label="Submit" data-bs-original-title="Submit">
+                                                    <span class="icon icon-submit icon-md m-0"></span>
+                                                </div>
+                                            </th>
+                                            <th data-orderable="false" column-id="upload">
+                                                <div class="d-flex align-items-center" data-toggle="tooltip"
+                                                    aria-label="Upload" data-bs-original-title="Upload">
+                                                    <span class="icon icon-upload icon-md m-0"></span>
+                                                </div>
+                                            </th>
+                                            <th data-orderable="false" column-id="download">
+                                                <div class="d-flex align-items-center" data-toggle="tooltip"
+                                                    aria-label="Download" data-bs-original-title="Download">
+                                                    <span class="icon icon-download icon-md m-0"></span>
+                                                </div>
+                                            </th>
+                                            <th data-orderable="false" column-id="invoices">
+                                                <div class="d-flex align-items-center" data-toggle="tooltip"
+                                                    aria-label="Invoices" data-bs-original-title="Invoices">
+                                                    <span class="icon icon-invoices icon-md m-0"></span>
+                                                </div>
+                                            </th>
+                                            <th data-orderable="false" column-id="acknowledge">
+                                                <div class="d-flex align-items-center" data-toggle="tooltip"
+                                                    aria-label="Acknowledge" data-bs-original-title="Acknowledge">
+                                                    <span class="icon icon-acknowledge icon-md m-0"></span>
+                                                </div>
+                                            </th>
+                                        </tr>
+                                        <tr class="group-row odd">
+                                            <th class="w-75" data-orderable="false">All Groups & Entities</th>
+                                            <th data-orderable="false" column-id="view">
+                                                <div class="d-flex align-item-center">
+                                                    <input data-column="view"
+                                                        class="form-check-input green-checkbox allgroup-select row-select ms-1"
+                                                        type="checkbox" id="">
+                                                </div>
+                                            </th>
+                                            <th data-orderable="false" column-id="edit">
+                                                <div class="d-flex align-item-center">
+                                                    <input data-column="edit"
+                                                        class="form-check-input green-checkbox allgroup-select row-select ms-1"
+                                                        type="checkbox" id="">
+                                                </div>
+                                            </th>
+                                            <th data-orderable="false" column-id="submit">
+                                                <div class="d-flex align-item-center">
+                                                    <input data-column="submit"
+                                                        class="form-check-input green-checkbox allgroup-select row-select ms-1"
+                                                        type="checkbox" id="">
+                                                </div>
+                                            </th>
+                                            <th data-orderable="false" column-id="upload">
+                                                <div class="d-flex align-item-center">
+                                                    <input data-column="upload"
+                                                        class="form-check-input green-checkbox allgroup-select row-select ms-1"
+                                                        type="checkbox" id="">
+                                                </div>
+                                            </th>
+                                            <th data-orderable="false" column-id="download">
+                                                <div class="d-flex align-item-center">
+                                                    <input data-column="download"
+                                                        class="form-check-input green-checkbox allgroup-select row-select ms-1"
+                                                        type="checkbox" id="">
+                                                </div>
+                                            </th>
+                                            <th data-orderable="false" column-id="invoices">
+                                                <div class="d-flex align-item-center">
+                                                    <input data-column="invoices"
+                                                        class="form-check-input green-checkbox allgroup-select row-select ms-1"
+                                                        type="checkbox" id="">
+                                                </div>
+                                            </th>
+                                            <th data-orderable="false" column-id="acknowledge">
+                                                <div class="d-flex align-item-center">
+                                                    <input data-column="acknowledge"
+                                                        class="form-check-input green-checkbox allgroup-select row-select ms-1"
+                                                        type="checkbox" id="">
+                                                </div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+                <!-- Modal Body End -->
+                <div class="modal-footer">
+                    <div class="d-flex justify-content-between align-items-center w-100 m-0">
+                        <button type="button" class="btn btn-link text-decoration-none font-weight-600 p-0"
+                            data-bs-dismiss="modal">
+                            CANCEL
+                        </button>
+                        <button type="button" class="btn btn-info py-0 px-5 rounded-3 ms-3" id=""
+                            data-bs-dismiss="modal">
+                            Add New User
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- New User step-2 Modal End-->
+
+    <!-- Edit Role Modal Start -->
+    <div class="modal modal-right fade filter-slideout SOP-model" id="EditRole" tabindex="-1"
+        aria-labelledby="EditRoleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-end modal-dialog-scrollable modal-md-plus my-0 min-vh-100">
+            <div class="modal-content border-0 rounded-0 min-vh-100">
+                <!-- Modal Header -->
+                <div class="modal-header flex-wrap">
+                    <div class="d-flex flex-column w-100 mb-0">
+                        <div class="d-flex align-items-center">
+                            <span class="icon icon-info-card icon-xxl me-3"></span>
+                            <h4 class="fw-bold m-0">
+                                Edit Role</h3>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal Header Ends -->
+                <!-- Modal Body Start-->
+                <div class="modal-body">
+                    <form action="">
+                        <div class="mb-4 p-3 bg-white rounded-2">
+                            <div>
+                                <fieldset>
+                                    <label for="entityType-model" class="form-label">Role Name</label>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <input type="text" class="form-control" id="" placeholder="Profile Name"
+                                            value="Role 1">
+                                        <div class="position-relative tag-colorPicker-wrapper">
+                                            <label data-toggle="tooltip" data-bs-original-title="Badge Color"
+                                                for="badgeColor0"
+                                                class="icon icon-lg m-0 ms-auto d-flex align-items-center justify-content-between">
+                                                <svg class="tagSvg" width="31" height="31" viewBox="0 0 31 31"
+                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect class="svgBackground" width="31" height="31" rx="15.5"
+                                                        fill="#7AACFD"></rect>
+                                                    <rect width="31" height="31" rx="15.5" fill="black"
+                                                        fill-opacity="0.3">
+                                                    </rect>
+                                                    <path d="M15.5 8V23M8 15.5H23" stroke="white" stroke-width="1.2">
+                                                    </path>
+                                                    <defs>
+                                                        <linearGradient id="paint0_linear_5599_132194" x1="5.16667"
+                                                            y1="6.57576" x2="26.7727" y2="27.2424"
+                                                            gradientUnits="userSpaceOnUse">
+                                                            <stop stop-color="#FF0000"></stop>
+                                                            <stop offset="0.144247" stop-color="#FFEA00"></stop>
+                                                            <stop offset="0.307713" stop-color="#6AFF00"></stop>
+                                                            <stop offset="0.548103" stop-color="#00EEFF"></stop>
+                                                            <stop offset="0.701953" stop-color="#2F00FF"></stop>
+                                                            <stop offset="0.826956" stop-color="#FF00E6"></stop>
+                                                            <stop offset="1" stop-color="#FF0000"></stop>
+                                                        </linearGradient>
+                                                    </defs>
+                                                </svg>
+
+                                            </label>
+                                            <input type="color" id="badgeColor0" class="tag-color-picker"
+                                                data-color-type="bg">
+                                        </div>
+                                        <div class="position-relative tag-colorPicker-wrapper">
+                                            <label data-toggle="tooltip" data-bs-original-title="Text Color"
+                                                for="badgeColor1"
+                                                class="icon icon-lg m-0 ms-auto d-flex align-items-center justify-content-between">
+                                                <svg class="tagSvg" width="31" height="31" viewBox="0 0 31 31"
+                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect class="svgBackground" width="31" height="31" rx="15.5"
+                                                        fill="#262626"></rect>
+                                                    <rect width="31" height="31" rx="15.5" fill="black"
+                                                        fill-opacity="0.3">
+                                                    </rect>
+
+                                                    <path transform="translate(8, 7) scale(1.7)"
+                                                        d="M5.89475 1.70928L7.69475 3.50928M0.494751 8.90928L1.09475 6.50928L7.09475 0.509277L8.89475 2.30928L2.89475 8.30928L0.494751 8.90928Z"
+                                                        stroke="white" stroke-width="0.72"></path>
+                                                    <defs>
+                                                        <linearGradient id="paint1_linear_5599_132194" x1="5.16667"
+                                                            y1="6.57576" x2="26.7727" y2="27.2424"
+                                                            gradientUnits="userSpaceOnUse">
+                                                            <stop stop-color="#FF0000"></stop>
+                                                            <stop offset="0.144247" stop-color="#FFEA00"></stop>
+                                                            <stop offset="0.307713" stop-color="#6AFF00"></stop>
+                                                            <stop offset="0.548103" stop-color="#00EEFF"></stop>
+                                                            <stop offset="0.701953" stop-color="#2F00FF"></stop>
+                                                            <stop offset="0.826956" stop-color="#FF00E6"></stop>
+                                                            <stop offset="1" stop-color="#FF0000"></stop>
+                                                        </linearGradient>
+                                                    </defs>
+                                                </svg>
+                                            </label>
+                                            <input type="color" id="badgeColor1" class="tag-color-picker"
+                                                data-color-type="text">
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+                        <!-- <div class="mb-4 p-3 bg-white rounded-2">
+                            <h4 class="text-capitalize fs-5 mb-4 fw-semibold">Rights</h4>
+                            <div class="border rounded-3 overflow-hidden">
+                                <table id="" class="table table-striped w-100 table-nowrap">
+                                    <thead>
+                                        <tr class="even">
+                                            <th class="w-75"></th>
+                                            <th>Rights</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="odd">
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="icon icon-md icon-view"></span>View
+                                                </div>
+                                            </td>
+                                            <td><input class="form-check-input green-checkbox ms-4" type="checkbox"
+                                                    id=""></td>
+                                        </tr>
+                                        <tr class="even">
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="icon icon-edit-grey icon-md"></span>Edit
+                                                </div>
+                                            </td>
+                                            <td><input class="form-check-input green-checkbox ms-4" type="checkbox"
+                                                    id="" checked></td>
+                                        </tr>
+                                        <tr class="odd">
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="icon icon-submit icon-md"></span>Submit
+                                                </div>
+                                            </td>
+                                            <td><input class="form-check-input green-checkbox ms-4" type="checkbox"
+                                                    id=""></td>
+                                        </tr>
+                                        <tr class="even">
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="icon icon-upload icon-md"></span>Upload
+                                                </div>
+                                            </td>
+                                            <td><input class="form-check-input green-checkbox ms-4" type="checkbox"
+                                                    id=""></td>
+                                        </tr>
+                                        <tr class="odd">
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="icon icon-download icon-md"></span>Download
+                                                </div>
+                                            </td>
+                                            <td><input class="form-check-input green-checkbox ms-4" type="checkbox"
+                                                    id="" checked></td>
+                                        </tr>
+                                        <tr class="even">
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="icon icon-invoices icon-md"></span>Invoices
+                                                </div>
+                                            </td>
+                                            <td><input class="form-check-input green-checkbox ms-4" type="checkbox"
+                                                    id=""></td>
+                                        </tr>
+                                        <tr class="odd">
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="icon icon-acknowledge icon-md"></span>Acknowledge
+                                                </div>
+                                            </td>
+                                            <td><input class="form-check-input green-checkbox ms-4" type="checkbox"
+                                                    id="" checked></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div> -->
+
+                        <div class="mb-4 p-3 bg-white rounded-2">
+                            <h4 class="text-capitalize fs-5 mb-4 fw-semibold">Access</h4>
+                            <div class="bg-white rounded-2 position-relative mb-4">
+                                <span
+                                    class="icon icon-search-grey opacity-25 position-absolute top-50 translate-middle ms-4"></span>
+                                <input type="text"
+                                    class="no-bg form-control search-input w-100 bg-transparent p-2 ps-5 m-0 rounded-2 border border-1"
+                                    placeholder="Search">
+                            </div>
+                            <!-- <div class="userAccessTable border rounded-3 overflow-hidden">
+                                <table id="user-access-table-1"
+                                    class="table table-striped w-100 table-nowrap user-data-table">
+                                    <thead>
+                                        <tr>
+                                            <th class="w-75" data-orderable="false"></th>
+                                            <th data-orderable="false" column-id="permissions">Permissions</th>
+                                        </tr>
+                                        <tr class="group-row odd">
+                                            <th class="w-75" data-orderable="false">All Groups & Entities</th>
+                                            <th data-orderable="false" column-id="permissions">
+                                                <div class="d-flex align-item-center">
+                                                    <input data-column="permissions"
+                                                        class="form-check-input green-checkbox allgroup-select row-select ms-4" type="checkbox" id="">
+                                                </div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div> -->
+                            <div class="userAccessTable border rounded-3 overflow-hidden">
+                                <table id="user-rights-table-1"
+                                    class="table table-striped w-100 table-nowrap user-data-table">
+                                    <thead>
+                                        <tr>
+                                            <th data-orderable="false"></th>
+                                            <th data-orderable="false" column-id="view">
+                                                <div class="d-flex align-items-center" data-toggle="tooltip"
+                                                    aria-label="View" data-bs-original-title="View">
+                                                    <span class="icon icon-md icon-view m-0"></span>
+                                                </div>
+                                            </th>
+                                            <th data-orderable="false" column-id="edit">
+                                                <div class="d-flex align-items-center" data-toggle="tooltip"
+                                                    aria-label="Edit" data-bs-original-title="Edit">
+                                                    <span class="icon icon-edit-grey icon-md m-0"></span>
+                                                </div>
+                                            </th>
+                                            <th data-orderable="false" column-id="submit">
+                                                <div class="d-flex align-items-center" data-toggle="tooltip"
+                                                    aria-label="Submit" data-bs-original-title="Submit">
+                                                    <span class="icon icon-submit icon-md m-0"></span>
+                                                </div>
+                                            </th>
+                                            <th data-orderable="false" column-id="upload">
+                                                <div class="d-flex align-items-center" data-toggle="tooltip"
+                                                    aria-label="Upload" data-bs-original-title="Upload">
+                                                    <span class="icon icon-upload icon-md m-0"></span>
+                                                </div>
+                                            </th>
+                                            <th data-orderable="false" column-id="download">
+                                                <div class="d-flex align-items-center" data-toggle="tooltip"
+                                                    aria-label="Download" data-bs-original-title="Download">
+                                                    <span class="icon icon-download icon-md m-0"></span>
+                                                </div>
+                                            </th>
+                                            <th data-orderable="false" column-id="invoices">
+                                                <div class="d-flex align-items-center" data-toggle="tooltip"
+                                                    aria-label="Invoices" data-bs-original-title="Invoices">
+                                                    <span class="icon icon-invoices icon-md m-0"></span>
+                                                </div>
+                                            </th>
+                                            <th data-orderable="false" column-id="acknowledge">
+                                                <div class="d-flex align-items-center" data-toggle="tooltip"
+                                                    aria-label="Acknowledge" data-bs-original-title="Acknowledge">
+                                                    <span class="icon icon-acknowledge icon-md m-0"></span>
+                                                </div>
+                                            </th>
+                                        </tr>
+                                        <tr class="group-row odd">
+                                            <th class="w-75" data-orderable="false">All Groups & Entities</th>
+                                            <th data-orderable="false" column-id="view">
+                                                <div class="d-flex align-item-center">
+                                                    <input data-column="view"
+                                                        class="form-check-input green-checkbox allgroup-select row-select ms-1"
+                                                        type="checkbox" id="">
+                                                </div>
+                                            </th>
+                                            <th data-orderable="false" column-id="edit">
+                                                <div class="d-flex align-item-center">
+                                                    <input data-column="edit"
+                                                        class="form-check-input green-checkbox allgroup-select row-select ms-1"
+                                                        type="checkbox" id="">
+                                                </div>
+                                            </th>
+                                            <th data-orderable="false" column-id="submit">
+                                                <div class="d-flex align-item-center">
+                                                    <input data-column="submit"
+                                                        class="form-check-input green-checkbox allgroup-select row-select ms-1"
+                                                        type="checkbox" id="">
+                                                </div>
+                                            </th>
+                                            <th data-orderable="false" column-id="upload">
+                                                <div class="d-flex align-item-center">
+                                                    <input data-column="upload"
+                                                        class="form-check-input green-checkbox allgroup-select row-select ms-1"
+                                                        type="checkbox" id="">
+                                                </div>
+                                            </th>
+                                            <th data-orderable="false" column-id="download">
+                                                <div class="d-flex align-item-center">
+                                                    <input data-column="download"
+                                                        class="form-check-input green-checkbox allgroup-select row-select ms-1"
+                                                        type="checkbox" id="">
+                                                </div>
+                                            </th>
+                                            <th data-orderable="false" column-id="invoices">
+                                                <div class="d-flex align-item-center">
+                                                    <input data-column="invoices"
+                                                        class="form-check-input green-checkbox allgroup-select row-select ms-1"
+                                                        type="checkbox" id="">
+                                                </div>
+                                            </th>
+                                            <th data-orderable="false" column-id="acknowledge">
+                                                <div class="d-flex align-item-center">
+                                                    <input data-column="acknowledge"
+                                                        class="form-check-input green-checkbox allgroup-select row-select ms-1"
+                                                        type="checkbox" id="">
+                                                </div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- Modal Body End -->
+                <div class="modal-footer">
+                    <div class="d-flex justify-content-between align-items-center w-100 m-0">
+                        <button type="button" class="btn btn-link text-decoration-none font-weight-600 p-0"
+                            data-bs-dismiss="modal">
+                            CANCEL
+                        </button>
+                        <div class="d-flex align-items-center">
+                            <button type="button" class="btn btn-info py-0 px-5 rounded-3 ms-3" id="" data-bs-target="#"
+                                data-bs-toggle="modal" data-bs-dismiss="modal">
+                                Update
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Edit Role Modal End -->
+
+    <!-- Add New Role Modal Start -->
+    <div class="modal modal-right fade filter-slideout SOP-model" id="AddNewRole" tabindex="-1"
+        aria-labelledby="AddNewRoleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-end modal-dialog-scrollable modal-md-plus my-0 min-vh-100">
+            <div class="modal-content border-0 rounded-0 min-vh-100">
+                <!-- Modal Header -->
+                <div class="modal-header flex-wrap">
+                    <div class="d-flex flex-column w-100 mb-0">
+                        <div class="d-flex align-items-center">
+                            <span class="icon icon-info-card icon-xxl me-3"></span>
+                            <h4 class="fw-bold m-0">
+                                Add New Role</h3>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal Header Ends -->
+                <!-- Modal Body Start-->
+                <div class="modal-body">
+                    <form action="">
+                        <div class="mb-4 p-3 bg-white rounded-2">
+                            <fieldset>
+                                <label for="entityType-model" class="form-label">Role Name</label>
+                                <div class="d-flex align-items-center gap-3">
+                                    <input type="text" class="form-control" id="" placeholder="Profile Name">
+                                    <div class="position-relative tag-colorPicker-wrapper">
+                                        <label data-toggle="tooltip" data-bs-original-title="Badge Color"
+                                            for="badgeColor2"
+                                            class="icon icon-lg m-0 ms-auto d-flex align-items-center justify-content-between">
+                                            <svg class="tagSvg" width="31" height="31" viewBox="0 0 31 31" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect class="svgBackground" width="31" height="31" rx="15.5"
+                                                    fill="url(#paint2_linear_5599_132194)"></rect>
+                                                <rect width="31" height="31" rx="15.5" fill="black" fill-opacity="0.3">
+                                                </rect>
+                                                <path d="M15.5 8V23M8 15.5H23" stroke="white" stroke-width="1.2"></path>
+                                                <defs>
+                                                    <linearGradient id="paint2_linear_5599_132194" x1="5.16667"
+                                                        y1="6.57576" x2="26.7727" y2="27.2424"
+                                                        gradientUnits="userSpaceOnUse">
+                                                        <stop stop-color="#FF0000"></stop>
+                                                        <stop offset="0.144247" stop-color="#FFEA00"></stop>
+                                                        <stop offset="0.307713" stop-color="#6AFF00"></stop>
+                                                        <stop offset="0.548103" stop-color="#00EEFF"></stop>
+                                                        <stop offset="0.701953" stop-color="#2F00FF"></stop>
+                                                        <stop offset="0.826956" stop-color="#FF00E6"></stop>
+                                                        <stop offset="1" stop-color="#FF0000"></stop>
+                                                    </linearGradient>
+                                                </defs>
+                                            </svg>
+
+                                        </label>
+                                        <input type="color" id="badgeColor2" class="tag-color-picker"
+                                            data-color-type="bg">
+                                    </div>
+                                    <div class="position-relative tag-colorPicker-wrapper">
+                                        <label data-toggle="tooltip" data-bs-original-title="Text Color"
+                                            for="badgeColor3"
+                                            class="icon icon-lg m-0 ms-auto d-flex align-items-center justify-content-between">
+                                            <svg class="tagSvg" width="31" height="31" viewBox="0 0 31 31" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect class="svgBackground" width="31" height="31" rx="15.5"
+                                                    fill="url(#paint3_linear_5599_132194)"></rect>
+                                                <rect width="31" height="31" rx="15.5" fill="black" fill-opacity="0.3">
+                                                </rect>
+
+                                                <path transform="translate(8, 7) scale(1.7)"
+                                                    d="M5.89475 1.70928L7.69475 3.50928M0.494751 8.90928L1.09475 6.50928L7.09475 0.509277L8.89475 2.30928L2.89475 8.30928L0.494751 8.90928Z"
+                                                    stroke="white" stroke-width="0.72"></path>
+                                                <defs>
+                                                    <linearGradient id="paint3_linear_5599_132194" x1="5.16667"
+                                                        y1="6.57576" x2="26.7727" y2="27.2424"
+                                                        gradientUnits="userSpaceOnUse">
+                                                        <stop stop-color="#FF0000"></stop>
+                                                        <stop offset="0.144247" stop-color="#FFEA00"></stop>
+                                                        <stop offset="0.307713" stop-color="#6AFF00"></stop>
+                                                        <stop offset="0.548103" stop-color="#00EEFF"></stop>
+                                                        <stop offset="0.701953" stop-color="#2F00FF"></stop>
+                                                        <stop offset="0.826956" stop-color="#FF00E6"></stop>
+                                                        <stop offset="1" stop-color="#FF0000"></stop>
+                                                    </linearGradient>
+                                                </defs>
+                                            </svg>
+
+                                        </label>
+                                        <input type="color" id="badgeColor3" class="tag-color-picker"
+                                            data-color-type="text">
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <!-- <div class="mb-4 p-3 bg-white rounded-2">
+                            <h4 class="text-capitalize fs-5 mb-4 fw-semibold">Rights</h4>
+                            <div class="border rounded-3 overflow-hidden">
+                                <table id="" class="table table-striped w-100 table-nowrap">
+                                    <thead>
+                                        <tr class="even">
+                                            <th class="w-75"></th>
+                                            <th>Rights</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="odd">
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="icon icon-md icon-view"></span>View
+                                                </div>
+                                            </td>
+                                            <td><input class="form-check-input green-checkbox ms-4" type="checkbox"
+                                                    id=""></td>
+                                        </tr>
+                                        <tr class="even">
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="icon icon-edit-grey icon-md"></span>Edit
+                                                </div>
+                                            </td>
+                                            <td><input class="form-check-input green-checkbox ms-4" type="checkbox"
+                                                    id=""></td>
+                                        </tr>
+                                        <tr class="odd">
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="icon icon-submit icon-md"></span>Submit
+                                                </div>
+                                            </td>
+                                            <td><input class="form-check-input green-checkbox ms-4" type="checkbox"
+                                                    id=""></td>
+                                        </tr>
+                                        <tr class="even">
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="icon icon-upload icon-md"></span>Upload
+                                                </div>
+                                            </td>
+                                            <td><input class="form-check-input green-checkbox ms-4" type="checkbox"
+                                                    id=""></td>
+                                        </tr>
+                                        <tr class="odd">
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="icon icon-download icon-md"></span>Download
+                                                </div>
+                                            </td>
+                                            <td><input class="form-check-input green-checkbox ms-4" type="checkbox"
+                                                    id=""></td>
+                                        </tr>
+                                        <tr class="even">
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="icon icon-invoices icon-md"></span>Invoices
+                                                </div>
+                                            </td>
+                                            <td><input class="form-check-input green-checkbox ms-4" type="checkbox"
+                                                    id=""></td>
+                                        </tr>
+                                        <tr class="odd">
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="icon icon-acknowledge icon-md"></span>Acknowledge
+                                                </div>
+                                            </td>
+                                            <td><input class="form-check-input green-checkbox ms-4" type="checkbox"
+                                                    id=""></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div> -->
+
+                        <div class="mb-4 p-3 bg-white rounded-2">
+                            <h4 class="text-capitalize fs-5 mb-4 fw-semibold">Access</h4>
+                            <div class="bg-white rounded-2 position-relative mb-4">
+                                <span
+                                    class="icon icon-search-grey opacity-25 position-absolute top-50 translate-middle ms-4"></span>
+                                <input type="text"
+                                    class="no-bg form-control search-input w-100 bg-transparent p-2 ps-5 m-0 rounded-2 border border-1"
+                                    placeholder="Search">
+                            </div>
+                            <div class="userAccessTable border rounded-3 overflow-hidden">
+                                <table id="user-rights-table-2"
+                                    class="table table-striped w-100 table-nowrap user-data-table">
+                                    <thead>
+                                        <tr>
+                                            <th data-orderable="false"></th>
+                                            <th data-orderable="false" column-id="view">
+                                                <div class="d-flex align-items-center" data-toggle="tooltip"
+                                                    aria-label="View" data-bs-original-title="View">
+                                                    <span class="icon icon-md icon-view m-0"></span>
+                                                </div>
+                                            </th>
+                                            <th data-orderable="false" column-id="edit">
+                                                <div class="d-flex align-items-center" data-toggle="tooltip"
+                                                    aria-label="Edit" data-bs-original-title="Edit">
+                                                    <span class="icon icon-edit-grey icon-md m-0"></span>
+                                                </div>
+                                            </th>
+                                            <th data-orderable="false" column-id="submit">
+                                                <div class="d-flex align-items-center" data-toggle="tooltip"
+                                                    aria-label="Submit" data-bs-original-title="Submit">
+                                                    <span class="icon icon-submit icon-md m-0"></span>
+                                                </div>
+                                            </th>
+                                            <th data-orderable="false" column-id="upload">
+                                                <div class="d-flex align-items-center" data-toggle="tooltip"
+                                                    aria-label="Upload" data-bs-original-title="Upload">
+                                                    <span class="icon icon-upload icon-md m-0"></span>
+                                                </div>
+                                            </th>
+                                            <th data-orderable="false" column-id="download">
+                                                <div class="d-flex align-items-center" data-toggle="tooltip"
+                                                    aria-label="Download" data-bs-original-title="Download">
+                                                    <span class="icon icon-download icon-md m-0"></span>
+                                                </div>
+                                            </th>
+                                            <th data-orderable="false" column-id="invoices">
+                                                <div class="d-flex align-items-center" data-toggle="tooltip"
+                                                    aria-label="Invoices" data-bs-original-title="Invoices">
+                                                    <span class="icon icon-invoices icon-md m-0"></span>
+                                                </div>
+                                            </th>
+                                            <th data-orderable="false" column-id="acknowledge">
+                                                <div class="d-flex align-items-center" data-toggle="tooltip"
+                                                    aria-label="Acknowledge" data-bs-original-title="Acknowledge">
+                                                    <span class="icon icon-acknowledge icon-md m-0"></span>
+                                                </div>
+                                            </th>
+                                        </tr>
+                                        <tr class="group-row odd">
+                                            <th class="w-75" data-orderable="false">All Groups & Entities</th>
+                                            <th data-orderable="false" column-id="view">
+                                                <div class="d-flex align-item-center">
+                                                    <input data-column="view"
+                                                        class="form-check-input green-checkbox allgroup-select row-select ms-1"
+                                                        type="checkbox" id="">
+                                                </div>
+                                            </th>
+                                            <th data-orderable="false" column-id="edit">
+                                                <div class="d-flex align-item-center">
+                                                    <input data-column="edit"
+                                                        class="form-check-input green-checkbox allgroup-select row-select ms-1"
+                                                        type="checkbox" id="">
+                                                </div>
+                                            </th>
+                                            <th data-orderable="false" column-id="submit">
+                                                <div class="d-flex align-item-center">
+                                                    <input data-column="submit"
+                                                        class="form-check-input green-checkbox allgroup-select row-select ms-1"
+                                                        type="checkbox" id="">
+                                                </div>
+                                            </th>
+                                            <th data-orderable="false" column-id="upload">
+                                                <div class="d-flex align-item-center">
+                                                    <input data-column="upload"
+                                                        class="form-check-input green-checkbox allgroup-select row-select ms-1"
+                                                        type="checkbox" id="">
+                                                </div>
+                                            </th>
+                                            <th data-orderable="false" column-id="download">
+                                                <div class="d-flex align-item-center">
+                                                    <input data-column="download"
+                                                        class="form-check-input green-checkbox allgroup-select row-select ms-1"
+                                                        type="checkbox" id="">
+                                                </div>
+                                            </th>
+                                            <th data-orderable="false" column-id="invoices">
+                                                <div class="d-flex align-item-center">
+                                                    <input data-column="invoices"
+                                                        class="form-check-input green-checkbox allgroup-select row-select ms-1"
+                                                        type="checkbox" id="">
+                                                </div>
+                                            </th>
+                                            <th data-orderable="false" column-id="acknowledge">
+                                                <div class="d-flex align-item-center">
+                                                    <input data-column="acknowledge"
+                                                        class="form-check-input green-checkbox allgroup-select row-select ms-1"
+                                                        type="checkbox" id="">
+                                                </div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- Modal Body End -->
+                <div class="modal-footer">
+                    <div class="d-flex justify-content-between align-items-center w-100 m-0">
+                        <button type="button" class="btn btn-link text-decoration-none font-weight-600 p-0"
+                            data-bs-dismiss="modal">
+                            CANCEL
+                        </button>
+                        <div class="d-flex align-items-center">
+                            <button type="button" class="btn btn-info py-0 px-5 rounded-3 ms-3" id="" data-bs-target="#"
+                                data-bs-toggle="modal" data-bs-dismiss="modal">
+                                Create Role
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Add New Role Modal End -->
+
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <script src="../dist/js/plugins.min.js"></script>
+    <script src="../dist/js/custom.min.js"></script>
+    <script src="dist/js/service-order-process.js"></script>
+    <script src="dist/js/dashboard.js"></script>
+    <!-- Scripts End-->
+</body>
+
+</html>
