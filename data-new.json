@@ -392,5 +392,66 @@
                 }
             }
         }
+    ],
+    "payment_method_data": [
+        {
+            "nickname": "American Express",
+            "account": "Amex 0005",
+            "status": {
+                "value": "Valid",
+                "label": "valid"
+            },
+            "isDefault": false,
+            "available_to": "All"
+        },
+        {
+            "nickname": "Emmanuel Sims",
+            "account": "Visa 4242",
+            "status": {
+                "value": "Valid",
+                "label": "valid"
+            },
+            "isDefault": false,
+            "available_to": "ApexCore Group"
+        },
+        {
+            "nickname": "John Doe",
+            "account": "Visa 1214",
+            "status": {
+                "value": "Expired",
+                "label": "expired"
+            },
+            "isDefault": false,
+            "available_to": "NovaTech Group"
+        },
+        {
+            "nickname": "Discover",
+            "account": "Discover 1117",
+            "status": {
+                "value": "Pending",
+                "label": "pending"
+            },
+            "isDefault": true,
+            "available_to": "Vertex Holdings"
+        },
+        {
+            "nickname": "Bank Of America",
+            "account": "Mastercard 6789",
+            "status": {
+                "value": "Valid",
+                "label": "valid"
+            },
+            "available_to": "All"
+        },
+        {
+            "nickname": "Net 30 Terms",
+            "account": "Terms",
+            "status": {
+                "value": "Valid",
+                "label": "valid"
+            },
+            "isDefault": true,
+            "available_to": "All"
+        }
     ]
 }

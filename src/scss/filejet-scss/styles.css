@@ -7666,7 +7666,7 @@ input[type=time]:active:before, .modal-header .btn-outline-dark:hover .icon-mail
   position: relative !important;
 }
 
-.position-absolute, .SOP-model .tooltipText.tooltipRight::after, .subscription-body .table-parent::after, .dataTables_wrapper .row.dt-row .dataTables_processing.card, .customTooltip .tooltipText.tooltipBottom::after, .customTooltip .tooltipText.tooltipTop::after, .customTooltip .tooltipText, input[type=time]:invalid:before {
+.position-absolute, .SOP-model .tooltipText.tooltipRight::after, .dataTables_wrapper .row.dt-row .dataTables_processing.card, .customTooltip .tooltipText.tooltipBottom::after, .customTooltip .tooltipText.tooltipTop::after, .customTooltip .tooltipText, input[type=time]:invalid:before {
   position: absolute !important;
 }
 
@@ -7683,7 +7683,7 @@ input[type=time]:active:before, .modal-header .btn-outline-dark:hover .icon-mail
   top: 0 !important;
 }
 
-.top-50, .SOP-model .tooltipText.tooltipRight::after, .subscription-body .table-parent::after, .dataTables_wrapper .row.dt-row .dataTables_processing.card {
+.top-50, .SOP-model .tooltipText.tooltipRight::after, .dataTables_wrapper .row.dt-row .dataTables_processing.card {
   top: 50% !important;
 }
 
@@ -7707,7 +7707,7 @@ input[type=time]:active:before, .modal-header .btn-outline-dark:hover .icon-mail
   left: 0 !important;
 }
 
-.start-50, .subscription-body .table-parent::after, .dataTables_wrapper .row.dt-row .dataTables_processing.card, .customTooltip .tooltipText.tooltipBottom::after, .customTooltip .tooltipText.tooltipTop::after, .customTooltip .tooltipText {
+.start-50, .dataTables_wrapper .row.dt-row .dataTables_processing.card, .customTooltip .tooltipText.tooltipBottom::after, .customTooltip .tooltipText.tooltipTop::after, .customTooltip .tooltipText {
   left: 50% !important;
 }
 
@@ -7727,7 +7727,7 @@ input[type=time]:active:before, .modal-header .btn-outline-dark:hover .icon-mail
   right: 100% !important;
 }
 
-.translate-middle, .subscription-body .table-parent::after {
+.translate-middle {
   transform: translate(-50%, -50%) !important;
 }
 
@@ -11813,7 +11813,7 @@ input[type=time]:active {
   opacity: 0.7;
 }
 
-.font-weight-700, .subscription-body .table-parent::after {
+.font-weight-700 {
   font-weight: 700;
 }
 
@@ -17038,13 +17038,55 @@ body .caledar-event-upcoming {
   transition: all 0.3s ease-in;
 }
 
-.subscription-body .table-parent::after {
-  content: "PREVIEW";
-  font-size: 4em;
-  opacity: 0.15;
-  letter-spacing: 4px;
-  rotate: -45deg;
-  transform-origin: 0 0;
+.badge {
+  padding: 8px 10px;
+  border-radius: 30px;
+  font-size: 10px;
+  color: #fff;
+  display: inline-block;
+  font-weight: 500;
+}
+
+.billingTableCard .paymentTable .dataTables_wrapper tr th:first-child,
+.billingTableCard .paymentTable .dataTables_wrapper tr td:first-child {
+  max-width: 30px !important;
+}
+.billingTableCard .paymentTable .dataTables_wrapper tr th:nth-child(2),
+.billingTableCard .paymentTable .dataTables_wrapper tr th:nth-child(3),
+.billingTableCard .paymentTable .dataTables_wrapper tr th:nth-child(5) {
+  min-width: 150px;
+}
+.billingTableCard .paymentTable .dataTables_wrapper tr th:nth-child(4),
+.billingTableCard .paymentTable .dataTables_wrapper tr td:nth-child(4) {
+  min-width: 80px !important;
+  width: 80px !important;
+}
+.billingTableCard .paymentTable .dataTables_wrapper tr th:last-child {
+  width: 50px !important;
+}
+
+.form-check-input[type=checkbox]:indeterminate {
+  background-color: #272727;
+}
+
+.badge-text-dark {
+  color: #0D2C36 !important;
+}
+
+.badge-valid {
+  background-color: #A1EABA;
+}
+
+.badge-pending {
+  background-color: #FCA86D;
+}
+
+.badge-expired {
+  background-color: #F68B82;
+}
+
+.form-select:has(option[value=""]:checked) {
+  color: var(--bs-filejet-medium-gray-opacity-50);
 }
 
 .daterangepicker {
@@ -20115,114 +20157,131 @@ body *::-webkit-scrollbar-thumb {
   background-color: var(--bs-yellow-bg);
 }
 
-.groupsTableCard, .usersTableCard {
+.groupsTableCard, .usersTableCard, .billingTableCard {
   background-color: white;
   position: relative;
 }
-.groupsTableCard .table, .usersTableCard .table {
+.groupsTableCard .table, .usersTableCard .table, .billingTableCard .table {
   margin-bottom: 0rem !important;
 }
-.groupsTableCard table thead th:first-child, .usersTableCard table thead th:first-child,
+.groupsTableCard table thead th:first-child, .usersTableCard table thead th:first-child, .billingTableCard table thead th:first-child,
 .groupsTableCard .dataTable thead th:first-child,
-.usersTableCard .dataTable thead th:first-child {
+.usersTableCard .dataTable thead th:first-child,
+.billingTableCard .dataTable thead th:first-child {
   border-top-left-radius: 5px;
 }
-.groupsTableCard table thead th:last-child, .usersTableCard table thead th:last-child,
+.groupsTableCard table thead th:last-child, .usersTableCard table thead th:last-child, .billingTableCard table thead th:last-child,
 .groupsTableCard .dataTable thead th:last-child,
-.usersTableCard .dataTable thead th:last-child {
+.usersTableCard .dataTable thead th:last-child,
+.billingTableCard .dataTable thead th:last-child {
   border-top-right-radius: 5px;
 }
-.groupsTableCard table tbody tr:last-child td, .usersTableCard table tbody tr:last-child td,
+.groupsTableCard table tbody tr:last-child td, .usersTableCard table tbody tr:last-child td, .billingTableCard table tbody tr:last-child td,
 .groupsTableCard .dataTable tbody tr:last-child td,
-.usersTableCard .dataTable tbody tr:last-child td {
+.usersTableCard .dataTable tbody tr:last-child td,
+.billingTableCard .dataTable tbody tr:last-child td {
   border: none;
 }
-.groupsTableCard table tbody tr:last-child td:first-child, .usersTableCard table tbody tr:last-child td:first-child,
+.groupsTableCard table tbody tr:last-child td:first-child, .usersTableCard table tbody tr:last-child td:first-child, .billingTableCard table tbody tr:last-child td:first-child,
 .groupsTableCard .dataTable tbody tr:last-child td:first-child,
-.usersTableCard .dataTable tbody tr:last-child td:first-child {
+.usersTableCard .dataTable tbody tr:last-child td:first-child,
+.billingTableCard .dataTable tbody tr:last-child td:first-child {
   border-bottom-left-radius: 5px;
 }
-.groupsTableCard table tbody tr:last-child td:last-child, .usersTableCard table tbody tr:last-child td:last-child,
+.groupsTableCard table tbody tr:last-child td:last-child, .usersTableCard table tbody tr:last-child td:last-child, .billingTableCard table tbody tr:last-child td:last-child,
 .groupsTableCard .dataTable tbody tr:last-child td:last-child,
-.usersTableCard .dataTable tbody tr:last-child td:last-child {
+.usersTableCard .dataTable tbody tr:last-child td:last-child,
+.billingTableCard .dataTable tbody tr:last-child td:last-child {
   border-bottom-right-radius: 5px;
 }
-.groupsTableCard .dataTables_wrapper tbody td, .usersTableCard .dataTables_wrapper tbody td {
+.groupsTableCard .dataTables_wrapper tbody td, .usersTableCard .dataTables_wrapper tbody td, .billingTableCard .dataTables_wrapper tbody td {
   font-weight: 400 !important;
   color: var(--bs-black-primary) !important;
   font-size: 12px !important;
   padding: 0.5rem 0.9rem !important;
   line-height: 1.25rem !important;
 }
-.groupsTableCard .dataTables_wrapper tbody td.text-light-blue, .usersTableCard .dataTables_wrapper tbody td.text-light-blue {
+.groupsTableCard .dataTables_wrapper tbody td.text-light-blue, .usersTableCard .dataTables_wrapper tbody td.text-light-blue, .billingTableCard .dataTables_wrapper tbody td.text-light-blue {
   color: var(--bs-light-blue) !important;
 }
-.groupsTableCard .dataTables_wrapper tbody td.disabled-column, .usersTableCard .dataTables_wrapper tbody td.disabled-column {
+.groupsTableCard .dataTables_wrapper tbody td.disabled-column, .usersTableCard .dataTables_wrapper tbody td.disabled-column, .billingTableCard .dataTables_wrapper tbody td.disabled-column {
   color: rgb(177, 176, 176) !important;
   pointer-events: none;
 }
-.groupsTableCard .dataTables_wrapper tbody td.disabled-column .dt-control, .usersTableCard .dataTables_wrapper tbody td.disabled-column .dt-control,
+.groupsTableCard .dataTables_wrapper tbody td.disabled-column .dt-control, .usersTableCard .dataTables_wrapper tbody td.disabled-column .dt-control, .billingTableCard .dataTables_wrapper tbody td.disabled-column .dt-control,
 .groupsTableCard .dataTables_wrapper tbody td.disabled-column .icon-folder-upload-purple,
 .usersTableCard .dataTables_wrapper tbody td.disabled-column .icon-folder-upload-purple,
+.billingTableCard .dataTables_wrapper tbody td.disabled-column .icon-folder-upload-purple,
 .groupsTableCard .dataTables_wrapper tbody td.disabled-column .icon-folder-upload-danger,
 .usersTableCard .dataTables_wrapper tbody td.disabled-column .icon-folder-upload-danger,
+.billingTableCard .dataTables_wrapper tbody td.disabled-column .icon-folder-upload-danger,
 .groupsTableCard .dataTables_wrapper tbody td.disabled-column .badge,
 .usersTableCard .dataTables_wrapper tbody td.disabled-column .badge,
+.billingTableCard .dataTables_wrapper tbody td.disabled-column .badge,
 .groupsTableCard .dataTables_wrapper tbody td.disabled-column input,
-.usersTableCard .dataTables_wrapper tbody td.disabled-column input {
+.usersTableCard .dataTables_wrapper tbody td.disabled-column input,
+.billingTableCard .dataTables_wrapper tbody td.disabled-column input {
   opacity: 0.35;
 }
-.groupsTableCard .dataTables_wrapper .dataTables_scroll .dataTables_scrollHeadInner, .usersTableCard .dataTables_wrapper .dataTables_scroll .dataTables_scrollHeadInner,
+.groupsTableCard .dataTables_wrapper .dataTables_scroll .dataTables_scrollHeadInner, .usersTableCard .dataTables_wrapper .dataTables_scroll .dataTables_scrollHeadInner, .billingTableCard .dataTables_wrapper .dataTables_scroll .dataTables_scrollHeadInner,
 .groupsTableCard .dataTables_wrapper .dataTables_scroll .dataTable,
-.usersTableCard .dataTables_wrapper .dataTables_scroll .dataTable {
+.usersTableCard .dataTables_wrapper .dataTables_scroll .dataTable,
+.billingTableCard .dataTables_wrapper .dataTables_scroll .dataTable {
   width: inherit !important;
   max-width: inherit !important;
   min-height: 0 !important;
 }
-.groupsTableCard .dataTables_wrapper .dataTables_scroll .dataTables_scrollBody, .usersTableCard .dataTables_wrapper .dataTables_scroll .dataTables_scrollBody {
+.groupsTableCard .dataTables_wrapper .dataTables_scroll .dataTables_scrollBody, .usersTableCard .dataTables_wrapper .dataTables_scroll .dataTables_scrollBody, .billingTableCard .dataTables_wrapper .dataTables_scroll .dataTables_scrollBody {
   overflow-y: hidden !important;
 }
-.groupsTableCard .groupsListingTable .dataTables_wrapper tbody td a, .usersTableCard .groupsListingTable .dataTables_wrapper tbody td a {
+.groupsTableCard .groupsListingTable .dataTables_wrapper tbody td a, .usersTableCard .groupsListingTable .dataTables_wrapper tbody td a, .billingTableCard .groupsListingTable .dataTables_wrapper tbody td a {
   font-weight: 400 !important;
 }
-.groupsTableCard .groupsListingTable .dataTables_wrapper .dataTable th:first-child, .usersTableCard .groupsListingTable .dataTables_wrapper .dataTable th:first-child,
+.groupsTableCard .groupsListingTable .dataTables_wrapper .dataTable th:first-child, .usersTableCard .groupsListingTable .dataTables_wrapper .dataTable th:first-child, .billingTableCard .groupsListingTable .dataTables_wrapper .dataTable th:first-child,
 .groupsTableCard .groupsListingTable .dataTables_wrapper .dataTable td:first-child,
-.usersTableCard .groupsListingTable .dataTables_wrapper .dataTable td:first-child {
+.usersTableCard .groupsListingTable .dataTables_wrapper .dataTable td:first-child,
+.billingTableCard .groupsListingTable .dataTables_wrapper .dataTable td:first-child {
   min-width: 170px !important;
 }
-.groupsTableCard .groupsListingTable .dataTables_wrapper .dataTable th:nth-child(2), .usersTableCard .groupsListingTable .dataTables_wrapper .dataTable th:nth-child(2),
+.groupsTableCard .groupsListingTable .dataTables_wrapper .dataTable th:nth-child(2), .usersTableCard .groupsListingTable .dataTables_wrapper .dataTable th:nth-child(2), .billingTableCard .groupsListingTable .dataTables_wrapper .dataTable th:nth-child(2),
 .groupsTableCard .groupsListingTable .dataTables_wrapper .dataTable td:nth-child(2),
-.usersTableCard .groupsListingTable .dataTables_wrapper .dataTable td:nth-child(2) {
+.usersTableCard .groupsListingTable .dataTables_wrapper .dataTable td:nth-child(2),
+.billingTableCard .groupsListingTable .dataTables_wrapper .dataTable td:nth-child(2) {
   min-width: 100px !important;
 }
-.groupsTableCard .groupsListingTable .dataTables_wrapper .dataTable th:nth-child(4), .usersTableCard .groupsListingTable .dataTables_wrapper .dataTable th:nth-child(4), .groupsTableCard .groupsListingTable .dataTables_wrapper .dataTable th:nth-child(6), .usersTableCard .groupsListingTable .dataTables_wrapper .dataTable th:nth-child(6), .groupsTableCard .groupsListingTable .dataTables_wrapper .dataTable th:nth-child(7), .usersTableCard .groupsListingTable .dataTables_wrapper .dataTable th:nth-child(7),
+.groupsTableCard .groupsListingTable .dataTables_wrapper .dataTable th:nth-child(4), .usersTableCard .groupsListingTable .dataTables_wrapper .dataTable th:nth-child(4), .billingTableCard .groupsListingTable .dataTables_wrapper .dataTable th:nth-child(4), .groupsTableCard .groupsListingTable .dataTables_wrapper .dataTable th:nth-child(6), .usersTableCard .groupsListingTable .dataTables_wrapper .dataTable th:nth-child(6), .billingTableCard .groupsListingTable .dataTables_wrapper .dataTable th:nth-child(6), .groupsTableCard .groupsListingTable .dataTables_wrapper .dataTable th:nth-child(7), .usersTableCard .groupsListingTable .dataTables_wrapper .dataTable th:nth-child(7), .billingTableCard .groupsListingTable .dataTables_wrapper .dataTable th:nth-child(7),
 .groupsTableCard .groupsListingTable .dataTables_wrapper .dataTable td:nth-child(4),
 .usersTableCard .groupsListingTable .dataTables_wrapper .dataTable td:nth-child(4),
+.billingTableCard .groupsListingTable .dataTables_wrapper .dataTable td:nth-child(4),
 .groupsTableCard .groupsListingTable .dataTables_wrapper .dataTable td:nth-child(6),
 .usersTableCard .groupsListingTable .dataTables_wrapper .dataTable td:nth-child(6),
+.billingTableCard .groupsListingTable .dataTables_wrapper .dataTable td:nth-child(6),
 .groupsTableCard .groupsListingTable .dataTables_wrapper .dataTable td:nth-child(7),
-.usersTableCard .groupsListingTable .dataTables_wrapper .dataTable td:nth-child(7) {
+.usersTableCard .groupsListingTable .dataTables_wrapper .dataTable td:nth-child(7),
+.billingTableCard .groupsListingTable .dataTables_wrapper .dataTable td:nth-child(7) {
   max-width: 75px !important;
 }
-.groupsTableCard .groupsListingTable .dataTables_wrapper .dataTable th:nth-child(5), .usersTableCard .groupsListingTable .dataTables_wrapper .dataTable th:nth-child(5),
+.groupsTableCard .groupsListingTable .dataTables_wrapper .dataTable th:nth-child(5), .usersTableCard .groupsListingTable .dataTables_wrapper .dataTable th:nth-child(5), .billingTableCard .groupsListingTable .dataTables_wrapper .dataTable th:nth-child(5),
 .groupsTableCard .groupsListingTable .dataTables_wrapper .dataTable td:nth-child(5),
-.usersTableCard .groupsListingTable .dataTables_wrapper .dataTable td:nth-child(5) {
+.usersTableCard .groupsListingTable .dataTables_wrapper .dataTable td:nth-child(5),
+.billingTableCard .groupsListingTable .dataTables_wrapper .dataTable td:nth-child(5) {
   max-width: 105px !important;
 }
-.groupsTableCard .groupsListingTable .dataTables_wrapper .dataTable td, .usersTableCard .groupsListingTable .dataTables_wrapper .dataTable td,
+.groupsTableCard .groupsListingTable .dataTables_wrapper .dataTable td, .usersTableCard .groupsListingTable .dataTables_wrapper .dataTable td, .billingTableCard .groupsListingTable .dataTables_wrapper .dataTable td,
 .groupsTableCard .groupsListingTable .dataTables_wrapper .dataTable th,
-.usersTableCard .groupsListingTable .dataTables_wrapper .dataTable th {
+.usersTableCard .groupsListingTable .dataTables_wrapper .dataTable th,
+.billingTableCard .groupsListingTable .dataTables_wrapper .dataTable th {
   padding: 0.9rem !important;
 }
-.groupsTableCard .icon-entity-edit:hover, .usersTableCard .icon-entity-edit:hover {
+.groupsTableCard .icon-entity-edit:hover, .usersTableCard .icon-entity-edit:hover, .billingTableCard .icon-entity-edit:hover {
   background-image: url("../../../../dist/images/icons/edit-dark.svg");
 }
-.groupsTableCard .icon-entity-delete:hover, .usersTableCard .icon-entity-delete:hover {
+.groupsTableCard .icon-entity-delete:hover, .usersTableCard .icon-entity-delete:hover, .billingTableCard .icon-entity-delete:hover {
   background-image: url("../../../../dist/images/icons/delete-red.svg");
 }
 
 @media (min-width: 1450px) {
-  .groupsTableCard .dataTables_wrapper .dataTables_scroll .dataTables_scrollBody, .usersTableCard .dataTables_wrapper .dataTables_scroll .dataTables_scrollBody {
+  .groupsTableCard .dataTables_wrapper .dataTables_scroll .dataTables_scrollBody, .usersTableCard .dataTables_wrapper .dataTables_scroll .dataTables_scrollBody, .billingTableCard .dataTables_wrapper .dataTables_scroll .dataTables_scrollBody {
     overflow: hidden !important;
   }
 }

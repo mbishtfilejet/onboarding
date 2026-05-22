@@ -1,11 +1,76 @@
-.subscription-body {
-    .table-parent::after{
-        content: "PREVIEW";
-        @extend .font-weight-700,.position-absolute,.top-50,.start-50,.translate-middle;
-        font-size: 4em;
-        opacity: .15;
-        letter-spacing:4px;
-        rotate: -45deg;
-        transform-origin: 0 0;
+// .subscription-body {
+//     .table-parent::after{
+//         content: "PREVIEW";
+//         @extend .font-weight-700,.position-absolute,.top-50,.start-50,.translate-middle;
+//         font-size: 4em;
+//         opacity: .15;
+//         letter-spacing:4px;
+//         rotate: -45deg;
+//         transform-origin: 0 0;
+//     }
+// }
+.badge {
+    padding: 8px 10px;
+    border-radius: 30px;
+    font-size: 10px;
+    color: #fff;
+    display: inline-block;
+    font-weight: 500;
+}
+
+.billingTableCard {
+    @extend .groupsTableCard;
+
+    .paymentTable .dataTables_wrapper {
+        tr {
+
+            th:first-child,
+            td:first-child {
+                max-width: 30px !important;
+            }
+
+            th:nth-child(2),
+            th:nth-child(3),
+            th:nth-child(5) {
+                min-width: 150px;
+            }
+
+            th:nth-child(4),
+            td:nth-child(4) {
+                min-width: 80px !important;
+                width: 80px !important;
+            }
+
+            th:last-child {
+                width: 50px !important;
+            }
+        }
     }
+}
+
+
+.form-check-input[type=checkbox]:indeterminate {
+    background-color: #272727;
+}
+
+
+.badge-text-dark {
+    color: #0D2C36 !important;
+}
+
+.badge-valid {
+    background-color: #A1EABA;
+
+}
+
+.badge-pending {
+    background-color: #FCA86D;
+}
+
+.badge-expired {
+    background-color: #F68B82;
+}
+
+.form-select:has(option[value=""]:checked) {
+    color: var(--bs-filejet-medium-gray-opacity-50);
 }

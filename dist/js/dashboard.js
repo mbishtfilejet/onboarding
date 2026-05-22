@@ -909,3 +909,60 @@ $(document).ready(function () {
         tagContainer.data('colors', colors);
     });
 })
+
+// payment method
+
+$(document).ready(function () {
+    const tableOptions_1 = {
+        ajax: {
+            url: "data-new.json",
+            dataSrc: 'payment_method_data',
+        },
+        scrollX: true,
+        scrollY: false,
+        columns: [
+            {
+                data: null, render: function (data, type, row) {
+                    return `<input data-column="payMtdCheck" class="d-flex form-check-input row-select" type="checkbox" value="${row?.id}">`;
+                }
+            },
+            { data: "nickname" },
+            { data: "account" },
+            {
+                data: "status", render: function (data, type, row) {
+                    return `<span class="badge badge-${row.status.label} badge-text-dark">${row.status.value}</span>`
+                }
+            },
+            {
+                data: "available_to", render: function (data, type, row) {
+                    return data + `${row.isDefault ? " (Default)" : ''}`;
+                }
+            },
+            {
+                data: null, render: function (data, type, row) {
+                    if (row.account === "Terms") return '';
+
+                    return `
+                    <div class="d-flex align-items-center">
+                            <span role="button" tabindex="0"> 
+                                <span data-toggle="tooltip" aria-label="EDIT" data-bs-original-title="EDIT" data-bs-toggle="modal" data-bs-target="#editPaymentMethod"
+                                    class="icon icon-entity-edit me-1 me-md-2"></span>
+                            </span>
+                            <span role="button" tabindex="0">
+                                <span data-toggle="tooltip" aria-label="DELETE" data-bs-original-title="DELETE" data-bs-toggle="modal" data-bs-target="#deletePaymentMethod"
+                                    class="icon icon-entity-delete me-1 me-md-2"></span> 
+                            </span>
+                    </div>
+                    `
+                }
+            }
+        ],
+        order: [[1, "asc"]],
+        lengthChange: false,  // Removed pagination
+        paging: false,  // Disable pagination
+        info: false,    // Hide table info (e.g., "Showing 1 to 10 of 50 entries"
+    }
+
+    $('#payment-methods-table').DataTable(tableOptions_1)
+    multiSelectRowCheckbox($('#payment-methods-table'))
+})
