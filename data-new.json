@@ -147,8 +147,8 @@
             "bgColor": "#72E097",
             "textColor": "#262626",
             "status": "Inactive",
-            "groups": 5,
-            "entities": 20
+            "groups": 0,
+            "entities": 0
         },
         {
             "username": "Liam Anderson",
@@ -158,8 +158,8 @@
             "bgColor": "#FCDF6D",
             "textColor": "#262626",
             "status": "Active",
-            "groups": 8,
-            "entities": 33
+            "groups": 0,
+            "entities": 0
         },
         {
             "username": "Olivia Brown",
