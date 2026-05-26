@@ -20322,13 +20322,16 @@ body *::-webkit-scrollbar-thumb {
 }
 .usersTableCard .usersListingTable .dataTables_wrapper .dataTable th:nth-child(2),
 .usersTableCard .usersListingTable .dataTables_wrapper .dataTable td:nth-child(2) {
-  min-width: 200px !important;
+  min-width: 250px !important;
 }
-.usersTableCard .usersListingTable .dataTables_wrapper .dataTable th:nth-child(5), .usersTableCard .usersListingTable .dataTables_wrapper .dataTable th:nth-child(6), .usersTableCard .usersListingTable .dataTables_wrapper .dataTable th:nth-child(7),
-.usersTableCard .usersListingTable .dataTables_wrapper .dataTable td:nth-child(5),
+.usersTableCard .usersListingTable .dataTables_wrapper .dataTable th:nth-child(5),
+.usersTableCard .usersListingTable .dataTables_wrapper .dataTable td:nth-child(5) {
+  min-width: 90px !important;
+}
+.usersTableCard .usersListingTable .dataTables_wrapper .dataTable th:nth-child(6), .usersTableCard .usersListingTable .dataTables_wrapper .dataTable th:nth-child(7),
 .usersTableCard .usersListingTable .dataTables_wrapper .dataTable td:nth-child(6),
 .usersTableCard .usersListingTable .dataTables_wrapper .dataTable td:nth-child(7) {
-  min-width: 60px !important;
+  min-width: 90px !important;
 }
 .usersTableCard .rolesListingTable .dataTables_wrapper .dataTable th:first-child,
 .usersTableCard .rolesListingTable .dataTables_wrapper .dataTable td:first-child {
