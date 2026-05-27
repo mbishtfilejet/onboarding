@@ -17057,22 +17057,17 @@ body .caledar-event-upcoming {
   font-weight: 500;
 }
 
-.billingTableCard .paymentTable .dataTables_wrapper tr th:first-child,
-.billingTableCard .paymentTable .dataTables_wrapper tr td:first-child {
-  max-width: 30px !important;
-}
+.billingTableCard .paymentTable .dataTables_wrapper tr th:nth-child(1),
 .billingTableCard .paymentTable .dataTables_wrapper tr th:nth-child(2),
-.billingTableCard .paymentTable .dataTables_wrapper tr th:nth-child(3),
-.billingTableCard .paymentTable .dataTables_wrapper tr th:nth-child(5) {
+.billingTableCard .paymentTable .dataTables_wrapper tr th:nth-child(4) {
   min-width: 150px;
 }
-.billingTableCard .paymentTable .dataTables_wrapper tr th:nth-child(4),
-.billingTableCard .paymentTable .dataTables_wrapper tr td:nth-child(4) {
-  min-width: 80px !important;
-  width: 80px !important;
+.billingTableCard .paymentTable .dataTables_wrapper tr th:nth-child(3),
+.billingTableCard .paymentTable .dataTables_wrapper tr td:nth-child(3) {
+  width: 100px !important;
 }
 .billingTableCard .paymentTable .dataTables_wrapper tr th:last-child {
-  width: 60px !important;
+  width: 70px !important;
 }
 
 .form-check-input[type=checkbox]:indeterminate {
