@@ -396,7 +396,7 @@
     "payment_method_data": [
         {
             "nickname": "American Express",
-            "account": "Amex 0005",
+            "account": "Amex 0005 EXP 09/26",
             "status": {
                 "value": "Valid",
                 "label": "valid"
@@ -406,7 +406,7 @@
         },
         {
             "nickname": "Emmanuel Sims",
-            "account": "Visa 4242",
+            "account": "Visa 4242 EXP 04/36",
             "status": {
                 "value": "Valid",
                 "label": "valid"
@@ -416,7 +416,7 @@
         },
         {
             "nickname": "John Doe",
-            "account": "Visa 1214",
+            "account": "Visa 1214 EXP 10/20",
             "status": {
                 "value": "Expired",
                 "label": "expired"
@@ -425,8 +425,8 @@
             "available_to": "NovaTech Group"
         },
         {
-            "nickname": "Discover",
-            "account": "Discover 1117",
+            "nickname": "Bank Account",
+            "account": "Checking 1117",
             "status": {
                 "value": "Pending",
                 "label": "pending"
