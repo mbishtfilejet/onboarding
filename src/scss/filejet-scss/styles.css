@@ -13474,6 +13474,16 @@ label {
   min-width: 105px !important;
 }
 
+.formation-date-min-width {
+  min-width: 135px !important;
+  width: 135px;
+}
+
+.min-width-160 {
+  min-width: 160px !important;
+  width: 160px;
+}
+
 .max-width-130 {
   max-width: 130px !important;
 }
@@ -17062,7 +17072,7 @@ body .caledar-event-upcoming {
   width: 80px !important;
 }
 .billingTableCard .paymentTable .dataTables_wrapper tr th:last-child {
-  width: 50px !important;
+  width: 60px !important;
 }
 
 .form-check-input[type=checkbox]:indeterminate {
