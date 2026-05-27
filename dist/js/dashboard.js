@@ -940,7 +940,7 @@ $(document).ready(function () {
                     return `
                     <div class="d-flex align-items-center">
                             <span role="button" tabindex="0"> 
-                                <span data-toggle="tooltip" aria-label="EDIT" data-bs-original-title="EDIT" data-bs-toggle="modal" data-bs-target="#editPaymentMethod"
+                                <span data-toggle="tooltip" aria-label="EDIT" data-bs-original-title="EDIT" data-bs-toggle="modal" data-bs-target="${row.isVerified ? "#editPaymentMethod" : "#verifyBankAccount"}"
                                     class="icon icon-entity-edit me-1 me-md-2"></span>
                             </span>
                             <span role="button" tabindex="0">

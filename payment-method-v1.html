@@ -242,6 +242,114 @@
         </div>
     </div>
 
+    <!-- verify bank account Starts -->
+    <div class="modal modal-right fade filter-slideout SOP-model" id="verifyBankAccount" tabindex="-1"
+        aria-labelledby="verifyBankAccountLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-end modal-dialog-scrollable my-0 min-vh-100">
+            <div class="modal-content border-0 rounded-0 min-vh-100">
+                <!-- Modal Header -->
+                <div class="modal-header flex-wrap">
+                    <div class="d-flex align-items-center w-100 pb-2">
+                        <span class="bg-dark p-3 rounded-2 me-4 d-inline-block">
+                            <span class="icon icon-payment-white  icon-lg m-0"></span> </span>
+                        <div>
+                            <span class="d-block text-dark text-opacity-50 fs-9 text-uppercase">Payment
+                                Method</span>
+                            <h3 class="fs-3 m-0 mt-2">Verify Bank Account</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal Header Ends -->
+
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <label for="" class="text-uppercase">Verification Method</label>
+                    <div class="nav nav-tabs d-flex align-items-center bg-white p-3 rounded mb-4" id=""
+                        role="tablist">
+                        <div class="nav-item col-6 d-flex flex-wrap align-items-center">
+                            <input class="form-check-input active" checked type="radio" name="verfication_method"
+                                value="Descriptor Code" id="verifyMethod_2" data-bs-toggle="tab"
+                                data-bs-target="#descriptor_code" role="tab" aria-controls="descriptor_code"
+                                aria-selected="false">
+                            <div>
+                                <label class="ps-2 m-0 fs-6" for="verifyMethod_2"> Descriptor Code </label>
+                            </div>
+                        </div>
+                        <div class="nav-item col-6 d-flex flex-wrap align-items-center">
+                            <input class="form-check-input" type="radio" name="verfication_method"
+                                value="Micro Deposits" id="verifyMethod_1" data-bs-toggle="tab"
+                                data-bs-target="#micro_deposit" role="tab" aria-controls="micro_deposit"
+                                aria-selected="true">
+                            <div>
+                                <label class="ps-2 m-0 fs-6" for="verifyMethod_1"> Micro Deposits </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-content shadow-none">
+                        <div class="tab-pane fade bg-white bg-white p-3 rounded-2" id="micro_deposit" role="tabpanel">
+                            <div class="">
+                                <p>Stripe sent two small deposits to this bank account. To verify this account, please
+                                    confirm the amounts of the deposits. You have only 3 attempts to verify your account
+                                    After 3 failed attempts you will not be able to verify your bank account.</p>
+                            </div>
+                            <div class="d-flex justify-content-center align-items-center gap-3">
+                                <div class="w-50">
+                                    <div class="form-group">
+                                        <label for="firstDeposit" class="form-label text-uppercase">First
+                                            deposit</label>
+                                        <input type="text" id="firstDeposit" class="form-control shadow-none"
+                                            placeholder="$.00">
+                                    </div>
+                                </div>
+                                <div class="w-50">
+                                    <div class="form-group">
+                                        <label for="secondDeposit" class=" form-label text-uppercase">Second
+                                            deposit</label>
+                                        <input type="text" id="secondDeposit" class="form-control shadow-none"
+                                            placeholder="$.00">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade show active bg-white p-3 rounded-2" id="descriptor_code" role="tabpanel">
+                            <div class="">
+                                <p>Stripe sent a small deposit to this bank account. To verify this
+                                    account, please confirm the 6-digit code in the statement
+                                    descriptor of this deposit.
+                                </p>
+                            </div>
+                            <div>
+                                <div class="form-group">
+                                    <label for="descriptorCode" class=" form-label text-uppercase">Descriptor
+                                        code</label>
+                                    <input type="text" maxlength="6" id="descriptorCode" class="form-control shadow-none"
+                                        placeholder="SMXXXX">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal Body Ends-->
+
+                <div class="modal-footer">
+                    <div class="d-flex justify-content-between align-items-center w-100 m-0">
+                        <button type="button" class="btn btn-link text-decoration-none font-weight-600 p-0"
+                            data-bs-dismiss="modal">
+                            Cancel
+                        </button>
+                        <button type="button" class="btn btn-info py-0 px-5 rounded-3 ms-3" id="" data-bs-target="#"
+                            data-bs-toggle="modal" data-bs-dismiss="modal">
+                            Verify
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Verify bank account Ends -->
+
     <!--Change Payment Method Modal start-->
     <div class="modal modal-right fade filter-slideout SOP-model" id="editPaymentMethod" tabindex="-1"
         aria-labelledby="editPaymentMethodLabel" aria-hidden="true">
