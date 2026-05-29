@@ -759,7 +759,7 @@ table .boc-light #boc-ppdf-btns #boc-prev-save,
     justify-content: space-between;
     font-size: 10px;
 
-    .btn-sm{
+    .btn-sm {
       font-size: 0.8rem;
     }
   }
@@ -1528,6 +1528,41 @@ table .boc-light #boc-ppdf-btns #boc-prev-save,
   .ui-datepicker {
     display: none !important;
   }
+
+  input[disabled],
+  select[disabled],
+  .form-disabled {
+    background-image: none !important;
+    background-color: #eee !important;
+    color: var(--bs-filejet-medium-gray) !important;
+    pointer-events: none;
+
+    &+.select2-container--default {
+
+      .select2-selection--single {
+        background-color: #eee !important;
+        color: var(--bs-filejet-medium-gray) !important;
+        pointer-events: none !important;
+
+        .select2-selection__arrow {
+          background-image: none !important;
+        }
+      }
+    }
+  }
+
+  input[type=radio]:disabled {
+    background-image: url("../../../../dist/images/icons/view-checkbox-inactive.svg") !important;
+
+    &:checked {
+      background-image: url("../../../../dist/images/icons/view-checkbox-active-disabled.svg") !important;
+    }
+  }
+  
+  input[type=checkbox]:disabled:checked {
+    background-image: url("../../../../dist/images/icons/radio-check.svg") !important;
+  }
+
 }
 
 
