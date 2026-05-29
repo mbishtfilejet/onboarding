@@ -447,7 +447,7 @@
             },
             "isDefault": false,
             "isVerified": true,
-            "available_to": "All"
+            "available_to": ""
         },
         {
             "nickname": "Net 30 Terms",
