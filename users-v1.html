@@ -396,12 +396,12 @@
                         </div>
                         <!-- stepper start -->
                         <div class="service-step-group user-step-group">
-                            <div class="step" data-bs-toggle="modal" data-bs-target="#AddUserDetails"
+                            <div class="step" data-bs-toggle="modal" data-bs-target="#EditUserDetails"
                                 data-bs-dismiss="modal">
                                 <div class="circle active"></div>
                                 <span class="step-text">DETAILS</span>
                             </div>
-                            <div class="step last-step" data-bs-toggle="modal" data-bs-target="#AddUserRole"
+                            <div class="step last-step" data-bs-toggle="modal" data-bs-target="#EditUserRole"
                                 data-bs-dismiss="modal">
                                 <div class="circle"></div>
                                 <span class="step-text">ROLE</span>
@@ -559,12 +559,12 @@
                         </div>
                         <!-- stepper start -->
                         <div class="service-step-group user-step-group">
-                            <div class="step completed" data-bs-toggle="modal" data-bs-target="#AddUserDetails"
+                            <div class="step completed" data-bs-toggle="modal" data-bs-target="#EditUserRole"
                                 data-bs-dismiss="modal">
                                 <div class="circle completed"></div>
                                 <span class="step-text">DETAILS</span>
                             </div>
-                            <div class="step last-step" data-bs-toggle="modal" data-bs-target="#AddUserRole"
+                            <div class="step last-step" data-bs-toggle="modal" data-bs-target="#EditUserRole"
                                 data-bs-dismiss="modal">
                                 <div class="circle active"></div>
                                 <span class="step-text">ROLE</span>
@@ -587,9 +587,9 @@
                                         <option value="Admin" selected>Admin</option>
                                         <option value="User Admin">User Admin</option>
                                         <option value="Invoice Admin">Invoice Admin</option>
+                                        <option value="Custom User">Custom User</option>
                                         <option value="Role 1">Role 1</option>
                                         <option value="Role 2">Role 2</option>
-                                        <option value="Custom User">Custom User</option>
                                     </select>
                                 </div>
                             </fieldset>
@@ -653,7 +653,7 @@
                                             </th>
                                         </tr>
                                         <tr class="group-row odd">
-                                            <th class="w-75" data-orderable="false">All Groups & Entities</th>
+                                            <th data-orderable="false">All Groups & Entities</th>
                                             <th data-orderable="false" column-id="view">
                                                 <div class="d-flex align-item-center">
                                                     <input data-column="view"
@@ -908,9 +908,9 @@
                                         <option value="Admin">Admin</option>
                                         <option value="User Admin">User Admin</option>
                                         <option value="Invoice Admin">Invoice Admin</option>
+                                        <option value="Custom User">Custom User</option>
                                         <option value="Role 1">Role 1</option>
                                         <option value="Role 2">Role 2</option>
-                                        <option value="Custom User">Custom User</option>
                                     </select>
                                 </div>
                             </fieldset>
@@ -974,7 +974,7 @@
                                             </th>
                                         </tr>
                                         <tr class="group-row odd">
-                                            <th class="w-75" data-orderable="false">All Groups & Entities</th>
+                                            <th data-orderable="false">All Groups & Entities</th>
                                             <th data-orderable="false" column-id="view">
                                                 <div class="d-flex align-item-center">
                                                     <input data-column="view"
@@ -1145,85 +1145,7 @@
                                 </fieldset>
                             </div>
                         </div>
-                        <!-- <div class="mb-4 p-3 bg-white rounded-2">
-                            <h4 class="text-capitalize fs-5 mb-4 fw-semibold">Rights</h4>
-                            <div class="border rounded-3 overflow-hidden">
-                                <table id="" class="table table-striped w-100 table-nowrap">
-                                    <thead>
-                                        <tr class="even">
-                                            <th class="w-75"></th>
-                                            <th>Rights</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr class="odd">
-                                            <td>
-                                                <div class="d-flex align-items-center">
-                                                    <span class="icon icon-md icon-view"></span>View
-                                                </div>
-                                            </td>
-                                            <td><input class="form-check-input green-checkbox ms-4" type="checkbox"
-                                                    id=""></td>
-                                        </tr>
-                                        <tr class="even">
-                                            <td>
-                                                <div class="d-flex align-items-center">
-                                                    <span class="icon icon-edit-grey icon-md"></span>Edit
-                                                </div>
-                                            </td>
-                                            <td><input class="form-check-input green-checkbox ms-4" type="checkbox"
-                                                    id="" checked></td>
-                                        </tr>
-                                        <tr class="odd">
-                                            <td>
-                                                <div class="d-flex align-items-center">
-                                                    <span class="icon icon-submit icon-md"></span>Submit
-                                                </div>
-                                            </td>
-                                            <td><input class="form-check-input green-checkbox ms-4" type="checkbox"
-                                                    id=""></td>
-                                        </tr>
-                                        <tr class="even">
-                                            <td>
-                                                <div class="d-flex align-items-center">
-                                                    <span class="icon icon-upload icon-md"></span>Upload
-                                                </div>
-                                            </td>
-                                            <td><input class="form-check-input green-checkbox ms-4" type="checkbox"
-                                                    id=""></td>
-                                        </tr>
-                                        <tr class="odd">
-                                            <td>
-                                                <div class="d-flex align-items-center">
-                                                    <span class="icon icon-download icon-md"></span>Download
-                                                </div>
-                                            </td>
-                                            <td><input class="form-check-input green-checkbox ms-4" type="checkbox"
-                                                    id="" checked></td>
-                                        </tr>
-                                        <tr class="even">
-                                            <td>
-                                                <div class="d-flex align-items-center">
-                                                    <span class="icon icon-invoices icon-md"></span>Invoices
-                                                </div>
-                                            </td>
-                                            <td><input class="form-check-input green-checkbox ms-4" type="checkbox"
-                                                    id=""></td>
-                                        </tr>
-                                        <tr class="odd">
-                                            <td>
-                                                <div class="d-flex align-items-center">
-                                                    <span class="icon icon-acknowledge icon-md"></span>Acknowledge
-                                                </div>
-                                            </td>
-                                            <td><input class="form-check-input green-checkbox ms-4" type="checkbox"
-                                                    id="" checked></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div> -->
-
+                        
                         <div class="mb-4 p-3 bg-white rounded-2">
                             <h4 class="text-capitalize fs-5 mb-4 fw-semibold">Access</h4>
                             <div class="bg-white rounded-2 position-relative mb-4">
@@ -1233,26 +1155,6 @@
                                     class="no-bg form-control search-input w-100 bg-transparent p-2 ps-5 m-0 rounded-2 border border-1"
                                     placeholder="Search">
                             </div>
-                            <!-- <div class="userAccessTable border rounded-3 overflow-hidden">
-                                <table id="user-access-table-1"
-                                    class="table table-striped w-100 table-nowrap user-data-table">
-                                    <thead>
-                                        <tr>
-                                            <th class="w-75" data-orderable="false"></th>
-                                            <th data-orderable="false" column-id="permissions">Permissions</th>
-                                        </tr>
-                                        <tr class="group-row odd">
-                                            <th class="w-75" data-orderable="false">All Groups & Entities</th>
-                                            <th data-orderable="false" column-id="permissions">
-                                                <div class="d-flex align-item-center">
-                                                    <input data-column="permissions"
-                                                        class="form-check-input green-checkbox allgroup-select row-select ms-4" type="checkbox" id="">
-                                                </div>
-                                            </th>
-                                        </tr>
-                                    </thead>
-                                </table>
-                            </div> -->
                             <div class="userAccessTable border rounded-3 overflow-hidden">
                                 <table id="user-rights-table-1"
                                     class="table table-striped w-100 table-nowrap user-data-table">
@@ -1303,7 +1205,7 @@
                                             </th>
                                         </tr>
                                         <tr class="group-row odd">
-                                            <th class="w-75" data-orderable="false">All Groups & Entities</th>
+                                            <th data-orderable="false">All Groups & Entities</th>
                                             <th data-orderable="false" column-id="view">
                                                 <div class="d-flex align-item-center">
                                                     <input data-column="view"
@@ -1470,85 +1372,7 @@
                                 </div>
                             </fieldset>
                         </div>
-                        <!-- <div class="mb-4 p-3 bg-white rounded-2">
-                            <h4 class="text-capitalize fs-5 mb-4 fw-semibold">Rights</h4>
-                            <div class="border rounded-3 overflow-hidden">
-                                <table id="" class="table table-striped w-100 table-nowrap">
-                                    <thead>
-                                        <tr class="even">
-                                            <th class="w-75"></th>
-                                            <th>Rights</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr class="odd">
-                                            <td>
-                                                <div class="d-flex align-items-center">
-                                                    <span class="icon icon-md icon-view"></span>View
-                                                </div>
-                                            </td>
-                                            <td><input class="form-check-input green-checkbox ms-4" type="checkbox"
-                                                    id=""></td>
-                                        </tr>
-                                        <tr class="even">
-                                            <td>
-                                                <div class="d-flex align-items-center">
-                                                    <span class="icon icon-edit-grey icon-md"></span>Edit
-                                                </div>
-                                            </td>
-                                            <td><input class="form-check-input green-checkbox ms-4" type="checkbox"
-                                                    id=""></td>
-                                        </tr>
-                                        <tr class="odd">
-                                            <td>
-                                                <div class="d-flex align-items-center">
-                                                    <span class="icon icon-submit icon-md"></span>Submit
-                                                </div>
-                                            </td>
-                                            <td><input class="form-check-input green-checkbox ms-4" type="checkbox"
-                                                    id=""></td>
-                                        </tr>
-                                        <tr class="even">
-                                            <td>
-                                                <div class="d-flex align-items-center">
-                                                    <span class="icon icon-upload icon-md"></span>Upload
-                                                </div>
-                                            </td>
-                                            <td><input class="form-check-input green-checkbox ms-4" type="checkbox"
-                                                    id=""></td>
-                                        </tr>
-                                        <tr class="odd">
-                                            <td>
-                                                <div class="d-flex align-items-center">
-                                                    <span class="icon icon-download icon-md"></span>Download
-                                                </div>
-                                            </td>
-                                            <td><input class="form-check-input green-checkbox ms-4" type="checkbox"
-                                                    id=""></td>
-                                        </tr>
-                                        <tr class="even">
-                                            <td>
-                                                <div class="d-flex align-items-center">
-                                                    <span class="icon icon-invoices icon-md"></span>Invoices
-                                                </div>
-                                            </td>
-                                            <td><input class="form-check-input green-checkbox ms-4" type="checkbox"
-                                                    id=""></td>
-                                        </tr>
-                                        <tr class="odd">
-                                            <td>
-                                                <div class="d-flex align-items-center">
-                                                    <span class="icon icon-acknowledge icon-md"></span>Acknowledge
-                                                </div>
-                                            </td>
-                                            <td><input class="form-check-input green-checkbox ms-4" type="checkbox"
-                                                    id=""></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div> -->
-
+                        
                         <div class="mb-4 p-3 bg-white rounded-2">
                             <h4 class="text-capitalize fs-5 mb-4 fw-semibold">Access</h4>
                             <div class="bg-white rounded-2 position-relative mb-4">
@@ -1608,7 +1432,7 @@
                                             </th>
                                         </tr>
                                         <tr class="group-row odd">
-                                            <th class="w-75" data-orderable="false">All Groups & Entities</th>
+                                            <th data-orderable="false">All Groups & Entities</th>
                                             <th data-orderable="false" column-id="view">
                                                 <div class="d-flex align-item-center">
                                                     <input data-column="view"
