@@ -54,9 +54,10 @@ $color-gray-900: #272A2E;
                     min-width: 250px !important;
                 }
 
-                &:nth-child(5){
+                &:nth-child(5) {
                     min-width: 90px !important;
                 }
+
                 &:nth-child(6),
                 &:nth-child(7) {
                     min-width: 90px !important;
@@ -134,9 +135,13 @@ $color-gray-900: #272A2E;
         th,
         td {
             &:first-child {
-                max-width: 300px !important;
-                width: 295px !important;
+                max-width: 200px !important;
+                width: 200px !important
             }
+        }
+
+        td {
+            @extend .text-break;
         }
     }
 }
@@ -194,27 +199,27 @@ $color-gray-900: #272A2E;
 
 .SOP-model .green-checkbox[type=checkbox]:checked,
 .green-checkbox[type=checkbox]:checked {
-    background-color: #72E097;
-    background-image: url("../../../../dist/images/icons/light-green-check.svg");
+    background-color: #72E097 !important;
+    background-image: url("../../../../dist/images/icons/light-green-check.svg") !important;
 }
 
 .SOP-model .light-green-checkbox[type=checkbox]:checked,
 .light-green-checkbox[type=checkbox]:checked {
-    background-color: #E7F9ED;
-    background-image: url("../../../../dist/images/icons/light-green-check.svg");
+    background-color: #E7F9ED !important;
+    background-image: url("../../../../dist/images/icons/light-green-check.svg") !important;
 }
 
 .SOP-model .green-checkbox[type=checkbox]:indeterminate,
 .green-checkbox[type=checkbox]:indeterminate {
-    background-color: #E7F9ED;
+    background-color: #E7F9ED !important;
     border-color: #272727 !important;
-    background-image: url("../../../../dist/images/icons/checkmark-optional-dark.svg");
+    background-image: url("../../../../dist/images/icons/checkmark-optional-dark.svg") !important;
 }
 
 .SOP-model .green-checkbox[type=checkbox]:checked:disabled,
 .SOP-model .green-checkbox[type=checkbox]:indeterminate:disabled,
 .SOP-model .light-green-checkbox[type=checkbox]:checked:disabled {
-    background-color: #D8DDDF;
+    background-color: #D8DDDF !important;
 }
 
 

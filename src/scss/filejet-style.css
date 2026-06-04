@@ -8763,7 +8763,7 @@ input[type=time]:active:before, .modal-header .btn-outline-dark:hover .icon-mail
 }
 
 /* rtl:begin:remove */
-.text-break {
+.text-break, .userAccessTable .dataTables_wrapper td {
   word-wrap: break-word !important;
   word-break: break-word !important;
 }
@@ -18874,13 +18874,15 @@ table .boc-light #boc-ppdf-btns #boc-prev-save,
 .SOP-model .form-disabled + .select2-container--default .select2-selection--single .select2-selection__arrow {
   background-image: none !important;
 }
-.SOP-model input[type=radio]:disabled {
+
+input[type=radio]:disabled {
   background-image: url("../../../../dist/images/icons/view-checkbox-inactive.svg") !important;
 }
-.SOP-model input[type=radio]:disabled:checked {
+input[type=radio]:disabled:checked {
   background-image: url("../../../../dist/images/icons/view-checkbox-active-disabled.svg") !important;
 }
-.SOP-model input[type=checkbox]:disabled:checked {
+
+input[type=checkbox]:disabled:checked {
   background-image: url("../../../../dist/images/icons/radio-check.svg") !important;
 }
 
@@ -20414,10 +20416,9 @@ body *::-webkit-scrollbar-thumb {
 }
 .userAccessTable .dataTables_wrapper th:first-child,
 .userAccessTable .dataTables_wrapper td:first-child {
-  max-width: 300px !important;
-  width: 295px !important;
+  max-width: 200px !important;
+  width: 200px !important;
 }
-
 .user-step-group .step {
   flex: 0 !important;
 }
@@ -20457,27 +20458,27 @@ body *::-webkit-scrollbar-thumb {
 
 .SOP-model .green-checkbox[type=checkbox]:checked,
 .green-checkbox[type=checkbox]:checked {
-  background-color: #72E097;
-  background-image: url("../../../../dist/images/icons/light-green-check.svg");
+  background-color: #72E097 !important;
+  background-image: url("../../../../dist/images/icons/light-green-check.svg") !important;
 }
 
 .SOP-model .light-green-checkbox[type=checkbox]:checked,
 .light-green-checkbox[type=checkbox]:checked {
-  background-color: #E7F9ED;
-  background-image: url("../../../../dist/images/icons/light-green-check.svg");
+  background-color: #E7F9ED !important;
+  background-image: url("../../../../dist/images/icons/light-green-check.svg") !important;
 }
 
 .SOP-model .green-checkbox[type=checkbox]:indeterminate,
 .green-checkbox[type=checkbox]:indeterminate {
-  background-color: #E7F9ED;
+  background-color: #E7F9ED !important;
   border-color: #272727 !important;
-  background-image: url("../../../../dist/images/icons/checkmark-optional-dark.svg");
+  background-image: url("../../../../dist/images/icons/checkmark-optional-dark.svg") !important;
 }
 
 .SOP-model .green-checkbox[type=checkbox]:checked:disabled,
 .SOP-model .green-checkbox[type=checkbox]:indeterminate:disabled,
 .SOP-model .light-green-checkbox[type=checkbox]:checked:disabled {
-  background-color: #D8DDDF;
+  background-color: #D8DDDF !important;
 }
 
 .badge-user-active {

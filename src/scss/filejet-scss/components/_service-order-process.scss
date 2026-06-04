@@ -1550,19 +1550,19 @@ table .boc-light #boc-ppdf-btns #boc-prev-save,
       }
     }
   }
+}
 
-  input[type=radio]:disabled {
-    background-image: url("../../../../dist/images/icons/view-checkbox-inactive.svg") !important;
 
-    &:checked {
-      background-image: url("../../../../dist/images/icons/view-checkbox-active-disabled.svg") !important;
-    }
+input[type=radio]:disabled {
+  background-image: url("../../../../dist/images/icons/view-checkbox-inactive.svg") !important;
+
+  &:checked {
+    background-image: url("../../../../dist/images/icons/view-checkbox-active-disabled.svg") !important;
   }
-  
-  input[type=checkbox]:disabled:checked {
-    background-image: url("../../../../dist/images/icons/radio-check.svg") !important;
-  }
+}
 
+input[type=checkbox]:disabled:checked {
+  background-image: url("../../../../dist/images/icons/radio-check.svg") !important;
 }
 
 
