@@ -13193,6 +13193,10 @@ input[type=radio] {
   background-image: url("../../../dist/images/icons/entity-main.svg");
 }
 
+.icon-user-invited {
+  background-image: url("../../../dist/images/icons/gray-mail-outline.svg");
+}
+
 .login-page {
   background: url("../../../../dist/images/login-banner.jpg") no-repeat center center/cover;
 }
