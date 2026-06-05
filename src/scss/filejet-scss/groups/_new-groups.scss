@@ -119,3 +119,17 @@
         background-image: url("../../../../dist/images/icons/delete-red.svg");
     }
 }
+
+@media (min-width: 1450px) {
+    .groupsTableCard {
+        .dataTables_wrapper {
+            .dataTables_scroll {
+                .dataTables_scrollBody {
+                    overflow: hidden !important;
+                }
+            }
+        }
+
+    }
+
+}
