@@ -488,6 +488,10 @@ form {
   color: var(--bs-dark);
 }
 
+.form-select option {
+    color: var(--bs-filejet-medium-gray);
+}
+
 .radio-group {
   border-radius: rem(8);
   padding: rem(20);

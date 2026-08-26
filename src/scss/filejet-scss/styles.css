@@ -12015,6 +12015,10 @@ form h3 {
   color: var(--bs-dark);
 }
 
+.form-select option {
+  color: var(--bs-filejet-medium-gray);
+}
+
 .radio-group {
   border-radius: 0.5rem;
   padding: 1.25rem;
@@ -20320,6 +20324,11 @@ body *::-webkit-scrollbar-thumb {
   background-image: url("../../../../dist/images/icons/delete-red.svg");
 }
 
+@media (min-width: 1450px) {
+  .groupsTableCard .dataTables_wrapper .dataTables_scroll .dataTables_scrollBody, .usersTableCard .dataTables_wrapper .dataTables_scroll .dataTables_scrollBody, .billingTableCard .dataTables_wrapper .dataTables_scroll .dataTables_scrollBody {
+    overflow: hidden !important;
+  }
+}
 .users_tablist {
   position: relative;
   background-color: #F3F5F8;
